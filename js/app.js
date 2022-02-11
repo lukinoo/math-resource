@@ -1,4 +1,9 @@
 const cardsWrapper = document.getElementById('cards-wrapper');
+const dropdown = document.querySelectorAll('.dropdown');
+const dropdownContent = document.querySelectorAll('.dropdown-content');
+const childDropdown = document.querySelectorAll('.child-dropdown');
+const childDropdownContent = document.querySelectorAll('.child-dropdown-content');
+
 const cards = [
   {
     id: 1,
@@ -83,7 +88,7 @@ const cards = [
   },
 ];
 
-cardsContainer = (obj) => {
+const cardsContainer = (obj) => {
   return `<div class="card" id=${obj.id}>
   <div class="top-content">
     <h3 class="topicByFilter">${obj.topicsByFilter}</h3>
@@ -103,3 +108,25 @@ cardsContainer = (obj) => {
 window.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card) => (cardsWrapper.innerHTML += cardsContainer(card)));
 });
+
+
+// sort
+
+// const dropdown = document.querySelectorAll('.dropdown');
+// const dropdownContent = document.querySelectorAll('.dropdown-content');
+// const childDropdown = document.querySelectorAll('.child-dropdown');
+// const childDropdownContent = document.querySelectorAll('.child-dropdown-content');
+
+window.addEventListener('load', () => {
+  dropdown.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      dropdownContent[index].classList.toggle('dropdown-active');
+    })
+  })
+
+  childDropdown.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      childDropdownContent[index].classList.toggle('child-dropdown-content-active')
+    })
+  })
+})
