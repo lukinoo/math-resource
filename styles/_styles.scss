@@ -7,7 +7,7 @@ header {
   box-shadow: 0px 3px 6px #00000029;
   background: $lightWhite;
   nav {
-    width: 85%;
+    width: $containerWidth;
     margin: 0 auto;
     height: 80px;
     @include displayFlex(space-between, center);
@@ -24,6 +24,84 @@ header {
         a {
           color: $darkBlack;
           font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  width: 560px;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+  @include displayFlex(space-between, center);
+  .filter {
+    width: 20%;
+  }
+  .sorting {
+    width: 65%;
+    margin: 2rem 0;
+    @include displayFlex(flex-start, center);
+    p {
+      font-style: italic;
+      margin-right: 1rem;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    button {
+      @include buttonStyles;
+      margin-right: 1rem;
+    }
+    button:hover {
+      background-color: $primaryColor;
+      color: $lightWhite;
+    }
+  }
+  .filters-wrapper {
+    width: 20%;
+  }
+  .cards-wrapper {
+    width: 65%;
+    @include grid(grid-template-columns, repeat(3, minmax(32%, 1fr)), 1.3rem, 1rem);
+    .card {
+      background-color: $lightWhite;
+      border: 1px solid $cardsBorderColor;
+      border-radius: 15px;
+      @include displayFlex(space-between, center);
+      flex-direction: column;
+      row-gap: 2rem;
+      .top-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(space-between, center);
+        h3 {
+          font-weight: bold;
+          width: 100px;
+        }
+      }
+      .middle-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(center, center);
+      }
+      .bottom-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(space-between, center);
+        p {
+          font-size: 11px;
+          background-color: $beige;
+          padding: 5px 8px;
+          border-radius: 16px;
         }
       }
     }
