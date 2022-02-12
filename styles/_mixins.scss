@@ -22,3 +22,12 @@
   font-weight: $fontWeight;
   cursor: pointer;
 }
+
+@mixin grid($grid-type, $params, $row-gap, $column-gap) {
+  @supports (display: grid) {
+    display: grid;
+    #{$grid-type}: #{$params};
+    column-gap: $column-gap;
+    row-gap: $row-gap;;
+  }
+}

@@ -3,11 +3,15 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   box-shadow: 0px 3px 6px #00000029;
   background: $lightWhite;
+  z-index: 99;
   nav {
-    width: 85%;
+    width: $containerWidth;
     margin: 0 auto;
     height: 80px;
     @include displayFlex(space-between, center);
@@ -18,12 +22,172 @@ header {
       background-image: linear-gradient(120deg, #fed142 30%, #3571a3 100%);
     }
     .nav-links {
-      min-width: 35%;
+      min-width: 40%;
       @include displayFlex(space-between, null);
       li {
         a {
           color: $darkBlack;
           font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  width: 560px;
+  margin: 10rem auto 3rem auto;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+  @include displayFlex(space-between);
+  .filter {
+    width: 20%;
+  }
+  .sorting {
+    width: 65%;
+    margin: 2rem 0;
+    @include displayFlex(flex-start, center);
+    p {
+      font-style: italic;
+      margin-right: 1rem;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    button {
+      @include buttonStyles;
+      margin-right: 1rem;
+    }
+    button:hover {
+      background-color: $primaryColor;
+      color: $lightWhite;
+    }
+  }
+  .filters-wrapper {
+    width: 20%;
+    align-self: flex-start;
+    
+    .main-dropdown{
+      position: relative;
+      margin: 5px 0;
+
+      .dropdown {
+        @include displayFlex(space-between);
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border: none;
+        background: $primaryColor;
+        color: $lightWhite;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+      }
+  
+      .dropdown-content {
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        
+        &.dropdown-active {
+          display: block;
+        }
+  
+        form {
+          width: 100%;
+          
+          .child-dropdown {
+            @include displayFlex(flex-start);
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            border: none;
+            background: $lightWhite;
+            color: $darkBlack;
+            border: 1px solid $lightGray;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+
+            .second-dropdown {
+              margin-left: 5px;
+              width: 100%;
+              @include displayFlex(space-between);
+            }
+          }
+
+          .child-dropdown-content {
+            @include displayFlex(flex-start, flex-start);
+            flex-direction: column;
+            display: none;
+
+            &.child-dropdown-content-active{
+              display: block;
+            }
+
+            button {
+              width: 100%;
+              text-align: left;
+              background: $darkWhiteColor;
+              padding: 10px;
+              border: none;
+              cursor: pointer;
+
+              &:hover{
+                background: $darkGray;
+                color: $lightWhite;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cards-wrapper {
+    width: 65%;
+    @include grid(grid-template-columns, repeat(3, minmax(32%, 1fr)), 1.3rem, 1rem);
+    .card {
+      background-color: $lightWhite;
+      border: 1px solid $cardsBorderColor;
+      border-radius: 15px;
+      @include displayFlex(space-between, center);
+      flex-direction: column;
+      row-gap: 2rem;
+      .top-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(space-between, center);
+        h3 {
+          font-weight: bold;
+          width: 100px;
+        }
+      }
+      .middle-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(center, center);
+      }
+      .bottom-content {
+        width: $containerWidth;
+        margin: 1rem auto;
+        @include displayFlex(space-between, center);
+        p {
+          font-size: 11px;
+          background-color: $beige;
+          padding: 5px 8px;
+          border-radius: 16px;
         }
       }
     }
