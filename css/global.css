@@ -7,8 +7,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -152,8 +151,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   background: #fdfdff;
   z-index: 99;
 }
@@ -162,15 +160,9 @@ header nav {
   width: 85%;
   margin: 0 auto;
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header nav .logo-wrapper {
@@ -182,12 +174,8 @@ header nav .logo-wrapper {
 
 header nav .nav-links {
   min-width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 header nav .nav-links li a {
@@ -208,15 +196,9 @@ h1 {
 .container {
   width: 85%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .filter {
@@ -226,15 +208,9 @@ h1 {
 .container .sorting {
   width: 65%;
   margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .container .sorting p {
@@ -263,8 +239,7 @@ h1 {
 
 .container .filters-wrapper {
   width: 20%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .container .filters-wrapper .main-dropdown {
@@ -273,15 +248,9 @@ h1 {
 }
 
 .container .filters-wrapper .main-dropdown .dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   text-align: left;
   padding: 10px;
@@ -300,8 +269,7 @@ h1 {
   background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -314,15 +282,9 @@ h1 {
 }
 
 .container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   text-align: left;
   padding: 10px;
@@ -338,31 +300,16 @@ h1 {
 .container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown .second-dropdown {
   margin-left: 5px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   display: none;
 }
 
@@ -390,12 +337,9 @@ h1 {
 
 @supports (display: grid) {
   .container .cards-wrapper {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(32%, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(32%, 1fr));
-    -webkit-column-gap: 1rem;
-            column-gap: 1rem;
+    grid-template-columns: repeat(3, minmax(32%, 1fr));
+    column-gap: 1rem;
     row-gap: 1.3rem;
   }
 }
@@ -404,34 +348,19 @@ h1 {
   background-color: #fdfdff;
   border: 1px solid #707070;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   row-gap: 2rem;
 }
 
 .container .cards-wrapper .card .top-content {
   width: 85%;
   margin: 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .cards-wrapper .card .top-content h3 {
@@ -442,29 +371,17 @@ h1 {
 .container .cards-wrapper .card .middle-content {
   width: 85%;
   margin: 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .container .cards-wrapper .card .bottom-content {
   width: 85%;
   margin: 1rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .cards-wrapper .card .bottom-content p {
@@ -472,5 +389,12 @@ h1 {
   background-color: #E5E0E0;
   padding: 5px 8px;
   border-radius: 16px;
+}
+
+.about-body .about-project {
+  width: 60%;
+  margin: 2rem auto;
+  font-size: 20px;
+  text-align: left;
 }
 /*# sourceMappingURL=global.css.map */
