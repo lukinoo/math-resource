@@ -34,6 +34,7 @@
           <label for="email">ი-მეილი</label>
           <input
             type="email"
+            name="email"
             id="email"
             required
           />
@@ -61,7 +62,7 @@
         </form>
         <form action="submit" class="pass-form" id="pass-form">
           <h3>პაროლის აღდგენა</h3>
-          <label for="email">ახალი პაროლი</label>
+          <label for="password">ახალი პაროლი</label>
           <input
             type="password"
             id="pass"
@@ -82,17 +83,92 @@
           <button type="button" id="enter">დამახსოვრება</button>
           <button type="button" id="registration">რეგისტრაცია</button>
         </form>
-        <form action="submit" class="pass-form" id="pass-form">
+        <form action="submit" class="email-form" id="email-form">
           <h3>პაროლის აღდგენა</h3>
           <label for="email">ი-მეილი</label>
           <input
             type="email"
+            name="email"
             id="email"
             required
           />
-          </div>
           <button type="button" id="enter-send">გაგზავნა</button>
           <button type="button" id="registration">რეგისტრაცია</button>
+        </form>
+        <form action="submit" class="register-form" id="register-form">
+          <h3>ახალი ანგარიშის შექმნა</h3>
+          <label for="first_name">სახელი</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            minlength="8"
+            required
+          />
+          <label for="last_name">გვარი</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            minlength="8"
+            required
+          />
+          <label for="region">რეგიონი</label>
+          <input
+            type="text"
+            id="region"
+            name="region"
+            minlength="8"
+            required
+          />
+          <label for="pass">სკოლა</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <label for="email">კლასი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <label for="email">ი-მეილი</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+          <label for="email">ახალი პაროლი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <label for="pass">გაიმეორე პაროლი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <div>
+          <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                checked
+              /><label>ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების პირობებებს</label>
+            </div>
+          <button type="button" id="enter">რეგისტრაცია</button>
         </form>
       </section>
     </main>

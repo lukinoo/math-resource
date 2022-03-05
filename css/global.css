@@ -482,4 +482,9 @@ h1 {
 .auth-container form #enter-send {
   margin-top: 3rem;
 }
+
+.auth-container form #remember {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
 /*# sourceMappingURL=global.css.map */
