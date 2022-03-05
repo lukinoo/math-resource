@@ -29,7 +29,7 @@
     <main>
       <section class="auth-container" id="auth-container">
         <h1>მათემატიკის რესურსი</h1>
-        <form action="submit">
+        <form action="submit" class="auth-form" id="auth-form">
           <h3>ავტორიზაცია</h3>
           <label for="email">ი-მეილი</label>
           <input
@@ -58,6 +58,29 @@
             <button type="button" id="recovery">პაროლის აღდგენა</button>
           </div>
           <button type="button" id="enter">შესვლა</button>
+          <button type="button" id="registration">რეგისტრაცია</button>
+        </form>
+        <form action="submit" class="pass-form" id="pass-form">
+          <h3>ავტორიზაცია</h3>
+          <label for="email">ახალი პაროლი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <label for="pass">გაიმეორე პაროლი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+            <button type="button" class="recovery" id="recovery">პაროლის აღდგენა</button>
+          </div>
+          <button type="button" id="enter">დამახსოვრება</button>
           <button type="button" id="registration">რეგისტრაცია</button>
         </form>
       </section>
