@@ -452,7 +452,8 @@ h1 {
   align-self: flex-start;
 }
 
-.auth-container form #enter {
+.auth-container form #enter,
+.auth-container form #enter-send {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
@@ -476,5 +477,9 @@ h1 {
 
 .auth-container form #recovery {
   align-self: flex-end;
+}
+
+.auth-container form #enter-send {
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=global.css.map */

@@ -252,7 +252,8 @@ h1 {
         align-self: flex-start;
       }
     }
-    #enter {
+    #enter,
+    #enter-send {
       background-color: $darkBlue;
       color: $whiteColor;
       font-size: 18px;
@@ -274,6 +275,9 @@ h1 {
     }
     #recovery {
       align-self: flex-end;
+    }
+    #enter-send {
+      margin-top: 3rem;
     }
   }
 }
