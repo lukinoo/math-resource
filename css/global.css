@@ -185,7 +185,7 @@ header nav .nav-links li a {
 
 h1 {
   width: 560px;
-  margin: 10rem auto 3rem auto;
+  margin: 8rem auto 3rem auto;
   text-align: center;
   font-size: 33px;
   font-weight: bold;
@@ -291,7 +291,7 @@ h1 {
   border: none;
   background: #fdfdff;
   color: #000000;
-  border: 1px solid #B2B2B2;
+  border: 1px solid #b2b2b2;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -386,7 +386,7 @@ h1 {
 
 .container .cards-wrapper .card .bottom-content p {
   font-size: 11px;
-  background-color: #E5E0E0;
+  background-color: #e5e0e0;
   padding: 5px 8px;
   border-radius: 16px;
 }
@@ -396,5 +396,77 @@ h1 {
   margin: 2rem auto;
   font-size: 20px;
   text-align: left;
+}
+
+.auth-container {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 3rem 6rem;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.auth-container form h3 {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.auth-container form label {
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.auth-container form input {
+  border: 1px solid #707070;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.auth-container form .restore-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-container form .restore-wrapper input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.auth-container form .restore-wrapper label {
+  color: #000000;
+}
+
+.auth-container form #enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px #00000029;
+  width: 43%;
+  margin: 0 auto;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+}
+
+.auth-container form #recovery,
+.auth-container form #registration {
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=global.css.map */

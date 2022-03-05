@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Project</title>
+    <title>Authorization</title>
     <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body class="about-body">
@@ -26,5 +26,41 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <section class="auth-container" id="auth-container">
+        <h1>მათემატიკის რესურსი</h1>
+        <form action="submit">
+          <h3>ავტორიზაცია</h3>
+          <label for="email">ი-მეილი</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="jondoe@mail.com"
+            required
+          />
+          <label for="pass">პაროლი</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+          <div class="restore-wrapper">
+            <div>
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                checked
+              /><label>დამახსოვრება</label>
+            </div>
+            <button type="button" id="recovery">პაროლის აღდგენა</button>
+          </div>
+          <button type="button" id="enter">შესვლა</button>
+          <button type="button" id="registration">რეგისტრაცია</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
