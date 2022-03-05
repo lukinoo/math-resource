@@ -252,7 +252,7 @@ h1 {
         align-self: flex-start;
       }
     }
-    #enter,
+    .enter,
     #enter-send {
       background-color: $darkBlue;
       color: $whiteColor;
@@ -265,8 +265,8 @@ h1 {
       padding: 0.8rem 1.8rem;
       cursor: pointer;
     }
-    #recovery,
-    #registration {
+    .recovery,
+    .registration {
       font-size: 13px;
       color: $primaryColor;
       background: transparent;
@@ -283,5 +283,8 @@ h1 {
       margin-right: 0.5rem;
       cursor: pointer;
     }
+  }
+  .active {
+    display: flex;
   }
 }

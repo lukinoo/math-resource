@@ -15,7 +15,7 @@
         </a>
         <ul class="nav-links">
           <li>
-            <a href="auth.html">ავტორიზაცია</a>
+            <a href="auth.html" id="auth-link">ავტორიზაცია</a>
           </li>
           <li>
             <a href="about.html">პროექტის შესახებ</a>
@@ -55,17 +55,17 @@
                 checked
               /><label>დამახსოვრება</label>
             </div>
-            <button type="button" id="recovery">პაროლის აღდგენა</button>
+            <button type="button" class="recovery" id="recovery-on-auth">პაროლის აღდგენა</button>
           </div>
-          <button type="button" id="enter">შესვლა</button>
-          <button type="button" id="registration">რეგისტრაცია</button>
+          <button type="button" class="enter" id="enter">შესვლა</button>
+          <button type="button" class="registration" id="registration-on-auth">რეგისტრაცია</button>
         </form>
         <form action="submit" class="pass-form" id="pass-form">
           <h3>პაროლის აღდგენა</h3>
           <label for="password">ახალი პაროლი</label>
           <input
             type="password"
-            id="pass"
+            id="recovery_password"
             name="password"
             minlength="8"
             required
@@ -73,15 +73,15 @@
           <label for="pass">გაიმეორე პაროლი</label>
           <input
             type="password"
-            id="pass"
+            id="repeat_pass"
             name="password"
             minlength="8"
             required
           />
             <button type="button" class="recovery" id="recovery">პაროლის აღდგენა</button>
           </div>
-          <button type="button" id="enter">დამახსოვრება</button>
-          <button type="button" id="registration">რეგისტრაცია</button>
+          <button type="button" class="enter" id="remember-button">დამახსოვრება</button>
+          <button type="button" class="registration" id="registration-on-recovery">რეგისტრაცია</button>
         </form>
         <form action="submit" class="email-form" id="email-form">
           <h3>პაროლის აღდგენა</h3>
@@ -89,11 +89,12 @@
           <input
             type="email"
             name="email"
-            id="email"
+            class="email"
+            id="recovery_email"
             required
           />
           <button type="button" id="enter-send">გაგზავნა</button>
-          <button type="button" id="registration">რეგისტრაცია</button>
+          <button type="button" class="registration" id="registration-on-email">რეგისტრაცია</button>
         </form>
         <form action="submit" class="register-form" id="register-form">
           <h3>ახალი ანგარიშის შექმნა</h3>
@@ -121,19 +122,20 @@
             minlength="8"
             required
           />
-          <label for="pass">სკოლა</label>
+          <label for="school">სკოლა</label>
           <input
-            type="password"
-            id="pass"
-            name="password"
+            type="text"
+            id="school"
+            name="school"
             minlength="8"
             required
           />
-          <label for="email">კლასი</label>
+          <label for="grade">კლასი</label>
           <input
-            type="password"
-            id="pass"
-            name="password"
+            type="text"
+            id="grade"
+            class="grade"
+            name="grade"
             minlength="8"
             required
           />
@@ -141,34 +143,34 @@
           <input
             type="email"
             name="email"
-            id="email"
+            id="register_email"
             required
           />
-          <label for="email">ახალი პაროლი</label>
+          <label for="password">ახალი პაროლი</label>
           <input
             type="password"
-            id="pass"
-            name="password"
+            id="new_password"
+            name="new_password"
             minlength="8"
             required
           />
-          <label for="pass">გაიმეორე პაროლი</label>
+          <label for="repeat_new_pass">გაიმეორე პაროლი</label>
           <input
             type="password"
-            id="pass"
-            name="password"
+            id="repeat_new_pass"
+            name="repeat_new_pass"
             minlength="8"
             required
           />
           <div>
           <input
                 type="checkbox"
-                id="remember"
-                name="remember"
+                id="agree-policies"
+                name="agreement"
                 checked
-              /><label>ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების პირობებებს</label>
+              /><label for="agreement">ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების პირობებებს</label>
             </div>
-          <button type="button" id="enter">რეგისტრაცია</button>
+          <button type="button" class="enter" id="registration-button">რეგისტრაცია</button>
         </form>
       </section>
     </main>
