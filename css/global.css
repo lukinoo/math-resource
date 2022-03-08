@@ -444,13 +444,18 @@ h1 {
 
 .auth-container form .restore-wrapper input {
   margin-right: 0.5rem;
-  align-self: flex-start;
   cursor: pointer;
 }
 
 .auth-container form .restore-wrapper label {
   color: #000000;
-  align-self: flex-start;
+}
+
+.auth-container form .restore-wrapper div .remember {
+  margin-right: 0.5rem;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 0;
 }
 
 .auth-container form .enter,
@@ -476,17 +481,14 @@ h1 {
   cursor: pointer;
 }
 
-.auth-container form #recovery {
+.auth-container form #recovery,
+.auth-container form #recovery-on-auth {
   align-self: flex-end;
+  margin-bottom: 0;
 }
 
 .auth-container form #enter-send {
   margin-top: 3rem;
-}
-
-.auth-container form #remember {
-  margin-right: 0.5rem;
-  cursor: pointer;
 }
 
 .auth-container form #agree-policies {

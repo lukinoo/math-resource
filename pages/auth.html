@@ -51,13 +51,14 @@
               <input
                 type="checkbox"
                 id="remember"
+                class="remember"
                 name="remember"
                 checked
-              /><label>დამახსოვრება</label>
+              /><label class="remember">დამახსოვრება</label>
             </div>
             <button type="button" class="recovery" id="recovery-on-auth">პაროლის აღდგენა</button>
           </div>
-          <button type="button" class="enter" id="enter">შესვლა</button>
+          <button type="submit" class="enter" id="enter">შესვლა</button>
           <button type="button" class="registration" id="registration-on-auth">რეგისტრაცია</button>
         </form>
         <form action="submit" class="pass-form" id="pass-form">
@@ -80,7 +81,7 @@
           />
             <button type="button" class="recovery" id="recovery">პაროლის აღდგენა</button>
           </div>
-          <button type="button" class="enter" id="remember-button">დამახსოვრება</button>
+          <button type="submit" class="enter" id="remember-button">დამახსოვრება</button>
           <button type="button" class="registration" id="registration-on-recovery">რეგისტრაცია</button>
         </form>
         <form action="submit" class="email-form" id="email-form">
@@ -93,7 +94,7 @@
             id="recovery_email"
             required
           />
-          <button type="button" id="enter-send">გაგზავნა</button>
+          <button type="submit" id="enter-send">გაგზავნა</button>
           <button type="button" class="registration" id="registration-on-email">რეგისტრაცია</button>
         </form>
         <form action="submit" class="register-form" id="register-form">
@@ -170,7 +171,7 @@
                 checked
               /><label for="agreement">ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების პირობებებს</label>
             </div>
-          <button type="button" class="enter" id="registration-button">რეგისტრაცია</button>
+          <button type="submit" class="enter" id="registration-button">რეგისტრაცია</button>
         </form>
       </section>
     </main>

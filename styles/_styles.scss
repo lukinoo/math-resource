@@ -245,12 +245,18 @@ h1 {
       justify-content: space-between;
       input {
         margin-right: 0.5rem;
-        align-self: flex-start;
         cursor: pointer;
       }
       label {
         color: $darkBlack;
-        align-self: flex-start;
+      }
+      div {
+        .remember {
+          margin-right: 0.5rem;
+          font-size: 13px;
+          cursor: pointer;
+          margin-bottom: 0;
+        }
       }
     }
     .enter,
@@ -274,15 +280,13 @@ h1 {
       border: none;
       cursor: pointer;
     }
-    #recovery {
+    #recovery,
+    #recovery-on-auth {
       align-self: flex-end;
+      margin-bottom: 0;
     }
     #enter-send {
       margin-top: 3rem;
-    }
-    #remember {
-      margin-right: 0.5rem;
-      cursor: pointer;
     }
     #agree-policies {
       margin-right: 0.5rem;
