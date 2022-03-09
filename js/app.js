@@ -2,7 +2,23 @@ const cardsWrapper = document.getElementById('cards-wrapper');
 const dropdown = document.querySelectorAll('.dropdown');
 const dropdownContent = document.querySelectorAll('.dropdown-content');
 const childDropdown = document.querySelectorAll('.child-dropdown');
-const childDropdownContent = document.querySelectorAll('.child-dropdown-content');
+const childDropdownContent = document.querySelectorAll(
+  '.child-dropdown-content'
+);
+const authForm = document.querySelector('#auth-form');
+const passwordForm = document.querySelector('#pass-form');
+const passFormRecoveryBtn = document.querySelector('#recovery');
+const registrationBtnOnRecovery = document.querySelector(
+  '#registration-on-recovery'
+);
+const emailForm = document.querySelector('#email-form');
+const registerForm = document.querySelector('#register-form');
+const authLinktoClick = document.querySelector('#auth-link');
+const recoveryButton = document.querySelector('.recovery');
+const registrationButton = document.querySelector('#registration-on-auth');
+const registrationButtonOnEmail = document.querySelector(
+  '#registration-on-email'
+);
 
 const cards = [
   {
@@ -109,7 +125,6 @@ window.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card) => (cardsWrapper.innerHTML += cardsContainer(card)));
 });
 
-
 // sort
 
 // const dropdown = document.querySelectorAll('.dropdown');
@@ -121,12 +136,47 @@ window.addEventListener('load', () => {
   dropdown.forEach((item, index) => {
     item.addEventListener('click', () => {
       dropdownContent[index].classList.toggle('dropdown-active');
-    })
-  })
+    });
+  });
 
   childDropdown.forEach((item, index) => {
     item.addEventListener('click', () => {
-      childDropdownContent[index].classList.toggle('child-dropdown-content-active')
-    })
-  })
-})
+      childDropdownContent[index].classList.toggle(
+        'child-dropdown-content-active'
+      );
+    });
+  });
+});
+
+const addClass = (element) => {
+  element.classList.add('active');
+};
+
+const removeClass = (element) => {
+  element.classList.remove('active');
+};
+
+registrationButton.addEventListener('click', () => {
+  addClass(authForm);
+  addClass(registerForm);
+});
+
+recoveryButton.addEventListener('click', () => {
+  addClass(authForm);
+  addClass(emailForm);
+});
+
+registrationButtonOnEmail.addEventListener('click', () => {
+  addClass(registerForm);
+  removeClass(emailForm);
+});
+
+passFormRecoveryBtn.addEventListener('click', () => {
+  addClass(emailForm);
+  removeClass(passwordForm);
+});
+
+registrationBtnOnRecovery.addEventListener('click', () => {
+  addClass(registerForm);
+  removeClass(passwordForm);
+});
