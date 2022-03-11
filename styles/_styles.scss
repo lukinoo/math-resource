@@ -232,7 +232,6 @@ h1 {
     .msg-wrapper {
       display: flex;
       justify-content: space-between;
-      // width: 95%;
       margin-bottom: 0;
       .email-msg {
         background-color: $errorMessage;
@@ -243,6 +242,9 @@ h1 {
         border-radius: 2px;
         position: relative;
         display: none;
+      }
+      .email-msg.error {
+        display: block;
       }
       .sb4:before {
         content: '';
@@ -276,6 +278,9 @@ h1 {
     .input.success {
       border: 1px solid $successMessage;
     }
+    input:focus {
+      outline-color: $darkBlue;
+    }
     .restore-wrapper {
       display: flex;
       justify-content: space-between;
@@ -297,8 +302,44 @@ h1 {
         }
       }
     }
-    .enter,
-    #enter-send {
+    .btn-wrapper-onMail {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      #cancel {
+        font-size: 18px;
+        border: none;
+        background: transparent;
+        color: $lightBlack;
+        width: auto;
+        margin: 1rem auto;
+        padding: 0.8rem 1.8rem;
+        border-radius: 9px;
+        cursor: pointer;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+      #enter-send {
+        background-color: $darkBlue;
+        color: $whiteColor;
+        font-size: 18px;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0px 3px 6px #00000029;
+        width: auto;
+        margin: 1rem auto;
+        padding: 0.8rem 1.8rem;
+        cursor: pointer;
+      }
+    }
+    .recovery,
+    .registration {
+      font-size: 13px;
+      color: $primaryColor;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .enter {
       background-color: $darkBlue;
       color: $whiteColor;
       font-size: 18px;
@@ -308,14 +349,6 @@ h1 {
       width: auto;
       margin: 1rem auto;
       padding: 0.8rem 1.8rem;
-      cursor: pointer;
-    }
-    .recovery,
-    .registration {
-      font-size: 13px;
-      color: $primaryColor;
-      background: transparent;
-      border: none;
       cursor: pointer;
     }
     #recovery,
@@ -334,7 +367,11 @@ h1 {
         margin: 0;
         margin-right: 0.5rem;
         padding: 0;
-        width: 2%;
+        width: 15%;
+      }
+      label {
+        line-height: 18px;
+        font-size: 13px;
       }
     }
   }
@@ -350,6 +387,10 @@ h1 {
   .failure-icon {
     color: $errorMessage;
     margin-left: 0.5rem;
+    opacity: 0;
+    display: none;
+  }
+  .failure-icon.error {
     opacity: 1;
     display: inline-block;
   }
@@ -358,7 +399,12 @@ h1 {
     background-color: $successMessage;
     margin-left: 0.5rem;
     border-radius: 100%;
-    opacity: 1;
+    opacity: 0;
     display: none;
+  }
+
+  .success-icon.success {
+    opacity: 1;
+    display: inline-block;
   }
 }

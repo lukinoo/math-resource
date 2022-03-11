@@ -441,6 +441,10 @@ h1 {
   display: none;
 }
 
+.auth-container form .msg-wrapper .email-msg.error {
+  display: block;
+}
+
 .auth-container form .msg-wrapper .sb4:before {
   content: '';
   width: 0px;
@@ -477,6 +481,10 @@ h1 {
   border: 1px solid #bdd36e;
 }
 
+.auth-container form input:focus {
+  outline-color: #3571a3;
+}
+
 .auth-container form .restore-wrapper {
   display: flex;
   justify-content: space-between;
@@ -502,8 +510,26 @@ h1 {
   width: 20%;
 }
 
-.auth-container form .enter,
-.auth-container form #enter-send {
+.auth-container form .btn-wrapper-onMail {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.auth-container form .btn-wrapper-onMail #cancel {
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  color: #483e3e;
+  width: auto;
+  margin: 1rem auto;
+  padding: 0.8rem 1.8rem;
+  border-radius: 9px;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.auth-container form .btn-wrapper-onMail #enter-send {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
@@ -522,6 +548,19 @@ h1 {
   color: #3571a3;
   background: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.auth-container form .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px #00000029;
+  width: auto;
+  margin: 1rem auto;
+  padding: 0.8rem 1.8rem;
   cursor: pointer;
 }
 
@@ -545,7 +584,12 @@ h1 {
   margin: 0;
   margin-right: 0.5rem;
   padding: 0;
-  width: 2%;
+  width: 15%;
+}
+
+.auth-container form .agree-policies-wrapper label {
+  line-height: 18px;
+  font-size: 13px;
 }
 
 .auth-container .active {
@@ -563,6 +607,11 @@ h1 {
 .auth-container .failure-icon {
   color: #ff7474;
   margin-left: 0.5rem;
+  opacity: 0;
+  display: none;
+}
+
+.auth-container .failure-icon.error {
   opacity: 1;
   display: inline-block;
 }
@@ -572,7 +621,12 @@ h1 {
   background-color: #bdd36e;
   margin-left: 0.5rem;
   border-radius: 100%;
-  opacity: 1;
+  opacity: 0;
   display: none;
+}
+
+.auth-container .success-icon.success {
+  opacity: 1;
+  display: inline-block;
 }
 /*# sourceMappingURL=global.css.map */
