@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Authorization</title>
+    <script src="https://kit.fontawesome.com/71fe441a00.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body class="about-body">
@@ -31,27 +32,43 @@
         <h1>მათემატიკის რესურსი</h1>
         <form action="submit" class="auth-form" id="auth-form">
           <h3>ავტორიზაცია</h3>
+          <div class="msg-wrapper">
           <label for="email">ი-მეილი</label>
+          <div class="email-msg sb4">სცადეთ სხვა იმეილი</div>
+        </div>
+          <div>
           <input
             type="email"
             name="email"
+            class="input"
             id="email"
             required
           />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
           <label for="pass">პაროლი</label>
+          <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
+        </div>
+          <div>
           <input
             type="password"
             id="pass"
             name="password"
+            class="input"
             minlength="8"
             required
           />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
           <div class="restore-wrapper">
             <div>
               <input
                 type="checkbox"
                 id="remember"
-                class="remember"
+                class="remember input"
                 name="remember"
                 checked
               /><label class="remember">დამახსოვრება</label>
@@ -63,22 +80,38 @@
         </form>
         <form action="submit" class="pass-form" id="pass-form">
           <h3>პაროლის აღდგენა</h3>
-          <label for="password">ახალი პაროლი</label>
+          <div class="msg-wrapper">
+            <label for="pass">ახალი პაროლი</label>
+            <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
+          </div>
+          <div>
           <input
             type="password"
             id="recovery_password"
             name="password"
+            class="input"
             minlength="8"
             required
           />
-          <label for="pass">გაიმეორე პაროლი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">გაიმეორეთ პაროლი</label>
+          <div class="email-msg sb4">პაროლი არ ემთხვევა</div>
+        </div>
+          <div>
           <input
             type="password"
             id="repeat_pass"
             name="password"
+            class="input"
             minlength="8"
             required
           />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
             <button type="button" class="recovery" id="recovery">პაროლის აღდგენა</button>
           </div>
           <button type="submit" class="enter" id="remember-button">დამახსოვრება</button>
@@ -86,84 +119,154 @@
         </form>
         <form action="submit" class="email-form" id="email-form">
           <h3>პაროლის აღდგენა</h3>
-          <label for="email">ი-მეილი</label>
+          <div class="msg-wrapper">
+            <label for="pass">ი-მეილი</label>
+            <div class="email-msg sb4">სცადეთ სხვა იმეილი</div>
+          </div>
+          <div>
           <input
             type="email"
             name="email"
-            class="email"
+            class="email input"
             id="recovery_email"
             required
           />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
           <button type="submit" id="enter-send">გაგზავნა</button>
           <button type="button" class="registration" id="registration-on-email">რეგისტრაცია</button>
         </form>
         <form action="submit" class="register-form" id="register-form">
           <h3>ახალი ანგარიშის შექმნა</h3>
-          <label for="first_name">სახელი</label>
+          <div class="msg-wrapper">
+            <label for="pass">სახელი</label>
+            <div class="email-msg sb4">ამ ველის შევსება აუცილებელია</div>
+          </div>
+          <div>
           <input
             type="text"
             id="first_name"
             name="first_name"
+            class="input"
             minlength="8"
             required
           />
-          <label for="last_name">გვარი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">გვარი</label>
+          <div class="email-msg sb4">ამ ველის შევსება აუცილებელია</div>
+        </div>
+          <div>
           <input
             type="text"
             id="last_name"
             name="last_name"
+            class="input"
             minlength="8"
             required
           />
-          <label for="region">რეგიონი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">რეგიონი</label>
+          <div class="email-msg sb4">ამ ველის შევსება აუცილებელია</div>
+        </div>
+          <div>
           <input
             type="text"
             id="region"
             name="region"
+            class="input"
             minlength="8"
             required
           />
-          <label for="school">სკოლა</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">სკოლა</label>
+          <div class="email-msg sb4">ამ ველის შევსება აუცილებელია</div>
+        </div>
+          <div>
           <input
             type="text"
             id="school"
             name="school"
+            class="input"
             minlength="8"
             required
           />
-          <label for="grade">კლასი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">კლასი</label>
+          <div class="email-msg sb4">ამ ველის შევსება აუცილებელია</div>
+        </div>
+          <div>
           <input
             type="text"
             id="grade"
-            class="grade"
+            class="grade input"
             name="grade"
             minlength="8"
             required
           />
-          <label for="email">ი-მეილი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">ი-მეილი</label>
+          <div class="email-msg sb4">ი-მეილი უკვე არსებობს</div>
+        </div>
+          <div>
           <input
             type="email"
             name="email"
+            class="input"
             id="register_email"
             required
           />
-          <label for="password">ახალი პაროლი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">პაროლი</label>
+          <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
+        </div>
+          <div>
           <input
             type="password"
             id="new_password"
             name="new_password"
+            class="input"
             minlength="8"
             required
           />
-          <label for="repeat_new_pass">გაიმეორე პაროლი</label>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">გაიმეორეთ პაროლი</label>
+          <div class="email-msg sb4">პაროლი არ ემთხვევა</div>
+        </div>
+          <div>
           <input
             type="password"
             id="repeat_new_pass"
             name="repeat_new_pass"
+            class="input"
             minlength="8"
             required
           />
-          <div>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+        </div>
+          <div class="agree-policies-wrapper">
           <input
                 type="checkbox"
                 id="agree-policies"

@@ -19,6 +19,7 @@ const registrationButton = document.querySelector('#registration-on-auth');
 const registrationButtonOnEmail = document.querySelector(
   '#registration-on-email'
 );
+const enterBtn = document.querySelector('#enter');
 
 const cards = [
   {
@@ -156,6 +157,14 @@ const removeClass = (element) => {
   element.classList.remove('active');
 };
 
+const errorMsg = (element) => {
+  element.classList.add('error');
+};
+
+const successMsg = (element) => {
+  element.classList.remove('success');
+};
+
 registrationButton.addEventListener('click', () => {
   addClass(authForm);
   addClass(registerForm);
@@ -180,3 +189,19 @@ registrationBtnOnRecovery.addEventListener('click', () => {
   addClass(registerForm);
   removeClass(passwordForm);
 });
+
+enterBtn.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
+
+let engine = (id, serial) => {
+  if (id.value.trim() === '') {
+    id.style.border = '2px solid red';
+    failureIcon[serial].style.opacity = '1';
+    successIcon[serial].style.opacity = '0';
+  } else {
+    id.style.border = '2px solid green';
+    failureIcon[serial].style.opacity = '0';
+    successIcon[serial].style.opacity = '1';
+  }
+};
