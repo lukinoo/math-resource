@@ -20,6 +20,28 @@ const registrationButtonOnEmail = document.querySelector(
   '#registration-on-email'
 );
 
+let id = (id) => document.getElementById(id);
+let classes = (classes) => document.getElementsByClassName(classes);
+let email = id('email'),
+  enterBtn = id('enter'),
+  emailFld = id('email'),
+  passFld = id('pass'),
+  password = id('pass'),
+  firstName = id('first_name'),
+  lastName = id('last_name'),
+  region = id('region'),
+  school = id('school'),
+  grade = id('grade'),
+  recoveryEmail = id('recovery_email'),
+  recoveryPass = id('recovery_password'),
+  repeatRecPass = id('repeat_pass'),
+  registeringEmail = id('register_email'),
+  newPassword = id('new_password'),
+  repeatPassword = id('repeat_new_pass'),
+  successIcon = classes('success-icon'),
+  failureIcon = classes('failure-icon'),
+  errorMessage = classes('email-msg');
+
 const cards = [
   {
     id: 1,
@@ -156,6 +178,22 @@ const removeClass = (element) => {
   element.classList.remove('active');
 };
 
+const errorMsgAdd = (element) => {
+  element.classList.add('error');
+};
+
+const errorMsgRemove = (element) => {
+  element.classList.remove('error');
+};
+
+const successMsgAdd = (element) => {
+  element.classList.add('success');
+};
+
+const successMsgRemove = (element) => {
+  element.classList.remove('success');
+};
+
 registrationButton.addEventListener('click', () => {
   addClass(authForm);
   addClass(registerForm);
@@ -180,3 +218,52 @@ registrationBtnOnRecovery.addEventListener('click', () => {
   addClass(registerForm);
   removeClass(passwordForm);
 });
+
+authForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  engine(emailFld, 0);
+  engine(passFld, 1);
+});
+
+registerForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  engine(firstName, 5);
+  engine(lastName, 6);
+  engine(region, 7);
+  engine(school, 8);
+  engine(grade, 9);
+  engine(registeringEmail, 10);
+  engine(newPassword, 11);
+  engine(repeatPassword, 12);
+});
+
+emailForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  engine(recoveryEmail, 4);
+});
+
+passwordForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  engine(recoveryPass, 2);
+  engine(repeatRecPass, 3);
+});
+
+let engine = (id, serial) => {
+  if (id.value.trim() === '') {
+    errorMsgAdd(id);
+    errorMsgAdd(failureIcon[serial]);
+    errorMsgAdd(errorMessage[serial]);
+    successMsgRemove(id);
+    successMsgRemove(successIcon[serial]);
+  } else {
+    errorMsgRemove(id);
+    errorMsgRemove(failureIcon[serial]);
+    errorMsgRemove(errorMessage[serial]);
+    successMsgAdd(id);
+    successMsgAdd(successIcon[serial]);
+  }
+};
