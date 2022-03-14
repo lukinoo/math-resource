@@ -38,9 +38,12 @@ let email = id('email'),
   registeringEmail = id('register_email'),
   newPassword = id('new_password'),
   repeatPassword = id('repeat_new_pass'),
+  registrationBtn = id('registration-button'),
   successIcon = classes('success-icon'),
   failureIcon = classes('failure-icon'),
-  errorMessage = classes('email-msg');
+  errorMessage = classes('email-msg'),
+  successPage = id('successful-registration'),
+  authContainer = id('auth-container');
 
 const cards = [
   {
@@ -219,6 +222,13 @@ registrationBtnOnRecovery.addEventListener('click', () => {
   removeClass(passwordForm);
 });
 
+// registrationBtn.addEventListener('click', (e) => {
+//   e.preventDefault();
+
+// addClass(authContainer);
+// addClass(successPage);
+// });
+
 authForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -237,6 +247,8 @@ registerForm.addEventListener('submit', (e) => {
   engine(registeringEmail, 10);
   engine(newPassword, 11);
   engine(repeatPassword, 12);
+  addClass(authContainer);
+  addClass(successPage);
 });
 
 emailForm.addEventListener('submit', (e) => {

@@ -208,117 +208,139 @@ h1 {
   }
 }
 
-.auth-container {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  form {
-    display: none;
+.authorization {
+  .auth-container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
-    padding: 3rem 2rem 3rem 5rem;
-    width: 100%;
-    height: 40%;
-    border-radius: 9px;
-    background-color: $whiteColor;
-    box-shadow: 0px 3px 6px #00000029;
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      align-self: center;
-      margin-bottom: 2rem;
-    }
-    .msg-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0;
-      .email-msg {
-        background-color: $errorMessage;
-        color: $whiteColor;
-        padding: 0.3rem 0.5rem;
-        text-align: center;
-        font-size: 13px;
-        border-radius: 2px;
-        position: relative;
-        display: none;
+    form {
+      display: none;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      padding: 3rem 2rem 3rem 5rem;
+      width: 100%;
+      height: 40%;
+      border-radius: 9px;
+      background-color: $whiteColor;
+      box-shadow: 0px 3px 6px #00000029;
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        align-self: center;
+        margin-bottom: 2rem;
       }
-      .email-msg.error {
-        display: block;
-      }
-      .sb4:before {
-        content: '';
-        width: 0px;
-        height: 0px;
-        position: absolute;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid $errorMessage;
-        border-bottom: 10px solid transparent;
-        right: 15%;
-        bottom: -20px;
-      }
-    }
-    label {
-      color: #9191a0;
-      margin-bottom: 0;
-      font-size: 13px;
-    }
-    input {
-      border: 1px solid $cardsBorderColor;
-      border-radius: 4px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      width: 90%;
-      margin: 0 auto 1 auto;
-    }
-    .input.error {
-      border: 1px solid $errorMessage;
-    }
-    .input.success {
-      border: 1px solid $successMessage;
-    }
-    input:focus {
-      outline-color: $darkBlue;
-    }
-    .restore-wrapper {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      margin: 0 auto 1 auto;
-      label {
-        color: $darkBlack;
-      }
-      div {
+      .msg-wrapper {
         display: flex;
-        width: 30%;
-        align-items: center;
-        .remember {
-          margin-right: 0.5rem;
+        justify-content: space-between;
+        margin-bottom: 0;
+        .email-msg {
+          background-color: $errorMessage;
+          color: $whiteColor;
+          padding: 0.3rem 0.5rem;
+          text-align: center;
           font-size: 13px;
-          cursor: pointer;
-          margin-bottom: 0;
-          width: 20%;
+          border-radius: 2px;
+          position: relative;
+          display: none;
+        }
+        .email-msg.error {
+          display: block;
+        }
+        .sb4:before {
+          content: '';
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $errorMessage;
+          border-bottom: 10px solid transparent;
+          right: 15%;
+          bottom: -20px;
         }
       }
-    }
-    .btn-wrapper-onMail {
-      display: flex;
-      justify-content: space-around;
-      width: 90%;
-      #cancel {
-        font-size: 18px;
-        border: none;
-        background: transparent;
-        color: $lightBlack;
-        width: auto;
-        margin: 1rem auto;
-        padding: 0.8rem 1.8rem;
-        border-radius: 9px;
-        cursor: pointer;
-        box-shadow: 0px 3px 6px #00000029;
+      label {
+        color: #9191a0;
+        margin-bottom: 0;
+        font-size: 13px;
       }
-      #enter-send {
+      input {
+        border: 1px solid $cardsBorderColor;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        margin: 0 auto 1 auto;
+      }
+      .input.error {
+        border: 1px solid $errorMessage;
+      }
+      .input.success {
+        border: 1px solid $successMessage;
+      }
+      input:focus {
+        outline-color: $darkBlue;
+      }
+      .restore-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto 1 auto;
+        label {
+          color: $darkBlack;
+        }
+        div {
+          display: flex;
+          width: 30%;
+          align-items: center;
+          .remember {
+            margin-right: 0.5rem;
+            font-size: 13px;
+            cursor: pointer;
+            margin-bottom: 0;
+            width: 20%;
+          }
+        }
+      }
+      .btn-wrapper-onMail {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        #cancel {
+          font-size: 18px;
+          border: none;
+          background: transparent;
+          color: $lightBlack;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          border-radius: 9px;
+          cursor: pointer;
+          box-shadow: 0px 3px 6px #00000029;
+        }
+        #enter-send {
+          background-color: $darkBlue;
+          color: $whiteColor;
+          font-size: 18px;
+          border: none;
+          border-radius: 9px;
+          box-shadow: 0px 3px 6px #00000029;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          cursor: pointer;
+        }
+      }
+      .recovery,
+      .registration {
+        font-size: 13px;
+        color: $primaryColor;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .enter {
         background-color: $darkBlue;
         color: $whiteColor;
         font-size: 18px;
@@ -330,81 +352,97 @@ h1 {
         padding: 0.8rem 1.8rem;
         cursor: pointer;
       }
+      #recovery,
+      #recovery-on-auth {
+        align-self: flex-end;
+        margin-bottom: 0;
+      }
+      #enter-send {
+        margin-top: 3rem;
+      }
+      .agree-policies-wrapper {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        #agree-policies {
+          margin: 0;
+          margin-right: 0.5rem;
+          padding: 0;
+          width: 15%;
+        }
+        label {
+          line-height: 18px;
+          font-size: 13px;
+        }
+      }
     }
-    .recovery,
-    .registration {
-      font-size: 13px;
-      color: $primaryColor;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    .enter {
-      background-color: $darkBlue;
-      color: $whiteColor;
-      font-size: 18px;
-      border: none;
-      border-radius: 9px;
-      box-shadow: 0px 3px 6px #00000029;
-      width: auto;
-      margin: 1rem auto;
-      padding: 0.8rem 1.8rem;
-      cursor: pointer;
-    }
-    #recovery,
-    #recovery-on-auth {
-      align-self: flex-end;
-      margin-bottom: 0;
-    }
-    #enter-send {
-      margin-top: 3rem;
-    }
-    .agree-policies-wrapper {
+    .active {
       display: flex;
-      width: 90%;
-      align-items: center;
-      #agree-policies {
-        margin: 0;
-        margin-right: 0.5rem;
-        padding: 0;
-        width: 15%;
-      }
-      label {
-        line-height: 18px;
-        font-size: 13px;
-      }
     }
-  }
-  .active {
-    display: flex;
-  }
-  .auth-form {
-    display: flex;
-  }
-  .auth-form.active {
-    display: none;
-  }
-  .failure-icon {
-    color: $errorMessage;
-    margin-left: 0.5rem;
-    opacity: 0;
-    display: none;
-  }
-  .failure-icon.error {
-    opacity: 1;
-    display: inline-block;
-  }
-  .success-icon {
-    color: $whiteColor;
-    background-color: $successMessage;
-    margin-left: 0.5rem;
-    border-radius: 100%;
-    opacity: 0;
-    display: none;
+    .auth-form {
+      display: flex;
+    }
+    .auth-form.active {
+      display: none;
+    }
+    .failure-icon {
+      color: $errorMessage;
+      margin-left: 0.5rem;
+      opacity: 0;
+      display: none;
+    }
+    .failure-icon.error {
+      opacity: 1;
+      display: inline-block;
+    }
+    .success-icon {
+      color: $whiteColor;
+      background-color: $successMessage;
+      margin-left: 0.5rem;
+      border-radius: 100%;
+      opacity: 0;
+      display: none;
+    }
+
+    .success-icon.success {
+      opacity: 1;
+      display: inline-block;
+    }
   }
 
-  .success-icon.success {
-    opacity: 1;
-    display: inline-block;
+  .successful-registration {
+    display: none;
+    margin-top: 8rem;
+    h3,
+    h2 {
+      width: 30%;
+      font-size: 33px;
+      line-height: 38px;
+      font-weight: bold;
+      color: $primaryColor;
+      text-align: center;
+      margin: 2rem auto;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 41px;
+    }
+
+    p {
+      width: 30%;
+      font-size: 15px;
+      line-height: 17px;
+      color: $lightBlack;
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+
+  .successful-registration.active {
+    display: block;
+  }
+
+  .auth-container.active {
+    display: none;
   }
 }
