@@ -570,6 +570,13 @@ h1 {
   margin-bottom: 0;
 }
 
+.authorization .auth-container form #recovery {
+  width: 90%;
+  margin: 0 10% 0 0;
+  align-self: flex-end;
+  text-align: end;
+}
+
 .authorization .auth-container form #enter-send {
   margin-top: 3rem;
 }
@@ -606,6 +613,14 @@ h1 {
 
 .authorization .auth-container .email-form.active {
   display: flex;
+}
+
+.authorization .auth-container .pass-form {
+  display: flex;
+}
+
+.authorization .auth-container .pass-form.active {
+  display: none;
 }
 
 .authorization .auth-container .failure-icon {
@@ -714,5 +729,23 @@ h1 {
 
 .authorization .successful-recovery-tab.active {
   display: flex;
+}
+
+.authorization .successful-pass-change {
+  display: none;
+  margin-top: 8rem;
+}
+
+.authorization .successful-pass-change h2 {
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.authorization .successful-pass-change.active {
+  display: block;
 }
 /*# sourceMappingURL=global.css.map */

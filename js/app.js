@@ -43,6 +43,7 @@ let email = id('email'),
   recoveryTab = id('successful-recovery-tab'),
   recoveryAgainBtn = id('send-to-recovery-again'),
   authContainer = id('auth-container'),
+  successPassPage = id('successful-pass-change'),
   successIcon = classes('success-icon'),
   failureIcon = classes('failure-icon'),
   errorMessage = classes('email-msg');
@@ -199,6 +200,22 @@ const successMsgRemove = (element) => {
   element.classList.remove('success');
 };
 
+let engine = (id, serial) => {
+  if (id.value.trim() === '') {
+    errorMsgAdd(id);
+    errorMsgAdd(failureIcon[serial]);
+    errorMsgAdd(errorMessage[serial]);
+    successMsgRemove(id);
+    successMsgRemove(successIcon[serial]);
+  } else {
+    errorMsgRemove(id);
+    errorMsgRemove(failureIcon[serial]);
+    errorMsgRemove(errorMessage[serial]);
+    successMsgAdd(id);
+    successMsgAdd(successIcon[serial]);
+  }
+};
+
 registrationButton.addEventListener('click', () => {
   addClass(authForm);
   addClass(registerForm);
@@ -228,6 +245,9 @@ recoveryAgainBtn.addEventListener('click', () => {
   addClass(emailForm);
   removeClass(recoveryTab);
   removeClass(authContainer);
+  errorMsgRemove(recoveryEmail);
+  errorMsgRemove(failureIcon[4]);
+  errorMsgRemove(errorMessage[4]);
 });
 
 authForm.addEventListener('submit', (e) => {
@@ -253,6 +273,7 @@ registerForm.addEventListener('submit', (e) => {
     if (input.value.trim() !== '') {
       addClass(authContainer);
       addClass(successPage);
+      registerForm.reset();
     } else {
       engine(firstName, 5);
       engine(lastName, 6);
@@ -271,6 +292,7 @@ emailForm.addEventListener('submit', (e) => {
   if (recoveryEmail.value.trim() !== '') {
     addClass(recoveryTab);
     addClass(authContainer);
+    emailForm.reset();
   } else {
     engine(recoveryEmail, 4);
   }
@@ -278,23 +300,13 @@ emailForm.addEventListener('submit', (e) => {
 
 passwordForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  engine(recoveryPass, 2);
-  engine(repeatRecPass, 3);
-});
-
-let engine = (id, serial) => {
-  if (id.value.trim() === '') {
-    errorMsgAdd(id);
-    errorMsgAdd(failureIcon[serial]);
-    errorMsgAdd(errorMessage[serial]);
-    successMsgRemove(id);
-    successMsgRemove(successIcon[serial]);
+  if (recoveryPass.value.trim() !== '' && repeatRecPass.value.trim() !== '') {
+    addClass(authContainer);
+    addClass(successPassPage);
+    addClass(passwordForm);
+    passwordForm.reset();
   } else {
-    errorMsgRemove(id);
-    errorMsgRemove(failureIcon[serial]);
-    errorMsgRemove(errorMessage[serial]);
-    successMsgAdd(id);
-    successMsgAdd(successIcon[serial]);
+    engine(recoveryPass, 2);
+    engine(repeatRecPass, 3);
   }
-};
+});

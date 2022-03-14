@@ -357,6 +357,12 @@ h1 {
         align-self: flex-end;
         margin-bottom: 0;
       }
+      #recovery {
+        width: 90%;
+        margin: 0 10% 0 0;
+        align-self: flex-end;
+        text-align: end;
+      }
       #enter-send {
         margin-top: 3rem;
       }
@@ -387,6 +393,12 @@ h1 {
     }
     .email-form.active {
       display: flex;
+    }
+    .pass-form {
+      display: flex;
+    }
+    .pass-form.active {
+      display: none;
     }
     .failure-icon {
       color: $errorMessage;
@@ -487,5 +499,21 @@ h1 {
   }
   .successful-recovery-tab.active {
     display: flex;
+  }
+
+  .successful-pass-change {
+    display: none;
+    margin-top: 8rem;
+    h2 {
+      font-size: 33px;
+      line-height: 38px;
+      font-weight: bold;
+      color: $primaryColor;
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+  .successful-pass-change.active {
+    display: block;
   }
 }
