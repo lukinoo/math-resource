@@ -39,11 +39,13 @@ let email = id('email'),
   newPassword = id('new_password'),
   repeatPassword = id('repeat_new_pass'),
   registrationBtn = id('registration-button'),
+  successPage = id('successful-registration'),
+  recoveryTab = id('successful-recovery-tab'),
+  recoveryAgainBtn = id('send-to-recovery-again'),
+  authContainer = id('auth-container'),
   successIcon = classes('success-icon'),
   failureIcon = classes('failure-icon'),
-  errorMessage = classes('email-msg'),
-  successPage = id('successful-registration'),
-  authContainer = id('auth-container');
+  errorMessage = classes('email-msg');
 
 const cards = [
   {
@@ -222,12 +224,11 @@ registrationBtnOnRecovery.addEventListener('click', () => {
   removeClass(passwordForm);
 });
 
-// registrationBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-
-// addClass(authContainer);
-// addClass(successPage);
-// });
+recoveryAgainBtn.addEventListener('click', () => {
+  addClass(emailForm);
+  removeClass(recoveryTab);
+  removeClass(authContainer);
+});
 
 authForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -238,23 +239,41 @@ authForm.addEventListener('submit', (e) => {
 
 registerForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  engine(firstName, 5);
-  engine(lastName, 6);
-  engine(region, 7);
-  engine(school, 8);
-  engine(grade, 9);
-  engine(registeringEmail, 10);
-  engine(newPassword, 11);
-  engine(repeatPassword, 12);
-  addClass(authContainer);
-  addClass(successPage);
+  let arrayOfInputs = [
+    firstName,
+    lastName,
+    region,
+    school,
+    grade,
+    registeringEmail,
+    newPassword,
+    repeatPassword,
+  ];
+  arrayOfInputs.forEach((input) => {
+    if (input.value.trim() !== '') {
+      addClass(authContainer);
+      addClass(successPage);
+    } else {
+      engine(firstName, 5);
+      engine(lastName, 6);
+      engine(region, 7);
+      engine(school, 8);
+      engine(grade, 9);
+      engine(registeringEmail, 10);
+      engine(newPassword, 11);
+      engine(repeatPassword, 12);
+    }
+  });
 });
 
 emailForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  engine(recoveryEmail, 4);
+  if (recoveryEmail.value.trim() !== '') {
+    addClass(recoveryTab);
+    addClass(authContainer);
+  } else {
+    engine(recoveryEmail, 4);
+  }
 });
 
 passwordForm.addEventListener('submit', (e) => {

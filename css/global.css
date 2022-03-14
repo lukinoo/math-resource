@@ -604,6 +604,10 @@ h1 {
   display: none;
 }
 
+.authorization .auth-container .email-form.active {
+  display: flex;
+}
+
 .authorization .auth-container .failure-icon {
   color: #ff7474;
   margin-left: 0.5rem;
@@ -666,5 +670,49 @@ h1 {
 
 .authorization .auth-container.active {
   display: none;
+}
+
+.authorization .successful-recovery-tab {
+  width: 50%;
+  margin: 8rem auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  padding: 3rem 2rem 3rem 5rem;
+  height: 40%;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.authorization .successful-recovery-tab h3 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.authorization .successful-recovery-tab p {
+  color: #483e3e;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: left;
+  margin: 4rem auto;
+}
+
+.authorization .successful-recovery-tab button {
+  font-size: 14px;
+  color: #483e3e;
+  align-self: flex-end;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.authorization .successful-recovery-tab.active {
+  display: flex;
 }
 /*# sourceMappingURL=global.css.map */

@@ -385,6 +385,9 @@ h1 {
     .auth-form.active {
       display: none;
     }
+    .email-form.active {
+      display: flex;
+    }
     .failure-icon {
       color: $errorMessage;
       margin-left: 0.5rem;
@@ -444,5 +447,45 @@ h1 {
 
   .auth-container.active {
     display: none;
+  }
+
+  .successful-recovery-tab {
+    width: 50%;
+    margin: 8rem auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    padding: 3rem 2rem 3rem 5rem;
+    height: 40%;
+    border-radius: 9px;
+    background-color: $whiteColor;
+    box-shadow: 0px 3px 6px #00000029;
+    h3 {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: bold;
+      color: $darkBlack;
+    }
+    p {
+      color: $lightBlack;
+      font-size: 15px;
+      line-height: 17px;
+      text-align: left;
+      margin: 4rem auto;
+    }
+    button {
+      font-size: 14px;
+      color: $lightBlack;
+      align-self: flex-end;
+      text-align: left;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .successful-recovery-tab.active {
+    display: flex;
   }
 }
