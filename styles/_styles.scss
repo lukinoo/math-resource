@@ -212,14 +212,61 @@ h1 {
   }
 }
 
-.auth-container {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  form {
-    display: none;
+.authorization {
+  .auth-container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
+    form {
+      display: none;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      padding: 3rem 2rem 3rem 5rem;
+      width: 100%;
+      height: 40%;
+      border-radius: 9px;
+      background-color: $whiteColor;
+      box-shadow: 0px 3px 6px #00000029;
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        align-self: center;
+        margin-bottom: 2rem;
+      }
+      .msg-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        .email-msg {
+          background-color: $errorMessage;
+          color: $whiteColor;
+          padding: 0.3rem 0.5rem;
+          text-align: center;
+          font-size: 13px;
+          border-radius: 2px;
+          position: relative;
+          display: none;
+        }
+        .email-msg.error {
+          display: block;
+        }
+        .sb4:before {
+          content: '';
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $errorMessage;
+          border-bottom: 10px solid transparent;
+          right: 15%;
+          bottom: -20px;
+        }
+      }
+      label {
+        color: #9191a0;
+        margin-bottom: 0;
     row-gap: 0.5rem;
     padding: 3rem 2rem 3rem 5rem;
     width: 100%;
@@ -244,88 +291,86 @@ h1 {
         padding: 0.3rem 0.5rem;
         text-align: center;
         font-size: 13px;
-        border-radius: 2px;
-        position: relative;
-        display: none;
       }
-      .email-msg.error {
-        display: block;
+      input {
+        border: 1px solid $cardsBorderColor;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        margin: 0 auto 1 auto;
       }
-      .sb4:before {
-        content: '';
-        width: 0px;
-        height: 0px;
-        position: absolute;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid $errorMessage;
-        border-bottom: 10px solid transparent;
-        right: 15%;
-        bottom: -20px;
+      .input.error {
+        border: 1px solid $errorMessage;
       }
-    }
-    label {
-      color: #9191a0;
-      margin-bottom: 0;
-      font-size: 13px;
-    }
-    input {
-      border: 1px solid $cardsBorderColor;
-      border-radius: 4px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      width: 90%;
-      margin: 0 auto 1 auto;
-    }
-    .input.error {
-      border: 1px solid $errorMessage;
-    }
-    .input.success {
-      border: 1px solid $successMessage;
-    }
-    input:focus {
-      outline-color: $darkBlue;
-    }
-    .restore-wrapper {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      margin: 0 auto 1 auto;
-      label {
-        color: $darkBlack;
+      .input.success {
+        border: 1px solid $successMessage;
       }
-      div {
+      input:focus {
+        outline-color: $darkBlue;
+      }
+      .restore-wrapper {
         display: flex;
-        width: 30%;
-        align-items: center;
-        .remember {
-          margin-right: 0.5rem;
-          font-size: 13px;
-          cursor: pointer;
-          margin-bottom: 0;
-          width: 20%;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto 1 auto;
+        label {
+          color: $darkBlack;
+        }
+        div {
+          display: flex;
+          width: 30%;
+          align-items: center;
+          .remember {
+            margin-right: 0.5rem;
+            font-size: 13px;
+            cursor: pointer;
+            margin-bottom: 0;
+            width: 20%;
+          }
         }
       }
-    }
-    .btn-wrapper-onMail {
-      display: flex;
-      justify-content: space-around;
-      width: 90%;
-      #cancel {
-        font-size: 18px;
-        border: none;
+      .btn-wrapper-onMail {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        #cancel {
+          font-size: 18px;
+          border: none;
+          background: transparent;
+          color: $lightBlack;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          border-radius: 9px;
+          cursor: pointer;
+          box-shadow: 0px 3px 6px #00000029;
+        }
+        #enter-send {
+          background-color: $darkBlue;
+          color: $whiteColor;
+          font-size: 18px;
+          border: none;
+          border-radius: 9px;
+          box-shadow: 0px 3px 6px #00000029;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          cursor: pointer;
+        }
+      }
+      .recovery,
+      .registration {
+        font-size: 13px;
+        color: $primaryColor;
         background: transparent;
-        color: $lightBlack;
-        width: auto;
-        margin: 1rem auto;
-        padding: 0.8rem 1.8rem;
-        border-radius: 9px;
+        border: none;
         cursor: pointer;
         box-shadow: 0px 3px 6px #00000029;
         font-family: 'BPG Nino Mtavruli';
         font-weight: bold;
       }
-      #enter-send {
+      .enter {
         background-color: $darkBlue;
         color: $whiteColor;
         font-size: 18px;
@@ -339,7 +384,43 @@ h1 {
         padding: 0.8rem 1.8rem;
         cursor: pointer;
       }
+      #recovery,
+      #recovery-on-auth {
+        align-self: flex-end;
+        margin-bottom: 0;
+      }
+      #recovery {
+        width: 90%;
+        margin: 0 10% 0 0;
+        align-self: flex-end;
+        text-align: end;
+      }
+      #enter-send {
+        margin-top: 3rem;
+      }
+      .agree-policies-wrapper {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        #agree-policies {
+          margin: 0;
+          margin-right: 0.5rem;
+          padding: 0;
+          width: 15%;
+        }
+        label {
+          line-height: 18px;
+          font-size: 13px;
+        }
+      }
     }
+
+    .active {
+      display: flex;
+    }
+    .auth-form {
+      display: flex;
+
     .recovery,
     .registration {
       font-size: 13px;
@@ -362,61 +443,134 @@ h1 {
       font-family: 'BPG Nino Mtavruli';
       font-weight: bold;
       cursor: pointer;
+
     }
-    #recovery,
-    #recovery-on-auth {
-      align-self: flex-end;
-      margin-bottom: 0;
+    .auth-form.active {
+      display: none;
     }
-    #enter-send {
-      margin-top: 3rem;
-    }
-    .agree-policies-wrapper {
+    .email-form.active {
       display: flex;
-      width: 90%;
-      align-items: center;
-      #agree-policies {
-        margin: 0;
-        margin-right: 0.5rem;
-        padding: 0;
-        width: 15%;
-      }
-      label {
-        line-height: 18px;
-        font-size: 13px;
-      }
+    }
+    .pass-form {
+      display: flex;
+    }
+    .pass-form.active {
+      display: none;
+    }
+    .failure-icon {
+      color: $errorMessage;
+      margin-left: 0.5rem;
+      opacity: 0;
+      display: none;
+    }
+    .failure-icon.error {
+      opacity: 1;
+      display: inline-block;
+    }
+    .success-icon {
+      color: $whiteColor;
+      background-color: $successMessage;
+      margin-left: 0.5rem;
+      border-radius: 100%;
+      opacity: 0;
+      display: none;
+    }
+
+    .success-icon.success {
+      opacity: 1;
+      display: inline-block;
     }
   }
-  .active {
-    display: flex;
-  }
-  .auth-form {
-    display: flex;
-  }
-  .auth-form.active {
+
+  .successful-registration {
     display: none;
+    margin-top: 8rem;
+    h3,
+    h2 {
+      width: 30%;
+      font-size: 33px;
+      line-height: 38px;
+      font-weight: bold;
+      color: $primaryColor;
+      text-align: center;
+      margin: 2rem auto;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 41px;
+    }
+
+    p {
+      width: 30%;
+      font-size: 15px;
+      line-height: 17px;
+      color: $lightBlack;
+      text-align: center;
+      margin: 2rem auto;
+    }
   }
-  .failure-icon {
-    color: $errorMessage;
-    margin-left: 0.5rem;
-    opacity: 0;
-    display: none;
+
+  .successful-registration.active {
+    display: block;
   }
-  .failure-icon.error {
-    opacity: 1;
-    display: inline-block;
-  }
-  .success-icon {
-    color: $whiteColor;
-    background-color: $successMessage;
-    margin-left: 0.5rem;
-    border-radius: 100%;
-    opacity: 0;
+
+  .auth-container.active {
     display: none;
   }
 
-  .success-icon.success {
-    opacity: 1;
-    display: inline-block;
+  .successful-recovery-tab {
+    width: 50%;
+    margin: 8rem auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    padding: 3rem 2rem 3rem 5rem;
+    height: 40%;
+    border-radius: 9px;
+    background-color: $whiteColor;
+    box-shadow: 0px 3px 6px #00000029;
+    h3 {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: bold;
+      color: $darkBlack;
+    }
+    p {
+      color: $lightBlack;
+      font-size: 15px;
+      line-height: 17px;
+      text-align: left;
+      margin: 4rem auto;
+    }
+    button {
+      font-size: 14px;
+      color: $lightBlack;
+      align-self: flex-end;
+      text-align: left;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .successful-recovery-tab.active {
+    display: flex;
+  }
+
+  .successful-pass-change {
+    display: none;
+    margin-top: 8rem;
+    h2 {
+      font-size: 33px;
+      line-height: 38px;
+      font-weight: bold;
+      color: $primaryColor;
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+  .successful-pass-change.active {
+    display: block;
   }
 }

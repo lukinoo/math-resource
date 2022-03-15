@@ -438,14 +438,14 @@ h1 {
   text-align: left;
 }
 
-.auth-container {
+.authorization .auth-container {
   width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.auth-container form {
+.authorization .auth-container form {
   display: none;
   flex-direction: column;
   row-gap: 0.5rem;
@@ -458,20 +458,20 @@ h1 {
   font-family: 'BPG Nino Mtavruli';
 }
 
-.auth-container form h3 {
+.authorization .auth-container form h3 {
   font-size: 18px;
   font-weight: bold;
   align-self: center;
   margin-bottom: 2rem;
 }
 
-.auth-container form .msg-wrapper {
+.authorization .auth-container form .msg-wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
 }
 
-.auth-container form .msg-wrapper .email-msg {
+.authorization .auth-container form .msg-wrapper .email-msg {
   background-color: #ff7474;
   color: #ffffff;
   padding: 0.3rem 0.5rem;
@@ -482,11 +482,11 @@ h1 {
   display: none;
 }
 
-.auth-container form .msg-wrapper .email-msg.error {
+.authorization .auth-container form .msg-wrapper .email-msg.error {
   display: block;
 }
 
-.auth-container form .msg-wrapper .sb4:before {
+.authorization .auth-container form .msg-wrapper .sb4:before {
   content: '';
   width: 0px;
   height: 0px;
@@ -499,13 +499,13 @@ h1 {
   bottom: -20px;
 }
 
-.auth-container form label {
+.authorization .auth-container form label {
   color: #9191a0;
   margin-bottom: 0;
   font-size: 13px;
 }
 
-.auth-container form input {
+.authorization .auth-container form input {
   border: 1px solid #707070;
   border-radius: 4px;
   padding: 1rem;
@@ -514,36 +514,36 @@ h1 {
   margin: 0 auto 1 auto;
 }
 
-.auth-container form .input.error {
+.authorization .auth-container form .input.error {
   border: 1px solid #ff7474;
 }
 
-.auth-container form .input.success {
+.authorization .auth-container form .input.success {
   border: 1px solid #bdd36e;
 }
 
-.auth-container form input:focus {
+.authorization .auth-container form input:focus {
   outline-color: #3571a3;
 }
 
-.auth-container form .restore-wrapper {
+.authorization .auth-container form .restore-wrapper {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto 1 auto;
 }
 
-.auth-container form .restore-wrapper label {
+.authorization .auth-container form .restore-wrapper label {
   color: #000000;
 }
 
-.auth-container form .restore-wrapper div {
+.authorization .auth-container form .restore-wrapper div {
   display: flex;
   width: 30%;
   align-items: center;
 }
 
-.auth-container form .restore-wrapper div .remember {
+.authorization .auth-container form .restore-wrapper div .remember {
   margin-right: 0.5rem;
   font-size: 13px;
   cursor: pointer;
@@ -551,13 +551,13 @@ h1 {
   width: 20%;
 }
 
-.auth-container form .btn-wrapper-onMail {
+.authorization .auth-container form .btn-wrapper-onMail {
   display: flex;
   justify-content: space-around;
   width: 90%;
 }
 
-.auth-container form .btn-wrapper-onMail #cancel {
+.authorization .auth-container form .btn-wrapper-onMail #cancel {
   font-size: 18px;
   border: none;
   background: transparent;
@@ -572,7 +572,7 @@ h1 {
   font-weight: bold;
 }
 
-.auth-container form .btn-wrapper-onMail #enter-send {
+.authorization .auth-container form .btn-wrapper-onMail #enter-send {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
@@ -587,8 +587,8 @@ h1 {
   cursor: pointer;
 }
 
-.auth-container form .recovery,
-.auth-container form .registration {
+.authorization .auth-container form .recovery,
+.authorization .auth-container form .registration {
   font-size: 13px;
   color: #3571a3;
   background: transparent;
@@ -597,7 +597,7 @@ h1 {
   cursor: pointer;
 }
 
-.auth-container form .enter {
+.authorization .auth-container form .enter {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
@@ -612,59 +612,78 @@ h1 {
   cursor: pointer;
 }
 
-.auth-container form #recovery,
-.auth-container form #recovery-on-auth {
+.authorization .auth-container form #recovery,
+.authorization .auth-container form #recovery-on-auth {
   align-self: flex-end;
   margin-bottom: 0;
 }
 
-.auth-container form #enter-send {
+.authorization .auth-container form #recovery {
+  width: 90%;
+  margin: 0 10% 0 0;
+  align-self: flex-end;
+  text-align: end;
+}
+
+.authorization .auth-container form #enter-send {
   margin-top: 3rem;
 }
 
-.auth-container form .agree-policies-wrapper {
+.authorization .auth-container form .agree-policies-wrapper {
   display: flex;
   width: 90%;
   align-items: center;
 }
 
-.auth-container form .agree-policies-wrapper #agree-policies {
+.authorization .auth-container form .agree-policies-wrapper #agree-policies {
   margin: 0;
   margin-right: 0.5rem;
   padding: 0;
   width: 15%;
 }
 
-.auth-container form .agree-policies-wrapper label {
+.authorization .auth-container form .agree-policies-wrapper label {
   line-height: 18px;
   font-size: 13px;
 }
 
-.auth-container .active {
+.authorization .auth-container .active {
   display: flex;
 }
 
-.auth-container .auth-form {
+.authorization .auth-container .auth-form {
   display: flex;
 }
 
-.auth-container .auth-form.active {
+.authorization .auth-container .auth-form.active {
   display: none;
 }
 
-.auth-container .failure-icon {
+.authorization .auth-container .email-form.active {
+  display: flex;
+}
+
+.authorization .auth-container .pass-form {
+  display: flex;
+}
+
+.authorization .auth-container .pass-form.active {
+  display: none;
+}
+
+.authorization .auth-container .failure-icon {
   color: #ff7474;
   margin-left: 0.5rem;
   opacity: 0;
   display: none;
 }
 
-.auth-container .failure-icon.error {
+.authorization .auth-container .failure-icon.error {
   opacity: 1;
   display: inline-block;
 }
 
-.auth-container .success-icon {
+.authorization .auth-container .success-icon {
   color: #ffffff;
   background-color: #bdd36e;
   margin-left: 0.5rem;
@@ -673,8 +692,108 @@ h1 {
   display: none;
 }
 
-.auth-container .success-icon.success {
+.authorization .auth-container .success-icon.success {
   opacity: 1;
   display: inline-block;
+}
+
+.authorization .successful-registration {
+  display: none;
+  margin-top: 8rem;
+}
+
+.authorization .successful-registration h3,
+.authorization .successful-registration h2 {
+  width: 30%;
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.authorization .successful-registration h2 {
+  font-size: 36px;
+  line-height: 41px;
+}
+
+.authorization .successful-registration p {
+  width: 30%;
+  font-size: 15px;
+  line-height: 17px;
+  color: #483e3e;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.authorization .successful-registration.active {
+  display: block;
+}
+
+.authorization .auth-container.active {
+  display: none;
+}
+
+.authorization .successful-recovery-tab {
+  width: 50%;
+  margin: 8rem auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  padding: 3rem 2rem 3rem 5rem;
+  height: 40%;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.authorization .successful-recovery-tab h3 {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.authorization .successful-recovery-tab p {
+  color: #483e3e;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: left;
+  margin: 4rem auto;
+}
+
+.authorization .successful-recovery-tab button {
+  font-size: 14px;
+  color: #483e3e;
+  align-self: flex-end;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.authorization .successful-recovery-tab.active {
+  display: flex;
+}
+
+.authorization .successful-pass-change {
+  display: none;
+  margin-top: 8rem;
+}
+
+.authorization .successful-pass-change h2 {
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.authorization .successful-pass-change.active {
+  display: block;
 }
 /*# sourceMappingURL=global.css.map */
