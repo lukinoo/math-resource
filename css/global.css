@@ -615,12 +615,8 @@ h1 {
   display: flex;
 }
 
-.authorization .auth-container .pass-form {
-  display: flex;
-}
-
 .authorization .auth-container .pass-form.active {
-  display: none;
+  display: flex;
 }
 
 .authorization .auth-container .failure-icon {
