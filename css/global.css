@@ -469,17 +469,19 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .authorization .auth-container form .msg-wrapper .email-msg {
   background-color: #ff7474;
   color: #ffffff;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 0.1rem;
   text-align: center;
   font-size: 13px;
   border-radius: 2px;
   position: relative;
   display: none;
+  width: 40%;
 }
 
 .authorization .auth-container form .msg-wrapper .email-msg.error {
@@ -495,7 +497,7 @@ h1 {
   border-right: 10px solid transparent;
   border-top: 10px solid #ff7474;
   border-bottom: 10px solid transparent;
-  right: 15%;
+  right: 12%;
   bottom: -20px;
 }
 
@@ -663,12 +665,8 @@ h1 {
   display: flex;
 }
 
-.authorization .auth-container .pass-form {
-  display: flex;
-}
-
 .authorization .auth-container .pass-form.active {
-  display: none;
+  display: flex;
 }
 
 .authorization .auth-container .failure-icon {
@@ -676,6 +674,10 @@ h1 {
   margin-left: 0.5rem;
   opacity: 0;
   display: none;
+  position: absolute;
+  right: -32%;
+  bottom: 35px;
+  width: 40%;
 }
 
 .authorization .auth-container .failure-icon.error {
@@ -690,11 +692,19 @@ h1 {
   border-radius: 100%;
   opacity: 0;
   display: none;
+  position: absolute;
+  bottom: 35px;
 }
 
 .authorization .auth-container .success-icon.success {
   opacity: 1;
   display: inline-block;
+}
+
+.authorization .auth-container .input-icons {
+  display: flex;
+  position: relative;
+  width: 100%;
 }
 
 .authorization .successful-registration {
