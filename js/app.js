@@ -269,22 +269,46 @@ registerForm.addEventListener('submit', (e) => {
     newPassword,
     repeatPassword,
   ];
-  arrayOfInputs.forEach((input) => {
-    if (input.value.trim() !== '') {
-      addClass(authContainer);
-      addClass(successPage);
-      registerForm.reset();
-    } else {
-      engine(firstName, 5);
-      engine(lastName, 6);
-      engine(region, 7);
-      engine(school, 8);
-      engine(grade, 9);
-      engine(registeringEmail, 10);
-      engine(newPassword, 11);
-      engine(repeatPassword, 12);
-    }
-  });
+
+  if (
+    firstName.value.trim() !== '' &&
+    lastName.value.trim() !== '' &&
+    region.value.trim() !== '' &&
+    school.value.trim() !== '' &&
+    grade.value.trim() !== '' &&
+    registeringEmail.value.trim() !== '' &&
+    repeatPassword.value.trim() !== '' &&
+    registeringEmail.value.trim() !== ''
+  ) {
+    addClass(authContainer);
+    addClass(successPage);
+    registerForm.reset();
+  } else {
+    engine(firstName, 5);
+    engine(lastName, 6);
+    engine(region, 7);
+    engine(school, 8);
+    engine(grade, 9);
+    engine(registeringEmail, 10);
+    engine(newPassword, 11);
+    engine(repeatPassword, 12);
+  }
+  // arrayOfInputs.forEach((input) => {
+  //   if (input.value.trim() !== '') {
+  //     addClass(authContainer);
+  //     addClass(successPage);
+  //     registerForm.reset();
+  //   } else {
+  //     engine(firstName, 5);
+  //     engine(lastName, 6);
+  //     engine(region, 7);
+  //     engine(school, 8);
+  //     engine(grade, 9);
+  //     engine(registeringEmail, 10);
+  //     engine(newPassword, 11);
+  //     engine(repeatPassword, 12);
+  //   }
+  // });
 });
 
 emailForm.addEventListener('submit', (e) => {
