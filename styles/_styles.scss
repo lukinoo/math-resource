@@ -136,6 +136,18 @@ h1 {
     grid-gap: 30px;
     padding: 2rem 0;
 
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .card {
       border: 1px solid #707070;
       padding: 10px 15px;

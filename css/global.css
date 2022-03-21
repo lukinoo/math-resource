@@ -343,6 +343,27 @@ h1 {
   padding: 2rem 0;
 }
 
+@media screen and (max-width: 991px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .container .grid-container .card {
   border: 1px solid #707070;
   padding: 10px 15px;
