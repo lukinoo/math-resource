@@ -1,225 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <title>Math resource</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="logo-wrapper">
-          <img src="./assets/mathlogo.png" alt="logo" class="logo" />
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a href="pages/auth.html" id="auth-link">ავტორიზაცია</a>
-          </li>
-          <li>
-            <a href="pages/about.html">პროექტის შესახებ</a>
-          </li>
-          <li>
-            <a href="pages/contacts.html">კონტაქტი</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <h1>ამოხსენი მათემატიკური ამოცანები პითონის პროგრამული ენით</h1>
-    <section class="container">
-      <div class="filter">ფილტრი:</div>
-      <div class="sorting">
-        <p>სორტირება:</p>
-        <button type="button" class="popular" id="popular">პოპულარობა</button>
-        <button type="button" class="date" id="date">თარიღი</button>
-        <button type="button" class="alphabet" id="alphabet">ანბანი</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <title>Math resource</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo-wrapper">
+        <img src="./assets/mathlogo.png" alt="logo" class="logo" />
       </div>
-    </section>
-    <section class="container">
-      <div class="filters-wrapper">
-        <div class="main-dropdown">
-          <button class="dropdown">თემები <span>^</span></button>
-          <div id="myDropdown" class="dropdown-content">
-            <form>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ხაზები
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
+      <ul class="nav-links">
+        <li>
+          <a href="pages/auth.html" id="auth-link">ავტორიზაცია</a>
+        </li>
+        <li>
+          <a href="pages/about.html">პროექტის შესახებ</a>
+        </li>
+        <li>
+          <a href="pages/contacts.html">კონტაქტი</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <h1>ამოხსენი მათემატიკური ამოცანები პითონის პროგრამული ენით</h1>
+
+  <section class="container">
+    <div class="sorting">
+      <button type="button" class="filter-buttons">თემები</button>
+      <button type="button" class="filter-buttons">ავტორი</button>
+      <button type="button" class="filter-buttons">კლასი</button>
+    </div>
+    <div class="filter-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="content-container">
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
               </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    კუთხეები
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
               </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ფიგურები
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
               </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    პითაგორას თეორემა
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
               </div>
-            </form>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+              <div class="item">
+                <div class="circle"></div>
+                <p>ფიგურები</p>
+              </div>
+            </div>
           </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
         </div>
-        <div class="main-dropdown">
-          <button class="dropdown">ავტორი <span>^</span></button>
-          <div id="myDropdown" class="dropdown-content">
-            <form>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ნინო ადამია
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ნინო ადამია
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ნინო სიდამონიძე
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    ნინო სიდამონიძე
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-            </form>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <div class="filter-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="content-container">
+              <div class="tag">ნინო ადამია</div>
+              <div class="tag">გიორგი თამაზაშვილი</div>
+              <div class="tag">ნინო ადამია</div>
+              <div class="tag">ია ია</div>
+              <div class="tag">გიორგი თამაზაშვილი</div>
+              <div class="tag">ია ფარულავა</div>
+              <div class="tag">თამაზ გრიგოლია</div>
+            </div>
           </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
         </div>
-        <div class="main-dropdown">
-          <button class="dropdown">კლასი <span>^</span></button>
-          <div id="myDropdown" class="dropdown-content">
-            <form>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    I-IV
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    I-IX
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-              <div>
-                <button type="button" class="child-dropdown">
-                  <input type="checkbox" />
-                  <div class="second-dropdown">
-                    I-XII
-                    <span>^</span>
-                  </div>
-                </button>
-                <div class="child-dropdown-content">
-                  <button type="button">A</button>
-                  <button type="button">B</button>
-                  <button type="button">C</button>
-                </div>
-              </div>
-            </form>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="content-container">
+              <div class="tag">I კლასი</div>
+              <div class="tag">II კლასი</div>
+              <div class="tag">III კლასი</div>
+              <div class="tag">IV კლასი</div>
+              <div class="tag">V კლასი</div>
+              <div class="tag">VI კლასი</div>
+              <div class="tag">VII კლასი</div>
+              <div class="tag">VIII კლასი</div>
+              <div class="tag">IX კლასი</div>
+              <div class="tag">X კლასი</div>
+              <div class="tag">XI კლასი</div>
+              <div class="tag">XII კლასი</div>
+            </div>
           </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="grid-container">
+      <!-- row -->
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
         </div>
       </div>
-      <div class="cards-wrapper" id="cards-wrapper"></div>
-    </section>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+      <!-- row -->
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>ორუცნობიანი განტოლებათა სისტემა და ფორმულა</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">ნინო ადამია</div>
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">IV</div>
+        </div>
+      </div>
+      <div class="card">
+        <p>სამკუთხედის ფართობი</p>
+        <img src="./assets/Ellipse 90.svg" alt="Ellipse">
+        <div class="tags-container">
+          <div class="tag">გიორგი თამაზაშვილი</div>
+          <div class="tag">II</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="./js/navigation.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/api.js"></script>
-  </body>
+  <script src="./js/navigation.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</body>
+
 </html>
