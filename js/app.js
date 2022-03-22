@@ -153,28 +153,64 @@ window.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card) => (cardsWrapper.innerHTML += cardsContainer(card)));
 });
 
-// sort
+// --------------- Filters
 
-// const dropdown = document.querySelectorAll('.dropdown');
-// const dropdownContent = document.querySelectorAll('.dropdown-content');
-// const childDropdown = document.querySelectorAll('.child-dropdown');
-// const childDropdownContent = document.querySelectorAll('.child-dropdown-content');
+// filter btns
+const filterBtns = document.querySelectorAll('.sorting .filter-buttons');
+
+// filter containers
+const filterContainers = document.querySelectorAll('.filter-container');
 
 window.addEventListener('load', () => {
-  dropdown.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      dropdownContent[index].classList.toggle('dropdown-active');
-    });
-  });
-
-  childDropdown.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      childDropdownContent[index].classList.toggle(
-        'child-dropdown-content-active'
-      );
-    });
-  });
+  filterBtns[0].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[1], filterContainers[2]);
+    filterContainers[0].classList.toggle('active-filter')
+  })
+  filterBtns[1].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[0], filterContainers[2]);
+    filterContainers[1].classList.toggle('active-filter')
+  })
+  filterBtns[2].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[0], filterContainers[1]);
+    filterContainers[2].classList.toggle('active-filter')
+  })
 });
+
+const removeActiveFilter = (item1, item2) => {
+  if (item1.classList.contains('active-filter')) {
+    item1.classList.remove('active-filter')
+  }
+  if (item2.classList.contains('active-filter')) {
+    item2.classList.remove('active-filter')
+  }
+}
+
+const contentContainerItems = document.querySelectorAll('.content-container .item');
+const contentContainerAuthors = document.querySelectorAll('.content-container .tag');
+
+window.addEventListener('load', () => {
+  contentContainerItems.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('chosen')
+    })
+  })
+  contentContainerAuthors.forEach(author => {
+    author.addEventListener('click', () => {
+      author.classList.toggle('clicked')
+    })
+  })
+});
+
+const swiper = new Swiper('.swiper', {
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
+
+console.log(swiper);
+
+// ----x-----x---- Filters
 
 const addClass = (element) => {
   element.classList.add('active');

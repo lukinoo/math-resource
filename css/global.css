@@ -7,7 +7,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -183,7 +184,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
   background: #fdfdff;
   z-index: 99;
 }
@@ -193,9 +195,15 @@ header nav {
   margin: 0 auto;
   font-family: 'BPG Nino Mtavruli';
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header nav .logo-wrapper {
@@ -210,8 +218,12 @@ header nav .logo-wrapper .logo {
 
 header nav .nav-links {
   min-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header nav .nav-links li a {
@@ -233,202 +245,173 @@ h1 {
 .container {
   width: 85%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-family: 'DejaVu Sans';
-}
-
-.container .filter {
-  width: 20%;
 }
 
 .container .sorting {
-  width: 65%;
-  margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.container .sorting p {
-  font-style: italic;
-  margin-right: 1rem;
-  font-size: 14px;
-  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .container .sorting button {
-  padding: 8px 12px;
-  background: #ffffff;
-  color: #483e3e;
-  border: 2px solid #a7a7a7;
-  border-radius: 16px;
-  font-size: 14px;
-  font-weight: normal;
-  cursor: pointer;
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-family: inherit;
-}
-
-.container .sorting button:hover {
-  background-color: #3571a3;
-  color: #fdfdff;
-}
-
-.container .filters-wrapper {
-  width: 20%;
-  align-self: flex-start;
-}
-
-.container .filters-wrapper .main-dropdown {
-  position: relative;
-  margin: 5px 0;
-}
-
-.container .filters-wrapper .main-dropdown .dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-family: 'DejaVu Sans';
-  text-align: left;
-  padding: 10px;
   border: none;
-  background: #3571a3;
-  color: #fdfdff;
-  border-radius: 5px;
+  background-color: transparent;
+  font-size: 25px;
   cursor: pointer;
-  outline: none;
 }
 
-.container .filters-wrapper .main-dropdown .dropdown-content {
-  display: none;
-  width: 100%;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.container .filters-wrapper .main-dropdown .dropdown-content.dropdown-active {
-  display: block;
-}
-
-.container .filters-wrapper .main-dropdown .dropdown-content form {
-  width: 100%;
-}
-
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  text-align: left;
-  padding: 10px;
+.container .sorting button:focus {
   border: none;
-  background: #fdfdff;
-  color: #000000;
-  border: 1px solid #b2b2b2;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
 }
 
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown .second-dropdown {
-  margin-left: 5px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+.container .filter-container {
+  margin: 2rem 0;
   display: none;
 }
 
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown-content.child-dropdown-content-active {
+.container .filter-container.active-filter {
   display: block;
 }
 
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown-content button {
-  width: 100%;
-  text-align: left;
-  background: #fbfbfb;
-  padding: 10px;
-  border: none;
+.container .filter-container .swiper-slide {
+  padding: 0 50px;
+}
+
+.container .filter-container .swiper-slide .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+
+.container .filter-container .swiper-slide .content-container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
   cursor: pointer;
 }
 
-.container .filters-wrapper .main-dropdown .dropdown-content form .child-dropdown-content button:hover {
-  background: #929292;
-  color: #fdfdff;
+.container .filter-container .swiper-slide .content-container .item .circle {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c5c5c5;
 }
 
-.container .cards-wrapper {
-  width: 65%;
+.container .filter-container .swiper-slide .content-container .item.chosen .circle {
+  background-color: #3571A3;
 }
 
-@supports (display: grid) {
-  .container .cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(32%, 1fr));
-    column-gap: 1rem;
-    row-gap: 1.3rem;
+.container .filter-container .swiper-slide .content-container .item p {
+  font-size: 15px;
+}
+
+.container .filter-container .swiper-slide .content-container .tag {
+  padding: 10px;
+  background-color: #c5c5c5;
+  margin-right: 10px;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.container .filter-container .swiper-slide .content-container .tag.clicked {
+  background-color: #3571A3;
+  color: white;
+}
+
+.container .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.container .cards-wrapper .card {
-  background-color: #fdfdff;
+@media screen and (max-width: 700px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container .grid-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.container .grid-container .card {
   border: 1px solid #707070;
+  padding: 10px 15px;
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  row-gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.container .cards-wrapper .card .top-content {
-  width: 85%;
-  margin: 1rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container .cards-wrapper .card .top-content h3 {
+.container .grid-container .card p {
+  font-size: 13px;
   font-weight: bold;
-  width: 100px;
+  color: black;
 }
 
-.container .cards-wrapper .card .middle-content {
-  width: 85%;
-  margin: 1rem auto;
+.container .grid-container .card img {
+  margin: 2rem auto 1rem auto;
+}
+
+.container .grid-container .card .tags-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.container .cards-wrapper .card .bottom-content {
-  width: 85%;
-  margin: 1rem auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container .cards-wrapper .card .bottom-content p {
-  font-size: 11px;
-  background-color: #e5e0e0;
-  padding: 5px 8px;
-  border-radius: 16px;
+.container .grid-container .card .tags-container .tag {
+  padding: 5px;
+  background-color: #3571A3;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 9px;
+  color: white;
 }
 
 .about-body .about-project {
@@ -441,33 +424,47 @@ h1 {
 .authorization .auth-container {
   width: 50%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .authorization .auth-container form {
   display: none;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   width: 100%;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  box-shadow: 0px 3px 6px #00000029;
-  font-family: 'BPG Nino Mtavruli';
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
 }
 
 .authorization .auth-container form h3 {
   font-size: 18px;
   font-weight: bold;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-bottom: 2rem;
 }
 
 .authorization .auth-container form .msg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 0;
   width: 100%;
 }
@@ -504,10 +501,45 @@ h1 {
 .authorization .auth-container form label {
   color: #9191a0;
   margin-bottom: 0;
+  row-gap: 0.5rem;
+  padding: 3rem 2rem 3rem 5rem;
+  width: 100%;
+  height: 40%;
+  border-radius: 9px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  font-family: 'BPG Nino Mtavruli';
+}
+
+.authorization .auth-container form label h3 {
+  font-size: 18px;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 2rem;
+}
+
+.authorization .auth-container form label .msg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.authorization .auth-container form label .msg-wrapper .email-msg {
+  background-color: #ff7474;
+  color: #ffffff;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
   font-size: 13px;
 }
 
-.authorization .auth-container form input {
+.authorization .auth-container form label .msg-wrapper input {
   border: 1px solid #707070;
   border-radius: 4px;
   padding: 1rem;
@@ -516,36 +548,44 @@ h1 {
   margin: 0 auto 1 auto;
 }
 
-.authorization .auth-container form .input.error {
+.authorization .auth-container form label .msg-wrapper .input.error {
   border: 1px solid #ff7474;
 }
 
-.authorization .auth-container form .input.success {
+.authorization .auth-container form label .msg-wrapper .input.success {
   border: 1px solid #bdd36e;
 }
 
-.authorization .auth-container form input:focus {
+.authorization .auth-container form label .msg-wrapper input:focus {
   outline-color: #3571a3;
 }
 
-.authorization .auth-container form .restore-wrapper {
+.authorization .auth-container form label .msg-wrapper .restore-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 90%;
   margin: 0 auto 1 auto;
 }
 
-.authorization .auth-container form .restore-wrapper label {
+.authorization .auth-container form label .msg-wrapper .restore-wrapper label {
   color: #000000;
 }
 
-.authorization .auth-container form .restore-wrapper div {
+.authorization .auth-container form label .msg-wrapper .restore-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 30%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.authorization .auth-container form .restore-wrapper div .remember {
+.authorization .auth-container form label .msg-wrapper .restore-wrapper div .remember {
   margin-right: 0.5rem;
   font-size: 13px;
   cursor: pointer;
@@ -553,13 +593,16 @@ h1 {
   width: 20%;
 }
 
-.authorization .auth-container form .btn-wrapper-onMail {
+.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 90%;
 }
 
-.authorization .auth-container form .btn-wrapper-onMail #cancel {
+.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail #cancel {
   font-size: 18px;
   border: none;
   background: transparent;
@@ -569,18 +612,45 @@ h1 {
   padding: 0.8rem 1.8rem;
   border-radius: 9px;
   cursor: pointer;
-  box-shadow: 0px 3px 6px #00000029;
-  font-family: 'BPG Nino Mtavruli';
-  font-weight: bold;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
 }
 
-.authorization .auth-container form .btn-wrapper-onMail #enter-send {
+.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail #enter-send {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  width: auto;
+  margin: 1rem auto;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+}
+
+.authorization .auth-container form label .msg-wrapper .recovery,
+.authorization .auth-container form label .msg-wrapper .registration {
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  font-family: 'BPG Nino Mtavruli';
+  font-weight: bold;
+}
+
+.authorization .auth-container form label .msg-wrapper .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   font-family: 'BPG Nino Mtavruli';
@@ -589,8 +659,61 @@ h1 {
   cursor: pointer;
 }
 
-.authorization .auth-container form .recovery,
-.authorization .auth-container form .registration {
+.authorization .auth-container form label .msg-wrapper #recovery,
+.authorization .auth-container form label .msg-wrapper #recovery-on-auth {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.authorization .auth-container form label .msg-wrapper #recovery {
+  width: 90%;
+  margin: 0 10% 0 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: end;
+}
+
+.authorization .auth-container form label .msg-wrapper #enter-send {
+  margin-top: 3rem;
+}
+
+.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper #agree-policies {
+  margin: 0;
+  margin-right: 0.5rem;
+  padding: 0;
+  width: 15%;
+}
+
+.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper label {
+  line-height: 18px;
+  font-size: 13px;
+}
+
+.authorization .auth-container form label .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authorization .auth-container form label .auth-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authorization .auth-container form label .auth-form .recovery,
+.authorization .auth-container form label .auth-form .registration {
   font-size: 13px;
   color: #3571a3;
   background: transparent;
@@ -599,13 +722,14 @@ h1 {
   cursor: pointer;
 }
 
-.authorization .auth-container form .enter {
+.authorization .auth-container form label .auth-form .enter {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
@@ -614,62 +738,23 @@ h1 {
   cursor: pointer;
 }
 
-.authorization .auth-container form #recovery,
-.authorization .auth-container form #recovery-on-auth {
-  align-self: flex-end;
-  margin-bottom: 0;
-}
-
-.authorization .auth-container form #recovery {
-  width: 90%;
-  margin: 0 10% 0 0;
-  align-self: flex-end;
-  text-align: end;
-}
-
-.authorization .auth-container form #enter-send {
-  margin-top: 3rem;
-}
-
-.authorization .auth-container form .agree-policies-wrapper {
-  display: flex;
-  width: 90%;
-  align-items: center;
-}
-
-.authorization .auth-container form .agree-policies-wrapper #agree-policies {
-  margin: 0;
-  margin-right: 0.5rem;
-  padding: 0;
-  width: 15%;
-}
-
-.authorization .auth-container form .agree-policies-wrapper label {
-  line-height: 18px;
-  font-size: 13px;
-}
-
-.authorization .auth-container .active {
-  display: flex;
-}
-
-.authorization .auth-container .auth-form {
-  display: flex;
-}
-
-.authorization .auth-container .auth-form.active {
+.authorization .auth-container form label .auth-form .auth-form.active {
   display: none;
 }
 
-.authorization .auth-container .email-form.active {
+.authorization .auth-container form label .auth-form .email-form.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.authorization .auth-container .pass-form.active {
+.authorization .auth-container form label .auth-form .pass-form.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.authorization .auth-container .failure-icon {
+.authorization .auth-container form label .auth-form .failure-icon {
   color: #ff7474;
   margin-left: 0.5rem;
   opacity: 0;
@@ -680,12 +765,12 @@ h1 {
   width: 40%;
 }
 
-.authorization .auth-container .failure-icon.error {
+.authorization .auth-container form label .auth-form .failure-icon.error {
   opacity: 1;
   display: inline-block;
 }
 
-.authorization .auth-container .success-icon {
+.authorization .auth-container form label .auth-form .success-icon {
   color: #ffffff;
   background-color: #bdd36e;
   margin-left: 0.5rem;
@@ -696,24 +781,26 @@ h1 {
   bottom: 35px;
 }
 
-.authorization .auth-container .success-icon.success {
+.authorization .auth-container form label .auth-form .success-icon.success {
   opacity: 1;
   display: inline-block;
 }
 
-.authorization .auth-container .input-icons {
+.authorization .auth-container form label .auth-form .input-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 100%;
 }
 
-.authorization .successful-registration {
+.authorization .auth-container form label .successful-registration {
   display: none;
   margin-top: 8rem;
 }
 
-.authorization .successful-registration h3,
-.authorization .successful-registration h2 {
+.authorization .auth-container form label .successful-registration h3,
+.authorization .auth-container form label .successful-registration h2 {
   width: 30%;
   font-size: 33px;
   line-height: 38px;
@@ -723,12 +810,12 @@ h1 {
   margin: 2rem auto;
 }
 
-.authorization .successful-registration h2 {
+.authorization .auth-container form label .successful-registration h2 {
   font-size: 36px;
   line-height: 41px;
 }
 
-.authorization .successful-registration p {
+.authorization .auth-container form label .successful-registration p {
   width: 30%;
   font-size: 15px;
   line-height: 17px;
@@ -737,37 +824,45 @@ h1 {
   margin: 2rem auto;
 }
 
-.authorization .successful-registration.active {
+.authorization .auth-container form label .successful-registration.active {
   display: block;
 }
 
-.authorization .auth-container.active {
+.authorization .auth-container form label .auth-container.active {
   display: none;
 }
 
-.authorization .successful-recovery-tab {
+.authorization .auth-container form label .successful-recovery-tab {
   width: 50%;
   margin: 8rem auto;
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
 }
 
-.authorization .successful-recovery-tab h3 {
+.authorization .auth-container form label .successful-recovery-tab h3 {
   font-size: 18px;
   line-height: 21px;
   font-weight: bold;
   color: #000000;
 }
 
-.authorization .successful-recovery-tab p {
+.authorization .auth-container form label .successful-recovery-tab p {
   color: #483e3e;
   font-size: 15px;
   line-height: 17px;
@@ -775,26 +870,29 @@ h1 {
   margin: 4rem auto;
 }
 
-.authorization .successful-recovery-tab button {
+.authorization .auth-container form label .successful-recovery-tab button {
   font-size: 14px;
   color: #483e3e;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   text-align: left;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-.authorization .successful-recovery-tab.active {
+.authorization .auth-container form label .successful-recovery-tab.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.authorization .successful-pass-change {
+.authorization .auth-container form label .successful-pass-change {
   display: none;
   margin-top: 8rem;
 }
 
-.authorization .successful-pass-change h2 {
+.authorization .auth-container form label .successful-pass-change h2 {
   font-size: 33px;
   line-height: 38px;
   font-weight: bold;
@@ -803,7 +901,7 @@ h1 {
   margin: 2rem auto;
 }
 
-.authorization .successful-pass-change.active {
+.authorization .auth-container form label .successful-pass-change.active {
   display: block;
 }
 /*# sourceMappingURL=global.css.map */
