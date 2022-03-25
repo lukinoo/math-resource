@@ -52,7 +52,7 @@ h1 {
   width: $containerWidth;
   margin: 0 auto;
   font-family: 'DejaVu Sans';
-  
+
   .sorting {
     margin-bottom: 2rem;
 
@@ -102,8 +102,8 @@ h1 {
           }
 
           &.chosen {
-            .circle{
-              background-color: #3571A3;
+            .circle {
+              background-color: #3571a3;
             }
           }
 
@@ -122,7 +122,7 @@ h1 {
           white-space: nowrap;
 
           &.clicked {
-            background-color: #3571A3;
+            background-color: #3571a3;
             color: white;
           }
         }
@@ -175,7 +175,7 @@ h1 {
 
         .tag {
           padding: 5px;
-          background-color: #3571A3;
+          background-color: #3571a3;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
@@ -252,322 +252,431 @@ h1 {
       label {
         color: #9191a0;
         margin-bottom: 0;
-    row-gap: 0.5rem;
-    padding: 3rem 2rem 3rem 5rem;
-    width: 100%;
-    height: 40%;
-    border-radius: 9px;
-    background-color: $whiteColor;
-    box-shadow: 0px 3px 6px #00000029;
-    font-family: 'BPG Nino Mtavruli';
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      align-self: center;
-      margin-bottom: 2rem;
-    }
-    .msg-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0;
-      .email-msg {
-        background-color: $errorMessage;
-        color: $whiteColor;
-        padding: 0.3rem 0.5rem;
-        text-align: center;
-        font-size: 13px;
-      }
-      input {
-        border: 1px solid $cardsBorderColor;
-        border-radius: 4px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        width: 90%;
-        margin: 0 auto 1 auto;
-      }
-      .input.error {
-        border: 1px solid $errorMessage;
-      }
-      .input.success {
-        border: 1px solid $successMessage;
-      }
-      input:focus {
-        outline-color: $darkBlue;
-      }
-      .restore-wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: 0 auto 1 auto;
-        label {
-          color: $darkBlack;
+        row-gap: 0.5rem;
+        padding: 3rem 2rem 3rem 5rem;
+        width: 100%;
+        height: 40%;
+        border-radius: 9px;
+        background-color: $whiteColor;
+        box-shadow: 0px 3px 6px #00000029;
+        font-family: 'BPG Nino Mtavruli';
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          align-self: center;
+          margin-bottom: 2rem;
         }
-        div {
+        .msg-wrapper {
           display: flex;
-          width: 30%;
-          align-items: center;
-          .remember {
-            margin-right: 0.5rem;
+          justify-content: space-between;
+          margin-bottom: 0;
+          .email-msg {
+            background-color: $errorMessage;
+            color: $whiteColor;
+            padding: 0.3rem 0.5rem;
+            text-align: center;
             font-size: 13px;
+          }
+          input {
+            border: 1px solid $cardsBorderColor;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            width: 90%;
+            margin: 0 auto 1 auto;
+          }
+          .input.error {
+            border: 1px solid $errorMessage;
+          }
+          .input.success {
+            border: 1px solid $successMessage;
+          }
+          input:focus {
+            outline-color: $darkBlue;
+          }
+          .restore-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto 1 auto;
+            label {
+              color: $darkBlack;
+            }
+            div {
+              display: flex;
+              width: 30%;
+              align-items: center;
+              .remember {
+                margin-right: 0.5rem;
+                font-size: 13px;
+                cursor: pointer;
+                margin-bottom: 0;
+                width: 20%;
+              }
+            }
+          }
+          .btn-wrapper-onMail {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            #cancel {
+              font-size: 18px;
+              border: none;
+              background: transparent;
+              color: $lightBlack;
+              width: auto;
+              margin: 1rem auto;
+              padding: 0.8rem 1.8rem;
+              border-radius: 9px;
+              cursor: pointer;
+              box-shadow: 0px 3px 6px #00000029;
+            }
+            #enter-send {
+              background-color: $darkBlue;
+              color: $whiteColor;
+              font-size: 18px;
+              border: none;
+              border-radius: 9px;
+              box-shadow: 0px 3px 6px #00000029;
+              width: auto;
+              margin: 1rem auto;
+              padding: 0.8rem 1.8rem;
+              cursor: pointer;
+            }
+          }
+          .recovery,
+          .registration {
+            font-size: 13px;
+            color: $primaryColor;
+            background: transparent;
+            border: none;
             cursor: pointer;
+            box-shadow: 0px 3px 6px #00000029;
+            font-family: 'BPG Nino Mtavruli';
+            font-weight: bold;
+          }
+          .enter {
+            background-color: $darkBlue;
+            color: $whiteColor;
+            font-size: 18px;
+            border: none;
+            border-radius: 9px;
+            box-shadow: 0px 3px 6px #00000029;
+            width: auto;
+            margin: 1rem auto;
+            font-family: 'BPG Nino Mtavruli';
+            font-weight: bold;
+            padding: 0.8rem 1.8rem;
+            cursor: pointer;
+          }
+          #recovery,
+          #recovery-on-auth {
+            align-self: flex-end;
             margin-bottom: 0;
-            width: 20%;
+          }
+          #recovery {
+            width: 90%;
+            margin: 0 10% 0 0;
+            align-self: flex-end;
+            text-align: end;
+          }
+          #enter-send {
+            margin-top: 3rem;
+          }
+          .agree-policies-wrapper {
+            display: flex;
+            width: 90%;
+            align-items: center;
+            #agree-policies {
+              margin: 0;
+              margin-right: 0.5rem;
+              padding: 0;
+              width: 15%;
+            }
+            label {
+              line-height: 18px;
+              font-size: 13px;
+            }
           }
         }
-      }
-      .btn-wrapper-onMail {
-        display: flex;
-        justify-content: space-around;
-        width: 90%;
-        #cancel {
-          font-size: 18px;
-          border: none;
-          background: transparent;
-          color: $lightBlack;
-          width: auto;
-          margin: 1rem auto;
-          padding: 0.8rem 1.8rem;
+
+        .active {
+          display: flex;
+        }
+        .auth-form {
+          display: flex;
+
+          .recovery,
+          .registration {
+            font-size: 13px;
+            color: $primaryColor;
+            background: transparent;
+            border: none;
+            font-family: 'DejaVu Sans';
+            cursor: pointer;
+          }
+          .enter {
+            background-color: $darkBlue;
+            color: $whiteColor;
+            font-size: 18px;
+            border: none;
+            border-radius: 9px;
+            box-shadow: 0px 3px 6px #00000029;
+            width: auto;
+            margin: 1rem auto;
+            padding: 0.8rem 1.8rem;
+            font-family: 'BPG Nino Mtavruli';
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .auth-form.active {
+            display: none;
+          }
+          .email-form.active {
+            display: flex;
+          }
+          .pass-form.active {
+            display: flex;
+          }
+          .failure-icon {
+            color: $errorMessage;
+            margin-left: 0.5rem;
+            opacity: 0;
+            display: none;
+            position: absolute;
+            right: -32%;
+            bottom: 35px;
+            width: 40%;
+          }
+          .failure-icon.error {
+            opacity: 1;
+            display: inline-block;
+          }
+          .success-icon {
+            color: $whiteColor;
+            background-color: $successMessage;
+            margin-left: 0.5rem;
+            border-radius: 100%;
+            opacity: 0;
+            display: none;
+            position: absolute;
+            bottom: 35px;
+          }
+
+          .success-icon.success {
+            opacity: 1;
+            display: inline-block;
+          }
+
+          .input-icons {
+            display: flex;
+            position: relative;
+            width: 100%;
+          }
+        }
+
+        .successful-registration {
+          display: none;
+          margin-top: 8rem;
+          h3,
+          h2 {
+            width: 30%;
+            font-size: 33px;
+            line-height: 38px;
+            font-weight: bold;
+            color: $primaryColor;
+            text-align: center;
+            margin: 2rem auto;
+          }
+          h2 {
+            font-size: 36px;
+            line-height: 41px;
+          }
+
+          p {
+            width: 30%;
+            font-size: 15px;
+            line-height: 17px;
+            color: $lightBlack;
+            text-align: center;
+            margin: 2rem auto;
+          }
+        }
+
+        .successful-registration.active {
+          display: block;
+        }
+
+        .auth-container.active {
+          display: none;
+        }
+
+        .successful-recovery-tab {
+          width: 50%;
+          margin: 8rem auto;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 0.5rem;
+          padding: 3rem 2rem 3rem 5rem;
+          height: 40%;
           border-radius: 9px;
-          cursor: pointer;
+          background-color: $whiteColor;
           box-shadow: 0px 3px 6px #00000029;
+          h3 {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: bold;
+            color: $darkBlack;
+          }
+          p {
+            color: $lightBlack;
+            font-size: 15px;
+            line-height: 17px;
+            text-align: left;
+            margin: 4rem auto;
+          }
+          button {
+            font-size: 14px;
+            color: $lightBlack;
+            align-self: flex-end;
+            text-align: left;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+          }
         }
-        #enter-send {
-          background-color: $darkBlue;
-          color: $whiteColor;
-          font-size: 18px;
-          border: none;
-          border-radius: 9px;
-          box-shadow: 0px 3px 6px #00000029;
-          width: auto;
-          margin: 1rem auto;
-          padding: 0.8rem 1.8rem;
-          cursor: pointer;
+        .successful-recovery-tab.active {
+          display: flex;
         }
-      }
-      .recovery,
-      .registration {
-        font-size: 13px;
-        color: $primaryColor;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0px 3px 6px #00000029;
-        font-family: 'BPG Nino Mtavruli';
-        font-weight: bold;
-      }
-      .enter {
-        background-color: $darkBlue;
-        color: $whiteColor;
-        font-size: 18px;
-        border: none;
-        border-radius: 9px;
-        box-shadow: 0px 3px 6px #00000029;
-        width: auto;
-        margin: 1rem auto;
-        font-family: 'BPG Nino Mtavruli';
-        font-weight: bold;
-        padding: 0.8rem 1.8rem;
-        cursor: pointer;
-      }
-      #recovery,
-      #recovery-on-auth {
-        align-self: flex-end;
-        margin-bottom: 0;
-      }
-      #recovery {
-        width: 90%;
-        margin: 0 10% 0 0;
-        align-self: flex-end;
-        text-align: end;
-      }
-      #enter-send {
-        margin-top: 3rem;
-      }
-      .agree-policies-wrapper {
-        display: flex;
-        width: 90%;
-        align-items: center;
-        #agree-policies {
-          margin: 0;
-          margin-right: 0.5rem;
-          padding: 0;
-          width: 15%;
+
+        .successful-pass-change {
+          display: none;
+          margin-top: 8rem;
+          h2 {
+            font-size: 33px;
+            line-height: 38px;
+            font-weight: bold;
+            color: $primaryColor;
+            text-align: center;
+            margin: 2rem auto;
+          }
         }
-        label {
-          line-height: 18px;
-          font-size: 13px;
+        .successful-pass-change.active {
+          display: block;
         }
       }
     }
-
-    .active {
-      display: flex;
-    }
-    .auth-form {
-      display: flex;
-
-    .recovery,
-    .registration {
-      font-size: 13px;
-      color: $primaryColor;
-      background: transparent;
-      border: none;
-      font-family: 'DejaVu Sans';
-      cursor: pointer;
-    }
-    .enter {
-      background-color: $darkBlue;
-      color: $whiteColor;
-      font-size: 18px;
-      border: none;
-      border-radius: 9px;
-      box-shadow: 0px 3px 6px #00000029;
-      width: auto;
-      margin: 1rem auto;
-      padding: 0.8rem 1.8rem;
-      font-family: 'BPG Nino Mtavruli';
-      font-weight: bold;
-      cursor: pointer;
-
-    }
-    .auth-form.active {
-      display: none;
-    }
-    .email-form.active {
-      display: flex;
-    }
-    .pass-form.active {
-      display: flex;
-    }
-    .failure-icon {
-      color: $errorMessage;
-      margin-left: 0.5rem;
-      opacity: 0;
-      display: none;
-      position: absolute;
-      right: -32%;
-      bottom: 35px;
-      width: 40%;
-    }
-    .failure-icon.error {
-      opacity: 1;
-      display: inline-block;
-    }
-    .success-icon {
-      color: $whiteColor;
-      background-color: $successMessage;
-      margin-left: 0.5rem;
-      border-radius: 100%;
-      opacity: 0;
-      display: none;
-      position: absolute;
-      bottom: 35px;
-    }
-
-    .success-icon.success {
-      opacity: 1;
-      display: inline-block;
-    }
-
-    .input-icons {
-      display: flex;
-      position: relative;
-      width: 100%;
-    }
-  }
-
-  .successful-registration {
-    display: none;
-    margin-top: 8rem;
-    h3,
-    h2 {
-      width: 30%;
-      font-size: 33px;
-      line-height: 38px;
-      font-weight: bold;
-      color: $primaryColor;
-      text-align: center;
-      margin: 2rem auto;
-    }
-    h2 {
-      font-size: 36px;
-      line-height: 41px;
-    }
-
-    p {
-      width: 30%;
-      font-size: 15px;
-      line-height: 17px;
-      color: $lightBlack;
-      text-align: center;
-      margin: 2rem auto;
-    }
-  }
-
-  .successful-registration.active {
-    display: block;
-  }
-
-  .auth-container.active {
-    display: none;
-  }
-
-  .successful-recovery-tab {
-    width: 50%;
-    margin: 8rem auto;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    padding: 3rem 2rem 3rem 5rem;
-    height: 40%;
-    border-radius: 9px;
-    background-color: $whiteColor;
-    box-shadow: 0px 3px 6px #00000029;
-    h3 {
-      font-size: 18px;
-      line-height: 21px;
-      font-weight: bold;
-      color: $darkBlack;
-    }
-    p {
-      color: $lightBlack;
-      font-size: 15px;
-      line-height: 17px;
-      text-align: left;
-      margin: 4rem auto;
-    }
-    button {
-      font-size: 14px;
-      color: $lightBlack;
-      align-self: flex-end;
-      text-align: left;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-  }
-  .successful-recovery-tab.active {
-    display: flex;
-  }
-
-  .successful-pass-change {
-    display: none;
-    margin-top: 8rem;
-    h2 {
-      font-size: 33px;
-      line-height: 38px;
-      font-weight: bold;
-      color: $primaryColor;
-      text-align: center;
-      margin: 2rem auto;
-    }
-  }
-  .successful-pass-change.active {
-    display: block;
   }
 }
+
+.contacts-container {
+  height: 30vh;
+  width: 80%;
+  margin: 8rem auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  @include displayFlex(center, null);
+  $margin: 0 0 1rem 0;
+  .contacts-titles {
+    h2 {
+      margin: $margin;
+      font-size: 26px;
+      font-family: 'BPG Nino Mtavruli';
+    }
+    p {
+      margin: $margin;
+      font-family: 'BPG Banner Caps';
+    }
+  }
+  .contacts-email {
+    font-family: 'BPG Nino Mtavruli';
+    margin: $margin;
+    a {
+      color: $darkBlack;
+      font-size: 16px;
+      margin: 0 0 0 0.3rem;
+    }
+  }
+  .contacts-social-media {
+    i {
+      color: $darkBlue;
+    }
+  }
+}
+
+.page-not-found-container {
+  margin: 8rem 0 0 0;
+  height: 60vh;
+  display: flex;
+  @include displayFlex();
+  .page-not-found-wrapper {
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @include displayFlex(space-between);
+    font-family: 'BPG Nino Mtavruli';
+    h2 {
+      font-size: 1.7rem;
+    }
+    .main-page-route {
+      align-self: flex-end;
+      i {
+        color: $darkBlue;
+        margin: 0 0.3rem 0 0;
+      }
+      a {
+        color: $darkBlack;
+        font-size: 15px;
+        border-bottom: 1px solid inherit;
+        &:hover {
+          border-bottom: 1px solid #000000;
+        }
+      }
+    }
+    .emoji-sad {
+      position: relative;
+      width: 266px;
+      height: 266px;
+      border: 10px solid $lightGray;
+      border-radius: 50%;
+      .face {
+        width: inherit;
+        height: inherit;
+        .eye-left {
+          position: absolute;
+          top: 30%;
+          left: 25%;
+          transform: translate(-25%, -30%);
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background: $lightGray;
+        }
+        .eye-right {
+          position: absolute;
+          top: 30%;
+          right: 20%;
+          transform: translate(-20%, -30%);
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          background: $lightGray;
+        }
+        .mouth-sad {
+          position: absolute;
+          bottom: 4%;
+          left: 50%;
+          transform: translate(-50%, 4%);
+          width: 106px;
+          height: 80px;
+          border: 10px solid transparent;
+          border-radius: 50%;
+          border-top-color: $lightGray;
+        }
+      }
     }
   }
 }

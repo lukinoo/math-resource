@@ -7,8 +7,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -184,8 +183,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   background: #fdfdff;
   z-index: 99;
 }
@@ -195,15 +193,9 @@ header nav {
   margin: 0 auto;
   font-family: 'BPG Nino Mtavruli';
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header nav .logo-wrapper {
@@ -218,12 +210,8 @@ header nav .logo-wrapper .logo {
 
 header nav .nav-links {
   min-width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 header nav .nav-links li a {
@@ -279,26 +267,15 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   overflow: hidden;
 }
 
 .container .filter-container .swiper-slide .content-container .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -312,7 +289,7 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container .item.chosen .circle {
-  background-color: #3571A3;
+  background-color: #3571a3;
 }
 
 .container .filter-container .swiper-slide .content-container .item p {
@@ -330,37 +307,32 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container .tag.clicked {
-  background-color: #3571A3;
+  background-color: #3571a3;
   color: white;
 }
 
 .container .grid-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   padding: 2rem 0;
 }
 
 @media screen and (max-width: 991px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 700px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 500px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -368,19 +340,10 @@ h1 {
   border: 1px solid #707070;
   padding: 10px 15px;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .grid-container .card p {
@@ -395,19 +358,14 @@ h1 {
 
 .container .grid-container .card .tags-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .container .grid-container .card .tags-container .tag {
   padding: 5px;
-  background-color: #3571A3;
+  background-color: #3571a3;
   margin-right: 5px;
   margin-bottom: 5px;
   font-size: 9px;
@@ -424,47 +382,32 @@ h1 {
 .authorization .auth-container {
   width: 50%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .authorization .auth-container form {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   width: 100%;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .authorization .auth-container form h3 {
   font-size: 18px;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-bottom: 2rem;
 }
 
 .authorization .auth-container form .msg-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 0;
   width: 100%;
 }
@@ -507,27 +450,20 @@ h1 {
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .auth-container form label h3 {
   font-size: 18px;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-bottom: 2rem;
 }
 
 .authorization .auth-container form label .msg-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
@@ -561,12 +497,8 @@ h1 {
 }
 
 .authorization .auth-container form label .msg-wrapper .restore-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 90%;
   margin: 0 auto 1 auto;
 }
@@ -576,13 +508,9 @@ h1 {
 }
 
 .authorization .auth-container form label .msg-wrapper .restore-wrapper div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 30%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .authorization .auth-container form label .msg-wrapper .restore-wrapper div .remember {
@@ -594,11 +522,8 @@ h1 {
 }
 
 .authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 90%;
 }
 
@@ -612,8 +537,7 @@ h1 {
   padding: 0.8rem 1.8rem;
   border-radius: 9px;
   cursor: pointer;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail #enter-send {
@@ -622,8 +546,7 @@ h1 {
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
@@ -637,8 +560,7 @@ h1 {
   background: transparent;
   border: none;
   cursor: pointer;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   font-family: 'BPG Nino Mtavruli';
   font-weight: bold;
 }
@@ -649,8 +571,7 @@ h1 {
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   font-family: 'BPG Nino Mtavruli';
@@ -661,16 +582,14 @@ h1 {
 
 .authorization .auth-container form label .msg-wrapper #recovery,
 .authorization .auth-container form label .msg-wrapper #recovery-on-auth {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin-bottom: 0;
 }
 
 .authorization .auth-container form label .msg-wrapper #recovery {
   width: 90%;
   margin: 0 10% 0 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   text-align: end;
 }
 
@@ -679,13 +598,9 @@ h1 {
 }
 
 .authorization .auth-container form label .msg-wrapper .agree-policies-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .authorization .auth-container form label .msg-wrapper .agree-policies-wrapper #agree-policies {
@@ -701,14 +616,10 @@ h1 {
 }
 
 .authorization .auth-container form label .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .authorization .auth-container form label .auth-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -728,8 +639,7 @@ h1 {
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
@@ -743,14 +653,10 @@ h1 {
 }
 
 .authorization .auth-container form label .auth-form .email-form.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .authorization .auth-container form label .auth-form .pass-form.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -787,8 +693,6 @@ h1 {
 }
 
 .authorization .auth-container form label .auth-form .input-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 100%;
@@ -836,23 +740,15 @@ h1 {
   width: 50%;
   margin: 8rem auto;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .authorization .auth-container form label .successful-recovery-tab h3 {
@@ -873,8 +769,7 @@ h1 {
 .authorization .auth-container form label .successful-recovery-tab button {
   font-size: 14px;
   color: #483e3e;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   text-align: left;
   background: transparent;
   border: none;
@@ -882,8 +777,6 @@ h1 {
 }
 
 .authorization .auth-container form label .successful-recovery-tab.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -903,5 +796,131 @@ h1 {
 
 .authorization .auth-container form label .successful-pass-change.active {
   display: block;
+}
+
+.contacts-container {
+  height: 30vh;
+  width: 80%;
+  margin: 8rem auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-container .contacts-titles h2 {
+  margin: 0 0 1rem 0;
+  font-size: 26px;
+  font-family: 'BPG Nino Mtavruli';
+}
+
+.contacts-container .contacts-titles p {
+  margin: 0 0 1rem 0;
+  font-family: 'BPG Banner Caps';
+}
+
+.contacts-container .contacts-email {
+  font-family: 'BPG Nino Mtavruli';
+  margin: 0 0 1rem 0;
+}
+
+.contacts-container .contacts-email a {
+  color: #000000;
+  font-size: 16px;
+  margin: 0 0 0 0.3rem;
+}
+
+.contacts-container .contacts-social-media i {
+  color: #3571a3;
+}
+
+.page-not-found-container {
+  margin: 8rem 0 0 0;
+  height: 60vh;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-not-found-container .page-not-found-wrapper {
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'BPG Nino Mtavruli';
+}
+
+.page-not-found-container .page-not-found-wrapper h2 {
+  font-size: 1.7rem;
+}
+
+.page-not-found-container .page-not-found-wrapper .main-page-route {
+  align-self: flex-end;
+}
+
+.page-not-found-container .page-not-found-wrapper .main-page-route i {
+  color: #3571a3;
+  margin: 0 0.3rem 0 0;
+}
+
+.page-not-found-container .page-not-found-wrapper .main-page-route a {
+  color: #000000;
+  font-size: 15px;
+  border-bottom: 1px solid inherit;
+}
+
+.page-not-found-container .page-not-found-wrapper .main-page-route a:hover {
+  border-bottom: 1px solid #000000;
+}
+
+.page-not-found-container .page-not-found-wrapper .emoji-sad {
+  position: relative;
+  width: 266px;
+  height: 266px;
+  border: 10px solid #b2b2b2;
+  border-radius: 50%;
+}
+
+.page-not-found-container .page-not-found-wrapper .emoji-sad .face {
+  width: inherit;
+  height: inherit;
+}
+
+.page-not-found-container .page-not-found-wrapper .emoji-sad .face .eye-left {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  transform: translate(-25%, -30%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #b2b2b2;
+}
+
+.page-not-found-container .page-not-found-wrapper .emoji-sad .face .eye-right {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  transform: translate(-20%, -30%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #b2b2b2;
+}
+
+.page-not-found-container .page-not-found-wrapper .emoji-sad .face .mouth-sad {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, 4%);
+  width: 106px;
+  height: 80px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top-color: #b2b2b2;
 }
 /*# sourceMappingURL=global.css.map */
