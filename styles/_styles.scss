@@ -13,13 +13,16 @@ header {
   nav {
     width: $containerWidth;
     margin: 0 auto;
+    font-family: 'BPG Nino Mtavruli';
     height: 80px;
     @include displayFlex(space-between, center);
     .logo-wrapper {
       width: 60px;
       height: 60px;
-      border-radius: 50%;
-      background-image: linear-gradient(120deg, #fed142 30%, $darkBlue 100%);
+      .logo {
+        width: 100%;
+        height: 100%;
+      }
     }
     .nav-links {
       min-width: 40%;
@@ -35,12 +38,13 @@ header {
 }
 
 h1 {
-  width: 560px;
+  max-width: 800px;
   margin: 8rem auto 3rem auto;
   text-align: center;
   font-size: 33px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 50px;
+  font-family: 'BPG Banner Caps';
   text-transform: uppercase;
 }
 
@@ -48,6 +52,7 @@ h1 {
   width: $containerWidth;
   margin: 0 auto;
   @include displayFlex(space-between);
+  font-family: 'DejaVu Sans';
   .filter {
     width: 20%;
   }
@@ -64,6 +69,7 @@ h1 {
     button {
       @include buttonStyles;
       margin-right: 1rem;
+      font-family: inherit;
     }
     button:hover {
       background-color: $primaryColor;
@@ -73,14 +79,13 @@ h1 {
   .filters-wrapper {
     width: 20%;
     align-self: flex-start;
-
     .main-dropdown {
       position: relative;
       margin: 5px 0;
-
       .dropdown {
         @include displayFlex(space-between);
         width: 100%;
+        font-family: 'DejaVu Sans';
         text-align: left;
         padding: 10px;
         border: none;
@@ -107,7 +112,6 @@ h1 {
 
         form {
           width: 100%;
-
           .child-dropdown {
             @include displayFlex(flex-start);
             width: 100%;
@@ -266,6 +270,7 @@ h1 {
         color: #9191a0;
         margin-bottom: 0;
         font-size: 13px;
+        font-family: 'BPG Nino Mtavruli';
       }
       input,
       select {
@@ -339,6 +344,7 @@ h1 {
         background: transparent;
         border: none;
         cursor: pointer;
+        font-family: 'BPG Nino Mtavruli';
       }
       .enter {
         background-color: $darkBlue;
@@ -349,6 +355,8 @@ h1 {
         box-shadow: 0px 3px 6px #00000029;
         width: auto;
         margin: 1rem auto;
+        font-family: 'BPG Nino Mtavruli';
+        font-weight: bold;
         padding: 0.8rem 1.8rem;
         cursor: pointer;
       }
@@ -433,7 +441,9 @@ h1 {
       width: 100%;
     }
   }
-
+  .auth-container.active {
+    display: none;
+  }
   .successful-registration {
     display: none;
     margin-top: 8rem;
@@ -464,10 +474,6 @@ h1 {
 
   .successful-registration.active {
     display: block;
-  }
-
-  .auth-container.active {
-    display: none;
   }
 
   .successful-recovery-tab {
@@ -509,7 +515,6 @@ h1 {
   .successful-recovery-tab.active {
     display: flex;
   }
-
   .successful-pass-change {
     display: none;
     margin-top: 8rem;
@@ -560,6 +565,7 @@ h1 {
       align-self: center;
       margin-bottom: 2rem;
       padding: 3rem 0rem;
+      font-family: 'BPG Nino Mtavruli';
     }
     hr {
       margin: 2rem auto 0 auto;
