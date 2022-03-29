@@ -46,9 +46,9 @@
             id="email"
           />
           <div>
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-        </div>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+          </div>
         </div>
         <div class="msg-wrapper">
           <label for="pass">პაროლი</label>
@@ -63,9 +63,9 @@
             class="input"
           />
           <div>
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-        </div>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+          </div>
         </div>
         </div>
           <div class="restore-wrapper">
@@ -147,7 +147,7 @@
         </div>
         </div>
         <div class="btn-wrapper-onMail">
-        <button type="button" id="cancel">გაუქმება</button>
+        <button type="button" id="cancel" class="cancel-button">გაუქმება</button>
           <button type="submit" id="enter-send">გაგზავნა</button>
         </div>
           <button type="button" class="registration" id="registration-on-email">რეგისტრაცია</button>
@@ -196,12 +196,20 @@
         </div>
           <div>
             <div class="input-icons">
-          <input
-            type="text"
-            id="region"
-            name="region"
-            class="input"
-          />
+              <select name="region" id="region">
+                <option value="shida-kartli">შიდა-ქართლი</option>
+                <option value="kvemo-kartli">ქვემო-ქართლი</option>
+                <option value="samtskhe-javakheti">სამცხე-ჯავახეთი</option>
+                <option value="mtskheta-mtianeti">მცხეთა-მთიანეთი</option>
+                <option value="kakheti">კახეთი</option>
+                <option value="imereti">იმერეთი</option>
+                <option value="adjara">აჭარა</option>
+                <option value="samegrelo">სამეგრელო</option>
+                <option value="guria">გურია</option>
+                <option value="racha-lechkhumi">რაჭა-ლეჩხუმი</option>
+                <option value="svaneti">სვანეთი</option>
+                <option value="aphkhazeti">აფხაზეთი</option>
+              </select>
           <div>
           <i class="fas fa-exclamation-circle failure-icon"></i>
           <i class="far fa-check-circle success-icon"></i>
@@ -232,12 +240,20 @@
         </div>
           <div>
             <div class="input-icons">
-          <input
-            type="text"
-            id="grade"
-            class="grade input"
-            name="grade"
-          />
+          <select name="grade" id="grade">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="VI">VI</option>
+            <option value="VII">VII</option>
+            <option value="VIII">VIII</option>
+            <option value="IX">IX</option>
+            <option value="X">X</option>
+            <option value="XI">XI</option>
+            <option value="XII">XII</option>
+          </select>
           <div>
           <i class="fas fa-exclamation-circle failure-icon"></i>
           <i class="far fa-check-circle success-icon"></i>
@@ -315,6 +331,115 @@
       </section>
       <section class="successful-pass-change" id="successful-pass-change">
         <h2>პაროლი წარმატებით შეიცვალა</h2>
+      </section>
+      <section class="my-profile" id="my-profile">
+        <h3>ჩემი პროფილი</h3>
+          <div class="options-wrapper">
+            <p tabindex="0" class="profile-option" id="profile-option-one">ინფორმაციის რედაქტირება</p>
+            <p tabindex="0" class="profile-option" id="profile-option-two">პაროლის ცვლილება</p>
+          </div>
+          <hr />
+        <form action="submit" class="my-profile-form" id="my-profile-form">
+             <label for="pass">სახელი</label>
+          </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="my-profile-first_name"
+            name="first_name"
+            class="input"
+          />
+        </div>
+        </div>
+         <label for="pass">გვარი</label>
+        </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="my-profile-last_name"
+            name="last_name"
+            class="input"
+          />
+        </div>
+        </div>
+         <label for="pass">რეგიონი</label>
+        </div>
+          <select name="region" id="my-profile-regions">
+            <option value="shida-kartli">შიდა-ქართლი</option>
+            <option value="kvemo-kartli">ქვემო-ქართლი</option>
+            <option value="samtskhe-javakheti">სამცხე-ჯავახეთი</option>
+            <option value="mtskheta-mtianeti">მცხეთა-მთიანეთი</option>
+            <option value="kakheti">კახეთი</option>
+            <option value="imereti">იმერეთი</option>
+            <option value="adjara">აჭარა</option>
+            <option value="samegrelo">სამეგრელო</option>
+            <option value="guria">გურია</option>
+            <option value="racha-lechkhumi">რაჭა-ლეჩხუმი</option>
+            <option value="svaneti">სვანეთი</option>
+            <option value="aphkhazeti">აფხაზეთი</option>
+          </select>
+         <label for="pass">სკოლა</label>
+        </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="my-profile-school"
+            name="school"
+            class="input"
+          />
+        </div>
+      </div>
+         <label for="pass">კლასი</label>
+          <select name="grade" id="my-profile-grades">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="VI">VI</option>
+            <option value="VII">VII</option>
+            <option value="VIII">VIII</option>
+            <option value="IX">IX</option>
+            <option value="X">X</option>
+            <option value="XI">XI</option>
+            <option value="XII">XII</option>
+          </select>
+         <label for="pass">ი-მეილი</label>
+        </div>
+            <div class="input-icons">
+          <input
+            type="text"
+            name="email"
+            class="input"
+            id="my-profile-register_email"
+          />
+        </div>
+         <label for="pass">პაროლი</label>
+        </div>
+        <div class="input-icons">
+          <input
+            type="password"
+            id="my-profile-new_password"
+            name="new_password"
+            class="input"
+          />
+        </div>
+          <div class="agree-policies-wrapper">
+          <input
+                type="checkbox"
+                id="my-profile-agree-policies"
+                name="agreement"
+                checked
+              /><label for="agreement">ვეთანხმები <span>მონაცემების დამუშავებას</span></label>
+            </div>
+        <div class="my-profile-buttons">
+          <button type="button" id="cancel-buttons" class="cancel-button">გაუქმება</button>
+          <button type="submit" class="enter" id="my-profile-button">შენახვა</button>
+        </div>
+        </form>
       </section>
     </main>
     
