@@ -46,7 +46,9 @@ let email = id('email'),
   successPassPage = id('successful-pass-change'),
   successIcon = classes('success-icon'),
   failureIcon = classes('failure-icon'),
-  errorMessage = classes('email-msg');
+  errorMessage = classes('email-msg'),
+  myProfile = id('my-profile'),
+  profileOptionTwo = id('profile-option-two');
 
 const cards = [
   {
@@ -252,9 +254,14 @@ recoveryAgainBtn.addEventListener('click', () => {
 
 authForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  engine(emailFld, 0);
-  engine(passFld, 1);
+  if (emailFld.value.trim() !== '' && passFld.value.trim() !== '') {
+    addClass(authForm);
+    addClass(authContainer);
+    addClass(myProfile);
+  } else {
+    engine(emailFld, 0);
+    engine(passFld, 1);
+  }
 });
 
 registerForm.addEventListener('submit', (e) => {

@@ -466,7 +466,8 @@ h1 {
   font-size: 13px;
 }
 
-.authorization .auth-container form input {
+.authorization .auth-container form input,
+.authorization .auth-container form select {
   border: 1px solid #707070;
   border-radius: 4px;
   padding: 1rem;
@@ -757,19 +758,52 @@ h1 {
 }
 
 .authorization .my-profile {
-  background-color: red;
   width: 50%;
   margin: 8rem auto;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 0.5rem;
-  padding: 3rem 2rem 3rem 5rem;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
   box-shadow: 0px 3px 6px #00000029;
+}
+
+.authorization .my-profile .options-wrapper,
+.authorization .my-profile hr {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.authorization .my-profile .options-wrapper .profile-option,
+.authorization .my-profile hr .profile-option {
+  font-size: 18px;
+}
+
+.authorization .my-profile .options-wrapper .profile-option:focus,
+.authorization .my-profile hr .profile-option:focus {
+  font-weight: bold;
+}
+
+.authorization .my-profile .options-wrapper .profile-option.active,
+.authorization .my-profile hr .profile-option.active {
+  font-weight: bold;
+}
+
+.authorization .my-profile h3 {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 2rem;
+  padding: 3rem 0rem;
+}
+
+.authorization .my-profile hr {
+  margin: 2rem auto 0 auto;
 }
 
 .authorization .my-profile form {
@@ -777,13 +811,8 @@ h1 {
   flex-direction: column;
   row-gap: 0.5rem;
   width: 100%;
-}
-
-.authorization .my-profile form h3 {
-  font-size: 18px;
-  font-weight: bold;
-  align-self: center;
-  margin-bottom: 2rem;
+  margin: 0 auto;
+  padding: 3rem 2rem 3rem 5rem;
 }
 
 .authorization .my-profile form label {
@@ -792,7 +821,8 @@ h1 {
   font-size: 13px;
 }
 
-.authorization .my-profile form input {
+.authorization .my-profile form input,
+.authorization .my-profile form select {
   border: 1px solid #707070;
   border-radius: 4px;
   padding: 1rem;
@@ -801,7 +831,33 @@ h1 {
   margin: 0 auto 1 auto;
 }
 
-.authorization .my-profile form .cancel-button {
+.authorization .my-profile form .agree-policies-wrapper {
+  display: flex;
+  width: 60%;
+  align-items: flex-start;
+}
+
+.authorization .my-profile form .agree-policies-wrapper #my-profile-agree-policies {
+  width: 10%;
+}
+
+.authorization .my-profile form .agree-policies-wrapper label {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.authorization .my-profile form .agree-policies-wrapper label span {
+  color: #3571a3;
+}
+
+.authorization .my-profile form .my-profile-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.authorization .my-profile form .my-profile-buttons .cancel-button {
   font-size: 18px;
   border: none;
   background: transparent;
@@ -809,5 +865,22 @@ h1 {
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
   cursor: pointer;
+}
+
+.authorization .my-profile form .my-profile-buttons .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px #00000029;
+  width: auto;
+  margin: 1rem auto;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+}
+
+.authorization .my-profile.active {
+  display: flex;
 }
 /*# sourceMappingURL=global.css.map */
