@@ -51,152 +51,135 @@ h1 {
 .container {
   width: $containerWidth;
   margin: 0 auto;
-  @include displayFlex(space-between);
   font-family: 'DejaVu Sans';
-  .filter {
-    width: 20%;
-  }
+  
   .sorting {
-    width: 65%;
-    margin: 2rem 0;
-    @include displayFlex(flex-start, center);
-    p {
-      font-style: italic;
-      margin-right: 1rem;
-      font-size: 14px;
-      font-weight: bold;
-    }
+    margin-bottom: 2rem;
+
     button {
-      @include buttonStyles;
-      margin-right: 1rem;
+      margin-right: 2rem;
       font-family: inherit;
+      border: none;
+      background-color: transparent;
+      font-size: 25px;
+      cursor: pointer;
     }
-    button:hover {
-      background-color: $primaryColor;
-      color: $lightWhite;
+
+    button:focus {
+      border: none;
     }
   }
-  .filters-wrapper {
-    width: 20%;
-    align-self: flex-start;
-    .main-dropdown {
-      position: relative;
-      margin: 5px 0;
-      .dropdown {
-        @include displayFlex(space-between);
-        width: 100%;
-        font-family: 'DejaVu Sans';
-        text-align: left;
-        padding: 10px;
-        border: none;
-        background: $primaryColor;
-        color: $lightWhite;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-      }
 
-      .dropdown-content {
-        display: none;
-        width: 100%;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+  .filter-container {
+    margin: 2rem 0;
+    display: none;
 
-        &.dropdown-active {
-          display: block;
-        }
+    &.active-filter {
+      display: block;
+    }
 
-        form {
-          width: 100%;
-          .child-dropdown {
-            @include displayFlex(flex-start);
-            width: 100%;
-            text-align: left;
-            padding: 10px;
-            border: none;
-            background: $lightWhite;
-            color: $darkBlack;
-            border: 1px solid $lightGray;
-            border-radius: 5px;
-            cursor: pointer;
-            outline: none;
+    .swiper-slide {
+      padding: 0 50px;
 
-            .second-dropdown {
-              margin-left: 5px;
-              width: 100%;
-              @include displayFlex(space-between);
+      .content-container {
+        display: flex;
+        align-items: flex-start;
+        overflow: hidden;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 20px;
+          cursor: pointer;
+
+          .circle {
+            margin-bottom: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #c5c5c5;
+          }
+
+          &.chosen {
+            .circle{
+              background-color: #3571A3;
             }
           }
 
-          .child-dropdown-content {
-            @include displayFlex(flex-start, flex-start);
-            flex-direction: column;
-            display: none;
+          p {
+            font-size: 15px;
+          }
+        }
 
-            &.child-dropdown-content-active {
-              display: block;
-            }
+        .tag {
+          padding: 10px;
+          background-color: #c5c5c5;
+          margin-right: 10px;
+          font-size: 15px;
+          color: black;
+          cursor: pointer;
+          white-space: nowrap;
 
-            button {
-              width: 100%;
-              text-align: left;
-              background: $darkWhiteColor;
-              padding: 10px;
-              border: none;
-              cursor: pointer;
-
-              &:hover {
-                background: $darkGray;
-                color: $lightWhite;
-              }
-            }
+          &.clicked {
+            background-color: #3571A3;
+            color: white;
           }
         }
       }
     }
   }
-  .cards-wrapper {
-    width: 65%;
-    @include grid(
-      grid-template-columns,
-      repeat(3, minmax(32%, 1fr)),
-      1.3rem,
-      1rem
-    );
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 2rem 0;
+
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .card {
-      background-color: $lightWhite;
-      border: 1px solid $cardsBorderColor;
+      border: 1px solid #707070;
+      padding: 10px 15px;
       border-radius: 15px;
-      @include displayFlex(space-between, center);
+      display: flex;
       flex-direction: column;
-      row-gap: 2rem;
-      .top-content {
-        width: $containerWidth;
-        margin: 1rem auto;
-        @include displayFlex(space-between, center);
-        h3 {
-          font-weight: bold;
-          width: 100px;
-        }
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: 13px;
+        font-weight: bold;
+        color: black;
       }
-      .middle-content {
-        width: $containerWidth;
-        margin: 1rem auto;
-        @include displayFlex(center, center);
+
+      img {
+        margin: 2rem auto 1rem auto;
       }
-      .bottom-content {
-        width: $containerWidth;
-        margin: 1rem auto;
-        @include displayFlex(space-between, center);
-        p {
-          font-size: 11px;
-          background-color: $beige;
-          padding: 5px 8px;
-          border-radius: 16px;
+
+      .tags-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .tag {
+          padding: 5px;
+          background-color: #3571A3;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          font-size: 9px;
+          color: white;
         }
       }
     }
@@ -637,5 +620,8 @@ h1 {
   }
   .my-profile.active {
     display: flex;
+  }
+}
+    }
   }
 }
