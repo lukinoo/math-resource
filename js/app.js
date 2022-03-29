@@ -50,134 +50,6 @@ let email = id('email'),
   myProfile = id('my-profile'),
   profileOptionTwo = id('profile-option-two');
 
-const cards = [
-  {
-    id: 1,
-    topicsByFilter: 'ხაზები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 2,
-    topicsByFilter: 'კუთხეები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'კუთხეები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 3,
-    topicsByFilter: 'ფიგურები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ფიგურები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 4,
-    topicsByFilter: 'პითაგორას თეორემა',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 5,
-    topicsByFilter: 'I-XII',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 6,
-    topicsByFilter: 'I-XII',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 7,
-    topicsByFilter: 'ნინო ადამია',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 8,
-    topicsByFilter: 'ნინო ადამია',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 9,
-    topicsByFilter: 'ნინო სიდამონიძე',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-];
-
-const cardsContainer = (obj) => {
-  return `<div class="card" id=${obj.id}>
-  <div class="top-content">
-    <h3 class="topicByFilter">${obj.topicsByFilter}</h3>
-    <p class="progress">${obj.progress}</p>
-  </div>
-  <div class="middle-content">
-    <div class="card-image">${obj.img}</div>
-  </div>
-  <div class="bottom-content">
-    <p class="topic">${obj.topics}</p>
-    <p class="grade">${obj.grade}</p>
-    <p class="author">${obj.author}</p>
-  </div>
-</div>`;
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  cards.forEach((card) => (cardsWrapper.innerHTML += cardsContainer(card)));
-});
-
-// sort
-
-// const dropdown = document.querySelectorAll('.dropdown');
-// const dropdownContent = document.querySelectorAll('.dropdown-content');
-// const childDropdown = document.querySelectorAll('.child-dropdown');
-// const childDropdownContent = document.querySelectorAll('.child-dropdown-content');
-
-window.addEventListener('load', () => {
-  dropdown.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      dropdownContent[index].classList.toggle('dropdown-active');
-    });
-  });
-
-  childDropdown.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      childDropdownContent[index].classList.toggle(
-        'child-dropdown-content-active'
-      );
-    });
-  });
-});
-
 const addClass = (element) => {
   element.classList.add('active');
 };
@@ -266,17 +138,6 @@ authForm.addEventListener('submit', (e) => {
 
 registerForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let arrayOfInputs = [
-    firstName,
-    lastName,
-    region,
-    school,
-    grade,
-    registeringEmail,
-    newPassword,
-    repeatPassword,
-  ];
-
   if (
     firstName.value.trim() !== '' &&
     lastName.value.trim() !== '' &&
@@ -300,22 +161,6 @@ registerForm.addEventListener('submit', (e) => {
     engine(newPassword, 11);
     engine(repeatPassword, 12);
   }
-  // arrayOfInputs.forEach((input) => {
-  //   if (input.value.trim() !== '') {
-  //     addClass(authContainer);
-  //     addClass(successPage);
-  //     registerForm.reset();
-  //   } else {
-  //     engine(firstName, 5);
-  //     engine(lastName, 6);
-  //     engine(region, 7);
-  //     engine(school, 8);
-  //     engine(grade, 9);
-  //     engine(registeringEmail, 10);
-  //     engine(newPassword, 11);
-  //     engine(repeatPassword, 12);
-  //   }
-  // });
 });
 
 emailForm.addEventListener('submit', (e) => {
