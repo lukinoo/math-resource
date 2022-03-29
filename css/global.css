@@ -522,13 +522,10 @@ h1 {
   font-size: 18px;
   border: none;
   background: transparent;
-  color: #483e3e;
   width: auto;
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
-  border-radius: 9px;
   cursor: pointer;
-  box-shadow: 0px 3px 6px #00000029;
 }
 
 .authorization .auth-container form .btn-wrapper-onMail #enter-send {
@@ -757,5 +754,60 @@ h1 {
 
 .authorization .successful-pass-change.active {
   display: block;
+}
+
+.authorization .my-profile {
+  background-color: red;
+  width: 50%;
+  margin: 8rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  padding: 3rem 2rem 3rem 5rem;
+  height: 40%;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.authorization .my-profile form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+}
+
+.authorization .my-profile form h3 {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.authorization .my-profile form label {
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.authorization .my-profile form input {
+  border: 1px solid #707070;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  margin: 0 auto 1 auto;
+}
+
+.authorization .my-profile form .cancel-button {
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  width: auto;
+  margin: 1rem auto;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=global.css.map */

@@ -43,10 +43,6 @@
             class="input"
             id="email"
           />
-          <div>
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-        </div>
         </div>
         <div class="msg-wrapper">
           <label for="pass">პაროლი</label>
@@ -60,10 +56,6 @@
             name="password"
             class="input"
           />
-          <div>
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-        </div>
         </div>
         </div>
           <div class="restore-wrapper">
@@ -145,7 +137,7 @@
         </div>
         </div>
         <div class="btn-wrapper-onMail">
-        <button type="button" id="cancel">გაუქმება</button>
+        <button type="button" id="cancel" class="cancel-button">გაუქმება</button>
           <button type="submit" id="enter-send">გაგზავნა</button>
         </div>
           <button type="button" class="registration" id="registration-on-email">რეგისტრაცია</button>
@@ -313,6 +305,111 @@
       </section>
       <section class="successful-pass-change" id="successful-pass-change">
         <h2>პაროლი წარმატებით შეიცვალა</h2>
+      </section>
+      <section class="my-profile">
+        <form action="submit" class="my-profile-form" id="my-profile-form">
+          <h3>ჩემი პროფილი</h3>
+          <div class="options-wrapper">
+            <p>ინფორმაციის რედაქტირება</p>
+            <p>პაროლის ცვლილება</p>
+          </div>
+          <hr />
+          <div class="msg-wrapper">
+            <label for="pass">სახელი</label>
+          </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            class="input"
+          />
+        </div>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">გვარი</label>
+        </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            class="input"
+          />
+        </div>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">რეგიონი</label>
+        </div>
+          <div>
+          <input
+            type="text"
+            id="region"
+            name="region"
+            class="input"
+          />
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">სკოლა</label>
+        </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="school"
+            name="school"
+            class="input"
+          />
+        </div>
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">კლასი</label>
+        </div>
+          <div>
+            <div class="input-icons">
+          <input
+            type="text"
+            id="grade"
+            class="grade input"
+            name="grade"
+          />
+        </div>
+      </div>
+        <div class="msg-wrapper">
+          <label for="pass">ი-მეილი</label>
+        </div>
+            <div class="input-icons">
+          <input
+            type="text"
+            name="email"
+            class="input"
+            id="register_email"
+          />
+        </div>
+        <div class="msg-wrapper">
+          <label for="pass">პაროლი</label>
+        </div>
+        <div class="input-icons">
+          <input
+            type="password"
+            id="new_password"
+            name="new_password"
+            class="input"
+          />
+        </div>
+          <div class="agree-policies-wrapper">
+          <input
+                type="checkbox"
+                id="agree-policies"
+                name="agreement"
+                checked
+              /><label for="agreement">ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების პირობებებს</label>
+            </div>
+        <button type="button" id="cancel" class="cancel-button">გაუქმება</button>
+          <button type="submit" class="enter" id="registration-button">შენახვა</button>
+        </form>
       </section>
     </main>
     <script src="../js/navigation.js"></script>
