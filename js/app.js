@@ -46,169 +46,47 @@ let email = id('email'),
   successPassPage = id('successful-pass-change'),
   successIcon = classes('success-icon'),
   failureIcon = classes('failure-icon'),
-  errorMessage = classes('email-msg');
-
-const cards = [
-  {
-    id: 1,
-    topicsByFilter: 'ხაზები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 2,
-    topicsByFilter: 'კუთხეები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'კუთხეები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 3,
-    topicsByFilter: 'ფიგურები',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ფიგურები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 4,
-    topicsByFilter: 'პითაგორას თეორემა',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 5,
-    topicsByFilter: 'I-XII',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 6,
-    topicsByFilter: 'I-XII',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 7,
-    topicsByFilter: 'ნინო ადამია',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 8,
-    topicsByFilter: 'ნინო ადამია',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-  {
-    id: 9,
-    topicsByFilter: 'ნინო სიდამონიძე',
-    progress: '0 / 9',
-    img: 'image content',
-    topics: 'ხაზები',
-    grade: 'I-IV',
-    author: 'ნინო ადამია',
-  },
-];
-
-const cardsContainer = (obj) => {
-  return `<div class="card" id=${obj.id}>
-  <div class="top-content">
-    <h3 class="topicByFilter">${obj.topicsByFilter}</h3>
-    <p class="progress">${obj.progress}</p>
-  </div>
-  <div class="middle-content">
-    <div class="card-image">${obj.img}</div>
-  </div>
-  <div class="bottom-content">
-    <p class="topic">${obj.topics}</p>
-    <p class="grade">${obj.grade}</p>
-    <p class="author">${obj.author}</p>
-  </div>
-</div>`;
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  cards.forEach((card) => (cardsWrapper.innerHTML += cardsContainer(card)));
-});
-
-// --------------- Filters
-
-// filter btns
-const filterBtns = document.querySelectorAll('.sorting .filter-buttons');
-
-// filter containers
-const filterContainers = document.querySelectorAll('.filter-container');
-
-window.addEventListener('load', () => {
-  filterBtns[0].addEventListener('click', () => {
-    removeActiveFilter(filterContainers[1], filterContainers[2]);
-    filterContainers[0].classList.toggle('active-filter')
-  })
-  filterBtns[1].addEventListener('click', () => {
-    removeActiveFilter(filterContainers[0], filterContainers[2]);
-    filterContainers[1].classList.toggle('active-filter')
-  })
-  filterBtns[2].addEventListener('click', () => {
-    removeActiveFilter(filterContainers[0], filterContainers[1]);
-    filterContainers[2].classList.toggle('active-filter')
-  })
-});
+  errorMessage = classes('email-msg'),
+  myProfile = id('my-profile'),
+  profileOptionTwo = id('profile-option-two');
 
 const removeActiveFilter = (item1, item2) => {
   if (item1.classList.contains('active-filter')) {
-    item1.classList.remove('active-filter')
+    item1.classList.remove('active-filter');
   }
   if (item2.classList.contains('active-filter')) {
-    item2.classList.remove('active-filter')
+    item2.classList.remove('active-filter');
   }
-}
+};
 
-const contentContainerItems = document.querySelectorAll('.content-container .item');
-const contentContainerAuthors = document.querySelectorAll('.content-container .tag');
+const contentContainerItems = document.querySelectorAll(
+  '.content-container .item'
+);
+const contentContainerAuthors = document.querySelectorAll(
+  '.content-container .tag'
+);
 
 window.addEventListener('load', () => {
-  contentContainerItems.forEach(button => {
+  contentContainerItems.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.toggle('chosen')
-    })
-  })
-  contentContainerAuthors.forEach(author => {
+      button.classList.toggle('chosen');
+    });
+  });
+  contentContainerAuthors.forEach((author) => {
     author.addEventListener('click', () => {
-      author.classList.toggle('clicked')
-    })
-  })
+      author.classList.toggle('clicked');
+    });
+  });
 });
 
-const swiper = new Swiper('.swiper', {
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-  },
-});
+// const swiper = new Swiper('.swiper', {
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//     draggable: true,
+//   },
+// });
 
-console.log(swiper);
+// console.log(swiper);
 
 // ----x-----x---- Filters
 
@@ -288,24 +166,18 @@ recoveryAgainBtn.addEventListener('click', () => {
 
 authForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  engine(emailFld, 0);
-  engine(passFld, 1);
+  if (emailFld.value.trim() !== '' && passFld.value.trim() !== '') {
+    addClass(authForm);
+    addClass(authContainer);
+    addClass(myProfile);
+  } else {
+    engine(emailFld, 0);
+    engine(passFld, 1);
+  }
 });
 
 registerForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let arrayOfInputs = [
-    firstName,
-    lastName,
-    region,
-    school,
-    grade,
-    registeringEmail,
-    newPassword,
-    repeatPassword,
-  ];
-
   if (
     firstName.value.trim() !== '' &&
     lastName.value.trim() !== '' &&
@@ -329,22 +201,6 @@ registerForm.addEventListener('submit', (e) => {
     engine(newPassword, 11);
     engine(repeatPassword, 12);
   }
-  // arrayOfInputs.forEach((input) => {
-  //   if (input.value.trim() !== '') {
-  //     addClass(authContainer);
-  //     addClass(successPage);
-  //     registerForm.reset();
-  //   } else {
-  //     engine(firstName, 5);
-  //     engine(lastName, 6);
-  //     engine(region, 7);
-  //     engine(school, 8);
-  //     engine(grade, 9);
-  //     engine(registeringEmail, 10);
-  //     engine(newPassword, 11);
-  //     engine(repeatPassword, 12);
-  //   }
-  // });
 });
 
 emailForm.addEventListener('submit', (e) => {
@@ -369,4 +225,10 @@ passwordForm.addEventListener('submit', (e) => {
     engine(recoveryPass, 2);
     engine(repeatRecPass, 3);
   }
+});
+
+profileOptionTwo.addEventListener('click', () => {
+  addClass(passwordForm);
+  removeClass(authContainer);
+  removeClass(myProfile);
 });

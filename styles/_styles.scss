@@ -52,7 +52,7 @@ h1 {
   width: $containerWidth;
   margin: 0 auto;
   font-family: 'DejaVu Sans';
-  
+
   .sorting {
     margin-bottom: 2rem;
 
@@ -102,8 +102,8 @@ h1 {
           }
 
           &.chosen {
-            .circle{
-              background-color: #3571A3;
+            .circle {
+              background-color: #3571a3;
             }
           }
 
@@ -122,7 +122,7 @@ h1 {
           white-space: nowrap;
 
           &.clicked {
-            background-color: #3571A3;
+            background-color: #3571a3;
             color: white;
           }
         }
@@ -175,7 +175,7 @@ h1 {
 
         .tag {
           padding: 5px;
-          background-color: #3571A3;
+          background-color: #3571a3;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
@@ -216,6 +216,7 @@ h1 {
         font-weight: bold;
         align-self: center;
         margin-bottom: 2rem;
+        font-family: 'BPG Nino Mtavruli';
       }
       .msg-wrapper {
         display: flex;
@@ -252,32 +253,11 @@ h1 {
       label {
         color: #9191a0;
         margin-bottom: 0;
-    row-gap: 0.5rem;
-    padding: 3rem 2rem 3rem 5rem;
-    width: 100%;
-    height: 40%;
-    border-radius: 9px;
-    background-color: $whiteColor;
-    box-shadow: 0px 3px 6px #00000029;
-    font-family: 'BPG Nino Mtavruli';
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      align-self: center;
-      margin-bottom: 2rem;
-    }
-    .msg-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0;
-      .email-msg {
-        background-color: $errorMessage;
-        color: $whiteColor;
-        padding: 0.3rem 0.5rem;
-        text-align: center;
         font-size: 13px;
+        font-family: 'BPG Nino Mtavruli';
       }
-      input {
+      input,
+      select {
         border: 1px solid $cardsBorderColor;
         border-radius: 4px;
         padding: 1rem;
@@ -323,13 +303,10 @@ h1 {
           font-size: 18px;
           border: none;
           background: transparent;
-          color: $lightBlack;
           width: auto;
           margin: 1rem auto;
           padding: 0.8rem 1.8rem;
-          border-radius: 9px;
           cursor: pointer;
-          box-shadow: 0px 3px 6px #00000029;
         }
         #enter-send {
           background-color: $darkBlue;
@@ -351,9 +328,7 @@ h1 {
         background: transparent;
         border: none;
         cursor: pointer;
-        box-shadow: 0px 3px 6px #00000029;
         font-family: 'BPG Nino Mtavruli';
-        font-weight: bold;
       }
       .enter {
         background-color: $darkBlue;
@@ -399,36 +374,11 @@ h1 {
         }
       }
     }
-
     .active {
       display: flex;
     }
     .auth-form {
       display: flex;
-
-    .recovery,
-    .registration {
-      font-size: 13px;
-      color: $primaryColor;
-      background: transparent;
-      border: none;
-      font-family: 'DejaVu Sans';
-      cursor: pointer;
-    }
-    .enter {
-      background-color: $darkBlue;
-      color: $whiteColor;
-      font-size: 18px;
-      border: none;
-      border-radius: 9px;
-      box-shadow: 0px 3px 6px #00000029;
-      width: auto;
-      margin: 1rem auto;
-      padding: 0.8rem 1.8rem;
-      font-family: 'BPG Nino Mtavruli';
-      font-weight: bold;
-      cursor: pointer;
-
     }
     .auth-form.active {
       display: none;
@@ -475,7 +425,9 @@ h1 {
       width: 100%;
     }
   }
-
+  .auth-container.active {
+    display: none;
+  }
   .successful-registration {
     display: none;
     margin-top: 8rem;
@@ -488,6 +440,7 @@ h1 {
       color: $primaryColor;
       text-align: center;
       margin: 2rem auto;
+      font-family: 'BPG Nino Mtavruli';
     }
     h2 {
       font-size: 36px;
@@ -508,10 +461,6 @@ h1 {
     display: block;
   }
 
-  .auth-container.active {
-    display: none;
-  }
-
   .successful-recovery-tab {
     width: 50%;
     margin: 8rem auto;
@@ -530,6 +479,7 @@ h1 {
       line-height: 21px;
       font-weight: bold;
       color: $darkBlack;
+      font-family: 'BPG Nino Mtavruli';
     }
     p {
       color: $lightBlack;
@@ -551,7 +501,6 @@ h1 {
   .successful-recovery-tab.active {
     display: flex;
   }
-
   .successful-pass-change {
     display: none;
     margin-top: 8rem;
@@ -567,7 +516,114 @@ h1 {
   .successful-pass-change.active {
     display: block;
   }
-}
+  .my-profile {
+    width: 50%;
+    margin: 8rem auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    height: 40%;
+    border-radius: 9px;
+    background-color: $whiteColor;
+    box-shadow: 0px 3px 6px #00000029;
+    .options-wrapper,
+    hr {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
+      .profile-option {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .profile-option:focus {
+        font-weight: bold;
+      }
+      #profile-option-one {
+        font-weight: bold;
+      }
     }
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      align-self: center;
+      margin-bottom: 2rem;
+      padding: 3rem 0rem;
+      font-family: 'BPG Nino Mtavruli';
+    }
+    hr {
+      margin: 2rem auto 0 auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 2rem 3rem 5rem;
+      label {
+        color: #9191a0;
+        margin-bottom: 0;
+        font-size: 13px;
+        font-family: 'BPG Nino Mtavruli';
+      }
+      input,
+      select {
+        border: 1px solid $cardsBorderColor;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        margin: 0 auto 1 auto;
+      }
+      .agree-policies-wrapper {
+        display: flex;
+        width: 60%;
+        align-items: flex-start;
+        #my-profile-agree-policies {
+          width: 10%;
+        }
+        label {
+          margin-right: 0.5rem;
+          cursor: pointer;
+          margin-top: 0;
+          span {
+            color: $primaryColor;
+          }
+        }
+      }
+      .my-profile-buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        .cancel-button {
+          font-size: 18px;
+          border: none;
+          background: transparent;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          cursor: pointer;
+        }
+        .enter {
+          background-color: $darkBlue;
+          color: $whiteColor;
+          font-size: 18px;
+          border: none;
+          border-radius: 9px;
+          box-shadow: 0px 3px 6px #00000029;
+          width: auto;
+          margin: 1rem auto;
+          padding: 0.8rem 1.8rem;
+          cursor: pointer;
+          font-family: 'BPG Nino Mtavruli';
+        }
+      }
+    }
+  }
+  .my-profile.active {
+    display: flex;
   }
 }
