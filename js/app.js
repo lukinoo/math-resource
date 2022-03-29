@@ -50,6 +50,29 @@ let email = id('email'),
   myProfile = id('my-profile'),
   profileOptionTwo = id('profile-option-two');
 
+// --------------- Filters
+
+// filter btns
+const filterBtns = document.querySelectorAll('.sorting .filter-buttons');
+
+// filter containers
+const filterContainers = document.querySelectorAll('.filter-container');
+
+window.addEventListener('load', () => {
+  filterBtns[0].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[1], filterContainers[2]);
+    filterContainers[0].classList.toggle('active-filter');
+  });
+  filterBtns[1].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[0], filterContainers[2]);
+    filterContainers[1].classList.toggle('active-filter');
+  });
+  filterBtns[2].addEventListener('click', () => {
+    removeActiveFilter(filterContainers[0], filterContainers[1]);
+    filterContainers[2].classList.toggle('active-filter');
+  });
+});
+
 const removeActiveFilter = (item1, item2) => {
   if (item1.classList.contains('active-filter')) {
     item1.classList.remove('active-filter');
