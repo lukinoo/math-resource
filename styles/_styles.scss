@@ -545,11 +545,12 @@ h1 {
       margin: 0 auto;
       .profile-option {
         font-size: 18px;
+        cursor: pointer;
       }
       .profile-option:focus {
         font-weight: bold;
       }
-      .profile-option.active {
+      #profile-option-one {
         font-weight: bold;
       }
     }

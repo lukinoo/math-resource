@@ -782,6 +782,7 @@ h1 {
 .authorization .my-profile .options-wrapper .profile-option,
 .authorization .my-profile hr .profile-option {
   font-size: 18px;
+  cursor: pointer;
 }
 
 .authorization .my-profile .options-wrapper .profile-option:focus,
@@ -789,8 +790,8 @@ h1 {
   font-weight: bold;
 }
 
-.authorization .my-profile .options-wrapper .profile-option.active,
-.authorization .my-profile hr .profile-option.active {
+.authorization .my-profile .options-wrapper #profile-option-one,
+.authorization .my-profile hr #profile-option-one {
   font-weight: bold;
 }
 

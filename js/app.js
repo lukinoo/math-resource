@@ -341,3 +341,9 @@ passwordForm.addEventListener('submit', (e) => {
     engine(repeatRecPass, 3);
   }
 });
+
+profileOptionTwo.addEventListener('click', () => {
+  addClass(passwordForm);
+  removeClass(authContainer);
+  removeClass(myProfile);
+});
