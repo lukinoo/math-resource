@@ -462,6 +462,7 @@ h1 {
   font-weight: bold;
   align-self: center;
   margin-bottom: 2rem;
+  font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .auth-container form .msg-wrapper {
@@ -719,6 +720,7 @@ h1 {
   color: #3571a3;
   text-align: center;
   margin: 2rem auto;
+  font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .successful-registration h2 {
@@ -759,6 +761,7 @@ h1 {
   line-height: 21px;
   font-weight: bold;
   color: #000000;
+  font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .successful-recovery-tab p {
@@ -865,6 +868,7 @@ h1 {
   color: #9191a0;
   margin-bottom: 0;
   font-size: 13px;
+  font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .my-profile form input,
@@ -924,6 +928,7 @@ h1 {
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
   cursor: pointer;
+  font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .my-profile.active {
