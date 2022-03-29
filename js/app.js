@@ -164,41 +164,45 @@ const filterContainers = document.querySelectorAll('.filter-container');
 window.addEventListener('load', () => {
   filterBtns[0].addEventListener('click', () => {
     removeActiveFilter(filterContainers[1], filterContainers[2]);
-    filterContainers[0].classList.toggle('active-filter')
-  })
+    filterContainers[0].classList.toggle('active-filter');
+  });
   filterBtns[1].addEventListener('click', () => {
     removeActiveFilter(filterContainers[0], filterContainers[2]);
-    filterContainers[1].classList.toggle('active-filter')
-  })
+    filterContainers[1].classList.toggle('active-filter');
+  });
   filterBtns[2].addEventListener('click', () => {
     removeActiveFilter(filterContainers[0], filterContainers[1]);
-    filterContainers[2].classList.toggle('active-filter')
-  })
+    filterContainers[2].classList.toggle('active-filter');
+  });
 });
 
 const removeActiveFilter = (item1, item2) => {
   if (item1.classList.contains('active-filter')) {
-    item1.classList.remove('active-filter')
+    item1.classList.remove('active-filter');
   }
   if (item2.classList.contains('active-filter')) {
-    item2.classList.remove('active-filter')
+    item2.classList.remove('active-filter');
   }
-}
+};
 
-const contentContainerItems = document.querySelectorAll('.content-container .item');
-const contentContainerAuthors = document.querySelectorAll('.content-container .tag');
+const contentContainerItems = document.querySelectorAll(
+  '.content-container .item'
+);
+const contentContainerAuthors = document.querySelectorAll(
+  '.content-container .tag'
+);
 
 window.addEventListener('load', () => {
-  contentContainerItems.forEach(button => {
+  contentContainerItems.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.toggle('chosen')
-    })
-  })
-  contentContainerAuthors.forEach(author => {
+      button.classList.toggle('chosen');
+    });
+  });
+  contentContainerAuthors.forEach((author) => {
     author.addEventListener('click', () => {
-      author.classList.toggle('clicked')
-    })
-  })
+      author.classList.toggle('clicked');
+    });
+  });
 });
 
 const swiper = new Swiper('.swiper', {
