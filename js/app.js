@@ -52,37 +52,41 @@ let email = id('email'),
 
 const removeActiveFilter = (item1, item2) => {
   if (item1.classList.contains('active-filter')) {
-    item1.classList.remove('active-filter')
+    item1.classList.remove('active-filter');
   }
   if (item2.classList.contains('active-filter')) {
-    item2.classList.remove('active-filter')
+    item2.classList.remove('active-filter');
   }
-}
+};
 
-const contentContainerItems = document.querySelectorAll('.content-container .item');
-const contentContainerAuthors = document.querySelectorAll('.content-container .tag');
+const contentContainerItems = document.querySelectorAll(
+  '.content-container .item'
+);
+const contentContainerAuthors = document.querySelectorAll(
+  '.content-container .tag'
+);
 
 window.addEventListener('load', () => {
-  contentContainerItems.forEach(button => {
+  contentContainerItems.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.toggle('chosen')
-    })
-  })
-  contentContainerAuthors.forEach(author => {
+      button.classList.toggle('chosen');
+    });
+  });
+  contentContainerAuthors.forEach((author) => {
     author.addEventListener('click', () => {
-      author.classList.toggle('clicked')
-    })
-  })
+      author.classList.toggle('clicked');
+    });
+  });
 });
 
-const swiper = new Swiper('.swiper', {
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-  },
-});
+// const swiper = new Swiper('.swiper', {
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//     draggable: true,
+//   },
+// });
 
-console.log(swiper);
+// console.log(swiper);
 
 // ----x-----x---- Filters
 

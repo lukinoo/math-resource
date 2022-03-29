@@ -52,7 +52,7 @@ h1 {
   width: $containerWidth;
   margin: 0 auto;
   font-family: 'DejaVu Sans';
-  
+
   .sorting {
     margin-bottom: 2rem;
 
@@ -102,8 +102,8 @@ h1 {
           }
 
           &.chosen {
-            .circle{
-              background-color: #3571A3;
+            .circle {
+              background-color: #3571a3;
             }
           }
 
@@ -122,7 +122,7 @@ h1 {
           white-space: nowrap;
 
           &.clicked {
-            background-color: #3571A3;
+            background-color: #3571a3;
             color: white;
           }
         }
@@ -175,7 +175,7 @@ h1 {
 
         .tag {
           padding: 5px;
-          background-color: #3571A3;
+          background-color: #3571a3;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
@@ -625,8 +625,5 @@ h1 {
   }
   .my-profile.active {
     display: flex;
-  }
-}
-    }
   }
 }

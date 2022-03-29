@@ -7,8 +7,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -184,8 +183,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   background: #fdfdff;
   z-index: 99;
 }
@@ -195,15 +193,9 @@ header nav {
   margin: 0 auto;
   font-family: 'BPG Nino Mtavruli';
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header nav .logo-wrapper {
@@ -218,12 +210,8 @@ header nav .logo-wrapper .logo {
 
 header nav .nav-links {
   min-width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 header nav .nav-links li a {
@@ -279,26 +267,15 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   overflow: hidden;
 }
 
 .container .filter-container .swiper-slide .content-container .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-right: 20px;
   cursor: pointer;
 }
@@ -312,7 +289,7 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container .item.chosen .circle {
-  background-color: #3571A3;
+  background-color: #3571a3;
 }
 
 .container .filter-container .swiper-slide .content-container .item p {
@@ -330,37 +307,32 @@ h1 {
 }
 
 .container .filter-container .swiper-slide .content-container .tag.clicked {
-  background-color: #3571A3;
+  background-color: #3571a3;
   color: white;
 }
 
 .container .grid-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   padding: 2rem 0;
 }
 
 @media screen and (max-width: 991px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 700px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 500px) {
   .container .grid-container {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -368,19 +340,10 @@ h1 {
   border: 1px solid #707070;
   padding: 10px 15px;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .grid-container .card p {
@@ -395,19 +358,14 @@ h1 {
 
 .container .grid-container .card .tags-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .container .grid-container .card .tags-container .tag {
   padding: 5px;
-  background-color: #3571A3;
+  background-color: #3571a3;
   margin-right: 5px;
   margin-bottom: 5px;
   font-size: 9px;
@@ -424,21 +382,13 @@ h1 {
 .authorization .auth-container {
   width: 50%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .authorization .auth-container form {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   width: 100%;
@@ -451,20 +401,14 @@ h1 {
 .authorization .auth-container form h3 {
   font-size: 18px;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-bottom: 2rem;
   font-family: 'BPG Nino Mtavruli';
 }
 
 .authorization .auth-container form .msg-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 0;
   width: 100%;
 }
@@ -501,41 +445,6 @@ h1 {
 .authorization .auth-container form label {
   color: #9191a0;
   margin-bottom: 0;
-  row-gap: 0.5rem;
-  padding: 3rem 2rem 3rem 5rem;
-  width: 100%;
-  height: 40%;
-  border-radius: 9px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
-  font-family: 'BPG Nino Mtavruli';
-}
-
-.authorization .auth-container form label h3 {
-  font-size: 18px;
-  font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-bottom: 2rem;
-}
-
-.authorization .auth-container form label .msg-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 0;
-}
-
-.authorization .auth-container form label .msg-wrapper .email-msg {
-  background-color: #ff7474;
-  color: #ffffff;
-  padding: 0.3rem 0.5rem;
-  text-align: center;
   font-size: 13px;
   font-family: 'BPG Nino Mtavruli';
 }
@@ -550,44 +459,36 @@ h1 {
   margin: 0 auto 1 auto;
 }
 
-.authorization .auth-container form label .msg-wrapper .input.error {
+.authorization .auth-container form .input.error {
   border: 1px solid #ff7474;
 }
 
-.authorization .auth-container form label .msg-wrapper .input.success {
+.authorization .auth-container form .input.success {
   border: 1px solid #bdd36e;
 }
 
-.authorization .auth-container form label .msg-wrapper input:focus {
+.authorization .auth-container form input:focus {
   outline-color: #3571a3;
 }
 
-.authorization .auth-container form label .msg-wrapper .restore-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container form .restore-wrapper {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 90%;
   margin: 0 auto 1 auto;
 }
 
-.authorization .auth-container form label .msg-wrapper .restore-wrapper label {
+.authorization .auth-container form .restore-wrapper label {
   color: #000000;
 }
 
-.authorization .auth-container form label .msg-wrapper .restore-wrapper div {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container form .restore-wrapper div {
   display: flex;
   width: 30%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
-.authorization .auth-container form label .msg-wrapper .restore-wrapper div .remember {
+.authorization .auth-container form .restore-wrapper div .remember {
   margin-right: 0.5rem;
   font-size: 13px;
   cursor: pointer;
@@ -595,16 +496,13 @@ h1 {
   width: 20%;
 }
 
-.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container form .btn-wrapper-onMail {
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   width: 90%;
 }
 
-.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail #cancel {
+.authorization .auth-container form .btn-wrapper-onMail #cancel {
   font-size: 18px;
   border: none;
   background: transparent;
@@ -614,22 +512,21 @@ h1 {
   cursor: pointer;
 }
 
-.authorization .auth-container form label .msg-wrapper .btn-wrapper-onMail #enter-send {
+.authorization .auth-container form .btn-wrapper-onMail #enter-send {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   padding: 0.8rem 1.8rem;
   cursor: pointer;
 }
 
-.authorization .auth-container form label .msg-wrapper .recovery,
-.authorization .auth-container form label .msg-wrapper .registration {
+.authorization .auth-container form .recovery,
+.authorization .auth-container form .registration {
   font-size: 13px;
   color: #3571a3;
   background: transparent;
@@ -638,14 +535,13 @@ h1 {
   font-family: 'BPG Nino Mtavruli';
 }
 
-.authorization .auth-container form label .msg-wrapper .enter {
+.authorization .auth-container form .enter {
   background-color: #3571a3;
   color: #ffffff;
   font-size: 18px;
   border: none;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
   width: auto;
   margin: 1rem auto;
   font-family: 'BPG Nino Mtavruli';
@@ -654,102 +550,62 @@ h1 {
   cursor: pointer;
 }
 
-.authorization .auth-container form label .msg-wrapper #recovery,
-.authorization .auth-container form label .msg-wrapper #recovery-on-auth {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.authorization .auth-container form #recovery,
+.authorization .auth-container form #recovery-on-auth {
+  align-self: flex-end;
   margin-bottom: 0;
 }
 
-.authorization .auth-container form label .msg-wrapper #recovery {
+.authorization .auth-container form #recovery {
   width: 90%;
   margin: 0 10% 0 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   text-align: end;
 }
 
-.authorization .auth-container form label .msg-wrapper #enter-send {
+.authorization .auth-container form #enter-send {
   margin-top: 3rem;
 }
 
-.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container form .agree-policies-wrapper {
   display: flex;
   width: 90%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
-.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper #agree-policies {
+.authorization .auth-container form .agree-policies-wrapper #agree-policies {
   margin: 0;
   margin-right: 0.5rem;
   padding: 0;
   width: 15%;
 }
 
-.authorization .auth-container form label .msg-wrapper .agree-policies-wrapper label {
+.authorization .auth-container form .agree-policies-wrapper label {
   line-height: 18px;
   font-size: 13px;
 }
 
-.authorization .auth-container form label .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container .active {
   display: flex;
 }
 
-.authorization .auth-container form label .auth-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container .auth-form {
   display: flex;
 }
 
-.authorization .auth-container form label .auth-form .recovery,
-.authorization .auth-container form label .auth-form .registration {
-  font-size: 13px;
-  color: #3571a3;
-  background: transparent;
-  border: none;
-  font-family: 'DejaVu Sans';
-  cursor: pointer;
-}
-
-.authorization .auth-container form label .auth-form .enter {
-  background-color: #3571a3;
-  color: #ffffff;
-  font-size: 18px;
-  border: none;
-  border-radius: 9px;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
-  width: auto;
-  margin: 1rem auto;
-  padding: 0.8rem 1.8rem;
-  font-family: 'BPG Nino Mtavruli';
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.authorization .auth-container form label .auth-form .auth-form.active {
+.authorization .auth-container .auth-form.active {
   display: none;
 }
 
-.authorization .auth-container form label .auth-form .email-form.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container .email-form.active {
   display: flex;
 }
 
-.authorization .auth-container form label .auth-form .pass-form.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container .pass-form.active {
   display: flex;
 }
 
-.authorization .auth-container form label .auth-form .failure-icon {
+.authorization .auth-container .failure-icon {
   color: #ff7474;
   margin-left: 0.5rem;
   opacity: 0;
@@ -760,12 +616,12 @@ h1 {
   width: 40%;
 }
 
-.authorization .auth-container form label .auth-form .failure-icon.error {
+.authorization .auth-container .failure-icon.error {
   opacity: 1;
   display: inline-block;
 }
 
-.authorization .auth-container form label .auth-form .success-icon {
+.authorization .auth-container .success-icon {
   color: #ffffff;
   background-color: #bdd36e;
   margin-left: 0.5rem;
@@ -776,14 +632,12 @@ h1 {
   bottom: 35px;
 }
 
-.authorization .auth-container form label .auth-form .success-icon.success {
+.authorization .auth-container .success-icon.success {
   opacity: 1;
   display: inline-block;
 }
 
-.authorization .auth-container form label .auth-form .input-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .auth-container .input-icons {
   display: flex;
   position: relative;
   width: 100%;
@@ -798,8 +652,8 @@ h1 {
   margin-top: 8rem;
 }
 
-.authorization .auth-container form label .successful-registration h3,
-.authorization .auth-container form label .successful-registration h2 {
+.authorization .successful-registration h3,
+.authorization .successful-registration h2 {
   width: 30%;
   font-size: 33px;
   line-height: 38px;
@@ -810,12 +664,12 @@ h1 {
   font-family: 'BPG Nino Mtavruli';
 }
 
-.authorization .auth-container form label .successful-registration h2 {
+.authorization .successful-registration h2 {
   font-size: 36px;
   line-height: 41px;
 }
 
-.authorization .auth-container form label .successful-registration p {
+.authorization .successful-registration p {
   width: 30%;
   font-size: 15px;
   line-height: 17px;
@@ -824,7 +678,7 @@ h1 {
   margin: 2rem auto;
 }
 
-.authorization .auth-container form label .successful-registration.active {
+.authorization .successful-registration.active {
   display: block;
 }
 
@@ -832,26 +686,18 @@ h1 {
   width: 50%;
   margin: 8rem auto;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   height: 40%;
   border-radius: 9px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 3px 6px #00000029;
-          box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
-.authorization .auth-container form label .successful-recovery-tab h3 {
+.authorization .successful-recovery-tab h3 {
   font-size: 18px;
   line-height: 21px;
   font-weight: bold;
@@ -859,7 +705,7 @@ h1 {
   font-family: 'BPG Nino Mtavruli';
 }
 
-.authorization .auth-container form label .successful-recovery-tab p {
+.authorization .successful-recovery-tab p {
   color: #483e3e;
   font-size: 15px;
   line-height: 17px;
@@ -867,29 +713,26 @@ h1 {
   margin: 4rem auto;
 }
 
-.authorization .auth-container form label .successful-recovery-tab button {
+.authorization .successful-recovery-tab button {
   font-size: 14px;
   color: #483e3e;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   text-align: left;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-.authorization .auth-container form label .successful-recovery-tab.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.authorization .successful-recovery-tab.active {
   display: flex;
 }
 
-.authorization .auth-container form label .successful-pass-change {
+.authorization .successful-pass-change {
   display: none;
   margin-top: 8rem;
 }
 
-.authorization .auth-container form label .successful-pass-change h2 {
+.authorization .successful-pass-change h2 {
   font-size: 33px;
   line-height: 38px;
   font-weight: bold;
@@ -898,7 +741,7 @@ h1 {
   margin: 2rem auto;
 }
 
-.authorization .auth-container form label .successful-pass-change.active {
+.authorization .successful-pass-change.active {
   display: block;
 }
 
