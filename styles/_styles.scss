@@ -198,7 +198,7 @@ h1 {
 .authorization {
   .auth-container {
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     display: flex;
     flex-direction: column;
     form {
@@ -282,137 +282,16 @@ h1 {
         label {
           color: $darkBlack;
         }
-        .msg-wrapper {
+        div {
           display: flex;
-          justify-content: space-between;
-          margin-bottom: 0;
-          .email-msg {
-            background-color: $errorMessage;
-            color: $whiteColor;
-            padding: 0.3rem 0.5rem;
-            text-align: center;
+          width: 30%;
+          align-items: center;
+          .remember {
+            margin-right: 0.5rem;
             font-size: 13px;
-          }
-          input {
-            border: 1px solid $cardsBorderColor;
-            border-radius: 4px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            width: 90%;
-            margin: 0 auto 1 auto;
-          }
-          .input.error {
-            border: 1px solid $errorMessage;
-          }
-          .input.success {
-            border: 1px solid $successMessage;
-          }
-          input:focus {
-            outline-color: $darkBlue;
-          }
-          .restore-wrapper {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;
-            margin: 0 auto 1 auto;
-            label {
-              color: $darkBlack;
-            }
-            div {
-              display: flex;
-              width: 30%;
-              align-items: center;
-              .remember {
-                margin-right: 0.5rem;
-                font-size: 13px;
-                cursor: pointer;
-                margin-bottom: 0;
-                width: 20%;
-              }
-            }
-          }
-          .btn-wrapper-onMail {
-            display: flex;
-            justify-content: space-around;
-            width: 90%;
-            #cancel {
-              font-size: 18px;
-              border: none;
-              background: transparent;
-              color: $lightBlack;
-              width: auto;
-              margin: 1rem auto;
-              padding: 0.8rem 1.8rem;
-              border-radius: 9px;
-              cursor: pointer;
-              box-shadow: 0px 3px 6px #00000029;
-            }
-            #enter-send {
-              background-color: $darkBlue;
-              color: $whiteColor;
-              font-size: 18px;
-              border: none;
-              border-radius: 9px;
-              box-shadow: 0px 3px 6px #00000029;
-              width: auto;
-              margin: 1rem auto;
-              padding: 0.8rem 1.8rem;
-              cursor: pointer;
-            }
-          }
-          .recovery,
-          .registration {
-            font-size: 13px;
-            color: $primaryColor;
-            background: transparent;
-            border: none;
             cursor: pointer;
-            box-shadow: 0px 3px 6px #00000029;
-            font-family: 'BPG Nino Mtavruli';
-            font-weight: bold;
-          }
-          .enter {
-            background-color: $darkBlue;
-            color: $whiteColor;
-            font-size: 18px;
-            border: none;
-            border-radius: 9px;
-            box-shadow: 0px 3px 6px #00000029;
-            width: auto;
-            margin: 1rem auto;
-            font-family: 'BPG Nino Mtavruli';
-            font-weight: bold;
-            padding: 0.8rem 1.8rem;
-            cursor: pointer;
-          }
-          #recovery,
-          #recovery-on-auth {
-            align-self: flex-end;
             margin-bottom: 0;
-          }
-          #recovery {
-            width: 90%;
-            margin: 0 10% 0 0;
-            align-self: flex-end;
-            text-align: end;
-          }
-          #enter-send {
-            margin-top: 3rem;
-          }
-          .agree-policies-wrapper {
-            display: flex;
-            width: 90%;
-            align-items: center;
-            #agree-policies {
-              margin: 0;
-              margin-right: 0.5rem;
-              padding: 0;
-              width: 15%;
-            }
-            label {
-              line-height: 18px;
-              font-size: 13px;
-            }
+            width: 20%;
           }
         }
       }
@@ -489,76 +368,9 @@ h1 {
           padding: 0;
           width: 15%;
         }
-        .auth-form {
-          display: flex;
-
-          .recovery,
-          .registration {
-            font-size: 13px;
-            color: $primaryColor;
-            background: transparent;
-            border: none;
-            font-family: 'DejaVu Sans';
-            cursor: pointer;
-          }
-          .enter {
-            background-color: $darkBlue;
-            color: $whiteColor;
-            font-size: 18px;
-            border: none;
-            border-radius: 9px;
-            box-shadow: 0px 3px 6px #00000029;
-            width: auto;
-            margin: 1rem auto;
-            padding: 0.8rem 1.8rem;
-            font-family: 'BPG Nino Mtavruli';
-            font-weight: bold;
-            cursor: pointer;
-          }
-          .auth-form.active {
-            display: none;
-          }
-          .email-form.active {
-            display: flex;
-          }
-          .pass-form.active {
-            display: flex;
-          }
-          .failure-icon {
-            color: $errorMessage;
-            margin-left: 0.5rem;
-            opacity: 0;
-            display: none;
-            position: absolute;
-            right: -32%;
-            bottom: 35px;
-            width: 40%;
-          }
-          .failure-icon.error {
-            opacity: 1;
-            display: inline-block;
-          }
-          .success-icon {
-            color: $whiteColor;
-            background-color: $successMessage;
-            margin-left: 0.5rem;
-            border-radius: 100%;
-            opacity: 0;
-            display: none;
-            position: absolute;
-            bottom: 35px;
-          }
-
-          .success-icon.success {
-            opacity: 1;
-            display: inline-block;
-          }
-
-          .input-icons {
-            display: flex;
-            position: relative;
-            width: 100%;
-          }
+        label {
+          line-height: 18px;
+          font-size: 13px;
         }
       }
     }
@@ -601,66 +413,16 @@ h1 {
       position: absolute;
       bottom: 35px;
     }
-       .auth-container.active {
-          display: none;
-        }
 
-        .successful-recovery-tab {
-          width: 50%;
-          margin: 8rem auto;
-          display: none;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          row-gap: 0.5rem;
-          padding: 3rem 2rem 3rem 5rem;
-          height: 40%;
-          border-radius: 9px;
-          background-color: $whiteColor;
-          box-shadow: 0px 3px 6px #00000029;
-          h3 {
-            font-size: 18px;
-            line-height: 21px;
-            font-weight: bold;
-            color: $darkBlack;
-          }
-          p {
-            color: $lightBlack;
-            font-size: 15px;
-            line-height: 17px;
-            text-align: left;
-            margin: 4rem auto;
-          }
-          button {
-            font-size: 14px;
-            color: $lightBlack;
-            align-self: flex-end;
-            text-align: left;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-          }
-        }
-        .successful-recovery-tab.active {
-          display: flex;
-        }
+    .success-icon.success {
+      opacity: 1;
+      display: inline-block;
+    }
 
-        .successful-pass-change {
-          display: none;
-          margin-top: 8rem;
-          h2 {
-            font-size: 33px;
-            line-height: 38px;
-            font-weight: bold;
-            color: $primaryColor;
-            text-align: center;
-            margin: 2rem auto;
-          }
-        }
-        .successful-pass-change.active {
-          display: block;
-        }
-      }
+    .input-icons {
+      display: flex;
+      position: relative;
+      width: 100%;
     }
   }
   .auth-container.active {
@@ -680,8 +442,24 @@ h1 {
       margin: 2rem auto;
       font-family: 'BPG Nino Mtavruli';
     }
-}
+    h2 {
+      font-size: 36px;
+      line-height: 41px;
+    }
 
+    p {
+      width: 30%;
+      font-size: 15px;
+      line-height: 17px;
+      color: $lightBlack;
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+
+  .successful-registration.active {
+    display: block;
+  }
 
   .successful-recovery-tab {
     width: 50%;
@@ -709,6 +487,17 @@ h1 {
       line-height: 17px;
       text-align: left;
       margin: 4rem auto;
+    }
+    button {
+      font-size: 14px;
+      color: $lightBlack;
+      align-self: flex-end;
+      text-align: left;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
   .successful-recovery-tab.active {
     display: flex;
   }
@@ -754,9 +543,6 @@ h1 {
       }
       #profile-option-one {
         font-weight: bold;
-}
-
-
       }
     }
     h3 {
@@ -841,13 +627,14 @@ h1 {
     display: flex;
   }
 }
+
 .contacts-container {
-  height: 30vh;
+  height: 100vh;
   width: 80%;
   margin: 8rem auto 3rem auto;
   display: flex;
   flex-direction: column;
-  @include displayFlex(center, null);
+  @include displayFlex(start, null);
   $margin: 0 0 1rem 0;
   .contacts-titles {
     h2 {
@@ -878,7 +665,7 @@ h1 {
 }
 
 .page-not-found-container {
-  margin: 8rem 0 0 0;
+  margin: 8rem 0 3rem 0;
   height: 60vh;
   display: flex;
   @include displayFlex();
@@ -950,20 +737,32 @@ h1 {
       }
     }
   }
-  .about-contaioner {
-  .about-container-top-wrapper {
-    width: 100%;
-    height: 60vh;
-    background: $darkBlue;
-    .about-container-top {
-      height: 100%;
-      width: 85%;
-      margin: 5rem auto 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: $lightWhite;
-      .about-container-top-about {
+}
+.about-contaioner {
+  margin-bottom: 3rem;
+    .about-container-top-wrapper {
+      width: 100%;
+      height: 60vh;
+      .about-container-top {
+        height: 100%;
+        width: 85%;
+        margin: 5rem auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .about-container-top-about {
+          h2 {
+          font-size: 35px;
+          font-family: 'BPG Banner Caps';
+          margin: 0 0 1.5rem 0;
+        }
+          p {
+          font-family: 'DejaVu Sans';
+          font-size: 18px;
+          margin: 0 0 3rem 0;
+        }
+      }
+      .about-container-top-goal {
         h2 {
           font-size: 35px;
           font-family: 'BPG Banner Caps';
@@ -972,24 +771,11 @@ h1 {
         p {
           font-family: 'DejaVu Sans';
           font-size: 18px;
-          margin: 0 0 3rem 0;
         }
-      }
-    }
-    .about-container-top-goal {
-      h2 {
-        font-size: 35px;
-        font-family: 'BPG Banner Caps';
-        margin: 0 0 1.5rem 0;
-      }
-      p {
-        font-family: 'DejaVu Sans';
-        font-size: 18px;
       }
     }
   }
   .about-container-bottom-wrapper {
-    background: #fed142;
     .about-container-bottom {
       width: 85%;
       margin: 0 auto;
@@ -1016,3 +802,31 @@ h1 {
             margin: 1rem 0 0 0;
           }
         }
+      }
+    }
+  }
+}
+
+footer {
+  // bottom:0;
+  width: 100%;
+  margin-top: auto;
+  background: $lightWhite;
+  border: 1px solid $cardsBorderColor;
+  padding: 1.5rem 2.0rem;
+  line-height: 18px;
+  .div-1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    p {
+      width: 30%;
+      text-align: left;
+    }
+  }
+  .div-2 {
+    width: 100%;
+    p {
+      text-align: center;
+    }
+  }
+}
