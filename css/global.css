@@ -457,6 +457,7 @@ h1 {
   margin-bottom: 1rem;
   width: 90%;
   margin: 0 auto 1 auto;
+  color: #483e3e;
 }
 
 .authorization .auth-container form .input.error {
@@ -467,7 +468,7 @@ h1 {
   border: 1px solid #bdd36e;
 }
 
-.authorization .auth-container form input:focus {
+.authorization .auth-container form input:focus, .authorization .auth-container form select:focus {
   outline-color: #3571a3;
 }
 
@@ -874,6 +875,42 @@ h1 {
 
 .authorization .my-profile.active {
   display: flex;
+}
+
+.authorization .selectDiv {
+  position: relative;
+  float: left;
+  min-width: 200px;
+}
+
+.authorization .selectDiv:after {
+  content: '>';
+  font: 17px "Consolas", monospace;
+  color: #707070;
+  transform: rotate(90deg);
+  right: 15%;
+  top: 18px;
+  padding: 1%;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.authorization .selectDiv.active:after {
+  content: '<';
+}
+
+.authorization select {
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  background-color: #ffffff;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
 }
 
 .contacts-container {

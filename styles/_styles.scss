@@ -264,6 +264,7 @@ h1 {
         margin-bottom: 1rem;
         width: 90%;
         margin: 0 auto 1 auto;
+        color: $lightBlack;
       }
       .input.error {
         border: 1px solid $errorMessage;
@@ -271,7 +272,7 @@ h1 {
       .input.success {
         border: 1px solid $successMessage;
       }
-      input:focus {
+      input:focus, select:focus {
         outline-color: $darkBlue;
       }
       .restore-wrapper {
@@ -626,6 +627,43 @@ h1 {
   .my-profile.active {
     display: flex;
   }
+  .selectDiv {
+      position: relative;
+      float: left;
+      min-width: 200px;
+  }
+  .selectDiv:after {
+    content: '>';
+    font: 17px "Consolas", monospace;
+    color: $cardsBorderColor;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 15%;
+    top: 18px;
+    padding: 1%;
+    border: 1px solid $cardsBorderColor;
+    border-radius: 3px;
+    position: absolute;
+    pointer-events: none;
+  }
+  .selectDiv.active:after {
+    content: '<';
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;    
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    background-color: $whiteColor;
+    background-image: none;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
 }
 
 .contacts-container {
@@ -808,7 +846,6 @@ h1 {
 }
 
 footer {
-  // bottom:0;
   width: 100%;
   margin-top: auto;
   background: $lightWhite;
