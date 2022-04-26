@@ -19,6 +19,7 @@ const registrationButton = document.querySelector('#registration-on-auth');
 const registrationButtonOnEmail = document.querySelector(
   '#registration-on-email'
 );
+const selectDropdown = document.getElementsByTagName('select');
 
 let id = (id) => document.getElementById(id);
 let classes = (classes) => document.getElementsByClassName(classes);
@@ -48,7 +49,8 @@ let email = id('email'),
   failureIcon = classes('failure-icon'),
   errorMessage = classes('email-msg'),
   myProfile = id('my-profile'),
-  profileOptionTwo = id('profile-option-two');
+  profileOptionTwo = id('profile-option-two'),
+  selectedDiv = classes('selectDiv');
 
 // --------------- Filters
 

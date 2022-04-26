@@ -381,7 +381,7 @@ h1 {
 
 .authorization .auth-container {
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   display: flex;
   flex-direction: column;
 }
@@ -457,6 +457,7 @@ h1 {
   margin-bottom: 1rem;
   width: 90%;
   margin: 0 auto 1 auto;
+  color: #483e3e;
 }
 
 .authorization .auth-container form .input.error {
@@ -467,7 +468,7 @@ h1 {
   border: 1px solid #bdd36e;
 }
 
-.authorization .auth-container form input:focus {
+.authorization .auth-container form input:focus, .authorization .auth-container form select:focus {
   outline-color: #3571a3;
 }
 
@@ -876,14 +877,50 @@ h1 {
   display: flex;
 }
 
+.authorization .selectDiv {
+  position: relative;
+  float: left;
+  min-width: 200px;
+}
+
+.authorization .selectDiv:after {
+  content: '>';
+  font: 17px "Consolas", monospace;
+  color: #707070;
+  transform: rotate(90deg);
+  right: 15%;
+  top: 18px;
+  padding: 1%;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.authorization .selectDiv.active:after {
+  content: '<';
+}
+
+.authorization select {
+  appearance: none;
+  width: 100%;
+  height: 50px;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  background-color: #ffffff;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
 .contacts-container {
-  height: 30vh;
+  height: 100vh;
   width: 80%;
   margin: 8rem auto 3rem auto;
   display: flex;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 .contacts-container .contacts-titles h2 {
@@ -913,7 +950,7 @@ h1 {
 }
 
 .page-not-found-container {
-  margin: 8rem 0 0 0;
+  margin: 8rem 0 3rem 0;
   height: 60vh;
   display: flex;
   display: flex;
@@ -1002,10 +1039,13 @@ h1 {
   border-top-color: #b2b2b2;
 }
 
+.about-contaioner {
+  margin-bottom: 3rem;
+}
+
 .about-contaioner .about-container-top-wrapper {
   width: 100%;
   height: 60vh;
-  background: #3571a3;
 }
 
 .about-contaioner .about-container-top-wrapper .about-container-top {
@@ -1015,7 +1055,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fdfdff;
 }
 
 .about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-about h2 {
@@ -1030,19 +1069,15 @@ h1 {
   margin: 0 0 3rem 0;
 }
 
-.about-contaioner .about-container-top-wrapper .about-container-top-goal h2 {
+.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal h2 {
   font-size: 35px;
   font-family: 'BPG Banner Caps';
   margin: 0 0 1.5rem 0;
 }
 
-.about-contaioner .about-container-top-wrapper .about-container-top-goal p {
+.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal p {
   font-family: 'DejaVu Sans';
   font-size: 18px;
-}
-
-.about-contaioner .about-container-bottom-wrapper {
-  background: #fed142;
 }
 
 .about-contaioner .about-container-bottom-wrapper .about-container-bottom {
@@ -1077,5 +1112,32 @@ h1 {
   font-family: 'DejaVu Sans';
   font-size: 18px;
   margin: 1rem 0 0 0;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  background: #fdfdff;
+  border: 1px solid #707070;
+  padding: 1.5rem 2.0rem;
+  line-height: 18px;
+}
+
+footer .div-1 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+footer .div-1 p {
+  width: 30%;
+  text-align: left;
+}
+
+footer .div-2 {
+  width: 100%;
+}
+
+footer .div-2 p {
+  text-align: center;
 }
 /*# sourceMappingURL=global.css.map */
