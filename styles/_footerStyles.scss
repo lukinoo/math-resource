@@ -1,0 +1,22 @@
+footer {
+  width: 100%;
+  margin-top: auto;
+  background: $lightWhite;
+  border: 1px solid $cardsBorderColor;
+  padding: 1.5rem 2rem;
+  line-height: 18px;
+  .div-1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    p {
+      width: 30%;
+      text-align: left;
+    }
+  }
+  .div-2 {
+    width: 100%;
+    p {
+      text-align: center;
+    }
+  }
+}
