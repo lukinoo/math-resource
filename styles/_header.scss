@@ -27,6 +27,9 @@ header {
         a {
           color: $darkBlack;
           font-size: 17px;
+          &:hover {
+            color: $primaryColor;
+          }
         }
       }
     }
