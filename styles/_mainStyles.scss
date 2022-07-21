@@ -114,7 +114,9 @@ h1 {
     }
 
     .card {
-      border: 1px solid #707070;
+      border: 1px solid $cardsBorderColor;
+      width: 250px;
+      height: 250px;
       padding: 10px 15px;
       border-radius: 15px;
       display: flex;
@@ -122,10 +124,48 @@ h1 {
       align-items: center;
       justify-content: space-between;
 
+      cursor: pointer;
+      &:hover {
+        background-color: $blueRgba;
+      }
       p {
         font-size: 13px;
         font-weight: bold;
-        color: black;
+        color: $darkBlack;
+        width: 100%;
+        height: 100px;
+      }
+
+      .checkSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          background-color: $greenBackground;
+          color: $whiteColor;
+          padding: 5px;
+          font-weight: bold;
+          font-size: 11px;
+        }
+      }
+      .nonCheckSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          color: $newGray;
+          font-weight: bold;
+          font-size: 11px;
+          padding: 5px;
+        }
       }
 
       img {
@@ -140,11 +180,11 @@ h1 {
 
         .tag {
           padding: 5px;
-          background-color: #3571a3;
+          background-color: $primaryColor;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
-          color: white;
+          color: $whiteColor;
         }
       }
     }
