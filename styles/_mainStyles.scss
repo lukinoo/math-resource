@@ -114,7 +114,9 @@ h1 {
       grid-template-columns: repeat(1, 1fr);
     }
     .card {
-      border: 1px solid #707070;
+
+      border: 1px solid $cardsBorderColor;
+
       width: 250px;
       height: 250px;
       padding: 10px 15px;
@@ -125,13 +127,13 @@ h1 {
       justify-content: space-between;
       cursor: pointer;
       &:hover {
-        background-color: rgba(53, 113, 163, 0.2);
+        background-color: $blueRgba;
       }
       p {
         display: flex;
         font-size: 13px;
         font-weight: bold;
-        color: black;
+        color: $darkBlack;
         width: 100%;
         height: 100px;
       }
@@ -161,7 +163,7 @@ h1 {
         span {
           display: flex;
           text-align: center;
-          color: #433f3f;
+          color: $newGray;
           font-weight: bold;
           font-size: 11px;
           padding: 5px;
@@ -181,11 +183,11 @@ h1 {
 
         .tag {
           padding: 5px;
-          background-color: #3571a3;
+          background-color: $primaryColor;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
-          color: white;
+          color: $whiteColor;
         }
       }
     }
@@ -849,5 +851,52 @@ h1 {
         }
       }
     }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 185px 0px 396px 0px;
+  .pre,
+  .next {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  }
+
+  .initionDecoration {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 6px;
+
+    &:hover {
+      border: 1px solid $primaryColor;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      color: white;
+      padding: 5px;
+    }
+  }
+  .dots {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  .basebtn {
+    border: none;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin: 0px 22px;
+  }
+  .basebtn img {
+    opacity: 0.7;
+    width: 12px;
+    height: 20px;
+  }
+  .basebtn:hover img {
+    opacity: 1;
   }
 }
