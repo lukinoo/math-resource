@@ -30,8 +30,8 @@ h1 {
       cursor: pointer;
     }
 
-    button:focus {
-      border: none;
+    .borderActive {
+      border-bottom: 5px solid $primaryColor;
     }
   }
 
@@ -100,6 +100,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     padding: 2rem 0;
+    // justify-items: center;
 
     @media screen and (max-width: 991px) {
       grid-template-columns: repeat(3, 1fr);
@@ -112,28 +113,68 @@ h1 {
     @media screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
     }
-
     .card {
       border: 1px solid #707070;
+      width: 250px;
+      height: 250px;
       padding: 10px 15px;
       border-radius: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(53, 113, 163, 0.2);
+      }
       p {
+        display: flex;
         font-size: 13px;
         font-weight: bold;
         color: black;
+        width: 100%;
+        height: 100px;
+      }
+
+      .checkSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          background-color: $greenBackground;
+          color: $whiteColor;
+          padding: 5px;
+          font-weight: bold;
+          font-size: 11px;
+        }
+      }
+      .nonCheckSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          color: #433f3f;
+          font-weight: bold;
+          font-size: 11px;
+          padding: 5px;
+        }
       }
 
       img {
-        margin: 2rem auto 1rem auto;
+        margin: 1rem auto 1rem auto;
       }
 
       .tags-container {
         width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
