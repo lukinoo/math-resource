@@ -850,3 +850,50 @@ h1 {
     }
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 185px 0px 396px 0px;
+  .pre,
+  .next {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  }
+
+  .initionDecoration {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 6px;
+
+    &:hover {
+      border: 1px solid $primaryColor;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      color: white;
+      padding: 5px;
+    }
+  }
+  .dots {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  .basebtn {
+    border: none;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin: 0px 22px;
+  }
+  .basebtn img {
+    opacity: 0.7;
+    width: 12px;
+    height: 20px;
+  }
+  .basebtn:hover img {
+    opacity: 1;
+  }
+}

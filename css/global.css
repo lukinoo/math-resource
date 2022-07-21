@@ -992,6 +992,51 @@ h1 {
   margin: 1rem 0 0 0;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 185px 0px 396px 0px;
+}
+.pagination .pre,
+.pagination .next {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+.pagination .initionDecoration {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin: 0px 8px;
+  padding: 6px;
+}
+.pagination .initionDecoration:hover {
+  border: 1px solid #3571a3;
+  background-color: #3571a3;
+  border-radius: 50%;
+  color: white;
+  padding: 5px;
+}
+.pagination .dots {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.pagination .basebtn {
+  border: none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  margin: 0px 22px;
+}
+.pagination .basebtn img {
+  opacity: 0.7;
+  width: 12px;
+  height: 20px;
+}
+.pagination .basebtn:hover img {
+  opacity: 1;
+}
+
 header {
   position: fixed;
   top: 0;
