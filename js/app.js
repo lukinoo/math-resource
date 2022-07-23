@@ -1,3 +1,5 @@
+"use strict";
+
 const cardsWrapper = document.getElementById("cards-wrapper");
 const dropdown = document.querySelectorAll(".dropdown");
 const dropdownContent = document.querySelectorAll(".dropdown-content");
@@ -181,105 +183,143 @@ let engine = (id, serial) => {
   }
 };
 
-registrationButton.addEventListener("click", () => {
-  addClass(authForm);
-  addClass(registerForm);
+// registrationButton.addEventListener("click", () => {
+//   addClass(authForm);
+//   addClass(registerForm);
+// });
+
+// recoveryButton.addEventListener("click", () => {
+//   addClass(authForm);
+//   addClass(emailForm);
+// });
+
+// registrationButtonOnEmail.addEventListener("click", () => {
+//   addClass(registerForm);
+//   removeClass(emailForm);
+// });
+
+// passFormRecoveryBtn.addEventListener("click", () => {
+//   addClass(emailForm);
+//   removeClass(passwordForm);
+// });
+
+// registrationBtnOnRecovery.addEventListener("click", () => {
+//   addClass(registerForm);
+//   removeClass(passwordForm);
+// });
+
+// recoveryAgainBtn.addEventListener("click", () => {
+//   addClass(emailForm);
+//   removeClass(recoveryTab);
+//   removeClass(authContainer);
+//   errorMsgRemove(recoveryEmail);
+//   errorMsgRemove(failureIcon[4]);
+//   errorMsgRemove(errorMessage[4]);
+// });
+
+// authForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (emailFld.value.trim() !== "" && passFld.value.trim() !== "") {
+//     addClass(authForm);
+//     addClass(authContainer);
+//     addClass(myProfile);
+//   } else {
+//     engine(emailFld, 0);
+//     engine(passFld, 1);
+//   }
+// });
+
+// registerForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (
+//     firstName.value.trim() !== "" &&
+//     lastName.value.trim() !== "" &&
+//     region.value.trim() !== "" &&
+//     school.value.trim() !== "" &&
+//     grade.value.trim() !== "" &&
+//     registeringEmail.value.trim() !== "" &&
+//     repeatPassword.value.trim() !== "" &&
+//     registeringEmail.value.trim() !== ""
+//   ) {
+//     addClass(authContainer);
+//     addClass(successPage);
+//     registerForm.reset();
+//   } else {
+//     engine(firstName, 5);
+//     engine(lastName, 6);
+//     engine(region, 7);
+//     engine(school, 8);
+//     engine(grade, 9);
+//     engine(registeringEmail, 10);
+//     engine(newPassword, 11);
+//     engine(repeatPassword, 12);
+//   }
+// });
+
+// emailForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (recoveryEmail.value.trim() !== "") {
+//     addClass(recoveryTab);
+//     addClass(authContainer);
+//     emailForm.reset();
+//   } else {
+//     engine(recoveryEmail, 4);
+//   }
+// });
+
+// passwordForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if (recoveryPass.value.trim() !== "" && repeatRecPass.value.trim() !== "") {
+//     addClass(authContainer);
+//     addClass(successPassPage);
+//     addClass(passwordForm);
+//     passwordForm.reset();
+//   } else {
+//     engine(recoveryPass, 2);
+//     engine(repeatRecPass, 3);
+//   }
+// });
+
+// profileOptionTwo.addEventListener("click", () => {
+//   addClass(passwordForm);
+//   removeClass(authContainer);
+//   removeClass(myProfile);
+// });
+
+// Swiper
+
+const productContainers = [document.querySelector(".circle-container")];
+const authorContainers = [document.querySelector(".author-container")];
+
+const nxtBtn1 = [document.querySelector(".nxt-btn1")];
+const preBtn1 = [document.querySelector(".pre-btn1")];
+const nxtBtn2 = [document.querySelector(".nxt-btn2")];
+const preBtn2 = [document.querySelector(".pre-btn2")];
+
+productContainers.forEach((item, i) => {
+  let productDimensions = item.getBoundingClientRect();
+
+  let productrWidth = productDimensions.width;
+
+  nxtBtn1[i].addEventListener("click", () => {
+    item.scrollLeft += productrWidth / 3;
+  });
+
+  preBtn1[i].addEventListener("click", () => {
+    item.scrollLeft -= productrWidth / 3;
+  });
 });
 
-recoveryButton.addEventListener("click", () => {
-  addClass(authForm);
-  addClass(emailForm);
-});
+authorContainers.forEach((item, i) => {
+  let authorDimensions = item.getBoundingClientRect();
 
-registrationButtonOnEmail.addEventListener("click", () => {
-  addClass(registerForm);
-  removeClass(emailForm);
-});
+  let authorWidth = authorDimensions.width;
 
-passFormRecoveryBtn.addEventListener("click", () => {
-  addClass(emailForm);
-  removeClass(passwordForm);
-});
+  nxtBtn2[i].addEventListener("click", () => {
+    item.scrollLeft += authorWidth / 3;
+  });
 
-registrationBtnOnRecovery.addEventListener("click", () => {
-  addClass(registerForm);
-  removeClass(passwordForm);
-});
-
-recoveryAgainBtn.addEventListener("click", () => {
-  addClass(emailForm);
-  removeClass(recoveryTab);
-  removeClass(authContainer);
-  errorMsgRemove(recoveryEmail);
-  errorMsgRemove(failureIcon[4]);
-  errorMsgRemove(errorMessage[4]);
-});
-
-authForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (emailFld.value.trim() !== "" && passFld.value.trim() !== "") {
-    addClass(authForm);
-    addClass(authContainer);
-    addClass(myProfile);
-  } else {
-    engine(emailFld, 0);
-    engine(passFld, 1);
-  }
-});
-
-registerForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (
-    firstName.value.trim() !== "" &&
-    lastName.value.trim() !== "" &&
-    region.value.trim() !== "" &&
-    school.value.trim() !== "" &&
-    grade.value.trim() !== "" &&
-    registeringEmail.value.trim() !== "" &&
-    repeatPassword.value.trim() !== "" &&
-    registeringEmail.value.trim() !== ""
-  ) {
-    addClass(authContainer);
-    addClass(successPage);
-    registerForm.reset();
-  } else {
-    engine(firstName, 5);
-    engine(lastName, 6);
-    engine(region, 7);
-    engine(school, 8);
-    engine(grade, 9);
-    engine(registeringEmail, 10);
-    engine(newPassword, 11);
-    engine(repeatPassword, 12);
-  }
-});
-
-emailForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (recoveryEmail.value.trim() !== "") {
-    addClass(recoveryTab);
-    addClass(authContainer);
-    emailForm.reset();
-  } else {
-    engine(recoveryEmail, 4);
-  }
-});
-
-passwordForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (recoveryPass.value.trim() !== "" && repeatRecPass.value.trim() !== "") {
-    addClass(authContainer);
-    addClass(successPassPage);
-    addClass(passwordForm);
-    passwordForm.reset();
-  } else {
-    engine(recoveryPass, 2);
-    engine(repeatRecPass, 3);
-  }
-});
-
-profileOptionTwo.addEventListener("click", () => {
-  addClass(passwordForm);
-  removeClass(authContainer);
-  removeClass(myProfile);
+  preBtn2[i].addEventListener("click", () => {
+    item.scrollLeft -= authorWidth / 3;
+  });
 });

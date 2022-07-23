@@ -36,20 +36,45 @@ h1 {
   }
 
   .filter-container {
-    margin: 2rem 0;
-    display: none;
+    width: 100%;
+    margin: 2rem 10% 0px 0px;
+    position: absolute;
+    left: -99999px;
+
+    .swiper-wrapper {
+      button {
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb);
+      }
+      img {
+        opacity: 0.7;
+        width: 12px;
+        height: 20px;
+      }
+    }
 
     &.active-filter {
-      display: block;
+      position: static;
     }
 
     .swiper-slide {
-      padding: 0 50px;
+      width: 91%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 25px;
+      .circle-container {
+        height: 76px;
+      }
 
       .content-container {
         display: flex;
-        align-items: flex-start;
-        overflow: hidden;
+        width: 1925px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         .item {
           display: flex;
@@ -79,11 +104,12 @@ h1 {
 
         .tag {
           padding: 10px;
-          background-color: #c5c5c5;
+          background-color: $whiteColor;
           margin-right: 10px;
           font-size: 15px;
-          color: black;
+          color: $darkBlack;
           cursor: pointer;
+          border: 1px solid $darkBlack;
           white-space: nowrap;
 
           &.clicked {
@@ -114,7 +140,6 @@ h1 {
       grid-template-columns: repeat(1, 1fr);
     }
     .card {
-
       border: 1px solid $cardsBorderColor;
 
       width: 250px;
@@ -854,6 +879,8 @@ h1 {
   }
 }
 
+//pagination
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -889,6 +916,7 @@ h1 {
     width: auto;
     height: auto;
     cursor: pointer;
+
     margin: 0px 22px;
   }
   .basebtn img {
