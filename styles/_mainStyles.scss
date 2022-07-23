@@ -2,41 +2,6 @@ body {
   background: $darkWhiteColor;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0px 3px 6px #00000029;
-  background: $lightWhite;
-  z-index: 99;
-  nav {
-    width: $containerWidth;
-    margin: 0 auto;
-    font-family: 'BPG Nino Mtavruli';
-    height: 80px;
-    @include displayFlex(space-between, center);
-    .logo-wrapper {
-      width: 60px;
-      height: 60px;
-      .logo {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .nav-links {
-      min-width: 40%;
-      @include displayFlex(space-between, null);
-      li {
-        a {
-          color: $darkBlack;
-          font-size: 17px;
-        }
-      }
-    }
-  }
-}
-
 h1 {
   max-width: 800px;
   margin: 8rem auto 3rem auto;
@@ -44,14 +9,14 @@ h1 {
   font-size: 33px;
   font-weight: normal;
   line-height: 50px;
-  font-family: 'BPG Banner Caps';
+  font-family: "BPG Banner Caps";
   text-transform: uppercase;
 }
 
 .container {
   width: $containerWidth;
   margin: 0 auto;
-  font-family: 'DejaVu Sans';
+  font-family: "DejaVu Sans";
 
   .sorting {
     margin-bottom: 2rem;
@@ -65,26 +30,51 @@ h1 {
       cursor: pointer;
     }
 
-    button:focus {
-      border: none;
+    .borderActive {
+      border-bottom: 5px solid $primaryColor;
     }
   }
 
   .filter-container {
-    margin: 2rem 0;
-    display: none;
+    width: 100%;
+    margin: 2rem 10% 0px 0px;
+    position: absolute;
+    left: -99999px;
+
+    .swiper-wrapper {
+      button {
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb);
+      }
+      img {
+        opacity: 0.7;
+        width: 12px;
+        height: 20px;
+      }
+    }
 
     &.active-filter {
-      display: block;
+      position: static;
     }
 
     .swiper-slide {
-      padding: 0 50px;
+      width: 91%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 25px;
+      .circle-container {
+        height: 76px;
+      }
 
       .content-container {
         display: flex;
-        align-items: flex-start;
-        overflow: hidden;
+        width: 1925px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         .item {
           display: flex;
@@ -114,11 +104,12 @@ h1 {
 
         .tag {
           padding: 10px;
-          background-color: #c5c5c5;
+          background-color: $whiteColor;
           margin-right: 10px;
           font-size: 15px;
-          color: black;
+          color: $darkBlack;
           cursor: pointer;
+          border: 1px solid $darkBlack;
           white-space: nowrap;
 
           &.clicked {
@@ -135,6 +126,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     padding: 2rem 0;
+    // justify-items: center;
 
     @media screen and (max-width: 991px) {
       grid-template-columns: repeat(3, 1fr);
@@ -147,39 +139,80 @@ h1 {
     @media screen and (max-width: 500px) {
       grid-template-columns: repeat(1, 1fr);
     }
-
     .card {
-      border: 1px solid #707070;
+      border: 1px solid $cardsBorderColor;
+
+      width: 250px;
+      height: 250px;
       padding: 10px 15px;
       border-radius: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-
+      cursor: pointer;
+      &:hover {
+        background-color: $blueRgba;
+      }
       p {
+        display: flex;
         font-size: 13px;
         font-weight: bold;
-        color: black;
+        color: $darkBlack;
+        width: 100%;
+        height: 100px;
+      }
+
+      .checkSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          background-color: $greenBackground;
+          color: $whiteColor;
+          padding: 5px;
+          font-weight: bold;
+          font-size: 11px;
+        }
+      }
+      .nonCheckSign {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin: 10px 10px 0px 0px;
+        span {
+          display: flex;
+          text-align: center;
+          color: $newGray;
+          font-weight: bold;
+          font-size: 11px;
+          padding: 5px;
+        }
       }
 
       img {
-        margin: 2rem auto 1rem auto;
+        margin: 1rem auto 1rem auto;
       }
 
       .tags-container {
         width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
 
         .tag {
           padding: 5px;
-          background-color: #3571a3;
+          background-color: $primaryColor;
           margin-right: 5px;
           margin-bottom: 5px;
           font-size: 9px;
-          color: white;
+          color: $whiteColor;
         }
       }
     }
@@ -216,7 +249,7 @@ h1 {
         font-weight: bold;
         align-self: center;
         margin-bottom: 2rem;
-        font-family: 'BPG Nino Mtavruli';
+        font-family: "BPG Nino Mtavruli";
       }
       .msg-wrapper {
         display: flex;
@@ -238,7 +271,7 @@ h1 {
           display: block;
         }
         .sb4:before {
-          content: '';
+          content: "";
           width: 0px;
           height: 0px;
           position: absolute;
@@ -254,7 +287,7 @@ h1 {
         color: #9191a0;
         margin-bottom: 0;
         font-size: 13px;
-        font-family: 'BPG Nino Mtavruli';
+        font-family: "BPG Nino Mtavruli";
       }
       input,
       select {
@@ -272,7 +305,8 @@ h1 {
       .input.success {
         border: 1px solid $successMessage;
       }
-      input:focus, select:focus {
+      input:focus,
+      select:focus {
         outline-color: $darkBlue;
       }
       .restore-wrapper {
@@ -329,7 +363,7 @@ h1 {
         background: transparent;
         border: none;
         cursor: pointer;
-        font-family: 'BPG Nino Mtavruli';
+        font-family: "BPG Nino Mtavruli";
       }
       .enter {
         background-color: $darkBlue;
@@ -340,7 +374,7 @@ h1 {
         box-shadow: 0px 3px 6px #00000029;
         width: auto;
         margin: 1rem auto;
-        font-family: 'BPG Nino Mtavruli';
+        font-family: "BPG Nino Mtavruli";
         font-weight: bold;
         padding: 0.8rem 1.8rem;
         cursor: pointer;
@@ -441,7 +475,7 @@ h1 {
       color: $primaryColor;
       text-align: center;
       margin: 2rem auto;
-      font-family: 'BPG Nino Mtavruli';
+      font-family: "BPG Nino Mtavruli";
     }
     h2 {
       font-size: 36px;
@@ -480,7 +514,7 @@ h1 {
       line-height: 21px;
       font-weight: bold;
       color: $darkBlack;
-      font-family: 'BPG Nino Mtavruli';
+      font-family: "BPG Nino Mtavruli";
     }
     p {
       color: $lightBlack;
@@ -552,7 +586,7 @@ h1 {
       align-self: center;
       margin-bottom: 2rem;
       padding: 3rem 0rem;
-      font-family: 'BPG Nino Mtavruli';
+      font-family: "BPG Nino Mtavruli";
     }
     hr {
       margin: 2rem auto 0 auto;
@@ -568,7 +602,7 @@ h1 {
         color: #9191a0;
         margin-bottom: 0;
         font-size: 13px;
-        font-family: 'BPG Nino Mtavruli';
+        font-family: "BPG Nino Mtavruli";
       }
       input,
       select {
@@ -619,7 +653,7 @@ h1 {
           margin: 1rem auto;
           padding: 0.8rem 1.8rem;
           cursor: pointer;
-          font-family: 'BPG Nino Mtavruli';
+          font-family: "BPG Nino Mtavruli";
         }
       }
     }
@@ -628,12 +662,12 @@ h1 {
     display: flex;
   }
   .selectDiv {
-      position: relative;
-      float: left;
-      min-width: 200px;
+    position: relative;
+    float: left;
+    min-width: 200px;
   }
   .selectDiv:after {
-    content: '>';
+    content: ">";
     font: 17px "Consolas", monospace;
     color: $cardsBorderColor;
     -webkit-transform: rotate(90deg);
@@ -649,12 +683,12 @@ h1 {
     pointer-events: none;
   }
   .selectDiv.active:after {
-    content: '<';
+    content: "<";
   }
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;    
+    appearance: none;
     width: 100%;
     height: 50px;
     margin: 5px 0px;
@@ -678,15 +712,15 @@ h1 {
     h2 {
       margin: $margin;
       font-size: 26px;
-      font-family: 'BPG Nino Mtavruli';
+      font-family: "BPG Nino Mtavruli";
     }
     p {
       margin: $margin;
-      font-family: 'BPG Banner Caps';
+      font-family: "BPG Banner Caps";
     }
   }
   .contacts-email {
-    font-family: 'BPG Nino Mtavruli';
+    font-family: "BPG Nino Mtavruli";
     margin: $margin;
     a {
       color: $darkBlack;
@@ -695,7 +729,7 @@ h1 {
     }
   }
 
-   .contacts-social-media {
+  .contacts-social-media {
     i {
       color: $darkBlue;
     }
@@ -713,7 +747,7 @@ h1 {
     display: flex;
     flex-direction: column;
     @include displayFlex(space-between);
-    font-family: 'BPG Nino Mtavruli';
+    font-family: "BPG Nino Mtavruli";
     h2 {
       font-size: 1.7rem;
     }
@@ -778,24 +812,24 @@ h1 {
 }
 .about-contaioner {
   margin-bottom: 3rem;
-    .about-container-top-wrapper {
-      width: 100%;
-      height: 60vh;
-      .about-container-top {
-        height: 100%;
-        width: 85%;
-        margin: 5rem auto 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .about-container-top-about {
-          h2 {
+  .about-container-top-wrapper {
+    width: 100%;
+    height: 60vh;
+    .about-container-top {
+      height: 100%;
+      width: 85%;
+      margin: 5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .about-container-top-about {
+        h2 {
           font-size: 35px;
-          font-family: 'BPG Banner Caps';
+          font-family: "BPG Banner Caps";
           margin: 0 0 1.5rem 0;
         }
-          p {
-          font-family: 'DejaVu Sans';
+        p {
+          font-family: "DejaVu Sans";
           font-size: 18px;
           margin: 0 0 3rem 0;
         }
@@ -803,11 +837,11 @@ h1 {
       .about-container-top-goal {
         h2 {
           font-size: 35px;
-          font-family: 'BPG Banner Caps';
+          font-family: "BPG Banner Caps";
           margin: 0 0 1.5rem 0;
         }
         p {
-          font-family: 'DejaVu Sans';
+          font-family: "DejaVu Sans";
           font-size: 18px;
         }
       }
@@ -820,7 +854,7 @@ h1 {
       h2 {
         padding: 3rem 0 5rem 0;
         font-size: 35px;
-        font-family: 'BPG Banner Caps';
+        font-family: "BPG Banner Caps";
       }
       .about-container-bottom-team-info {
         min-height: 70vh;
@@ -831,11 +865,11 @@ h1 {
           width: 100%;
           height: 100%;
           h4 {
-            font-family: 'DejaVu Sans';
+            font-family: "DejaVu Sans";
             font-size: 24px;
           }
           p {
-            font-family: 'DejaVu Sans';
+            font-family: "DejaVu Sans";
             font-size: 18px;
             margin: 1rem 0 0 0;
           }
@@ -845,25 +879,52 @@ h1 {
   }
 }
 
-footer {
-  width: 100%;
-  margin-top: auto;
-  background: $lightWhite;
-  border: 1px solid $cardsBorderColor;
-  padding: 1.5rem 2.0rem;
-  line-height: 18px;
-  .div-1 {
-    width: 100%;
-    margin-bottom: 1rem;
-    p {
-      width: 30%;
-      text-align: left;
+//pagination
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 185px 0px 396px 0px;
+  .pre,
+  .next {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  }
+
+  .initionDecoration {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    margin: 0px 8px;
+    padding: 6px;
+
+    &:hover {
+      border: 1px solid $primaryColor;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      color: white;
+      padding: 5px;
     }
   }
-  .div-2 {
-    width: 100%;
-    p {
-      text-align: center;
-    }
+  .dots {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  .basebtn {
+    border: none;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+
+    margin: 0px 22px;
+  }
+  .basebtn img {
+    opacity: 0.7;
+    width: 12px;
+    height: 20px;
+  }
+  .basebtn:hover img {
+    opacity: 1;
   }
 }
