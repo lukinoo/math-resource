@@ -277,6 +277,7 @@ h1 {
 }
 .container .grid-container {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   padding: 2rem 0;
@@ -1017,6 +1018,24 @@ h1 {
   margin: 1rem 0 0 0;
 }
 
+.initionDecoration {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin: 0px 8px;
+  padding: 6.3px;
+}
+.initionDecoration:hover {
+  border: 1px solid #3571a3;
+  background-color: #3571a3;
+  border-radius: 50%;
+  color: white;
+  padding: 6.3px;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -1026,20 +1045,13 @@ h1 {
 .pagination .next {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
-.pagination .initionDecoration {
-  display: flex;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-  margin: 0px 8px;
-  padding: 6px;
-}
-.pagination .initionDecoration:hover {
+.pagination .active {
   border: 1px solid #3571a3;
   background-color: #3571a3;
   border-radius: 50%;
   color: white;
-  padding: 5px;
+  margin: 0px 8px;
+  padding: 6.3px;
 }
 .pagination .dots {
   display: flex;
