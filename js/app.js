@@ -73,7 +73,7 @@ window.addEventListener("load", () => {
     );
     filterContainers[0].classList.toggle("active-filter");
     filterBtns[0].classList.toggle("borderActive");
-    console.log("test");
+    showCainerBtn();
   });
   filterBtns[1].addEventListener("click", () => {
     removeActiveFilter(
@@ -84,6 +84,7 @@ window.addEventListener("load", () => {
     );
     filterContainers[1].classList.toggle("active-filter");
     filterBtns[1].classList.toggle("borderActive");
+    showCainerBtn();
   });
   filterBtns[2].addEventListener("click", () => {
     removeActiveFilter(
@@ -94,8 +95,10 @@ window.addEventListener("load", () => {
     );
     filterContainers[2].classList.toggle("active-filter");
     filterBtns[2].classList.toggle("borderActive");
+    showCainerBtn();
   });
 });
+
 // RemoveActiveFilter-ში დავამატე RemoveBorderActive.
 const removeActiveFilter = (item1, item2, item3, item4) => {
   if (item1.classList.contains("active-filter")) {
@@ -110,6 +113,7 @@ const removeActiveFilter = (item1, item2, item3, item4) => {
   if (item4.classList.contains("borderActive")) {
     item4.classList.remove("borderActive");
   }
+  // document.getElementById("containerHide").classList.add("mainContainer1");
 };
 
 const contentContainerItems = document.querySelectorAll(
@@ -286,7 +290,7 @@ let engine = (id, serial) => {
 //   removeClass(myProfile);
 // });
 
-// Swiper
+// slider
 
 const productContainers = [document.querySelector(".circle-container")];
 const authorContainers = [document.querySelector(".author-container")];
@@ -323,3 +327,136 @@ authorContainers.forEach((item, i) => {
     item.scrollLeft -= authorWidth / 3;
   });
 });
+
+// Container
+
+const searchBtn = document.querySelector(".search");
+
+const mm = document.querySelectorAll(".closeBtn");
+
+function clearBox(elementID, elementID2, elementID3) {
+  // Empty filter Container
+
+  document.getElementById(elementID).innerHTML = "";
+  document.getElementById(elementID2).innerHTML = "";
+  document.getElementById(elementID3).innerHTML = "";
+
+  // Remove Filter active class
+  const items = [...document.querySelectorAll(".clicked")];
+  for (const item of items) {
+    item.classList.remove("clicked");
+  }
+
+  // remove filter Chosen class
+  const items2 = [...document.querySelectorAll(".chosen")];
+  for (const item of items2) {
+    item.classList.remove("chosen");
+  }
+
+  // document.getElementById("containerHide").style.display = "none";
+}
+
+// id = "authorClear";
+// id = "circleClear";
+// id = "classClear";
+// addFilter
+
+// Filterbox
+const authorFilterBox = document.querySelector(".author");
+const gradeFilterBox = document.querySelector(".gradeBox");
+const circleFilterBox = document.querySelector(".circleBox");
+
+// add/delete Author filter and active
+function addAuthorFilter(element) {
+  if (element.classList.contains("clicked")) {
+    document.getElementById("filter_" + element.id).remove();
+  } else {
+    const elements1 = `
+  <div id="filter_${element.id}" class="containerTag">
+    ${element.innerText} <button
+    onclick="removeParents(this);"
+    id="closeActive"
+    class="closeBtn"
+  >&nbsp;
+  <img src="/assets/closeBtn.png" alt="" />
+  </button>
+  </div>
+`;
+    authorFilterBox.insertAdjacentHTML("beforeend", elements1);
+  }
+  showContainer();
+}
+// add/delete Grade filter and active
+function addGradeFilter(element2) {
+  if (element2.classList.contains("clicked")) {
+    document.getElementById("filter_" + element2.id).remove();
+  } else {
+    const elements1 = `
+  <div id="filter_${element2.id}" class="containerTag">
+    ${element2.innerText} <button
+    onclick="removeParents(this);"
+    id="closeActive"
+    class="closeBtn"
+  >&nbsp;
+  <img src="/assets/closeBtn.png" alt="" />
+  </button>
+  </div>
+`;
+    gradeFilterBox.insertAdjacentHTML("beforeend", elements1);
+  }
+  showContainer();
+}
+// add/delete Circle filter and active
+function addCircleFilter(element3) {
+  if (element3.classList.contains("chosen")) {
+    document.getElementById("filter_" + element3.id).remove();
+  } else {
+    const elements1 = `
+  <div id="filter_${element3.id}" class="containerTag">
+    ${element3.innerText} <button
+    onclick="removeParents(this);"
+    id="closeActive"
+    class="closeBtn"
+  >&nbsp;
+  <img src="/assets/closeBtn.png" alt="" />
+  </button>
+  </div>
+`;
+    circleFilterBox.insertAdjacentHTML("beforeend", elements1);
+  }
+  showContainer();
+}
+
+// Remove button (delete div from Filter Container)
+
+function removeParents(e) {
+  let root = e.parentNode;
+  root.parentNode.removeChild(root);
+  console.log(root);
+  let newRoot = root.id;
+  let newStr = newRoot.substr(7, newRoot.length);
+  console.log(newStr);
+  document.getElementById(newStr).classList.remove("clicked");
+  document.getElementById(newStr).classList.remove("chosen");
+}
+
+// Main Container show/hide
+
+function showContainer() {
+  document.getElementById("containerHide").style.display = "flex";
+}
+
+// Clear main Container after hide
+function showCainerBtn() {
+  const activeBorder = [...document.querySelectorAll(".filter-buttons")];
+
+  if (
+    activeBorder[0].classList.contains("borderActive") ||
+    activeBorder[1].classList.contains("borderActive") ||
+    activeBorder[2].classList.contains("borderActive")
+  ) {
+  } else {
+    document.getElementById("containerHide").style.display = "none";
+    clearBox("authorClear", "circleClear", "classClear");
+  }
+}

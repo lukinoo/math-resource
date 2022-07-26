@@ -18,11 +18,106 @@ h1 {
   margin: 0 auto;
   font-family: "DejaVu Sans";
 
+  .mainContainer {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin: 45px 0px;
+    height: auto;
+
+    .containerCombine {
+      box-sizing: inherit;
+      border: 2px solid $cardsBorderColor;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+
+      .firstPart {
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .containerTag {
+          height: 50px;
+          background-color: $primaryColor;
+          color: $whiteColor;
+          padding: 10px 6px;
+          font-size: 15px;
+          border: 1px solid $primaryColor;
+          white-space: nowrap;
+          margin: 0px 0px 20px 15px;
+        }
+        .closeBtn {
+          background-color: $primaryColor;
+          color: $whiteColor;
+          border: none;
+          margin-bottom: 10px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+
+        .authorClass {
+          display: flex;
+          margin-top: 20px;
+
+          .author {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+          }
+
+          .gradeBox {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            margin-left: 30px;
+          }
+        }
+
+        .circleBox {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .tag {
+          }
+        }
+      }
+
+      .containerOptions {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        .clear {
+          background-color: $whiteColor;
+          color: $primaryColor;
+          padding: 10px;
+          margin-right: 10px;
+          font-size: 15px;
+          border: 1px solid $primaryColor;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+        .search {
+          background-color: $primaryColor;
+          color: $whiteColor;
+          padding: 10px 20px;
+          font-size: 15px;
+          border: 1px solid $primaryColor;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   .sorting {
     margin-bottom: 2rem;
+    padding-left: 50px;
 
     button {
-      margin-right: 2rem;
+      margin-right: 100px;
       font-family: inherit;
       border: none;
       background-color: transparent;
@@ -42,7 +137,10 @@ h1 {
     left: -99999px;
 
     .swiper-wrapper {
+      display: flex;
+      justify-content: center;
       button {
+        padding: 0px 40px;
         border: none;
         cursor: pointer;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb);
@@ -61,7 +159,7 @@ h1 {
     .swiper-slide {
       width: 91%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       padding: 0px 25px;
       .circle-container {
         height: 76px;
@@ -113,8 +211,8 @@ h1 {
           white-space: nowrap;
 
           &.clicked {
-            background-color: #3571a3;
-            color: white;
+            background-color: $primaryColor;
+            color: $whiteColor;
           }
         }
       }
@@ -124,21 +222,20 @@ h1 {
   .grid-container {
     display: grid;
     justify-items: center;
-
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     padding: 2rem 0;
     // justify-items: center;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1300px) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 950px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 650px) {
       grid-template-columns: repeat(1, 1fr);
     }
     .card {
@@ -881,7 +978,6 @@ h1 {
   }
 }
 
-
 .initionDecoration {
   width: 30px;
   height: 30px;
@@ -901,14 +997,13 @@ h1 {
   }
 }
 
-
 .pagination {
   display: flex;
   justify-content: center;
   margin: 185px 0px 396px 0px;
   .pre,
   .next {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb 100%);
   }
   .active {
     border: 1px solid $primaryColor;
@@ -926,18 +1021,18 @@ h1 {
   }
   .basebtn {
     border: none;
-    width: auto;
-    height: auto;
+    // width: auto;
+    // height: auto;
     cursor: pointer;
 
     margin: 0px 22px;
   }
   .basebtn img {
-    opacity: 0.7;
-    width: 12px;
-    height: 20px;
+    // opacity: 0.7;
+    // width: 12px;
+    // height: 20px;
   }
   .basebtn:hover img {
-    opacity: 1;
+    // opacity: 1;
   }
 }
