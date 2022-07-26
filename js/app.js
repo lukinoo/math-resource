@@ -378,7 +378,7 @@ function addAuthorFilter(element) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
@@ -398,7 +398,7 @@ function addGradeFilter(element2) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
@@ -418,7 +418,7 @@ function addCircleFilter(element3) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
