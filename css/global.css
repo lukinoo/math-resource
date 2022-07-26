@@ -190,11 +190,94 @@ h1 {
   margin: 0 auto;
   font-family: "DejaVu Sans";
 }
+.container .mainContainer {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  margin: 45px 0px;
+  height: auto;
+}
+.container .mainContainer .containerCombine {
+  box-sizing: inherit;
+  border: 2px solid #707070;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.container .mainContainer .containerCombine .firstPart {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .mainContainer .containerCombine .firstPart .containerTag {
+  height: 50px;
+  background-color: #3571a3;
+  color: #ffffff;
+  padding: 10px 6px;
+  font-size: 15px;
+  border: 1px solid #3571a3;
+  white-space: nowrap;
+  margin: 0px 0px 20px 15px;
+}
+.container .mainContainer .containerCombine .firstPart .closeBtn {
+  background-color: #3571a3;
+  color: #ffffff;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container .mainContainer .containerCombine .firstPart .authorClass {
+  display: flex;
+  margin-top: 20px;
+}
+.container .mainContainer .containerCombine .firstPart .authorClass .author {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.container .mainContainer .containerCombine .firstPart .authorClass .gradeBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 30px;
+}
+.container .mainContainer .containerCombine .firstPart .circleBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .mainContainer .containerCombine .containerOptions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.container .mainContainer .containerCombine .containerOptions .clear {
+  background-color: #ffffff;
+  color: #3571a3;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  border: 1px solid #3571a3;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.container .mainContainer .containerCombine .containerOptions .search {
+  background-color: #3571a3;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: 1px solid #3571a3;
+  white-space: nowrap;
+  cursor: pointer;
+}
 .container .sorting {
   margin-bottom: 2rem;
+  padding-left: 50px;
 }
 .container .sorting button {
-  margin-right: 2rem;
+  margin-right: 100px;
   font-family: inherit;
   border: none;
   background-color: transparent;
@@ -210,7 +293,12 @@ h1 {
   position: absolute;
   left: -99999px;
 }
+.container .filter-container .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .container .filter-container .swiper-wrapper button {
+  padding: 0px 40px;
   border: none;
   cursor: pointer;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb);
@@ -226,7 +314,7 @@ h1 {
 .container .filter-container .swiper-slide {
   width: 91%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 0px 25px;
 }
 .container .filter-container .swiper-slide .circle-container {
@@ -273,7 +361,7 @@ h1 {
 }
 .container .filter-container .swiper-slide .content-container .tag.clicked {
   background-color: #3571a3;
-  color: white;
+  color: #ffffff;
 }
 .container .grid-container {
   display: grid;
@@ -282,17 +370,17 @@ h1 {
   grid-gap: 30px;
   padding: 2rem 0;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1300px) {
   .container .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 950px) {
   .container .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .container .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1043,7 +1131,7 @@ h1 {
 }
 .pagination .pre,
 .pagination .next {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb 100%);
 }
 .pagination .active {
   border: 1px solid #3571a3;
@@ -1060,20 +1148,9 @@ h1 {
 }
 .pagination .basebtn {
   border: none;
-  width: auto;
-  height: auto;
   cursor: pointer;
   margin: 0px 22px;
 }
-.pagination .basebtn img {
-  opacity: 0.7;
-  width: 12px;
-  height: 20px;
-}
-.pagination .basebtn:hover img {
-  opacity: 1;
-}
-
 header {
   position: fixed;
   top: 0;
