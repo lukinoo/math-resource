@@ -14,7 +14,7 @@ h1 {
 }
 
 .container {
-  width: $containerWidth;
+  max-width: 1300px;
   margin: 0 auto;
   font-family: "DejaVu Sans";
 
@@ -223,7 +223,7 @@ h1 {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-gap: 30px 0px;
     padding: 2rem 0;
     // justify-items: center;
 
@@ -1000,7 +1000,7 @@ h1 {
 .pagination {
   display: flex;
   justify-content: center;
-  margin: 185px 0px 396px 0px;
+  margin: 84px 0px 163px 0px;
   .pre,
   .next {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb 100%);

@@ -147,45 +147,45 @@ window.addEventListener("load", () => {
 
 // ----x-----x---- Filters
 
-const addClass = (element) => {
-  element.classList.add("active");
-};
+// const addClass = (element) => {
+//   element.classList.add("active");
+// };
 
-const removeClass = (element) => {
-  element.classList.remove("active");
-};
+// const removeClass = (element) => {
+//   element.classList.remove("active");
+// };
 
-const errorMsgAdd = (element) => {
-  element.classList.add("error");
-};
+// const errorMsgAdd = (element) => {
+//   element.classList.add("error");
+// };
 
-const errorMsgRemove = (element) => {
-  element.classList.remove("error");
-};
+// const errorMsgRemove = (element) => {
+//   element.classList.remove("error");
+// };
 
-const successMsgAdd = (element) => {
-  element.classList.add("success");
-};
+// const successMsgAdd = (element) => {
+//   element.classList.add("success");
+// };
 
-const successMsgRemove = (element) => {
-  element.classList.remove("success");
-};
+// const successMsgRemove = (element) => {
+//   element.classList.remove("success");
+// };
 
-let engine = (id, serial) => {
-  if (id.value.trim() === "") {
-    errorMsgAdd(id);
-    errorMsgAdd(failureIcon[serial]);
-    errorMsgAdd(errorMessage[serial]);
-    successMsgRemove(id);
-    successMsgRemove(successIcon[serial]);
-  } else {
-    errorMsgRemove(id);
-    errorMsgRemove(failureIcon[serial]);
-    errorMsgRemove(errorMessage[serial]);
-    successMsgAdd(id);
-    successMsgAdd(successIcon[serial]);
-  }
-};
+// let engine = (id, serial) => {
+//   if (id.value.trim() === "") {
+//     errorMsgAdd(id);
+//     errorMsgAdd(failureIcon[serial]);
+//     errorMsgAdd(errorMessage[serial]);
+//     successMsgRemove(id);
+//     successMsgRemove(successIcon[serial]);
+//   } else {
+//     errorMsgRemove(id);
+//     errorMsgRemove(failureIcon[serial]);
+//     errorMsgRemove(errorMessage[serial]);
+//     successMsgAdd(id);
+//     successMsgAdd(successIcon[serial]);
+//   }
+// };
 
 // registrationButton.addEventListener("click", () => {
 //   addClass(authForm);
@@ -353,7 +353,7 @@ function clearBox(elementID, elementID2, elementID3) {
     item.classList.remove("chosen");
   }
 
-  // document.getElementById("containerHide").style.display = "none";
+  document.getElementById("containerHide").style.display = "none";
 }
 
 // id = "authorClear";
@@ -370,6 +370,7 @@ const circleFilterBox = document.querySelector(".circleBox");
 function addAuthorFilter(element) {
   if (element.classList.contains("clicked")) {
     document.getElementById("filter_" + element.id).remove();
+    showContainer();
   } else {
     const elements1 = `
   <div id="filter_${element.id}" class="containerTag">
@@ -390,6 +391,7 @@ function addAuthorFilter(element) {
 function addGradeFilter(element2) {
   if (element2.classList.contains("clicked")) {
     document.getElementById("filter_" + element2.id).remove();
+    showContainer();
   } else {
     const elements1 = `
   <div id="filter_${element2.id}" class="containerTag">
@@ -410,6 +412,7 @@ function addGradeFilter(element2) {
 function addCircleFilter(element3) {
   if (element3.classList.contains("chosen")) {
     document.getElementById("filter_" + element3.id).remove();
+    showContainer();
   } else {
     const elements1 = `
   <div id="filter_${element3.id}" class="containerTag">
@@ -455,8 +458,15 @@ function showCainerBtn() {
     activeBorder[1].classList.contains("borderActive") ||
     activeBorder[2].classList.contains("borderActive")
   ) {
+  } else if (
+    element3.classList.contains("chosen") &&
+    element2.classList.contains("clicked")
+  ) {
+    showContainer();
   } else {
     document.getElementById("containerHide").style.display = "none";
-    clearBox("authorClear", "circleClear", "classClear");
+    // clearBox("authorClear", "circleClear", "classClear");
   }
 }
+
+// მოკლედ გავუწერო თუ ერთი ელემენტი შიგნით მაინც იქნება აქტიური აჩვენოს
