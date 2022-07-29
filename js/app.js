@@ -292,6 +292,10 @@ window.addEventListener("load", () => {
 
 // slider
 
+const authorBox = document.getElementById("authorClear");
+const classBox = document.getElementById("classClear");
+const circleBox = document.getElementById("circleClear");
+// const box12 = document.getElementById("filter_author_1");
 const productContainers = [document.querySelector(".circle-container")];
 const authorContainers = [document.querySelector(".author-container")];
 
@@ -353,7 +357,7 @@ function clearBox(elementID, elementID2, elementID3) {
     item.classList.remove("chosen");
   }
 
-  document.getElementById("containerHide").style.display = "none";
+  closeContainer();
 }
 
 // id = "authorClear";
@@ -371,6 +375,7 @@ function addAuthorFilter(element) {
   if (element.classList.contains("clicked")) {
     document.getElementById("filter_" + element.id).remove();
     showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element.id}" class="containerTag">
@@ -384,14 +389,15 @@ function addAuthorFilter(element) {
   </div>
 `;
     authorFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 // add/delete Grade filter and active
 function addGradeFilter(element2) {
   if (element2.classList.contains("clicked")) {
     document.getElementById("filter_" + element2.id).remove();
     showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element2.id}" class="containerTag">
@@ -405,14 +411,15 @@ function addGradeFilter(element2) {
   </div>
 `;
     gradeFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 // add/delete Circle filter and active
 function addCircleFilter(element3) {
   if (element3.classList.contains("chosen")) {
     document.getElementById("filter_" + element3.id).remove();
     showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element3.id}" class="containerTag">
@@ -426,8 +433,8 @@ function addCircleFilter(element3) {
   </div>
 `;
     circleFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 
 // Remove button (delete div from Filter Container)
@@ -441,12 +448,16 @@ function removeParents(e) {
   console.log(newStr);
   document.getElementById(newStr).classList.remove("clicked");
   document.getElementById(newStr).classList.remove("chosen");
+  closeContainerFromButton(authorBox, circleBox, classBox);
 }
 
 // Main Container show/hide
 
 function showContainer() {
   document.getElementById("containerHide").style.display = "flex";
+}
+function closeContainer() {
+  document.getElementById("containerHide").style.display = "none";
 }
 
 // Clear main Container after hide
@@ -464,9 +475,23 @@ function showCainerBtn() {
   ) {
     showContainer();
   } else {
-    document.getElementById("containerHide").style.display = "none";
+    closeContainer();
     // clearBox("authorClear", "circleClear", "classClear");
   }
 }
 
 // მოკლედ გავუწერო თუ ერთი ელემენტი შიგნით მაინც იქნება აქტიური აჩვენოს
+
+// authorClear classClear circleClear
+
+function closeContainerFromButton(authorBox, circleBox, classBox) {
+  if (
+    (authorBox.textContent.trim() === "" && circleBox.textContent.trim()) ===
+      "" &&
+    classBox.textContent.trim() === ""
+  ) {
+    closeContainer();
+  } else {
+    console.log("⛔️ Element is NOT empty");
+  }
+}
