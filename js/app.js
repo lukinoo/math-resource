@@ -147,45 +147,45 @@ window.addEventListener("load", () => {
 
 // ----x-----x---- Filters
 
-const addClass = (element) => {
-  element.classList.add("active");
-};
+// const addClass = (element) => {
+//   element.classList.add("active");
+// };
 
-const removeClass = (element) => {
-  element.classList.remove("active");
-};
+// const removeClass = (element) => {
+//   element.classList.remove("active");
+// };
 
-const errorMsgAdd = (element) => {
-  element.classList.add("error");
-};
+// const errorMsgAdd = (element) => {
+//   element.classList.add("error");
+// };
 
-const errorMsgRemove = (element) => {
-  element.classList.remove("error");
-};
+// const errorMsgRemove = (element) => {
+//   element.classList.remove("error");
+// };
 
-const successMsgAdd = (element) => {
-  element.classList.add("success");
-};
+// const successMsgAdd = (element) => {
+//   element.classList.add("success");
+// };
 
-const successMsgRemove = (element) => {
-  element.classList.remove("success");
-};
+// const successMsgRemove = (element) => {
+//   element.classList.remove("success");
+// };
 
-let engine = (id, serial) => {
-  if (id.value.trim() === "") {
-    errorMsgAdd(id);
-    errorMsgAdd(failureIcon[serial]);
-    errorMsgAdd(errorMessage[serial]);
-    successMsgRemove(id);
-    successMsgRemove(successIcon[serial]);
-  } else {
-    errorMsgRemove(id);
-    errorMsgRemove(failureIcon[serial]);
-    errorMsgRemove(errorMessage[serial]);
-    successMsgAdd(id);
-    successMsgAdd(successIcon[serial]);
-  }
-};
+// let engine = (id, serial) => {
+//   if (id.value.trim() === "") {
+//     errorMsgAdd(id);
+//     errorMsgAdd(failureIcon[serial]);
+//     errorMsgAdd(errorMessage[serial]);
+//     successMsgRemove(id);
+//     successMsgRemove(successIcon[serial]);
+//   } else {
+//     errorMsgRemove(id);
+//     errorMsgRemove(failureIcon[serial]);
+//     errorMsgRemove(errorMessage[serial]);
+//     successMsgAdd(id);
+//     successMsgAdd(successIcon[serial]);
+//   }
+// };
 
 // registrationButton.addEventListener("click", () => {
 //   addClass(authForm);
@@ -292,6 +292,10 @@ let engine = (id, serial) => {
 
 // slider
 
+const authorBox = document.getElementById("authorClear");
+const classBox = document.getElementById("classClear");
+const circleBox = document.getElementById("circleClear");
+// const box12 = document.getElementById("filter_author_1");
 const productContainers = [document.querySelector(".circle-container")];
 const authorContainers = [document.querySelector(".author-container")];
 
@@ -353,7 +357,7 @@ function clearBox(elementID, elementID2, elementID3) {
     item.classList.remove("chosen");
   }
 
-  // document.getElementById("containerHide").style.display = "none";
+  closeContainer();
 }
 
 // id = "authorClear";
@@ -370,6 +374,8 @@ const circleFilterBox = document.querySelector(".circleBox");
 function addAuthorFilter(element) {
   if (element.classList.contains("clicked")) {
     document.getElementById("filter_" + element.id).remove();
+    showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element.id}" class="containerTag">
@@ -378,18 +384,20 @@ function addAuthorFilter(element) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
     authorFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 // add/delete Grade filter and active
 function addGradeFilter(element2) {
   if (element2.classList.contains("clicked")) {
     document.getElementById("filter_" + element2.id).remove();
+    showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element2.id}" class="containerTag">
@@ -398,18 +406,20 @@ function addGradeFilter(element2) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
     gradeFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 // add/delete Circle filter and active
 function addCircleFilter(element3) {
   if (element3.classList.contains("chosen")) {
     document.getElementById("filter_" + element3.id).remove();
+    showContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
   } else {
     const elements1 = `
   <div id="filter_${element3.id}" class="containerTag">
@@ -418,13 +428,13 @@ function addCircleFilter(element3) {
     id="closeActive"
     class="closeBtn"
   >&nbsp;
-  <img src="/assets/closeBtn.png" alt="" />
+  <img src="assets/closeBtn.png" alt="" />
   </button>
   </div>
 `;
     circleFilterBox.insertAdjacentHTML("beforeend", elements1);
+    showContainer();
   }
-  showContainer();
 }
 
 // Remove button (delete div from Filter Container)
@@ -438,12 +448,16 @@ function removeParents(e) {
   console.log(newStr);
   document.getElementById(newStr).classList.remove("clicked");
   document.getElementById(newStr).classList.remove("chosen");
+  closeContainerFromButton(authorBox, circleBox, classBox);
 }
 
 // Main Container show/hide
 
 function showContainer() {
   document.getElementById("containerHide").style.display = "flex";
+}
+function closeContainer() {
+  document.getElementById("containerHide").style.display = "none";
 }
 
 // Clear main Container after hide
@@ -455,8 +469,29 @@ function showCainerBtn() {
     activeBorder[1].classList.contains("borderActive") ||
     activeBorder[2].classList.contains("borderActive")
   ) {
+  } else if (
+    element3.classList.contains("chosen") &&
+    element2.classList.contains("clicked")
+  ) {
+    showContainer();
   } else {
-    document.getElementById("containerHide").style.display = "none";
-    clearBox("authorClear", "circleClear", "classClear");
+    closeContainer();
+    // clearBox("authorClear", "circleClear", "classClear");
+  }
+}
+
+// მოკლედ გავუწერო თუ ერთი ელემენტი შიგნით მაინც იქნება აქტიური აჩვენოს
+
+// authorClear classClear circleClear
+
+function closeContainerFromButton(authorBox, circleBox, classBox) {
+  if (
+    (authorBox.textContent.trim() === "" && circleBox.textContent.trim()) ===
+      "" &&
+    classBox.textContent.trim() === ""
+  ) {
+    closeContainer();
+  } else {
+    console.log("⛔️ Element is NOT empty");
   }
 }
