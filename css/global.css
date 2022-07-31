@@ -1209,11 +1209,11 @@ footer {
   padding: 1.5rem 2rem;
   line-height: 18px;
 }
-footer .div-1 {
+footer .copyRightDiv {
   padding: 10px 0px;
   display: flex;
 }
-footer .div-1 .test2 a {
+footer .copyRightDiv .copyRightLink a {
   width: 60%;
   text-decoration: none;
   color: inherit;
@@ -1226,7 +1226,7 @@ footer .div-2 p {
 }
 
 @media (min-width: 1305px) {
-  footer .div-1 {
+  footer .copyRightDiv {
     width: 1230px;
     margin: 0 auto;
   }

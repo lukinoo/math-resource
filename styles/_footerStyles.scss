@@ -5,11 +5,11 @@ footer {
   border: 1px solid $cardsBorderColor;
   padding: 1.5rem 2rem;
   line-height: 18px;
-  .div-1 {
+  .copyRightDiv {
     padding: 10px 0px;
     display: flex;
 
-    .test2 {
+    .copyRightLink {
       a {
         width: 60%;
         text-decoration: none;
@@ -27,12 +27,9 @@ footer {
 
 @media (min-width: 1305px) {
   footer {
-    .div-1 {
+    .copyRightDiv {
       width: 1230px;
       margin: 0 auto;
     }
   }
 }
-
-// width: 1300px;
-// margin: 0 auto;

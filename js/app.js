@@ -471,11 +471,8 @@ function showCainerBtn() {
   ) {
   } else {
     closeContainerFromButton(authorBox, circleBox, classBox);
-    // clearBox("authorClear", "circleClear", "classClear");
   }
 }
-
-// authorClear classClear circleClear
 
 function closeContainerFromButton(authorBox, circleBox, classBox) {
   if (
