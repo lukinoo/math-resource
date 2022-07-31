@@ -465,6 +465,9 @@ h1 {
   text-align: left;
 }
 
+.authorization {
+  min-height: calc(100vh - 106px);
+}
 .authorization .auth-container {
   width: 50%;
   margin: 0 auto 3rem auto;
@@ -1161,7 +1164,7 @@ header {
   z-index: 99;
 }
 header nav {
-  width: 85%;
+  width: 91%;
   margin: 0 auto;
   font-family: "BPG Nino Mtavruli";
   height: 80px;
@@ -1182,6 +1185,9 @@ header nav .nav-links {
   display: flex;
   justify-content: space-between;
 }
+header nav .nav-links li {
+  padding-left: 20px;
+}
 header nav .nav-links li a {
   color: #000000;
   font-size: 17px;
@@ -1190,6 +1196,11 @@ header nav .nav-links li a:hover {
   color: #3571a3;
 }
 
+@media (min-width: 1305px) {
+  header nav {
+    width: 1200px;
+  }
+}
 footer {
   width: 100%;
   margin-top: auto;
@@ -1198,17 +1209,25 @@ footer {
   padding: 1.5rem 2rem;
   line-height: 18px;
 }
-footer .div-1 {
-  width: 100%;
-  margin-bottom: 1rem;
+footer .copyRightDiv {
+  padding: 10px 0px;
+  display: flex;
 }
-footer .div-1 p {
-  width: 30%;
-  text-align: left;
+footer .copyRightDiv .copyRightLink a {
+  width: 60%;
+  text-decoration: none;
+  color: inherit;
 }
 footer .div-2 {
   width: 100%;
 }
 footer .div-2 p {
   text-align: center;
+}
+
+@media (min-width: 1305px) {
+  footer .copyRightDiv {
+    width: 1230px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=global.css.map */

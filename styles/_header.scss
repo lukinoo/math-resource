@@ -7,11 +7,12 @@ header {
   background: $lightWhite;
   z-index: 99;
   nav {
-    width: $containerWidth;
+    width: 91%;
     margin: 0 auto;
     font-family: "BPG Nino Mtavruli";
     height: 80px;
     @include displayFlex(space-between, center);
+
     .logo-wrapper {
       width: 60px;
       height: 60px;
@@ -24,6 +25,7 @@ header {
       min-width: 40%;
       @include displayFlex(space-between, null);
       li {
+        padding-left: 20px;
         a {
           color: $darkBlack;
           font-size: 17px;
@@ -32,6 +34,14 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1305px) {
+  header {
+    nav {
+      width: 1200px;
     }
   }
 }

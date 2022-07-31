@@ -328,6 +328,7 @@ h1 {
 }
 
 .authorization {
+  min-height: calc(100vh - 106px);
   .auth-container {
     width: 50%;
     margin: 0 auto 3rem auto;
