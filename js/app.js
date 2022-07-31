@@ -147,148 +147,148 @@ window.addEventListener("load", () => {
 
 // ----x-----x---- Filters
 
-// const addClass = (element) => {
-//   element.classList.add("active");
-// };
+const addClass = (element) => {
+  element.classList.add("active");
+};
 
-// const removeClass = (element) => {
-//   element.classList.remove("active");
-// };
+const removeClass = (element) => {
+  element.classList.remove("active");
+};
 
-// const errorMsgAdd = (element) => {
-//   element.classList.add("error");
-// };
+const errorMsgAdd = (element) => {
+  element.classList.add("error");
+};
 
-// const errorMsgRemove = (element) => {
-//   element.classList.remove("error");
-// };
+const errorMsgRemove = (element) => {
+  element.classList.remove("error");
+};
 
-// const successMsgAdd = (element) => {
-//   element.classList.add("success");
-// };
+const successMsgAdd = (element) => {
+  element.classList.add("success");
+};
 
-// const successMsgRemove = (element) => {
-//   element.classList.remove("success");
-// };
+const successMsgRemove = (element) => {
+  element.classList.remove("success");
+};
 
-// let engine = (id, serial) => {
-//   if (id.value.trim() === "") {
-//     errorMsgAdd(id);
-//     errorMsgAdd(failureIcon[serial]);
-//     errorMsgAdd(errorMessage[serial]);
-//     successMsgRemove(id);
-//     successMsgRemove(successIcon[serial]);
-//   } else {
-//     errorMsgRemove(id);
-//     errorMsgRemove(failureIcon[serial]);
-//     errorMsgRemove(errorMessage[serial]);
-//     successMsgAdd(id);
-//     successMsgAdd(successIcon[serial]);
-//   }
-// };
+let engine = (id, serial) => {
+  if (id.value.trim() === "") {
+    errorMsgAdd(id);
+    errorMsgAdd(failureIcon[serial]);
+    errorMsgAdd(errorMessage[serial]);
+    successMsgRemove(id);
+    successMsgRemove(successIcon[serial]);
+  } else {
+    errorMsgRemove(id);
+    errorMsgRemove(failureIcon[serial]);
+    errorMsgRemove(errorMessage[serial]);
+    successMsgAdd(id);
+    successMsgAdd(successIcon[serial]);
+  }
+};
 
-// registrationButton.addEventListener("click", () => {
-//   addClass(authForm);
-//   addClass(registerForm);
-// });
+registrationButton.addEventListener("click", () => {
+  addClass(authForm);
+  addClass(registerForm);
+});
 
-// recoveryButton.addEventListener("click", () => {
-//   addClass(authForm);
-//   addClass(emailForm);
-// });
+recoveryButton.addEventListener("click", () => {
+  addClass(authForm);
+  addClass(emailForm);
+});
 
-// registrationButtonOnEmail.addEventListener("click", () => {
-//   addClass(registerForm);
-//   removeClass(emailForm);
-// });
+registrationButtonOnEmail.addEventListener("click", () => {
+  addClass(registerForm);
+  removeClass(emailForm);
+});
 
-// passFormRecoveryBtn.addEventListener("click", () => {
-//   addClass(emailForm);
-//   removeClass(passwordForm);
-// });
+passFormRecoveryBtn.addEventListener("click", () => {
+  addClass(emailForm);
+  removeClass(passwordForm);
+});
 
-// registrationBtnOnRecovery.addEventListener("click", () => {
-//   addClass(registerForm);
-//   removeClass(passwordForm);
-// });
+registrationBtnOnRecovery.addEventListener("click", () => {
+  addClass(registerForm);
+  removeClass(passwordForm);
+});
 
-// recoveryAgainBtn.addEventListener("click", () => {
-//   addClass(emailForm);
-//   removeClass(recoveryTab);
-//   removeClass(authContainer);
-//   errorMsgRemove(recoveryEmail);
-//   errorMsgRemove(failureIcon[4]);
-//   errorMsgRemove(errorMessage[4]);
-// });
+recoveryAgainBtn.addEventListener("click", () => {
+  addClass(emailForm);
+  removeClass(recoveryTab);
+  removeClass(authContainer);
+  errorMsgRemove(recoveryEmail);
+  errorMsgRemove(failureIcon[4]);
+  errorMsgRemove(errorMessage[4]);
+});
 
-// authForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   if (emailFld.value.trim() !== "" && passFld.value.trim() !== "") {
-//     addClass(authForm);
-//     addClass(authContainer);
-//     addClass(myProfile);
-//   } else {
-//     engine(emailFld, 0);
-//     engine(passFld, 1);
-//   }
-// });
+authForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (emailFld.value.trim() !== "" && passFld.value.trim() !== "") {
+    addClass(authForm);
+    addClass(authContainer);
+    addClass(myProfile);
+  } else {
+    engine(emailFld, 0);
+    engine(passFld, 1);
+  }
+});
 
-// registerForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   if (
-//     firstName.value.trim() !== "" &&
-//     lastName.value.trim() !== "" &&
-//     region.value.trim() !== "" &&
-//     school.value.trim() !== "" &&
-//     grade.value.trim() !== "" &&
-//     registeringEmail.value.trim() !== "" &&
-//     repeatPassword.value.trim() !== "" &&
-//     registeringEmail.value.trim() !== ""
-//   ) {
-//     addClass(authContainer);
-//     addClass(successPage);
-//     registerForm.reset();
-//   } else {
-//     engine(firstName, 5);
-//     engine(lastName, 6);
-//     engine(region, 7);
-//     engine(school, 8);
-//     engine(grade, 9);
-//     engine(registeringEmail, 10);
-//     engine(newPassword, 11);
-//     engine(repeatPassword, 12);
-//   }
-// });
+registerForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (
+    firstName.value.trim() !== "" &&
+    lastName.value.trim() !== "" &&
+    region.value.trim() !== "" &&
+    school.value.trim() !== "" &&
+    grade.value.trim() !== "" &&
+    registeringEmail.value.trim() !== "" &&
+    repeatPassword.value.trim() !== "" &&
+    registeringEmail.value.trim() !== ""
+  ) {
+    addClass(authContainer);
+    addClass(successPage);
+    registerForm.reset();
+  } else {
+    engine(firstName, 5);
+    engine(lastName, 6);
+    engine(region, 7);
+    engine(school, 8);
+    engine(grade, 9);
+    engine(registeringEmail, 10);
+    engine(newPassword, 11);
+    engine(repeatPassword, 12);
+  }
+});
 
-// emailForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   if (recoveryEmail.value.trim() !== "") {
-//     addClass(recoveryTab);
-//     addClass(authContainer);
-//     emailForm.reset();
-//   } else {
-//     engine(recoveryEmail, 4);
-//   }
-// });
+emailForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (recoveryEmail.value.trim() !== "") {
+    addClass(recoveryTab);
+    addClass(authContainer);
+    emailForm.reset();
+  } else {
+    engine(recoveryEmail, 4);
+  }
+});
 
-// passwordForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   if (recoveryPass.value.trim() !== "" && repeatRecPass.value.trim() !== "") {
-//     addClass(authContainer);
-//     addClass(successPassPage);
-//     addClass(passwordForm);
-//     passwordForm.reset();
-//   } else {
-//     engine(recoveryPass, 2);
-//     engine(repeatRecPass, 3);
-//   }
-// });
+passwordForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (recoveryPass.value.trim() !== "" && repeatRecPass.value.trim() !== "") {
+    addClass(authContainer);
+    addClass(successPassPage);
+    addClass(passwordForm);
+    passwordForm.reset();
+  } else {
+    engine(recoveryPass, 2);
+    engine(repeatRecPass, 3);
+  }
+});
 
-// profileOptionTwo.addEventListener("click", () => {
-//   addClass(passwordForm);
-//   removeClass(authContainer);
-//   removeClass(myProfile);
-// });
+profileOptionTwo.addEventListener("click", () => {
+  addClass(passwordForm);
+  removeClass(authContainer);
+  removeClass(myProfile);
+});
 
 // slider
 
@@ -469,18 +469,11 @@ function showCainerBtn() {
     activeBorder[1].classList.contains("borderActive") ||
     activeBorder[2].classList.contains("borderActive")
   ) {
-  } else if (
-    element3.classList.contains("chosen") &&
-    element2.classList.contains("clicked")
-  ) {
-    showContainer();
   } else {
-    closeContainer();
+    closeContainerFromButton(authorBox, circleBox, classBox);
     // clearBox("authorClear", "circleClear", "classClear");
   }
 }
-
-// მოკლედ გავუწერო თუ ერთი ელემენტი შიგნით მაინც იქნება აქტიური აჩვენოს
 
 // authorClear classClear circleClear
 
