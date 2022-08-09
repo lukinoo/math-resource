@@ -1,0 +1,33 @@
+@mixin displayFlex($x: center, $y: center) {
+  display: flex;
+  align-items: $y;
+  justify-content: $x;
+}
+
+@mixin buttonStyles(
+  $padding: 8px 12px,
+  $background: #ffffff,
+  $color: #483e3e,
+  $border: 2px solid #a7a7a7,
+  $borderRadius: 16px,
+  $fontSize: 14px,
+  $fontWeight: normal
+) {
+  padding: $padding;
+  background: $background;
+  color: $color;
+  border: $border;
+  border-radius: $borderRadius;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  cursor: pointer;
+}
+
+@mixin grid($grid-type, $params, $row-gap, $column-gap) {
+  @supports (display: grid) {
+    display: grid;
+    #{$grid-type}: #{$params};
+    column-gap: $column-gap;
+    row-gap: $row-gap;;
+  }
+}
