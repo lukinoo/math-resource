@@ -1430,8 +1430,7 @@ header {
   z-index: 99;
 }
 header nav {
-  width: 91%;
-  margin: 0 auto;
+  margin: 0 140px;
   font-family: "BPG Nino Mtavruli";
   height: 80px;
   display: flex;
@@ -1447,9 +1446,9 @@ header nav .logo-wrapper .logo {
   height: 100%;
 }
 header nav .nav-links {
-  min-width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 header nav .nav-links li {
   padding-left: 20px;
@@ -1462,11 +1461,6 @@ header nav .nav-links li a:hover {
   color: #3571a3;
 }
 
-@media (min-width: 1305px) {
-  header nav {
-    width: 1200px;
-  }
-}
 footer {
   width: 100%;
   margin-top: auto;
