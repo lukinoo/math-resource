@@ -1,5 +1,4 @@
 header {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -9,10 +8,16 @@ header {
     z-index: 99;
 
     nav {
-        margin: 0 140px;
+        width: 91%;
+        margin: 0 auto;
         font-family: "BPG Nino Mtavruli";
         height: 80px;
         @include displayFlex(space-between, center);
+
+        @media (min-width: 1305px) {
+            width: 1230px;
+
+        }
 
         .logo-wrapper {
             width: 60px;
@@ -32,6 +37,10 @@ header {
             li {
                 padding-left: 20px;
 
+                .activeHeaderColor {
+                    color: $primaryColor;
+                }
+
                 a {
                     color: $darkBlack;
                     font-size: 17px;
@@ -39,6 +48,8 @@ header {
                     &:hover {
                         color: $primaryColor;
                     }
+
+
                 }
             }
         }

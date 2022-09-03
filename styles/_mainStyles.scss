@@ -48,6 +48,7 @@ h1 {
           white-space: nowrap;
           margin: 0px 0px 20px 15px;
         }
+
         .closeBtn {
           background-color: $primaryColor;
           color: $whiteColor;
@@ -80,8 +81,7 @@ h1 {
           align-items: center;
           flex-wrap: wrap;
 
-          .tag {
-          }
+          .tag {}
         }
       }
 
@@ -89,6 +89,7 @@ h1 {
         display: flex;
         justify-content: flex-end;
         padding: 10px;
+
         .clear {
           background-color: $whiteColor;
           color: $primaryColor;
@@ -99,6 +100,7 @@ h1 {
           white-space: nowrap;
           cursor: pointer;
         }
+
         .search {
           background-color: $primaryColor;
           color: $whiteColor;
@@ -139,12 +141,14 @@ h1 {
     .swiper-wrapper {
       display: flex;
       justify-content: center;
+
       button {
         padding: 0px 40px;
         border: none;
         cursor: pointer;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb);
       }
+
       img {
         opacity: 0.7;
         width: 12px;
@@ -161,6 +165,7 @@ h1 {
       display: flex;
       justify-content: center;
       padding: 0px 25px;
+
       .circle-container {
         height: 76px;
       }
@@ -170,6 +175,7 @@ h1 {
         width: 1925px;
         overflow-x: auto;
         scroll-behavior: smooth;
+
         &::-webkit-scrollbar {
           display: none;
         }
@@ -238,6 +244,7 @@ h1 {
     @media screen and (max-width: 650px) {
       grid-template-columns: repeat(1, 1fr);
     }
+
     .card {
       border: 1px solid $cardsBorderColor;
 
@@ -250,9 +257,11 @@ h1 {
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
+
       &:hover {
         background-color: $blueRgba;
       }
+
       p {
         display: flex;
         font-size: 13px;
@@ -268,6 +277,7 @@ h1 {
         justify-content: flex-end;
         text-align: center;
         margin: 10px 10px 0px 0px;
+
         span {
           display: flex;
           text-align: center;
@@ -278,12 +288,14 @@ h1 {
           font-size: 11px;
         }
       }
+
       .nonCheckSign {
         width: 100%;
         display: flex;
         justify-content: flex-end;
         text-align: center;
         margin: 10px 10px 0px 0px;
+
         span {
           display: flex;
           text-align: center;
@@ -330,7 +342,7 @@ h1 {
 }
 
 .authorization {
-  min-height: calc(100vh - 106px);
+  min-height: calc(100vh - 187px);
 
   // პაროლის აღდგენა
   .successful-recovery-tab {
@@ -345,6 +357,7 @@ h1 {
     border-radius: 9px;
     background-color: $whiteColor;
     box-shadow: 0px 3px 6px #00000029;
+
     h3 {
       font-size: 20px;
       font-weight: bold;
@@ -354,6 +367,7 @@ h1 {
       margin-top: 2rem;
       font-family: "BPG Nino Mtavruli";
     }
+
     p {
       color: $lightBlack;
       font-size: 15px;
@@ -361,6 +375,7 @@ h1 {
       margin: 70px 0px 40px;
       font-weight: bold;
     }
+
     .sendAgain {
       font-size: 14px;
       color: $lightBlack;
@@ -386,6 +401,7 @@ h1 {
       padding: 22px 40px;
       cursor: pointer;
       opacity: 0.8;
+
       &:hover {
         opacity: 1;
       }
@@ -408,6 +424,7 @@ h1 {
       border-radius: 9px;
       background-color: $whiteColor;
       box-shadow: 0px 3px 6px #00000029;
+
       h3 {
         font-size: 20px;
         font-weight: bold;
@@ -415,6 +432,7 @@ h1 {
         margin-bottom: 2rem;
         font-family: "BPG Nino Mtavruli";
       }
+
       .msg-wrapper {
         display: flex;
         justify-content: space-between;
@@ -432,9 +450,11 @@ h1 {
           display: none;
           width: 40%;
         }
+
         .email-msg.error {
           display: block;
         }
+
         .sb4:before {
           content: "";
           width: 0px;
@@ -448,9 +468,11 @@ h1 {
           bottom: -20px;
         }
       }
+
       .input {
         border-color: #9191a0;
       }
+
       label {
         width: 330px;
         display: flex;
@@ -464,26 +486,33 @@ h1 {
       .input.error {
         border: 1px solid $errorMessage;
       }
+
       .input.success {
         border: 1px solid $successMessage;
       }
+
       input:focus,
       select:focus {
         outline-color: $darkBlue;
       }
+
       .restore-wrapper {
         display: flex;
         justify-content: center;
         width: 100%;
+
         label {
           color: $darkBlack;
         }
+
         .divSymmetry {
           display: flex;
+
           .saveInfo {
             display: flex;
             align-items: baseline;
             width: 230px;
+
             .remember {
               display: flex;
               justify-content: flex-start;
@@ -495,6 +524,7 @@ h1 {
           }
         }
       }
+
       .recovery {
         font-size: 13px;
         color: $primaryColor;
@@ -503,6 +533,7 @@ h1 {
         cursor: pointer;
         font-family: "BPG Nino Mtavruli";
       }
+
       .registration {
         font-size: 15px;
         color: $primaryColor;
@@ -511,6 +542,7 @@ h1 {
         cursor: pointer;
         font-family: "BPG Nino Mtavruli";
       }
+
       .enter {
         background-color: $darkBlue;
         color: $whiteColor;
@@ -525,11 +557,13 @@ h1 {
         padding: 15px 40px;
         cursor: pointer;
         opacity: 0.8;
+
         &:hover {
           opacity: 1;
         }
       }
     }
+
     //470-600
     .email-form {
       display: none;
@@ -541,6 +575,7 @@ h1 {
       border-radius: 9px;
       background-color: $whiteColor;
       box-shadow: 0px 3px 6px #00000029;
+
       h3 {
         font-size: 20px;
         font-weight: bold;
@@ -550,11 +585,13 @@ h1 {
         margin-top: 2rem;
         font-family: "BPG Nino Mtavruli";
       }
+
       .msg-wrapper {
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;
         width: 100%;
+
         .email-msg {
           background-color: $errorMessage;
           color: $whiteColor;
@@ -565,9 +602,11 @@ h1 {
           position: relative;
           display: none;
           width: 40%;
+
           .email-msg.error {
             display: block;
           }
+
           .sb4:before {
             content: "";
             width: 0px;
@@ -581,6 +620,7 @@ h1 {
             bottom: -20px;
           }
         }
+
         label {
           width: 330px;
           display: flex;
@@ -591,21 +631,26 @@ h1 {
           font-family: "BPG Nino Mtavruli";
         }
       }
+
       .input.error {
         border: 1px solid $errorMessage;
       }
+
       .input.success {
         border: 1px solid $successMessage;
       }
+
       input:focus,
       select:focus {
         outline-color: $darkBlue;
       }
+
       .btn-wrapper-onMail {
         margin: 1rem 0rem;
         display: flex;
         justify-content: center;
         width: 100%;
+
         #cancel {
           font-size: 18px;
           border: none;
@@ -614,6 +659,7 @@ h1 {
           padding: 0.8rem 1.8rem;
           cursor: pointer;
         }
+
         #enter-send {
           background-color: $darkBlue;
           color: $whiteColor;
@@ -626,11 +672,13 @@ h1 {
           padding: 0.8rem 1.8rem;
           cursor: pointer;
           opacity: 0.8;
+
           &:hover {
             opacity: 1;
           }
         }
       }
+
       .recovery,
       .registration {
         margin-top: 1rem;
@@ -641,20 +689,24 @@ h1 {
         cursor: pointer;
         font-family: "BPG Nino Mtavruli";
       }
+
       #recovery,
       #recovery-on-auth {
         align-self: flex-end;
         margin-bottom: 0;
       }
+
       #recovery {
         width: 90%;
         margin: 0 10% 0 0;
         align-self: flex-end;
         text-align: end;
       }
+
       #enter-send {
         margin-top: 3rem;
       }
+
       .remember {
         color: red;
         background-color: red;
@@ -671,6 +723,7 @@ h1 {
       border-radius: 9px;
       background-color: $whiteColor;
       box-shadow: 0px 3px 6px #00000029;
+
       h3 {
         font-size: 18px;
         font-weight: bold;
@@ -678,11 +731,13 @@ h1 {
         margin-bottom: 5rem;
         font-family: "BPG Nino Mtavruli";
       }
+
       .msg-wrapper {
         display: flex;
         justify-content: space-between;
         margin-bottom: 0;
         width: 100%;
+
         .email-msg {
           background-color: $errorMessage;
           color: $whiteColor;
@@ -694,9 +749,11 @@ h1 {
           display: none;
           width: 40%;
         }
+
         .email-msg.error {
           display: block;
         }
+
         .sb4:before {
           content: "";
           width: 0px;
@@ -710,6 +767,7 @@ h1 {
           bottom: -20px;
         }
       }
+
       label {
         width: 330px;
         display: flex;
@@ -719,6 +777,7 @@ h1 {
         font-size: 13px;
         font-family: "BPG Nino Mtavruli";
       }
+
       input,
       select {
         // border: 1px solid $cardsBorderColor;
@@ -729,29 +788,37 @@ h1 {
         // margin: 0 auto 1 auto;
         // color: $lightBlack;
       }
+
       .input.error {
         border: 1px solid $errorMessage;
       }
+
       .input.success {
         border: 1px solid $successMessage;
       }
+
       input:focus,
       select:focus {
         outline-color: $darkBlue;
       }
+
       .restore-wrapper {
         display: flex;
         justify-content: center;
         width: 100%;
+
         label {
           color: $darkBlack;
         }
+
         .divSymmetry {
           display: flex;
+
           .saveInfo {
             display: flex;
             align-items: baseline;
             width: 230px;
+
             .remember {
               display: flex;
               justify-content: flex-start;
@@ -763,10 +830,12 @@ h1 {
           }
         }
       }
+
       .btn-wrapper-onMail {
         display: flex;
         justify-content: space-around;
         width: 90%;
+
         #cancel {
           font-size: 18px;
           border: none;
@@ -776,6 +845,7 @@ h1 {
           padding: 0.8rem 1.8rem;
           cursor: pointer;
         }
+
         #enter-send {
           background-color: $darkBlue;
           color: $whiteColor;
@@ -798,6 +868,7 @@ h1 {
         cursor: pointer;
         font-family: "BPG Nino Mtavruli";
       }
+
       .enter {
         background-color: $darkBlue;
         color: $whiteColor;
@@ -812,40 +883,48 @@ h1 {
         padding: 15px 40px;
         cursor: pointer;
         opacity: 0.8;
+
         &:hover {
           opacity: 1;
         }
       }
+
       #recovery,
       #recovery-on-auth {
         align-self: flex-end;
         margin-bottom: 0;
       }
+
       #recovery {
         width: 90%;
         margin: 0 10% 0 0;
         align-self: flex-end;
         text-align: end;
       }
+
       #enter-send {
         margin-top: 3rem;
       }
+
       .agree-policies-wrapper {
         display: flex;
         width: 90%;
         align-items: center;
+
         #agree-policies {
           margin: 0;
           margin-right: 0.5rem;
           padding: 0;
           width: 15%;
         }
+
         label {
           line-height: 18px;
           font-size: 13px;
         }
       }
     }
+
     //
     .active {
       display: flex;
@@ -854,6 +933,7 @@ h1 {
     .pass-form.active {
       display: flex;
     }
+
     .failure-icon {
       color: $errorMessage;
       margin-left: 0.5rem;
@@ -864,10 +944,12 @@ h1 {
       bottom: 35px;
       width: 40%;
     }
+
     .failure-icon.error {
       opacity: 1;
       display: inline-block;
     }
+
     .success-icon {
       color: $whiteColor;
       background-color: $successMessage;
@@ -902,12 +984,15 @@ h1 {
       }
     }
   }
+
   .auth-container.active {
     display: none;
   }
+
   .successful-registration {
     display: none;
     margin-top: 8rem;
+
     h3,
     h2 {
       width: 30%;
@@ -919,6 +1004,7 @@ h1 {
       margin: 2rem auto;
       font-family: "BPG Nino Mtavruli";
     }
+
     h2 {
       font-size: 36px;
       line-height: 41px;
@@ -941,6 +1027,7 @@ h1 {
   .successful-pass-change {
     display: none;
     margin-top: 8rem;
+
     h2 {
       font-size: 33px;
       line-height: 38px;
@@ -950,9 +1037,11 @@ h1 {
       margin: 2rem auto;
     }
   }
+
   .successful-pass-change.active {
     display: block;
   }
+
   .my-profile {
     width: 50%;
     margin: 8rem auto;
@@ -965,23 +1054,28 @@ h1 {
     border-radius: 9px;
     background-color: $whiteColor;
     box-shadow: 0px 3px 6px #00000029;
+
     .options-wrapper,
     hr {
       display: flex;
       justify-content: space-between;
       width: 80%;
       margin: 0 auto;
+
       .profile-option {
         font-size: 18px;
         cursor: pointer;
       }
+
       .profile-option:focus {
         font-weight: bold;
       }
+
       #profile-option-one {
         font-weight: bold;
       }
     }
+
     h3 {
       font-size: 18px;
       font-weight: bold;
@@ -990,9 +1084,11 @@ h1 {
       padding: 3rem 0rem;
       font-family: "BPG Nino Mtavruli";
     }
+
     hr {
       margin: 2rem auto 0 auto;
     }
+
     form {
       display: flex;
       flex-direction: column;
@@ -1000,12 +1096,14 @@ h1 {
       width: 100%;
       margin: 0 auto;
       padding: 3rem 2rem 3rem 5rem;
+
       label {
         color: #9191a0;
         margin-bottom: 0;
         font-size: 13px;
         font-family: "BPG Nino Mtavruli";
       }
+
       input,
       select {
         // border: 1px solid $cardsBorderColor;
@@ -1015,26 +1113,32 @@ h1 {
         // width: 90%;
         // margin: 0 auto 1 auto;
       }
+
       .agree-policies-wrapper {
         display: flex;
         width: 60%;
         align-items: flex-start;
+
         #my-profile-agree-policies {
           width: 10%;
         }
+
         label {
           margin-right: 0.5rem;
           cursor: pointer;
           margin-top: 0;
+
           span {
             color: $primaryColor;
           }
         }
       }
+
       .my-profile-buttons {
         display: flex;
         justify-content: space-around;
         width: 90%;
+
         .cancel-button {
           font-size: 18px;
           border: none;
@@ -1044,6 +1148,7 @@ h1 {
           padding: 0.8rem 1.8rem;
           cursor: pointer;
         }
+
         .enter {
           background-color: $darkBlue;
           color: $whiteColor;
@@ -1060,14 +1165,17 @@ h1 {
       }
     }
   }
+
   .my-profile.active {
     display: flex;
   }
+
   .selectDiv {
     position: relative;
     float: left;
     min-width: 200px;
   }
+
   .selectDiv:after {
     content: ">";
     font: 17px "Consolas", monospace;
@@ -1084,9 +1192,11 @@ h1 {
     position: absolute;
     pointer-events: none;
   }
+
   .selectDiv.active:after {
     content: "<";
   }
+
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1110,20 +1220,24 @@ h1 {
   flex-direction: column;
   @include displayFlex(start, null);
   $margin: 0 0 1rem 0;
+
   .contacts-titles {
     h2 {
       margin: $margin;
       font-size: 26px;
       font-family: "BPG Nino Mtavruli";
     }
+
     p {
       margin: $margin;
       font-family: "BPG Banner Caps";
     }
   }
+
   .contacts-email {
     font-family: "BPG Nino Mtavruli";
     margin: $margin;
+
     a {
       color: $darkBlack;
       font-size: 16px;
@@ -1143,6 +1257,7 @@ h1 {
   height: 60vh;
   display: flex;
   @include displayFlex();
+
   .page-not-found-wrapper {
     max-width: 400px;
     height: 100%;
@@ -1150,33 +1265,41 @@ h1 {
     flex-direction: column;
     @include displayFlex(space-between);
     font-family: "BPG Nino Mtavruli";
+
     h2 {
       font-size: 1.7rem;
     }
+
     .main-page-route {
       align-self: flex-end;
+
       i {
         color: $darkBlue;
         margin: 0 0.3rem 0 0;
       }
+
       a {
         color: $darkBlack;
         font-size: 15px;
         border-bottom: 1px solid inherit;
+
         &:hover {
           border-bottom: 1px solid #000000;
         }
       }
     }
+
     .emoji-sad {
       position: relative;
       width: 266px;
       height: 266px;
       border: 10px solid $lightGray;
       border-radius: 50%;
+
       .face {
         width: inherit;
         height: inherit;
+
         .eye-left {
           position: absolute;
           top: 30%;
@@ -1187,6 +1310,7 @@ h1 {
           border-radius: 50%;
           background: $lightGray;
         }
+
         .eye-right {
           position: absolute;
           top: 30%;
@@ -1197,6 +1321,7 @@ h1 {
           border-radius: 50%;
           background: $lightGray;
         }
+
         .mouth-sad {
           position: absolute;
           bottom: 4%;
@@ -1212,11 +1337,14 @@ h1 {
     }
   }
 }
+
 .about-contaioner {
   margin-bottom: 3rem;
+
   .about-container-top-wrapper {
     width: 100%;
     height: 60vh;
+
     .about-container-top {
       height: 100%;
       width: 85%;
@@ -1224,24 +1352,28 @@ h1 {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .about-container-top-about {
         h2 {
           font-size: 35px;
           font-family: "BPG Banner Caps";
           margin: 0 0 1.5rem 0;
         }
+
         p {
           font-family: "DejaVu Sans";
           font-size: 18px;
           margin: 0 0 3rem 0;
         }
       }
+
       .about-container-top-goal {
         h2 {
           font-size: 35px;
           font-family: "BPG Banner Caps";
           margin: 0 0 1.5rem 0;
         }
+
         p {
           font-family: "DejaVu Sans";
           font-size: 18px;
@@ -1249,27 +1381,33 @@ h1 {
       }
     }
   }
+
   .about-container-bottom-wrapper {
     .about-container-bottom {
       width: 85%;
       margin: 0 auto;
+
       h2 {
         padding: 3rem 0 5rem 0;
         font-size: 35px;
         font-family: "BPG Banner Caps";
       }
+
       .about-container-bottom-team-info {
         min-height: 70vh;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 2rem;
+
         .team-info {
           width: 100%;
           height: 100%;
+
           h4 {
             font-family: "DejaVu Sans";
             font-size: 24px;
           }
+
           p {
             font-family: "DejaVu Sans";
             font-size: 18px;
@@ -1304,10 +1442,12 @@ h1 {
   display: flex;
   justify-content: center;
   margin: 84px 0px 163px 0px;
+
   .pre,
   .next {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fbfbfb 100%);
   }
+
   .active {
     border: 1px solid $primaryColor;
     background-color: $primaryColor;
@@ -1322,6 +1462,7 @@ h1 {
     align-items: center;
     color: black;
   }
+
   .basebtn {
     border: none;
     // width: auto;
@@ -1330,11 +1471,13 @@ h1 {
 
     margin: 0px 22px;
   }
+
   .basebtn img {
     // opacity: 0.7;
     // width: 12px;
     // height: 20px;
   }
+
   .basebtn:hover img {
     // opacity: 1;
   }
