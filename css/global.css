@@ -466,7 +466,7 @@ h1 {
 }
 
 .authorization {
-  min-height: calc(100vh - 106px);
+  min-height: calc(100vh - 187px);
 }
 .authorization .successful-recovery-tab {
   display: none;
@@ -1430,12 +1430,18 @@ header {
   z-index: 99;
 }
 header nav {
-  margin: 0 140px;
+  width: 91%;
+  margin: 0 auto;
   font-family: "BPG Nino Mtavruli";
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 1305px) {
+  header nav {
+    width: 1230px;
+  }
 }
 header nav .logo-wrapper {
   width: 60px;
@@ -1452,6 +1458,9 @@ header nav .nav-links {
 }
 header nav .nav-links li {
   padding-left: 20px;
+}
+header nav .nav-links li .activeHeaderColor {
+  color: #3571a3;
 }
 header nav .nav-links li a {
   color: #000000;
@@ -1472,11 +1481,38 @@ footer {
 footer .copyRightDiv {
   padding: 10px 0px;
   display: flex;
+  justify-content: space-between;
 }
-footer .copyRightDiv .copyRightLink a {
-  width: 60%;
+footer .copyRightDiv .copyRightLink {
+  margin-top: 25px;
+}
+footer .copyRightDiv .copyRightLink .privacy {
   text-decoration: none;
   color: inherit;
+}
+footer .copyRightDiv .contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .copyRightDiv .contactList .contact {
+  color: black;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+footer .copyRightDiv .contactList .contactEmail {
+  padding-bottom: 15px;
+}
+footer .copyRightDiv .contactList .contactEmail a {
+  text-decoration: none;
+  color: #707070;
+}
+footer .copyRightDiv .contactList .contactEmail a:hover {
+  color: #000000;
+}
+footer .copyRightDiv .contactList .contactFacebook {
+  text-decoration: none;
+  color: #707070;
 }
 footer .div-2 {
   width: 100%;
