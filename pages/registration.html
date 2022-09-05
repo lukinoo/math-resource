@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/71fe441a00.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <div class="logo-wrapper">
+            <img src="../assets/mathlogo.png" alt="logo" class="logo" />
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="authorization.html" id="auth-link">ავტორიზაცია</a>
+          </li>
+          <li>
+            <a href="about.html">პროექტის შესახებ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mainRegistration">
+      <section class="registration-container" id="registration-container">
+        <h1></h1>
+        <form action="submit" class="register-form" id="register-form">
+          <h3>ახალი ანგარიშის შექმნა</h3>
+          <div class="msg-wrapper">
+            <label for="pass">სახელი</label>
+          </div>
+          <div>
+            <div class="input-icons">
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                class="input"
+              />
+            </div>
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">გვარი</label>
+          </div>
+          <div>
+            <div class="input-icons">
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                class="input"
+              />
+            </div>
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">რეგიონი</label>
+          </div>
+          <!-- Custom select structure -->
+          <div class="customSelect selectVisual">
+            <div class="select-menu">
+              <div class="select menuVisual">
+                <span></span>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div class="options-list optionVisual">
+                <div class="option">შიდა-ქართლი</div>
+                <div class="option">ქვემო-ქართლი</div>
+                <div class="option">სამცხე-ჯავახეთი</div>
+                <div class="option">მცხეთა-მთიანეთი</div>
+                <div class="option">კახეთი</div>
+                <div class="option">იმერეთი</div>
+                <div class="option">აჭარა</div>
+                <div class="option">სამეგრელო</div>
+                <div class="option">რაჭა-ლეჩხუმი</div>
+                <div class="option">სვანეთი</div>
+                <div class="option">აფხაზეთი</div>
+              </div>
+            </div>
+          </div>
+          <!-- Custom select structure -->
+          <div class="msg-wrapper">
+            <label for="pass">სკოლა</label>
+          </div>
+          <div>
+            <div class="input-icons">
+              <input type="text" id="school" name="school" class="input" />
+            </div>
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">კლასი</label>
+          </div>
+          <div class="customSelect selectVisual">
+            <div class="select-menu">
+              <div class="select2 menuVisual">
+                <span></span>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div class="options-list2 optionVisual">
+                <div class="option2">I</div>
+                <div class="option2">II</div>
+                <div class="option2">III</div>
+                <div class="option2">IV</div>
+                <div class="option2">V</div>
+                <div class="option2">VI</div>
+                <div class="option2">VII</div>
+                <div class="option2">VIII</div>
+                <div class="option2">IX</div>
+                <div class="option2">X</div>
+                <div class="option2">XI</div>
+                <div class="option2">XI</div>
+                <div class="option2">XII</div>
+              </div>
+            </div>
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">ი-მეილი</label>
+          </div>
+          <div class="input-icons">
+            <input type="text" name="email" class="input" id="register_email" />
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">პაროლი</label>
+          </div>
+          <div class="input-icons">
+            <input
+              type="password"
+              id="new_password"
+              name="new_password"
+              class="input"
+            />
+          </div>
+          <div class="msg-wrapper">
+            <label for="pass">გაიმეორეთ პაროლი</label>
+          </div>
+          <div class="input-icons">
+            <input
+              type="password"
+              id="repeat_new_pass"
+              name="repeat_new_pass"
+              class="input"
+            />
+          </div>
+          <div class="agree-policies-wrapper">
+            <div class="policeDiv">
+              <input
+                type="checkbox"
+                id="agree-policies"
+                name="agreement"
+                checked
+              /><label for="agreement"
+                >ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების
+                პირობებებს</label
+              >
+            </div>
+          </div>
+          <button type="button" class="enter" id="registration-button">
+            რეგისტრაცია
+          </button>
+        </form>
+      </section>
+      <section class="successful-registration" id="successful-registration">
+        <h2>თქვენ წარმატებით</h2>
+        <h2>დარეგისტრირდით</h2>
+        <p>დასადასტურებელი შეტყობინება გამოგზავნილია თქვენს ი-მეილზე</p>
+        <button
+          onclick="location.href='authorization.html'"
+          type="button"
+          class="homePage"
+          id="homePageBtn"
+        >
+          მთავარი გვერდი
+        </button>
+      </section>
+    </main>
+    <footer>
+      <!-- Copyright -->
+      <div class="copyRightDiv">
+        <div class="copyRightLink">
+          <a href="" class="privacy"
+            >კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</a
+          >
+        </div>
+        <div>
+          <div class="contactList">
+            <p class="contact">კონტაქტი</p>
+            <p class="contactEmail">
+              <a href="mailto: unilabinfo@iliauni.edu.ge"
+                >unilabinfo@iliauni.edu.ge</a
+              >
+            </p>
+            <p class="contactEmail">
+              <a href="https://www.facebook.com/"> Facebook</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div-2">
+        <p>copyright</p>
+      </div>
+    </footer>
+    <script src="../js/registration.js"></script>
+  </body>
+</html>

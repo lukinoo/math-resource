@@ -1,0 +1,327 @@
+#registration-container {
+  display: flex;
+}
+.mainRegistration {
+  .registration-container {
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin: 8rem auto 3rem auto;
+    }
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      padding: 3rem 0rem;
+      width: 627px;
+      border-radius: 9px;
+      background-color: #ffffff;
+      box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+        align-self: center;
+        margin-bottom: 2rem;
+        font-family: "BPG Nino Mtavruli";
+      }
+
+      .msg-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        width: 100%;
+        label {
+          width: 50%;
+          display: flex;
+          padding-left: 22%;
+          color: #9191a0;
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "BPG Nino Mtavruli";
+        }
+      }
+
+      .input-icons {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        input {
+          display: flex;
+          width: 350px;
+          border: 1px solid #707070;
+          border-radius: 4px;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          color: #483e3e;
+        }
+      }
+
+      //Selects
+      .selectDiv {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        float: left;
+        width: 100%;
+
+        &::after {
+          content: ">";
+          font: 17px "Consolas", monospace;
+          color: $cardsBorderColor;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+          right: 25%;
+          top: 14px;
+          padding: 5px;
+          border: 1px solid $cardsBorderColor;
+          border-radius: 4px;
+          position: absolute;
+          pointer-events: none;
+          &:active {
+            content: ">";
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+          }
+        }
+
+        .input-icons {
+          width: 350px;
+          display: flex;
+          position: relative;
+
+          select {
+            width: 100%;
+            border: 1px solid #707070;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            margin: 0 auto 1 auto;
+            color: #483e3e;
+
+            //
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            height: 50px;
+            margin: 5px 0px;
+            padding: 0px 25px;
+            background-color: $whiteColor;
+            background-image: none;
+            -ms-word-break: normal;
+            word-break: normal;
+
+            option {
+              width: 100px;
+              font-weight: normal;
+              display: block;
+              white-space: nowrap;
+              min-height: 1.2em;
+              padding: 0px 2px 1px;
+            }
+          }
+        }
+      }
+
+      //privace police
+
+      .agree-policies-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        .policeDiv {
+          display: flex;
+          align-items: baseline;
+          width: 350px;
+
+          input {
+            display: flex;
+            align-self: center;
+          }
+
+          label {
+            // add link
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &:hover {
+              color: #3571a3;
+            }
+          }
+        }
+      }
+
+      //registration Btn
+
+      .enter {
+        background-color: #3571a3;
+        color: #ffffff;
+        font-size: 18px;
+        border: none;
+        border-radius: 9px;
+        box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+        width: auto;
+        margin: 1rem auto;
+        font-family: "BPG Nino Mtavruli";
+        font-weight: bold;
+        padding: 15px 40px;
+        cursor: pointer;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Custom Select
+
+.selectVisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+
+  .select-menu {
+    width: 350px;
+    cursor: pointer;
+    position: relative;
+
+    .menuVisual {
+      border: 1px solid #707070;
+      background-color: #fff;
+      padding: 20px;
+      color: #483e3e;
+      font-weight: 500;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.borderVisual {
+  border: solid 1px #707070;
+}
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: 0;
+  z-index: 5;
+  div {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.optionVisual::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+.optionVisual::-webkit-scrollbar-thumb {
+  height: 52px;
+  background-color: #efeff5;
+  border-radius: 10px;
+  border: 1px solid black;
+  border: 0.3px solid #707070;
+}
+
+.optionVisual.active {
+  height: 131px;
+}
+
+// Successful-Registration Page
+
+#successful-registration {
+  display: none;
+}
+.successful-registration {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 427px);
+  width: 100%;
+  margin-top: 240px;
+
+  h2 {
+    margin: 0px auto;
+    width: 100%;
+    font-size: 33px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $primaryColor;
+    text-align: center;
+    margin: 1rem 0;
+    font-family: "BPG Nino Mtavruli";
+  }
+
+  p {
+    margin: 0px auto;
+    padding-top: 50px;
+    width: 242px;
+    height: 32px;
+    text-align: center;
+    font: normal normal bold 15px/16px BPG Nino Mtavruli;
+    letter-spacing: 0px;
+    color: #433f3f;
+    opacity: 1;
+  }
+  .homePage {
+    display: flex;
+    justify-content: center;
+    background-color: $darkBlue;
+    color: $whiteColor;
+    font-size: 18px;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0px 3px 6px #00000029;
+    width: auto;
+    margin: 4rem auto;
+    margin: 4rem auto;
+    font-family: "BPG Nino Mtavruli";
+    font-weight: bold;
+    padding: 21px 29px;
+    cursor: pointer;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.successful-registration.active {
+  display: block;
+}
