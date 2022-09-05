@@ -1,3 +1,6 @@
+"use strict";
+
+// custom Select
 //custom Select 1
 const select = document.querySelector(".select");
 const options_list = document.querySelector(".options-list");
@@ -48,18 +51,28 @@ options2.forEach((option2) => {
     select2.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
   });
 });
+// swich pages Myprofile/recovery
+const profileInformation = document.querySelector("#profile-option-one");
+const profilePassword = document.querySelector("#profile-option-two");
+const profileForm = document.querySelector("#my-profile-form");
+const passwordForm = document.querySelector("#postPassword");
 
-//show forms
-const registrationBtn = document.getElementById("registration-button");
+profilePassword.addEventListener("click", function () {
+  profilePassword.style.color = "black";
+  profilePassword.style.fontWeight = "bold";
+  profileInformation.style.color = "#707070";
+  profileInformation.style.fontWeight = "400";
+  profileForm.style.display = "none";
+  passwordForm.style.display = "flex";
+});
 
-const registration = document.getElementById("registration-container");
-const registrationNotification = document.getElementById(
-  "successful-registration"
-);
-
-registrationBtn.addEventListener("click", () => {
-  registration.style.display = "none";
-  registrationNotification.style.display = "flex";
+profileInformation.addEventListener("click", function () {
+  profileInformation.style.color = "black";
+  profileInformation.style.fontWeight = "bold";
+  profilePassword.style.color = "#707070";
+  profilePassword.style.fontWeight = "400";
+  profileForm.style.display = "flex";
+  passwordForm.style.display = "none";
 });
 
 // myProfile page Hide/Show password

@@ -1,3 +1,4 @@
+// Registration Page
 #registration-container {
   display: flex;
 }
@@ -20,6 +21,14 @@
       border-radius: 9px;
       background-color: #ffffff;
       box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+      .eyeBtn {
+        width: 30px;
+        height: 20px;
+        margin: 15px 0px 0px -30px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #b2b2b2;
+      }
 
       h3 {
         font-size: 20px;
@@ -63,73 +72,6 @@
       }
 
       //Selects
-      .selectDiv {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        float: left;
-        width: 100%;
-
-        &::after {
-          content: ">";
-          font: 17px "Consolas", monospace;
-          color: $cardsBorderColor;
-          -webkit-transform: rotate(90deg);
-          -moz-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-          right: 25%;
-          top: 14px;
-          padding: 5px;
-          border: 1px solid $cardsBorderColor;
-          border-radius: 4px;
-          position: absolute;
-          pointer-events: none;
-          &:active {
-            content: ">";
-            -webkit-transform: rotate(-90deg);
-            -moz-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-          }
-        }
-
-        .input-icons {
-          width: 350px;
-          display: flex;
-          position: relative;
-
-          select {
-            width: 100%;
-            border: 1px solid #707070;
-            border-radius: 4px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            margin: 0 auto 1 auto;
-            color: #483e3e;
-
-            //
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            height: 50px;
-            margin: 5px 0px;
-            padding: 0px 25px;
-            background-color: $whiteColor;
-            background-image: none;
-            -ms-word-break: normal;
-            word-break: normal;
-
-            option {
-              width: 100px;
-              font-weight: normal;
-              display: block;
-              white-space: nowrap;
-              min-height: 1.2em;
-              padding: 0px 2px 1px;
-            }
-          }
-        }
-      }
 
       //privace police
 
@@ -206,7 +148,7 @@
     .menuVisual {
       border: 1px solid #707070;
       background-color: #fff;
-      padding: 20px;
+      padding: 1rem;
       color: #483e3e;
       font-weight: 500;
       border-radius: 6px;

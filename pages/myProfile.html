@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/global.css" />
-    <title>Registration</title>
+    <title>My Profile</title>
   </head>
   <body>
     <header>
@@ -33,11 +33,21 @@
         </ul>
       </nav>
     </header>
-    <main class="mainRegistration">
-      <section class="registration-container" id="registration-container">
-        <h1></h1>
-        <form action="submit" class="register-form" id="register-form">
-          <h3>ახალი ანგარიშის შექმნა</h3>
+    <main class="myProfile">
+      <h1></h1>
+      <section class="my-profile" id="my-profile">
+        <h3>ჩემი პროფილი</h3>
+        <div class="options-wrapper">
+          <p tabindex="0" class="profile-option" id="profile-option-one">
+            ინფორმაციის რედაქტირება
+          </p>
+          <p tabindex="0" class="profile-option" id="profile-option-two">
+            პაროლის ცვლილება
+          </p>
+        </div>
+        <hr />
+        <!-- Edit information Start -->
+        <form action="submit" class="my-profile-form" id="my-profile-form">
           <div class="msg-wrapper">
             <label for="pass">სახელი</label>
           </div>
@@ -45,7 +55,7 @@
             <div class="input-icons">
               <input
                 type="text"
-                id="first_name"
+                id="my-profile-first_name"
                 name="first_name"
                 class="input"
               />
@@ -58,7 +68,7 @@
             <div class="input-icons">
               <input
                 type="text"
-                id="last_name"
+                id="my-profile-last_name"
                 name="last_name"
                 class="input"
               />
@@ -95,12 +105,18 @@
           </div>
           <div>
             <div class="input-icons">
-              <input type="text" id="school" name="school" class="input" />
+              <input
+                type="text"
+                id="my-profile-school"
+                name="school"
+                class="input"
+              />
             </div>
           </div>
           <div class="msg-wrapper">
             <label for="pass">კლასი</label>
           </div>
+
           <!-- Custom select structure -->
           <div class="customSelect selectVisual">
             <div class="select-menu">
@@ -125,16 +141,55 @@
               </div>
             </div>
           </div>
-          <!-- Custom select structure -->
           <div class="msg-wrapper">
             <label for="pass">ი-მეილი</label>
           </div>
-          <div class="input-icons">
-            <input type="text" name="email" class="input" id="register_email" />
+          <div>
+            <div class="input-icons">
+              <input
+                type="text"
+                name="email"
+                class="input"
+                id="my-profile-register_email"
+              />
+            </div>
           </div>
-          <!-- current password -->
           <div class="msg-wrapper">
             <label for="pass">პაროლი</label>
+          </div>
+          <div class="input-icons">
+            <input
+              class="input eyePassword"
+              id="password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required=""
+            />
+
+            <i
+              class="eyeBtn far fa-eye"
+              onclick="showPassword(`password`,this)"
+            ></i>
+          </div>
+          <div class="agree-policies-wrapper">
+            <div class="policeDiv">
+              <input
+                type="checkbox"
+                id="my-profile-agree-policies"
+                name="agreement"
+                checked
+              /><label for="agreement"
+                >ვეთანხმები <span>მონაცემების დამუშავებას</span></label
+              >
+            </div>
+          </div>
+        </form>
+        <!-- Edit information End -->
+        <form method="post" id="postPassword">
+          <!-- current password -->
+          <div class="msg-wrapper">
+            <label for="pass">არსებული პაროლი</label>
           </div>
           <div class="input-icons">
             <input
@@ -151,6 +206,26 @@
               onclick="showPassword(`id_password`,this)"
             ></i>
           </div>
+          <!-- new Password -->
+          <div class="msg-wrapper">
+            <label for="pass">ახალი პაროლი</label>
+          </div>
+          <div class="input-icons">
+            <input
+              class="eyePassword input"
+              type="password"
+              id="new_password"
+              name="new_password"
+              autocomplete="new_password"
+              required=""
+            />
+
+            <i
+              class="eyeBtn far fa-eye"
+              onclick="showPassword(`new_password`,this)"
+            ></i>
+          </div>
+
           <!-- repeat new password -->
           <div class="msg-wrapper">
             <label for="pass">გაიმეორეთ პაროლი</label>
@@ -170,36 +245,15 @@
               onclick="showPassword(`repeat_new_pass`,this)"
             ></i>
           </div>
-          <div class="agree-policies-wrapper">
-            <div class="policeDiv">
-              <input
-                type="checkbox"
-                id="agree-policies"
-                name="agreement"
-                checked
-              /><label for="agreement"
-                >ვეთანხმები კონფიდენციალურობის პოლიტიკას და გამოყენების
-                პირობებებს</label
-              >
-            </div>
-          </div>
-          <button type="button" class="enter" id="registration-button">
-            რეგისტრაცია
-          </button>
         </form>
-      </section>
-      <section class="successful-registration" id="successful-registration">
-        <h2>თქვენ წარმატებით</h2>
-        <h2>დარეგისტრირდით</h2>
-        <p>დასადასტურებელი შეტყობინება გამოგზავნილია თქვენს ი-მეილზე</p>
-        <button
-          onclick="location.href='authorization.html'"
-          type="button"
-          class="homePage"
-          id="homePageBtn"
-        >
-          მთავარი გვერდი
-        </button>
+        <div class="my-profile-buttons">
+          <button type="button" id="cancel-buttons" class="cancel-button">
+            გაუქმება
+          </button>
+          <button type="button" class="enter" id="my-profile-button">
+            შენახვა
+          </button>
+        </div>
       </section>
     </main>
     <footer>
@@ -228,6 +282,6 @@
         <p>copyright</p>
       </div>
     </footer>
-    <script src="../js/registration.js"></script>
+    <script src="../js/myProfile.js"></script>
   </body>
 </html>
