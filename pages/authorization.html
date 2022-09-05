@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/global.css" />
-    <title>Document</title>
+    <title>Authorization</title>
   </head>
   <body>
     <header>
@@ -52,16 +52,21 @@
           </div>
           <div class="msg-wrapper">
             <label for="pass">პაროლი</label>
-            <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
           </div>
-          <div>
-            <div class="input-icons">
-              <input type="password" id="pass" name="password" class="input" />
-              <div>
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-              </div>
-            </div>
+          <div class="input-icons">
+            <input
+              class="input eyePassword"
+              id="id_password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required=""
+            />
+
+            <i
+              class="eyeBtn far fa-eye"
+              onclick="showPassword(`id_password`,this)"
+            ></i>
           </div>
           <div class="restore-wrapper">
             <div class="divSymmetry">
