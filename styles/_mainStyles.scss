@@ -1340,81 +1340,120 @@ h1 {
     }
   }
 }
+.aboutPage {
+  width: 89%;
+  margin: 0 auto;
+  font-family: "BPG Nino Mtavruli";
+  @include displayFlex(space-between, center);
 
-.about-contaioner {
-  margin-bottom: 3rem;
-
-  .about-container-top-wrapper {
-    width: 100%;
-    height: 60vh;
-
-    .about-container-top {
-      height: 100%;
-      width: 85%;
-      margin: 5rem auto 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      .about-container-top-about {
-        h2 {
-          font-size: 35px;
-          font-family: "BPG Banner Caps";
-          margin: 0 0 1.5rem 0;
-        }
-
-        p {
-          font-family: "DejaVu Sans";
-          font-size: 18px;
-          margin: 0 0 3rem 0;
-        }
-      }
-
-      .about-container-top-goal {
-        h2 {
-          font-size: 35px;
-          font-family: "BPG Banner Caps";
-          margin: 0 0 1.5rem 0;
-        }
-
-        p {
-          font-family: "DejaVu Sans";
-          font-size: 18px;
-        }
-      }
-    }
+  @media (min-width: 1305px) {
+    width: 1210px;
   }
 
-  .about-container-bottom-wrapper {
-    .about-container-bottom {
-      width: 85%;
-      margin: 0 auto;
+  margin: 0 auto;
+  font-family: "DejaVu Sans";
+  .about-contaioner {
+    margin-bottom: 3rem;
 
-      h2 {
-        padding: 3rem 0 5rem 0;
-        font-size: 35px;
-        font-family: "BPG Banner Caps";
-      }
+    .about-container-top-wrapper {
+      width: 100%;
+      height: auto;
 
-      .about-container-bottom-team-info {
-        min-height: 70vh;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 2rem;
+      .about-container-top {
+        height: auto;
+        width: 100%;
+        margin: 10rem 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        .team-info {
-          width: 100%;
-          height: 100%;
-
-          h4 {
-            font-family: "DejaVu Sans";
-            font-size: 24px;
+        .about-container-top-about {
+          h2 {
+            font-size: 35px;
+            font-family: "BPG Banner Caps";
+            margin: 0 0 1.5rem 0;
           }
 
           p {
             font-family: "DejaVu Sans";
             font-size: 18px;
-            margin: 1rem 0 0 0;
+            margin: 0 0 3rem 0;
+          }
+        }
+
+        .about-container-top-goal {
+          h2 {
+            font-size: 35px;
+            font-family: "BPG Banner Caps";
+            margin: 0 0 1.5rem 0;
+          }
+
+          p {
+            font-family: "DejaVu Sans";
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .about-container-bottom-wrapper {
+      .about-container-bottom {
+        width: 100%;
+        margin: 4rem auto;
+
+        h2 {
+          margin: 1rem 0 5rem 0;
+          font-size: 35px;
+          font-family: "BPG Banner Caps";
+        }
+
+        .about-container-bottom-team-info {
+          min-height: 70vh;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          grid-gap: 8rem;
+
+          .team-info {
+            display: flex;
+            flex-direction: column;
+            width: 285px;
+            height: 185px;
+            h4 {
+              width: 100%;
+              min-height: 80px;
+              display: flex;
+              justify-content: center;
+              font-weight: bold;
+              align-items: center;
+            }
+            p {
+              width: 100%;
+              min-height: 50px;
+              display: flex;
+              justify-content: center;
+            }
+
+            .linkProfile {
+              display: flex;
+              justify-content: center;
+              a {
+                img {
+                  margin: 0px 10px;
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+
+            h4 {
+              font-family: "DejaVu Sans";
+              font-size: 24px;
+            }
+
+            p {
+              font-family: "DejaVu Sans";
+              font-size: 18px;
+            }
           }
         }
       }
