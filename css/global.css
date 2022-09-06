@@ -1234,6 +1234,7 @@ h1 {
 }
 
 .page-not-found-container {
+  min-height: calc(100vh - 363px);
   margin: 8rem 0 3rem 0;
   height: 60vh;
   display: flex;
@@ -1246,13 +1247,12 @@ h1 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-family: "BPG Nino Mtavruli";
 }
 .page-not-found-container .page-not-found-wrapper h2 {
   font-size: 1.7rem;
+  margin: 70px 0px 20px 0px;
+  color: #707070;
 }
 .page-not-found-container .page-not-found-wrapper .main-page-route {
   align-self: flex-end;
@@ -1271,7 +1271,7 @@ h1 {
 }
 .page-not-found-container .page-not-found-wrapper .emoji-sad {
   position: relative;
-  width: 266px;
+  width: 285px;
   height: 266px;
   border: 10px solid #b2b2b2;
   border-radius: 50%;
@@ -2008,4 +2008,140 @@ footer .div-2 p {
   cursor: pointer;
   font-size: 20px;
   color: #b2b2b2;
+}
+
+.recoveryPassword {
+  min-height: calc(100vh - 235px);
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recoveryPassword .successful-pass-change {
+  display: none;
+  flex-direction: column;
+}
+.recoveryPassword .recoverySection {
+  display: flex;
+  justify-content: center;
+}
+.recoveryPassword .recoverySection .pass-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 3rem 0rem;
+  width: 627px;
+  height: 462px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.recoveryPassword .recoverySection .pass-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 2rem;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper label {
+  width: 50%;
+  display: flex;
+  padding-left: 22%;
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .input-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.recoveryPassword .recoverySection .pass-form .input-icons input {
+  display: flex;
+  width: 350px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #483e3e;
+}
+.recoveryPassword .recoverySection .pass-form .recovery {
+  width: 90%;
+  margin: 0 22% 0 0;
+  align-self: flex-end;
+  text-align: end;
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  width: auto;
+  margin: 1rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.recoveryPassword .recoverySection .pass-form .enter:hover {
+  opacity: 1;
+}
+.recoveryPassword .recoverySection .pass-form .registration {
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+}
+
+.successful-pass-change {
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 4rem auto;
+}
+.successful-pass-change h2 {
+  margin: 160px 0px 69px;
+}
+
+.homePage {
+  display: flex;
+  justify-content: center;
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: auto;
+  margin: 4rem auto;
+  margin: 4rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 21px 29px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.homePage:hover {
+  opacity: 1;
 }/*# sourceMappingURL=global.css.map */

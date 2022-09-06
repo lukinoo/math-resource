@@ -1254,6 +1254,7 @@ h1 {
 }
 
 .page-not-found-container {
+  min-height: calc(100vh - 363px);
   margin: 8rem 0 3rem 0;
   height: 60vh;
   display: flex;
@@ -1264,11 +1265,12 @@ h1 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    @include displayFlex(space-between);
     font-family: "BPG Nino Mtavruli";
 
     h2 {
       font-size: 1.7rem;
+      margin: 70px 0px 20px 0px;
+      color: #707070;
     }
 
     .main-page-route {
@@ -1292,7 +1294,7 @@ h1 {
 
     .emoji-sad {
       position: relative;
-      width: 266px;
+      width: 285px;
       height: 266px;
       border: 10px solid $lightGray;
       border-radius: 50%;
