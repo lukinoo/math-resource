@@ -1436,10 +1436,12 @@ h1 {
             .linkProfile {
               display: flex;
               justify-content: center;
-              img {
-                margin: 0px 10px;
-                width: 24px;
-                height: 24px;
+              a {
+                img {
+                  margin: 0px 10px;
+                  width: 24px;
+                  height: 24px;
+                }
               }
             }
 

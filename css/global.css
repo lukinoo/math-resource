@@ -1400,7 +1400,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile img {
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile a img {
   margin: 0px 10px;
   width: 24px;
   height: 24px;
