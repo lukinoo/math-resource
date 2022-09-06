@@ -4,7 +4,7 @@ body {
 
 h1 {
   max-width: 800px;
-  margin: 8rem auto 3rem auto;
+  margin: 8rem auto 0rem auto;
   text-align: center;
   font-size: 33px;
   font-weight: normal;
@@ -1341,7 +1341,7 @@ h1 {
   }
 }
 .aboutPage {
-  width: 89%;
+  width: 90%;
   margin: 0 auto;
   font-family: "BPG Nino Mtavruli";
   @include displayFlex(space-between, center);
@@ -1522,5 +1522,56 @@ h1 {
 
   .basebtn:hover img {
     // opacity: 1;
+  }
+}
+
+// Privacy Policy
+
+.privacyPolicy {
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 187px);
+  margin-top: 12rem;
+  h1 {
+    display: flex;
+    justify-content: center;
+    color: #1d2933;
+    width: 436px;
+    height: 68px;
+    opacity: 1;
+    text-shadow: 0px 3px 6px #00000029;
+  }
+
+  .policyList {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "BPG Nino Mtavruli";
+    @include displayFlex(space-between, center);
+
+    @media (min-width: 1305px) {
+      width: 1210px;
+    }
+    ol li {
+      list-style-type: decimal;
+      display: list-item;
+    }
+    ol {
+      color: #433f3f;
+      font: normal normal bold 25px/29px DejaVu Sans;
+      li {
+        h3 {
+          margin: 70px 0px 30px;
+          color: #433f3f;
+          font: normal normal bold 25px/29px DejaVu Sans;
+          text-transform: uppercase;
+          opacity: 1;
+        }
+        P {
+          font: normal normal normal 20px/24px DejaVu Sans;
+          letter-spacing: 0px;
+          color: #483e3e;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
