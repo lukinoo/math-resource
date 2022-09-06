@@ -176,7 +176,7 @@ body {
 
 h1 {
   max-width: 800px;
-  margin: 8rem auto 3rem auto;
+  margin: 8rem auto 0rem auto;
   text-align: center;
   font-size: 33px;
   font-weight: normal;
@@ -466,7 +466,7 @@ h1 {
 }
 
 .authorization {
-  min-height: calc(100vh - 106px);
+  min-height: calc(100vh - 187px);
 }
 .authorization .successful-recovery-tab {
   display: none;
@@ -517,7 +517,7 @@ h1 {
   margin: 4rem auto 0px;
   font-family: "BPG Nino Mtavruli";
   font-weight: bold;
-  padding: 22px 40px;
+  padding: 21px 29px;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -1234,6 +1234,7 @@ h1 {
 }
 
 .page-not-found-container {
+  min-height: calc(100vh - 363px);
   margin: 8rem 0 3rem 0;
   height: 60vh;
   display: flex;
@@ -1246,13 +1247,12 @@ h1 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-family: "BPG Nino Mtavruli";
 }
 .page-not-found-container .page-not-found-wrapper h2 {
   font-size: 1.7rem;
+  margin: 70px 0px 20px 0px;
+  color: #707070;
 }
 .page-not-found-container .page-not-found-wrapper .main-page-route {
   align-self: flex-end;
@@ -1271,7 +1271,7 @@ h1 {
 }
 .page-not-found-container .page-not-found-wrapper .emoji-sad {
   position: relative;
-  width: 266px;
+  width: 285px;
   height: 266px;
   border: 10px solid #b2b2b2;
   border-radius: 50%;
@@ -1312,67 +1312,106 @@ h1 {
   border-top-color: #b2b2b2;
 }
 
-.about-contaioner {
+.aboutPage {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "BPG Nino Mtavruli";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-family: "DejaVu Sans";
+}
+@media (min-width: 1305px) {
+  .aboutPage {
+    width: 1210px;
+  }
+}
+.aboutPage .about-contaioner {
   margin-bottom: 3rem;
 }
-.about-contaioner .about-container-top-wrapper {
+.aboutPage .about-contaioner .about-container-top-wrapper {
   width: 100%;
-  height: 60vh;
+  height: auto;
 }
-.about-contaioner .about-container-top-wrapper .about-container-top {
-  height: 100%;
-  width: 85%;
-  margin: 5rem auto 0 auto;
+.aboutPage .about-contaioner .about-container-top-wrapper .about-container-top {
+  height: auto;
+  width: 100%;
+  margin: 10rem 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-about h2 {
+.aboutPage .about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-about h2 {
   font-size: 35px;
   font-family: "BPG Banner Caps";
   margin: 0 0 1.5rem 0;
 }
-.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-about p {
+.aboutPage .about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-about p {
   font-family: "DejaVu Sans";
   font-size: 18px;
   margin: 0 0 3rem 0;
 }
-.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal h2 {
+.aboutPage .about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal h2 {
   font-size: 35px;
   font-family: "BPG Banner Caps";
   margin: 0 0 1.5rem 0;
 }
-.about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal p {
+.aboutPage .about-contaioner .about-container-top-wrapper .about-container-top .about-container-top-goal p {
   font-family: "DejaVu Sans";
   font-size: 18px;
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom {
-  width: 85%;
-  margin: 0 auto;
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom {
+  width: 100%;
+  margin: 4rem auto;
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom h2 {
-  padding: 3rem 0 5rem 0;
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom h2 {
+  margin: 1rem 0 5rem 0;
   font-size: 35px;
   font-family: "BPG Banner Caps";
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info {
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info {
   min-height: 70vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 8rem;
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info {
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info {
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  height: 185px;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info h4 {
   width: 100%;
-  height: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info h4 {
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info p {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile {
+  display: flex;
+  justify-content: center;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile a img {
+  margin: 0px 10px;
+  width: 24px;
+  height: 24px;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info h4 {
   font-family: "DejaVu Sans";
   font-size: 24px;
 }
-.about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info p {
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info p {
   font-family: "DejaVu Sans";
   font-size: 18px;
-  margin: 1rem 0 0 0;
 }
 
 .initionDecoration {
@@ -1420,6 +1459,55 @@ h1 {
   cursor: pointer;
   margin: 0px 22px;
 }
+.privacyPolicy {
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 187px);
+  margin-top: 12rem;
+}
+.privacyPolicy h1 {
+  display: flex;
+  justify-content: center;
+  color: #1d2933;
+  width: 436px;
+  height: 68px;
+  opacity: 1;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.privacyPolicy .policyList {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "BPG Nino Mtavruli";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1305px) {
+  .privacyPolicy .policyList {
+    width: 1210px;
+  }
+}
+.privacyPolicy .policyList ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+.privacyPolicy .policyList ol {
+  color: #433f3f;
+  font: normal normal bold 25px/29px DejaVu Sans;
+}
+.privacyPolicy .policyList ol li h3 {
+  margin: 70px 0px 30px;
+  color: #433f3f;
+  font: normal normal bold 25px/29px DejaVu Sans;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.privacyPolicy .policyList ol li P {
+  font: normal normal normal 20px/24px DejaVu Sans;
+  letter-spacing: 0px;
+  color: #483e3e;
+  opacity: 1;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -1438,6 +1526,11 @@ header nav {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 1305px) {
+  header nav {
+    width: 1230px;
+  }
+}
 header nav .logo-wrapper {
   width: 60px;
   height: 60px;
@@ -1447,12 +1540,15 @@ header nav .logo-wrapper .logo {
   height: 100%;
 }
 header nav .nav-links {
-  min-width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 header nav .nav-links li {
   padding-left: 20px;
+}
+header nav .nav-links li .activeHeaderColor {
+  color: #3571a3;
 }
 header nav .nav-links li a {
   color: #000000;
@@ -1462,11 +1558,6 @@ header nav .nav-links li a:hover {
   color: #3571a3;
 }
 
-@media (min-width: 1305px) {
-  header nav {
-    width: 1200px;
-  }
-}
 footer {
   width: 100%;
   margin-top: auto;
@@ -1478,11 +1569,41 @@ footer {
 footer .copyRightDiv {
   padding: 10px 0px;
   display: flex;
+  justify-content: space-between;
 }
-footer .copyRightDiv .copyRightLink a {
-  width: 60%;
+footer .copyRightDiv .copyRightLink {
+  margin-top: 25px;
+}
+footer .copyRightDiv .copyRightLink .privacy {
   text-decoration: none;
   color: inherit;
+}
+footer .copyRightDiv .copyRightLink .privacy:hover {
+  color: #3571a3;
+}
+footer .copyRightDiv .contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .copyRightDiv .contactList .contact {
+  color: black;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+footer .copyRightDiv .contactList .contactEmail {
+  padding-bottom: 15px;
+}
+footer .copyRightDiv .contactList .contactEmail a {
+  text-decoration: none;
+  color: #707070;
+}
+footer .copyRightDiv .contactList .contactEmail a:hover {
+  color: #000000;
+}
+footer .copyRightDiv .contactList .contactFacebook {
+  text-decoration: none;
+  color: #707070;
 }
 footer .div-2 {
   width: 100%;
@@ -1496,4 +1617,622 @@ footer .div-2 p {
     width: 1230px;
     margin: 0 auto;
   }
+}
+#registration-container {
+  display: flex;
+}
+
+.mainRegistration .registration-container {
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainRegistration .registration-container h1 {
+  margin: 8rem auto 3rem auto;
+}
+.mainRegistration .registration-container .register-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 3rem 0rem;
+  width: 627px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.mainRegistration .registration-container .register-form .eyeBtn {
+  width: 30px;
+  height: 20px;
+  margin: 15px 0px 0px -30px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #b2b2b2;
+}
+.mainRegistration .registration-container .register-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 2rem;
+  font-family: "BPG Nino Mtavruli";
+}
+.mainRegistration .registration-container .register-form .msg-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%;
+}
+.mainRegistration .registration-container .register-form .msg-wrapper label {
+  width: 50%;
+  display: flex;
+  padding-left: 22%;
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: "BPG Nino Mtavruli";
+}
+.mainRegistration .registration-container .register-form .input-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.mainRegistration .registration-container .register-form .input-icons input {
+  display: flex;
+  width: 350px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #483e3e;
+}
+.mainRegistration .registration-container .register-form .agree-policies-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv {
+  display: flex;
+  align-items: baseline;
+  width: 350px;
+}
+.mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv input {
+  display: flex;
+  align-self: center;
+}
+.mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv label {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv label:hover {
+  color: #3571a3;
+}
+.mainRegistration .registration-container .register-form .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  width: auto;
+  margin: 1rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 15px 40px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.mainRegistration .registration-container .register-form .enter:hover {
+  opacity: 1;
+}
+
+.selectVisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.selectVisual .select-menu {
+  width: 350px;
+  cursor: pointer;
+  position: relative;
+}
+.selectVisual .select-menu .menuVisual {
+  border: 1px solid #707070;
+  background-color: #fff;
+  padding: 1rem;
+  color: #483e3e;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.borderVisual {
+  border: solid 1px #707070;
+}
+
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: 0;
+  z-index: 5;
+}
+.optionVisual div {
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.optionVisual::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+.optionVisual::-webkit-scrollbar-thumb {
+  height: 52px;
+  background-color: #efeff5;
+  border-radius: 10px;
+  border: 1px solid black;
+  border: 0.3px solid #707070;
+}
+
+.optionVisual.active {
+  height: 131px;
+}
+
+#successful-registration {
+  display: none;
+}
+
+.successful-registration {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 427px);
+  width: 100%;
+  margin-top: 240px;
+}
+.successful-registration h2 {
+  margin: 0px auto;
+  width: 100%;
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 1rem 0;
+  font-family: "BPG Nino Mtavruli";
+}
+.successful-registration p {
+  margin: 0px auto;
+  padding-top: 50px;
+  width: 242px;
+  height: 32px;
+  text-align: center;
+  font: normal normal bold 15px/16px BPG Nino Mtavruli;
+  letter-spacing: 0px;
+  color: #433f3f;
+  opacity: 1;
+}
+.successful-registration .homePage {
+  display: flex;
+  justify-content: center;
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: auto;
+  margin: 4rem auto;
+  margin: 4rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 21px 29px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.successful-registration .homePage:hover {
+  opacity: 1;
+}
+
+.successful-registration.active {
+  display: block;
+}
+
+.myProfile {
+  min-height: calc(100vh - 187px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.myProfile h1 {
+  margin: 8rem auto 3rem auto;
+}
+.myProfile .my-profile {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 627px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.myProfile .my-profile h3 {
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 1rem;
+  padding: 3rem 0rem;
+  font-family: "BPG Nino Mtavruli";
+}
+.myProfile .my-profile .options-wrapper,
+.myProfile .my-profile hr {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  margin: 0 auto;
+}
+.myProfile .my-profile .options-wrapper .profile-option,
+.myProfile .my-profile hr .profile-option {
+  font-size: 14px;
+  cursor: pointer;
+}
+.myProfile .my-profile .options-wrapper #profile-option-one,
+.myProfile .my-profile hr #profile-option-one {
+  color: black;
+  font-weight: bold;
+}
+.myProfile .my-profile .options-wrapper #profile-option-two,
+.myProfile .my-profile hr #profile-option-two {
+  color: #707070;
+}
+.myProfile .my-profile hr {
+  margin: 2rem auto 0 auto;
+}
+.myProfile .my-profile #my-profile-form {
+  display: flex;
+  flex-direction: column;
+}
+.myProfile .my-profile #postPassword {
+  display: none;
+  flex-direction: column;
+}
+.myProfile .my-profile form {
+  row-gap: 0.5rem;
+  margin-top: 50px;
+}
+.myProfile .my-profile form .msg-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%;
+}
+.myProfile .my-profile form .msg-wrapper label {
+  width: 50%;
+  display: flex;
+  padding-left: 22%;
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: "BPG Nino Mtavruli";
+}
+.myProfile .my-profile form .input-icons input {
+  display: flex;
+  width: 350px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #483e3e;
+}
+.myProfile .my-profile form .agree-policies-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.myProfile .my-profile form .agree-policies-wrapper .policeDiv {
+  display: flex;
+  align-items: baseline;
+  width: 350px;
+}
+.myProfile .my-profile form .agree-policies-wrapper .policeDiv input {
+  display: flex;
+  align-self: center;
+}
+.myProfile .my-profile form .agree-policies-wrapper label {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.myProfile .my-profile form .agree-policies-wrapper label span {
+  padding-left: 4px;
+  color: #3571a3;
+}
+.myProfile .my-profile-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+.myProfile .my-profile-buttons .cancel-button {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  width: auto;
+  padding: 0.8rem 0px;
+  cursor: pointer;
+  margin-right: 100px;
+}
+.myProfile .my-profile-buttons .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: auto;
+  margin-left: 50px;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+  opacity: 0.8;
+}
+.myProfile .my-profile-buttons .enter:hover {
+  opacity: 1;
+}
+
+.selectVisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.selectVisual .select-menu {
+  width: 350px;
+  cursor: pointer;
+  position: relative;
+}
+.selectVisual .select-menu .menuVisual {
+  border: 1px solid #707070;
+  background-color: #fff;
+  padding: 1rem;
+  color: #483e3e;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.borderVisual {
+  border: solid 1px #707070;
+}
+
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: 0;
+  z-index: 5;
+}
+.optionVisual div {
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.optionVisual::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+.optionVisual::-webkit-scrollbar-thumb {
+  height: 52px;
+  background-color: #efeff5;
+  border-radius: 10px;
+  border: 1px solid black;
+  border: 0.3px solid #707070;
+}
+
+.optionVisual.active {
+  height: 131px;
+}
+
+.input-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.input-icons .eyeBtn {
+  width: 30px;
+  height: 20px;
+  margin: 15px 0px 0px -30px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #b2b2b2;
+}
+
+.recoveryPassword {
+  min-height: calc(100vh - 235px);
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recoveryPassword .successful-pass-change {
+  display: none;
+  flex-direction: column;
+}
+.recoveryPassword .recoverySection {
+  display: flex;
+  justify-content: center;
+}
+.recoveryPassword .recoverySection .pass-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 3rem 0rem;
+  width: 627px;
+  height: 462px;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.recoveryPassword .recoverySection .pass-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  margin-bottom: 2rem;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  width: 100%;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper label {
+  width: 50%;
+  display: flex;
+  padding-left: 22%;
+  color: #9191a0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .input-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.recoveryPassword .recoverySection .pass-form .input-icons input {
+  display: flex;
+  width: 350px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #483e3e;
+}
+.recoveryPassword .recoverySection .pass-form .recovery {
+  width: 90%;
+  margin: 0 22% 0 0;
+  align-self: flex-end;
+  text-align: end;
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+}
+.recoveryPassword .recoverySection .pass-form .enter {
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  width: auto;
+  margin: 1rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.recoveryPassword .recoverySection .pass-form .enter:hover {
+  opacity: 1;
+}
+.recoveryPassword .recoverySection .pass-form .registration {
+  font-size: 13px;
+  color: #3571a3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+}
+
+.successful-pass-change {
+  font-size: 33px;
+  line-height: 38px;
+  font-weight: bold;
+  color: #3571a3;
+  text-align: center;
+  margin: 4rem auto;
+}
+.successful-pass-change h2 {
+  margin: 160px 0px 69px;
+}
+
+.homePage {
+  display: flex;
+  justify-content: center;
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: auto;
+  margin: 4rem auto;
+  margin: 4rem auto;
+  font-family: "BPG Nino Mtavruli";
+  font-weight: bold;
+  padding: 21px 29px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.homePage:hover {
+  opacity: 1;
 }/*# sourceMappingURL=global.css.map */

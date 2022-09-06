@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Project</title>
+    <title>Not Found</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -27,9 +27,6 @@
           <li>
             <a href="./about.html">პროექტის შესახებ</a>
           </li>
-          <li>
-            <a href="./contacts.html">კონტაქტი</a>
-          </li>
         </ul>
       </nav>
     </header>
@@ -43,15 +40,37 @@
           </div>
         </div>
         <h2>გვერდი ვერ მოიძებნა</h2>
-        <div class="main-page-route">
-          <i class="fa-solid fa-arrow-right"></i>
-          <a href="../index.html">მთავარი გვერდი</a>
-        </div>
+        <button
+          onclick="location.href='authorization.html'"
+          type="button"
+          class="homePage"
+          id="homePageBtn"
+        >
+          მთავარი გვერდი
+        </button>
       </div>
     </section>
     <footer>
-      <div class="div-1">
-        <p>კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</p>
+      <!-- Copyright -->
+      <div class="copyRightDiv">
+        <div class="copyRightLink">
+          <a href="./privacyPolicy.html" class="privacy"
+            >კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</a
+          >
+        </div>
+        <div>
+          <div class="contactList">
+            <p class="contact">კონტაქტი</p>
+            <p class="contactEmail">
+              <a href="mailto: unilabinfo@iliauni.edu.ge"
+                >unilabinfo@iliauni.edu.ge</a
+              >
+            </p>
+            <p class="contactEmail">
+              <a href="https://www.facebook.com/"> Facebook</a>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="div-2">
         <p>copyright</p>
@@ -59,6 +78,5 @@
     </footer>
     <script src="../js/navigation.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/api.js"></script>
   </body>
 </html>

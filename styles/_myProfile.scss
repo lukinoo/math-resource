@@ -1,0 +1,248 @@
+.myProfile {
+  min-height: calc(100vh - 187px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  h1 {
+    margin: 8rem auto 3rem auto;
+  }
+  .my-profile {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 627px;
+    border-radius: 9px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      align-self: center;
+      margin-bottom: 1rem;
+      padding: 3rem 0rem;
+      font-family: "BPG Nino Mtavruli";
+    }
+    .options-wrapper,
+    hr {
+      display: flex;
+      justify-content: space-between;
+      width: 74%;
+      margin: 0 auto;
+      .profile-option {
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      #profile-option-one {
+        color: black;
+        font-weight: bold;
+      }
+      #profile-option-two {
+        color: #707070;
+      }
+    }
+    hr {
+      margin: 2rem auto 0 auto;
+    }
+
+    // Edit information form start
+    #my-profile-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #postPassword {
+      display: none;
+      flex-direction: column;
+    }
+    form {
+      row-gap: 0.5rem;
+      margin-top: 50px;
+      .msg-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        width: 100%;
+        label {
+          width: 50%;
+          display: flex;
+          padding-left: 22%;
+          color: #9191a0;
+          margin-bottom: 0;
+          font-size: 13px;
+          font-family: "BPG Nino Mtavruli";
+        }
+      }
+      .input-icons {
+        input {
+          display: flex;
+          width: 350px;
+          border: 1px solid #707070;
+          border-radius: 4px;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          color: #483e3e;
+        }
+      }
+      .agree-policies-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        .policeDiv {
+          display: flex;
+          align-items: baseline;
+          width: 350px;
+
+          input {
+            display: flex;
+            align-self: center;
+          }
+        }
+
+        label {
+          display: flex;
+          justify-content: flex-start;
+          padding-left: 10px;
+          font-size: 15px;
+          cursor: pointer;
+          margin-bottom: 0;
+          span {
+            padding-left: 4px;
+            color: $primaryColor;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+    // Edit information form End
+  }
+
+  .my-profile-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    .cancel-button {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 18px;
+      border: none;
+      background: transparent;
+      width: auto;
+      padding: 0.8rem 0px;
+      cursor: pointer;
+      margin-right: 100px;
+    }
+    .enter {
+      background-color: $darkBlue;
+      color: $whiteColor;
+      font-size: 18px;
+      border: none;
+      border-radius: 9px;
+      box-shadow: 0px 3px 6px #00000029;
+      width: auto;
+      margin-left: 50px;
+      padding: 0.8rem 1.8rem;
+      cursor: pointer;
+      font-family: "BPG Nino Mtavruli";
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Custom Select
+
+.selectVisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+
+  .select-menu {
+    width: 350px;
+    cursor: pointer;
+    position: relative;
+
+    .menuVisual {
+      border: 1px solid #707070;
+      background-color: #fff;
+      padding: 1rem;
+      color: #483e3e;
+      font-weight: 500;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.borderVisual {
+  border: solid 1px #707070;
+}
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: 0;
+  z-index: 5;
+  div {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+.option:hover,
+.option.selected {
+  color: #3571a3;
+}
+
+.optionVisual::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+.optionVisual::-webkit-scrollbar-thumb {
+  height: 52px;
+  background-color: #efeff5;
+  border-radius: 10px;
+  border: 1px solid black;
+  border: 0.3px solid #707070;
+}
+
+.optionVisual.active {
+  height: 131px;
+}
+
+.input-icons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  .eyeBtn {
+    width: 30px;
+    height: 20px;
+    margin: 15px 0px 0px -30px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b2b2b2;
+  }
+}

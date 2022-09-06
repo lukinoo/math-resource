@@ -9,9 +9,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../css/global.css" />
-    <title>Document</title>
+    <title>Authorization</title>
   </head>
-  <body class="">
+  <body>
     <header>
       <nav>
         <a href="../index.html">
@@ -21,13 +21,15 @@
         </a>
         <ul class="nav-links">
           <li>
-            <a href="authorization.html" id="auth-link">ავტორიზაცია</a>
+            <a
+              href="authorization.html"
+              id="auth-link"
+              class="activeHeaderColor"
+              >ავტორიზაცია</a
+            >
           </li>
           <li>
             <a href="about.html">პროექტის შესახებ</a>
-          </li>
-          <li>
-            <a href="contacts.html">კონტაქტი</a>
           </li>
         </ul>
       </nav>
@@ -50,16 +52,21 @@
           </div>
           <div class="msg-wrapper">
             <label for="pass">პაროლი</label>
-            <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
           </div>
-          <div>
-            <div class="input-icons">
-              <input type="password" id="pass" name="password" class="input" />
-              <div>
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-              </div>
-            </div>
+          <div class="input-icons">
+            <input
+              class="input eyePassword"
+              id="id_password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required=""
+            />
+
+            <i
+              class="eyeBtn far fa-eye"
+              onclick="showPassword(`id_password`,this)"
+            ></i>
           </div>
           <div class="restore-wrapper">
             <div class="divSymmetry">
@@ -78,7 +85,12 @@
             </button>
           </div>
           <button type="button" class="enter" id="enter">შესვლა</button>
-          <button type="button" class="registration" id="registration-on-auth">
+          <button
+            onclick="location.href='registration.html'"
+            type="button"
+            class="registration"
+            id="registration-on-auth"
+          >
             რეგისტრაცია
           </button>
         </form>
@@ -108,7 +120,12 @@
             </button>
             <button type="button" id="enter-send">გაგზავნა</button>
           </div>
-          <button type="button" class="registration" id="registration-on-email">
+          <button
+            onclick="location.href='registration.html'"
+            type="button"
+            class="registration"
+            id="registration-on-email"
+          >
             რეგისტრაცია
           </button>
         </form>
@@ -130,7 +147,22 @@
       <!-- Copyright -->
       <div class="copyRightDiv">
         <div class="copyRightLink">
-          <a href="">კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</a>
+          <a href="./privacyPolicy.html" class="privacy"
+            >კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</a
+          >
+        </div>
+        <div>
+          <div class="contactList">
+            <p class="contact">კონტაქტი</p>
+            <p class="contactEmail">
+              <a href="mailto: unilabinfo@iliauni.edu.ge"
+                >unilabinfo@iliauni.edu.ge</a
+              >
+            </p>
+            <p class="contactEmail">
+              <a href="https://www.facebook.com/"> Facebook</a>
+            </p>
+          </div>
         </div>
       </div>
       <div class="div-2">
