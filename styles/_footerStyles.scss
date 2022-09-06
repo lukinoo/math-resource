@@ -17,11 +17,11 @@ footer {
       .privacy {
         text-decoration: none;
         color: inherit;
+        &:hover {
+          color: #3571a3;
+        }
       }
-
-
     }
-
 
     .contactList {
       display: flex;
@@ -45,7 +45,6 @@ footer {
             color: $darkBlack;
           }
         }
-
       }
 
       .contactFacebook {

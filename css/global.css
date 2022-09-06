@@ -176,7 +176,7 @@ body {
 
 h1 {
   max-width: 800px;
-  margin: 8rem auto 3rem auto;
+  margin: 8rem auto 0rem auto;
   text-align: center;
   font-size: 33px;
   font-weight: normal;
@@ -1313,7 +1313,7 @@ h1 {
 }
 
 .aboutPage {
-  width: 89%;
+  width: 90%;
   margin: 0 auto;
   font-family: "BPG Nino Mtavruli";
   display: flex;
@@ -1459,6 +1459,55 @@ h1 {
   cursor: pointer;
   margin: 0px 22px;
 }
+.privacyPolicy {
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 187px);
+  margin-top: 12rem;
+}
+.privacyPolicy h1 {
+  display: flex;
+  justify-content: center;
+  color: #1d2933;
+  width: 436px;
+  height: 68px;
+  opacity: 1;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.privacyPolicy .policyList {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "BPG Nino Mtavruli";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1305px) {
+  .privacyPolicy .policyList {
+    width: 1210px;
+  }
+}
+.privacyPolicy .policyList ol li {
+  list-style-type: decimal;
+  display: list-item;
+}
+.privacyPolicy .policyList ol {
+  color: #433f3f;
+  font: normal normal bold 25px/29px DejaVu Sans;
+}
+.privacyPolicy .policyList ol li h3 {
+  margin: 70px 0px 30px;
+  color: #433f3f;
+  font: normal normal bold 25px/29px DejaVu Sans;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.privacyPolicy .policyList ol li P {
+  font: normal normal normal 20px/24px DejaVu Sans;
+  letter-spacing: 0px;
+  color: #483e3e;
+  opacity: 1;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -1528,6 +1577,9 @@ footer .copyRightDiv .copyRightLink {
 footer .copyRightDiv .copyRightLink .privacy {
   text-decoration: none;
   color: inherit;
+}
+footer .copyRightDiv .copyRightLink .privacy:hover {
+  color: #3571a3;
 }
 footer .copyRightDiv .contactList {
   display: flex;
