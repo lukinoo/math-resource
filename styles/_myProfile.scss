@@ -156,6 +156,10 @@
       }
     }
   }
+  .successful-pass-change {
+    display: none;
+    flex-direction: column;
+  }
 }
 
 // Custom Select
