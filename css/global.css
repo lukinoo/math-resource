@@ -187,7 +187,7 @@ h1 {
 
 .container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 50px auto 0px auto;
   font-family: "DejaVu Sans";
 }
 .container .mainContainer {
@@ -247,6 +247,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .container .mainContainer .containerCombine .containerOptions {
   display: flex;
@@ -321,6 +322,7 @@ h1 {
   height: 76px;
 }
 .container .filter-container .swiper-slide .content-container {
+  height: 100%;
   display: flex;
   width: 1925px;
   overflow-x: auto;
@@ -330,6 +332,7 @@ h1 {
   display: none;
 }
 .container .filter-container .swiper-slide .content-container .item {
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,7 +350,9 @@ h1 {
   background-color: #3571a3;
 }
 .container .filter-container .swiper-slide .content-container .item p {
-  font-size: 15px;
+  font: normal normal normal 15px DejaVu Sans;
+  letter-spacing: 0px;
+  color: #000000;
 }
 .container .filter-container .swiper-slide .content-container .tag {
   padding: 10px;
@@ -368,7 +373,6 @@ h1 {
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px 0px;
-  padding: 2rem 0;
 }
 @media screen and (max-width: 1300px) {
   .container .grid-container {
@@ -1373,10 +1377,12 @@ h1 {
 .aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info {
   min-height: 70vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   grid-gap: 8rem;
 }
 .aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info {
+  text-align: center;
+  margin: auto;
   display: flex;
   flex-direction: column;
   width: 285px;
@@ -2011,6 +2017,10 @@ footer .div-2 p {
 }
 .myProfile .my-profile-buttons .enter:hover {
   opacity: 1;
+}
+.myProfile .successful-pass-change {
+  display: none;
+  flex-direction: column;
 }
 
 .selectVisual {
