@@ -1,0 +1,211 @@
+body {
+  .mathPage {
+    width: 91%;
+    margin: 0 auto;
+    font-family: "BPG Nino Mtavruli";
+    margin-top: 150px;
+    min-height: 100vh;
+
+    @media (min-width: 1305px) {
+      width: 1210px;
+    }
+
+    .mathProfile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .profileName {
+        h4 {
+          font-size: 22px;
+          min-width: 205px;
+          min-height: 22px;
+          opacity: 1;
+        }
+        .editProfile {
+          display: flex;
+          cursor: pointer;
+          padding-top: 5px;
+
+          .bgPen {
+            width: 23px;
+            height: 50px;
+            background-image: url(../assets/Ellipse\ 105.svg);
+            background-repeat: no-repeat;
+            img {
+              padding: 5px 0px 0px 6px;
+            }
+          }
+
+          span {
+            font-size: 15px;
+            color: #433f3f;
+            min-width: 205px;
+            min-height: 22px;
+            padding: 7px 0px 0px 8px;
+          }
+        }
+      }
+      .logOut {
+        a {
+          font-size: 22px;
+          text-decoration: none;
+          color: #000000;
+          border-bottom: 1px solid #000000;
+        }
+      }
+    }
+
+    .mathResults {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .mathAnswers {
+        width: 260px;
+        height: 172px;
+        border-radius: 10px;
+        padding: 15px 15px;
+        background-color: fade(#6bcb77, 0.1);
+        .answerTitle {
+          display: flex;
+          justify-content: center;
+          color: #000000;
+        }
+        .mainTitle {
+          padding-top: 8px;
+          display: flex;
+          height: 100%;
+          justify-content: space-between;
+          .triangleImg {
+            height: 35px;
+            margin-top: 78px;
+            display: flex;
+            text-align: end;
+          }
+          .bgCircle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px 0px 32px;
+            font-size: 40px;
+            padding: 0px 30px 20px 0px;
+            width: 100px;
+            height: 100px;
+            background-image: url(../assets/Ellipse\ 120.svg);
+            background-repeat: no-repeat;
+          }
+          .squareImg {
+            height: 35px;
+          }
+        }
+      }
+    }
+    .borderTop {
+      margin-top: 25px;
+      width: 100%;
+      height: 8px;
+      border-radius: 6px;
+      background-color: #3571a3;
+    }
+    .mathActivity {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      // height: 842px;
+      border: 1px solid #707070;
+      border-radius: 11px;
+      box-shadow: 0px 3px 6px #00000029;
+      background-color: #f5f5f7;
+      margin-bottom: 100px;
+
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 35px 0px 70px 0px;
+        color: #000000;
+      }
+      .myActivity {
+        display: flex;
+        .mathProblemPart {
+          border-right: 2px solid #707070;
+          width: 800px;
+          display: flex;
+          flex-direction: column;
+          margin: 0px 0px 50px 33px;
+          padding-right: 30px;
+          .miniMathAnswers {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .completeTaskTitle {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            h3 {
+              color: #000000;
+              font-size: 28px;
+            }
+            span {
+              color: #433f3f;
+              font-size: 20px;
+            }
+          }
+          .completeTaskResult {
+            margin-top: 50px;
+
+            .taskDisplay {
+              margin-bottom: 55px;
+              display: flex;
+              flex-direction: column;
+
+              .taskTitle {
+                color: #433f3f;
+                font-size: 22px;
+                font-weight: 900;
+              }
+
+              .totalAnswer {
+                margin-top: 15px;
+                width: 100%;
+                display: flex;
+                span {
+                  padding: 10px;
+                  min-width: 71px;
+                  height: 35px;
+                  border-radius: 15px;
+                  border: 1px solid black;
+                }
+                div {
+                  padding: 10px;
+                  margin-left: 30px;
+                  padding: 10px;
+                  min-width: 50px;
+                  height: 35px;
+                  border-radius: 15px;
+                  font-size: large;
+                }
+                img {
+                  width: 15px;
+                  height: 15px;
+                }
+                a {
+                  margin-left: 30px;
+                  padding: 10px;
+                  min-width: 90px;
+                  height: 35px;
+                  text-decoration: none;
+                  color: #433f3f;
+                  border-radius: 15px;
+                  background-color: #e5e0e0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

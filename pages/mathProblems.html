@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-doughnutlabel/2.0.3/chartjs-plugin-doughnutlabel.js"
+    ></script>
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>Mathematical problems</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html">
+          <div class="logo-wrapper">
+            <img src="../assets/mathlogo.png" alt="logo" class="logo" />
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="./myProfile.html" id="auth-link">ზურაბ კალმახელიძე</a>
+          </li>
+          <li>
+            <a href="about.html">პროექტის შესახებ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mathPage">
+      <section class="mathProfile">
+        <div class="profileName">
+          <h4>ზურაბ კალმახელიძე</h4>
+          <a class="editProfile" href="./myProfile.html">
+            <div class="bgPen">
+              <img src="../assets/Icon material-edit.svg" alt="" />
+            </div>
+            <span>პროფილის რედაქტირება</span>
+          </a>
+        </div>
+        <div class="logOut">
+          <a href="./authorization.html"><span>გასვლა</span></a>
+        </div>
+      </section>
+      <section class="mathResults">
+        <div class="mathAnswers" style="background-color: #00000010">
+          <span class="answerTitle"> გაცემული პასუხები</span>
+          <div class="mainTitle">
+            <img class="triangleImg" src="../assets/PolygonYellow.svg" alt="" />
+            <span class="bgCircle">18</span>
+            <img class="squareImg" src="../assets/RectangleBlue.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="mathAnswers"
+          style="background-color: rgb(107, 203, 119, 0.1)"
+        >
+          <span class="answerTitle"> სწორი </span>
+          <div class="mainTitle">
+            <img class="triangleImg" src="../assets/PolygonWhite.svg" alt="" />
+            <span class="bgCircle">10</span>
+            <img class="squareImg" src="../assets/RectangleYellow.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="mathAnswers"
+          style="background-color: rgb(255, 107, 107, 0.2)"
+        >
+          <span class="answerTitle"> არასწორი </span>
+          <div class="mainTitle">
+            <img class="triangleImg" src="../assets/PolygonBlue.svg" alt="" />
+            <span class="bgCircle">5</span>
+            <img class="squareImg" src="../assets/RectangleWhite.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="mathAnswers"
+          style="background-color: rgb(254, 209, 66, 0.2)"
+        >
+          <span class="answerTitle"> მინიშნებით გაცემული პასუხი </span>
+          <div class="mainTitle">
+            <img class="triangleImg" src="../assets/RectangleBlue.svg" alt="" />
+            <span class="bgCircle">3</span>
+            <img class="squareImg" src="../assets/PolygonYellow.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="borderTop"></div>
+        <div class="mathActivity">
+          <p>ჩემი აქტივობები</p>
+          <div class="myActivity">
+            <div class="mathProblemPart">
+              <div class="miniMathAnswers">
+                <div>
+                  <img src="../assets/circleGreen.svg" alt="" />
+                  <span>სწორი პასუხი</span>
+                </div>
+                <div>
+                  <img src="../assets/circleRed.svg" alt="" />
+                  <span>არასწორი პასუხი</span>
+                </div>
+                <div>
+                  <img src="../assets/circleSilver.svg" alt="" />
+                  <span>პასუხგაუცემელი</span>
+                </div>
+                <div>
+                  <img src="../assets/circleYellow.svg" alt="" />
+                  <span>მინიშნებით გაცემული</span>
+                </div>
+              </div>
+              <div class="completeTaskTitle">
+                <h3>შესრულებული სავარჯიშოები</h3>
+                <span> სულ 15 სავარჯიშო </span>
+              </div>
+              <div class="completeTaskResult">
+                <div class="taskDisplay">
+                  <span class="taskTitle"
+                    >ორუცნობიან განტოლებათა სისტემა და ფორმულა</span
+                  >
+                  <div class="totalAnswer">
+                    <span> სულ: 3</span>
+                    <div style="background-color: rgb(107, 203, 119)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(254, 209, 66)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(255, 107, 107)">
+                      <img src="../assets/icon-cancel.svg" alt="" /> 1
+                    </div>
+                    <a href="">
+                      გახსნა <img src="../assets/Icon-navigate-next.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="taskDisplay">
+                  <span class="taskTitle">სამკუთხედის ფართობი</span>
+                  <div class="totalAnswer">
+                    <span> სულ: 3</span>
+                    <div style="background-color: rgb(107, 203, 119)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(254, 209, 66)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(255, 107, 107)">
+                      <img src="../assets/icon-cancel.svg" alt="" /> 1
+                    </div>
+                    <a href="">
+                      გახსნა <img src="../assets/Icon-navigate-next.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="taskDisplay">
+                  <span class="taskTitle"
+                    >ორუცნობიან განტოლებათა სისტემა და ფორმულა</span
+                  >
+                  <div class="totalAnswer">
+                    <span> სულ: 3</span>
+                    <div style="background-color: rgb(107, 203, 119)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(254, 209, 66)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(255, 107, 107)">
+                      <img src="../assets/icon-cancel.svg" alt="" /> 1
+                    </div>
+                    <a href="">
+                      გახსნა <img src="../assets/Icon-navigate-next.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="taskDisplay">
+                  <span class="taskTitle">სამკუთხედის ფართობი</span>
+                  <div class="totalAnswer">
+                    <span> სულ: 3</span>
+                    <div style="background-color: rgb(107, 203, 119)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(254, 209, 66)">
+                      <img src="../assets/Icondone.svg" alt="" /> 1
+                    </div>
+                    <div style="background-color: rgb(255, 107, 107)">
+                      <img src="../assets/icon-cancel.svg" alt="" /> 1
+                    </div>
+                    <a href="">
+                      გახსნა <img src="../assets/Icon-navigate-next.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mathChart">
+              <div class="chart-inner">
+                <canvas
+                  id="BA-chart-job-error"
+                  width="500"
+                  height="500"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Copyright -->
+      <div class="copyRightDiv">
+        <div class="copyRightLink">
+          <a href="./privacyPolicy.html" class="privacy"
+            >კონფიდენციალურობის პოლიტიკა და გამოყენების პირობები</a
+          >
+        </div>
+        <div>
+          <div class="contactList">
+            <p class="contact">კონტაქტი</p>
+            <p class="contactEmail">
+              <a href="mailto: unilabinfo@iliauni.edu.ge"
+                >unilabinfo@iliauni.edu.ge</a
+              >
+            </p>
+            <p class="contactEmail">
+              <a href="https://www.facebook.com/" target="_blank"> Facebook </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="div-2">
+        <p>copyright</p>
+      </div>
+    </footer>
+    <script src="../js/chartPie.js"></script>
+  </body>
+</html>
