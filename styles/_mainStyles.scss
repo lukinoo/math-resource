@@ -2,6 +2,10 @@ body {
   background: $darkWhiteColor;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
   max-width: 800px;
   margin: 8rem auto 0rem auto;
@@ -15,7 +19,7 @@ h1 {
 
 .container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 50px auto 0px auto;
   font-family: "DejaVu Sans";
 
   .mainContainer {
@@ -80,6 +84,7 @@ h1 {
           display: flex;
           align-items: center;
           flex-wrap: wrap;
+          overflow: hidden;
 
           .tag {
           }
@@ -172,6 +177,7 @@ h1 {
       }
 
       .content-container {
+        height: 100%;
         display: flex;
         width: 1925px;
         overflow-x: auto;
@@ -182,6 +188,7 @@ h1 {
         }
 
         .item {
+          height: auto;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -203,7 +210,9 @@ h1 {
           }
 
           p {
-            font-size: 15px;
+            font: normal normal normal 15px DejaVu Sans;
+            letter-spacing: 0px;
+            color: #000000;
           }
         }
 
@@ -231,7 +240,7 @@ h1 {
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px 0px;
-    padding: 2rem 0;
+
     // justify-items: center;
 
     @media screen and (max-width: 1300px) {
@@ -1353,6 +1362,7 @@ h1 {
   margin: 0 auto;
   font-family: "DejaVu Sans";
   .about-contaioner {
+    min-height: 100vh;
     margin-bottom: 3rem;
 
     .about-container-top-wrapper {
@@ -1410,10 +1420,12 @@ h1 {
         .about-container-bottom-team-info {
           min-height: 70vh;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
           grid-gap: 8rem;
 
           .team-info {
+            text-align: center;
+            margin: auto;
             display: flex;
             flex-direction: column;
             width: 285px;

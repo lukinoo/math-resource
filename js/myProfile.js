@@ -51,6 +51,7 @@ options2.forEach((option2) => {
     select2.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
   });
 });
+
 // swich pages Myprofile/recovery
 const profileInformation = document.querySelector("#profile-option-one");
 const profilePassword = document.querySelector("#profile-option-two");
@@ -73,6 +74,23 @@ profileInformation.addEventListener("click", function () {
   profilePassword.style.fontWeight = "400";
   profileForm.style.display = "flex";
   passwordForm.style.display = "none";
+});
+
+// swich pages recovery/notification
+const myProfile = document.querySelector("#my-profile");
+const myPasswordBtn = document.querySelector("#my-password-button");
+const myProfileBtn = document.querySelector("#my-profile-button");
+const successfulChange = document.querySelector("#successful-pass-change");
+const notificationMsg = document.querySelector("#notificationMsg");
+
+myPasswordBtn.addEventListener("click", function () {
+  myProfile.style.display = "none";
+  successfulChange.style.display = "flex";
+});
+myProfileBtn.addEventListener("click", function () {
+  myProfile.style.display = "none";
+  successfulChange.style.display = "flex";
+  notificationMsg.innerHTML = "ინფორმაცია წარმატებით შეიცვალა";
 });
 
 // myProfile page Hide/Show password

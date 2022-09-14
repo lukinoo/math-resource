@@ -174,6 +174,10 @@ body {
   background: #fbfbfb;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
   max-width: 800px;
   margin: 8rem auto 0rem auto;
@@ -187,7 +191,7 @@ h1 {
 
 .container {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 50px auto 0px auto;
   font-family: "DejaVu Sans";
 }
 .container .mainContainer {
@@ -247,6 +251,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .container .mainContainer .containerCombine .containerOptions {
   display: flex;
@@ -321,6 +326,7 @@ h1 {
   height: 76px;
 }
 .container .filter-container .swiper-slide .content-container {
+  height: 100%;
   display: flex;
   width: 1925px;
   overflow-x: auto;
@@ -330,6 +336,7 @@ h1 {
   display: none;
 }
 .container .filter-container .swiper-slide .content-container .item {
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -347,7 +354,9 @@ h1 {
   background-color: #3571a3;
 }
 .container .filter-container .swiper-slide .content-container .item p {
-  font-size: 15px;
+  font: normal normal normal 15px DejaVu Sans;
+  letter-spacing: 0px;
+  color: #000000;
 }
 .container .filter-container .swiper-slide .content-container .tag {
   padding: 10px;
@@ -368,7 +377,6 @@ h1 {
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px 0px;
-  padding: 2rem 0;
 }
 @media screen and (max-width: 1300px) {
   .container .grid-container {
@@ -1328,6 +1336,7 @@ h1 {
   }
 }
 .aboutPage .about-contaioner {
+  min-height: 100vh;
   margin-bottom: 3rem;
 }
 .aboutPage .about-contaioner .about-container-top-wrapper {
@@ -1373,10 +1382,12 @@ h1 {
 .aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info {
   min-height: 70vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   grid-gap: 8rem;
 }
 .aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info {
+  text-align: center;
+  margin: auto;
   display: flex;
   flex-direction: column;
   width: 285px;
@@ -1573,6 +1584,7 @@ footer .copyRightDiv {
 }
 footer .copyRightDiv .copyRightLink {
   margin-top: 25px;
+  max-width: 280px;
 }
 footer .copyRightDiv .copyRightLink .privacy {
   text-decoration: none;
@@ -1622,6 +1634,9 @@ footer .div-2 p {
   display: flex;
 }
 
+.mainRegistration {
+  min-height: 100vh;
+}
 .mainRegistration .registration-container {
   margin: 0 auto 3rem auto;
   display: flex;
@@ -2012,6 +2027,10 @@ footer .div-2 p {
 .myProfile .my-profile-buttons .enter:hover {
   opacity: 1;
 }
+.myProfile .successful-pass-change {
+  display: none;
+  flex-direction: column;
+}
 
 .selectVisual {
   width: 100%;
@@ -2235,4 +2254,200 @@ footer .div-2 p {
 }
 .homePage:hover {
   opacity: 1;
+}
+
+body .mathPage {
+  width: 91%;
+  margin: 0 auto;
+  font-family: "BPG Nino Mtavruli";
+  margin-top: 150px;
+  min-height: 100vh;
+}
+@media (min-width: 1305px) {
+  body .mathPage {
+    width: 1210px;
+  }
+}
+body .mathPage .mathProfile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .mathPage .mathProfile .profileName h4 {
+  font-size: 22px;
+  min-width: 205px;
+  min-height: 22px;
+  opacity: 1;
+}
+body .mathPage .mathProfile .profileName .editProfile {
+  display: flex;
+  cursor: pointer;
+  padding-top: 5px;
+}
+body .mathPage .mathProfile .profileName .editProfile .bgPen {
+  width: 23px;
+  height: 50px;
+  background-image: url(../assets/Ellipse\ 105.svg);
+  background-repeat: no-repeat;
+}
+body .mathPage .mathProfile .profileName .editProfile .bgPen img {
+  padding: 5px 0px 0px 6px;
+}
+body .mathPage .mathProfile .profileName .editProfile span {
+  font-size: 15px;
+  color: #433f3f;
+  min-width: 205px;
+  min-height: 22px;
+  padding: 7px 0px 0px 8px;
+}
+body .mathPage .mathProfile .logOut a {
+  font-size: 22px;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+body .mathPage .mathResults {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+body .mathPage .mathResults .mathAnswers {
+  width: 260px;
+  height: 172px;
+  border-radius: 10px;
+  padding: 15px 15px;
+  background-color: fade(#6bcb77, 0.1);
+}
+body .mathPage .mathResults .mathAnswers .answerTitle {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+body .mathPage .mathResults .mathAnswers .mainTitle {
+  padding-top: 8px;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+body .mathPage .mathResults .mathAnswers .mainTitle .triangleImg {
+  height: 35px;
+  margin-top: 78px;
+  display: flex;
+  text-align: end;
+}
+body .mathPage .mathResults .mathAnswers .mainTitle .bgCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 0px 32px;
+  font-size: 40px;
+  padding: 0px 30px 20px 0px;
+  width: 100px;
+  height: 100px;
+  background-image: url(../assets/Ellipse\ 120.svg);
+  background-repeat: no-repeat;
+}
+body .mathPage .mathResults .mathAnswers .mainTitle .squareImg {
+  height: 35px;
+}
+body .mathPage .borderTop {
+  margin-top: 25px;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  background-color: #3571a3;
+}
+body .mathPage .mathActivity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 11px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background-color: #f5f5f7;
+  margin-bottom: 100px;
+}
+body .mathPage .mathActivity p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 35px 0px 70px 0px;
+  color: #000000;
+}
+body .mathPage .mathActivity .myActivity {
+  display: flex;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart {
+  border-right: 2px solid #707070;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 50px 33px;
+  padding-right: 30px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .miniMathAnswers {
+  display: flex;
+  justify-content: space-between;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskTitle h3 {
+  color: #000000;
+  font-size: 28px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskTitle span {
+  color: #433f3f;
+  font-size: 20px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult {
+  margin-top: 50px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay {
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .taskTitle {
+  color: #433f3f;
+  font-size: 22px;
+  font-weight: 900;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .totalAnswer {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .totalAnswer span {
+  padding: 10px;
+  min-width: 71px;
+  height: 35px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .totalAnswer div {
+  padding: 10px;
+  margin-left: 30px;
+  padding: 10px;
+  min-width: 50px;
+  height: 35px;
+  border-radius: 15px;
+  font-size: large;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .totalAnswer img {
+  width: 15px;
+  height: 15px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay .totalAnswer a {
+  margin-left: 30px;
+  padding: 10px;
+  min-width: 90px;
+  height: 35px;
+  text-decoration: none;
+  color: #433f3f;
+  border-radius: 15px;
+  background-color: #e5e0e0;
 }/*# sourceMappingURL=global.css.map */

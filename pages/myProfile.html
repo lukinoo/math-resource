@@ -178,13 +178,20 @@
                 type="checkbox"
                 id="my-profile-agree-policies"
                 name="agreement"
-                checked
               /><label
                 onclick="location.href='./privacyPolicy.html'"
                 for="agreement"
                 >ვეთანხმები <span>მონაცემების დამუშავებას</span></label
               >
             </div>
+          </div>
+          <div class="my-profile-buttons">
+            <button type="button" id="cancel-buttons" class="cancel-button">
+              გაუქმება
+            </button>
+            <button type="button" class="enter" id="my-profile-button">
+              შენახვა
+            </button>
           </div>
         </form>
         <!-- Edit information End -->
@@ -247,15 +254,29 @@
               onclick="showPassword(`repeat_new_pass`,this)"
             ></i>
           </div>
+          <div class="my-profile-buttons">
+            <button type="button" id="cancel-buttons" class="cancel-button">
+              გაუქმება
+            </button>
+            <button type="button" class="enter" id="my-password-button">
+              შენახვა
+            </button>
+          </div>
         </form>
-        <div class="my-profile-buttons">
-          <button type="button" id="cancel-buttons" class="cancel-button">
-            გაუქმება
-          </button>
-          <button type="button" class="enter" id="my-profile-button">
-            შენახვა
-          </button>
-        </div>
+      </section>
+      <section
+        class="successful-pass-change active"
+        id="successful-pass-change"
+      >
+        <h2 id="notificationMsg">პაროლი წარმატებით შეიცვალა</h2>
+        <button
+          onclick="location.href='authorization.html'"
+          type="button"
+          class="homePage"
+          id="homePageBtn"
+        >
+          მთავარი გვერდი
+        </button>
       </section>
     </main>
     <footer>
@@ -275,7 +296,7 @@
               >
             </p>
             <p class="contactEmail">
-              <a href="https://www.facebook.com/"> Facebook</a>
+              <a href="https://www.facebook.com/" target="_blank"> Facebook</a>
             </p>
           </div>
         </div>
