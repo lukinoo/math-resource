@@ -2,6 +2,10 @@ body {
   background: $darkWhiteColor;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1 {
   max-width: 800px;
   margin: 8rem auto 0rem auto;
@@ -1358,6 +1362,7 @@ h1 {
   margin: 0 auto;
   font-family: "DejaVu Sans";
   .about-contaioner {
+    min-height: 100vh;
     margin-bottom: 3rem;
 
     .about-container-top-wrapper {
