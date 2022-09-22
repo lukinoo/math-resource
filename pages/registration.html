@@ -40,6 +40,7 @@
           <h3>ახალი ანგარიშის შექმნა</h3>
           <div class="msg-wrapper">
             <label for="pass">სახელი</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <div>
             <div class="input-icons">
@@ -49,10 +50,15 @@
                 name="first_name"
                 class="input"
               />
+              <div>
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+              </div>
             </div>
           </div>
           <div class="msg-wrapper">
             <label for="pass">გვარი</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <div>
             <div class="input-icons">
@@ -62,18 +68,24 @@
                 name="last_name"
                 class="input"
               />
+              <div>
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+              </div>
             </div>
           </div>
           <div class="msg-wrapper">
             <label for="pass">რეგიონი</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <!-- Custom select structure -->
           <div class="customSelect selectVisual">
             <div class="select-menu">
-              <div class="select menuVisual">
+              <div class="select menuVisual menuVisual-one">
                 <span></span>
                 <i class="fas fa-angle-down"></i>
               </div>
+
               <div class="options-list optionVisual">
                 <div class="option">შიდა-ქართლი</div>
                 <div class="option">ქვემო-ქართლი</div>
@@ -87,24 +99,44 @@
                 <div class="option">სვანეთი</div>
                 <div class="option">აფხაზეთი</div>
               </div>
+              <div>
+                <i
+                  class="fas fa-exclamation-circle failure-icon"
+                  style="position: absolute; right: -152px; top: 18px"
+                ></i>
+                <i
+                  class="far fa-check-circle success-icon"
+                  style="
+                    position: absolute;
+                    right: -22px;
+                    transform: translateY(15px);
+                  "
+                ></i>
+              </div>
             </div>
           </div>
           <!-- Custom select structure -->
           <div class="msg-wrapper">
             <label for="pass">სკოლა</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <div>
             <div class="input-icons">
               <input type="text" id="school" name="school" class="input" />
+              <div>
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+              </div>
             </div>
           </div>
           <div class="msg-wrapper">
             <label for="pass">კლასი</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <!-- Custom select structure -->
           <div class="customSelect selectVisual">
             <div class="select-menu">
-              <div class="select2 menuVisual">
+              <div class="select2 menuVisual menuVisual-two">
                 <span></span>
                 <i class="fas fa-angle-down"></i>
               </div>
@@ -123,18 +155,38 @@
                 <div class="option2">XI</div>
                 <div class="option2">XII</div>
               </div>
+              <div>
+                <i
+                  class="fas fa-exclamation-circle failure-icon"
+                  style="position: absolute; right: -152px; top: 18px"
+                ></i>
+                <i
+                  class="far fa-check-circle success-icon"
+                  style="
+                    position: absolute;
+                    right: -22px;
+                    transform: translateY(15px);
+                  "
+                ></i>
+              </div>
             </div>
           </div>
           <!-- Custom select structure -->
           <div class="msg-wrapper">
             <label for="pass">ი-მეილი</label>
+            <div class="email-msg sb4">ამ ველის შეყვანა აუცილებელია</div>
           </div>
           <div class="input-icons">
             <input type="text" name="email" class="input" id="register_email" />
+            <div>
+              <i class="fas fa-exclamation-circle failure-icon"></i>
+              <i class="far fa-check-circle success-icon"></i>
+            </div>
           </div>
           <!-- current password -->
           <div class="msg-wrapper">
             <label for="pass">პაროლი</label>
+            <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
           </div>
           <div class="input-icons">
             <input
@@ -150,10 +202,15 @@
               class="eyeBtn far fa-eye"
               onclick="showPassword(`id_password`,this)"
             ></i>
+            <div>
+              <i class="fas fa-exclamation-circle failure-icon"></i>
+              <i class="far fa-check-circle success-icon"></i>
+            </div>
           </div>
           <!-- repeat new password -->
           <div class="msg-wrapper">
             <label for="pass">გაიმეორეთ პაროლი</label>
+            <div class="email-msg sb4">სცადეთ სხვა პაროლი</div>
           </div>
           <div class="input-icons">
             <input
@@ -169,6 +226,10 @@
               class="eyeBtn far fa-eye"
               onclick="showPassword(`repeat_new_pass`,this)"
             ></i>
+            <div>
+              <i class="fas fa-exclamation-circle failure-icon"></i>
+              <i class="far fa-check-circle success-icon"></i>
+            </div>
           </div>
           <div class="agree-policies-wrapper">
             <div class="policeDiv">
@@ -230,5 +291,6 @@
       </div>
     </footer>
     <script src="../js/registration.js"></script>
+    <script src="../js/validators/registrationValidation.js"></script>
   </body>
 </html>

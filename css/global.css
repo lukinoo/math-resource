@@ -572,6 +572,7 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
 .authorization .auth-container .auth-form .msg-wrapper .email-msg.error {
   display: block;
@@ -704,11 +705,12 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
-.authorization .auth-container .email-form .msg-wrapper .email-msg .email-msg.error {
+.authorization .auth-container .email-form .msg-wrapper .email-msg.error {
   display: block;
 }
-.authorization .auth-container .email-form .msg-wrapper .email-msg .sb4:before {
+.authorization .auth-container .email-form .msg-wrapper .sb4:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -831,6 +833,7 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
 .authorization .auth-container .form1 .msg-wrapper .email-msg.error {
   display: block;
@@ -975,34 +978,6 @@ h1 {
 }
 .authorization .auth-container .pass-form.active {
   display: flex;
-}
-.authorization .auth-container .failure-icon {
-  color: #ff7474;
-  margin-left: 0.5rem;
-  opacity: 0;
-  display: none;
-  position: absolute;
-  right: -32%;
-  bottom: 35px;
-  width: 40%;
-}
-.authorization .auth-container .failure-icon.error {
-  opacity: 1;
-  display: inline-block;
-}
-.authorization .auth-container .success-icon {
-  color: #ffffff;
-  background-color: #bdd36e;
-  margin-left: 0.5rem;
-  border-radius: 100%;
-  opacity: 0;
-  display: none;
-  position: absolute;
-  bottom: 35px;
-}
-.authorization .auth-container .success-icon.success {
-  opacity: 1;
-  display: inline-block;
 }
 .authorization .auth-container .input-icons {
   display: flex;
@@ -1677,6 +1652,33 @@ footer .div-2 p {
   margin-bottom: 0;
   width: 100%;
 }
+.mainRegistration .registration-container .register-form .msg-wrapper .email-msg {
+  background-color: #ff7474;
+  color: #ffffff;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  display: none;
+  width: 40%;
+  margin-right: 80px;
+}
+.mainRegistration .registration-container .register-form .msg-wrapper .email-msg.error {
+  display: block;
+}
+.mainRegistration .registration-container .register-form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
+}
 .mainRegistration .registration-container .register-form .msg-wrapper label {
   width: 50%;
   display: flex;
@@ -1685,6 +1687,12 @@ footer .div-2 p {
   margin-bottom: 0;
   font-size: 13px;
   font-family: "BPG Nino Mtavruli";
+}
+.mainRegistration .registration-container .register-form .input.error {
+  border: 1px solid #ff7474;
+}
+.mainRegistration .registration-container .register-form .input.success {
+  border: 1px solid #bdd36e;
 }
 .mainRegistration .registration-container .register-form .input-icons {
   display: flex;
@@ -1948,6 +1956,33 @@ footer .div-2 p {
   margin-bottom: 0;
   width: 100%;
 }
+.myProfile .my-profile form .msg-wrapper .email-msg {
+  background-color: #ff7474;
+  color: #ffffff;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  display: none;
+  width: 40%;
+  margin-right: 80px;
+}
+.myProfile .my-profile form .msg-wrapper .email-msg.error {
+  display: block;
+}
+.myProfile .my-profile form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
+}
 .myProfile .my-profile form .msg-wrapper label {
   width: 50%;
   display: flex;
@@ -1956,6 +1991,12 @@ footer .div-2 p {
   margin-bottom: 0;
   font-size: 13px;
   font-family: "BPG Nino Mtavruli";
+}
+.myProfile .my-profile form .input.error {
+  border: 1px solid #ff7474;
+}
+.myProfile .my-profile form .input.success {
+  border: 1px solid #bdd36e;
 }
 .myProfile .my-profile form .input-icons input {
   display: flex;
@@ -2159,6 +2200,34 @@ footer .div-2 p {
   margin-bottom: 0;
   width: 100%;
 }
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-msg,
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-rep-msg {
+  background-color: #ff7474;
+  color: white;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  width: 35%;
+  display: none;
+  margin-right: 80px;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-msg.error {
+  display: block;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
+}
 .recoveryPassword .recoverySection .pass-form .msg-wrapper label {
   width: 50%;
   display: flex;
@@ -2254,6 +2323,38 @@ footer .div-2 p {
 }
 .homePage:hover {
   opacity: 1;
+}
+
+.failure-icon {
+  color: #ff7474;
+  margin-left: 0.5rem;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  right: -20%;
+  bottom: 35px;
+  width: 40%;
+}
+
+.failure-icon.error {
+  opacity: 1;
+  display: inline-block;
+}
+
+.success-icon {
+  color: #ffffff;
+  background-color: #bdd36e;
+  margin-left: 0.5rem;
+  border-radius: 100%;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  bottom: 35px;
+}
+
+.success-icon.success {
+  opacity: 1;
+  display: inline-block;
 }
 
 body .mathPage {

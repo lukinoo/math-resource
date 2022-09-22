@@ -44,6 +44,36 @@
         justify-content: space-between;
         margin-bottom: 0;
         width: 100%;
+
+        .email-msg {
+          background-color: $errorMessage;
+          color: $whiteColor;
+          padding: 0.3rem 0.1rem;
+          text-align: center;
+          font-size: 13px;
+          border-radius: 2px;
+          position: relative;
+          display: none;
+          width: 40%;
+          margin-right: 80px;
+        }
+        .email-msg.error {
+          display: block;
+        }
+
+        .sb4:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $errorMessage;
+          border-bottom: 10px solid transparent;
+          right: 12%;
+          bottom: -20px;
+        }
+
         label {
           width: 50%;
           display: flex;
@@ -53,6 +83,14 @@
           font-size: 13px;
           font-family: "BPG Nino Mtavruli";
         }
+      }
+
+      .input.error {
+        border: 1px solid $errorMessage;
+      }
+
+      .input.success {
+        border: 1px solid $successMessage;
       }
 
       .input-icons {

@@ -49,18 +49,18 @@ options2.forEach((option2) => {
   });
 });
 
-//show forms
-const registrationBtn = document.getElementById("registration-button");
+// //show forms
+// const registrationBtn = document.getElementById("registration-button");
 
-const registration = document.getElementById("registration-container");
-const registrationNotification = document.getElementById(
-  "successful-registration"
-);
+// const registration = document.getElementById("registration-container");
+// const registrationNotification = document.getElementById(
+//   "successful-registration"
+// );
 
-registrationBtn.addEventListener("click", () => {
-  registration.style.display = "none";
-  registrationNotification.style.display = "flex";
-});
+// registrationBtn.addEventListener("click", () => {
+//   registration.style.display = "none";
+//   registrationNotification.style.display = "flex";
+// });
 
 // myProfile page Hide/Show password
 
