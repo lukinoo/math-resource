@@ -459,6 +459,7 @@ h1 {
           position: relative;
           display: none;
           width: 40%;
+          margin-right: 80px;
         }
 
         .email-msg.error {
@@ -612,23 +613,23 @@ h1 {
           position: relative;
           display: none;
           width: 40%;
+          margin-right: 80px;
+        }
+        .email-msg.error {
+          display: block;
+        }
 
-          .email-msg.error {
-            display: block;
-          }
-
-          .sb4:before {
-            content: "";
-            width: 0px;
-            height: 0px;
-            position: absolute;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid $errorMessage;
-            border-bottom: 10px solid transparent;
-            right: 12%;
-            bottom: -20px;
-          }
+        .sb4:before {
+          content: "";
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $errorMessage;
+          border-bottom: 10px solid transparent;
+          right: 12%;
+          bottom: -20px;
         }
 
         label {
@@ -758,6 +759,7 @@ h1 {
           position: relative;
           display: none;
           width: 40%;
+          margin-right: 80px;
         }
 
         .email-msg.error {
@@ -944,37 +946,37 @@ h1 {
       display: flex;
     }
 
-    .failure-icon {
-      color: $errorMessage;
-      margin-left: 0.5rem;
-      opacity: 0;
-      display: none;
-      position: absolute;
-      right: -32%;
-      bottom: 35px;
-      width: 40%;
-    }
+    // .failure-icon {
+    //   color: $errorMessage;
+    //   margin-left: 0.5rem;
+    //   opacity: 0;
+    //   display: none;
+    //   position: absolute;
+    //   right: -32%;
+    //   bottom: 35px;
+    //   width: 40%;
+    // }
 
-    .failure-icon.error {
-      opacity: 1;
-      display: inline-block;
-    }
+    // .failure-icon.error {
+    //   opacity: 1;
+    //   display: inline-block;
+    // }
 
-    .success-icon {
-      color: $whiteColor;
-      background-color: $successMessage;
-      margin-left: 0.5rem;
-      border-radius: 100%;
-      opacity: 0;
-      display: none;
-      position: absolute;
-      bottom: 35px;
-    }
+    // .success-icon {
+    //   color: $whiteColor;
+    //   background-color: $successMessage;
+    //   margin-left: 0.5rem;
+    //   border-radius: 100%;
+    //   opacity: 0;
+    //   display: none;
+    //   position: absolute;
+    //   bottom: 35px;
+    // }
 
-    .success-icon.success {
-      opacity: 1;
-      display: inline-block;
-    }
+    // .success-icon.success {
+    //   opacity: 1;
+    //   display: inline-block;
+    // }
 
     .input-icons {
       display: flex;

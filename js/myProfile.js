@@ -77,21 +77,21 @@ profileInformation.addEventListener("click", function () {
 });
 
 // swich pages recovery/notification
-const myProfile = document.querySelector("#my-profile");
-const myPasswordBtn = document.querySelector("#my-password-button");
-const myProfileBtn = document.querySelector("#my-profile-button");
-const successfulChange = document.querySelector("#successful-pass-change");
-const notificationMsg = document.querySelector("#notificationMsg");
+// const myProfile = document.querySelector("#my-profile");
+// const myPasswordBtn = document.querySelector("#my-password-button");
+// const myProfileBtn = document.querySelector("#my-profile-button");
+// const successfulChange = document.querySelector("#successful-pass-change");
+// const notificationMsg = document.querySelector("#notificationMsg");
 
-myPasswordBtn.addEventListener("click", function () {
-  myProfile.style.display = "none";
-  successfulChange.style.display = "flex";
-});
-myProfileBtn.addEventListener("click", function () {
-  myProfile.style.display = "none";
-  successfulChange.style.display = "flex";
-  notificationMsg.innerHTML = "ინფორმაცია წარმატებით შეიცვალა";
-});
+// myPasswordBtn.addEventListener("click", function () {
+//   myProfile.style.display = "none";
+//   successfulChange.style.display = "flex";
+// });
+// myProfileBtn.addEventListener("click", function () {
+//   myProfile.style.display = "none";
+//   successfulChange.style.display = "flex";
+//   notificationMsg.innerHTML = "ინფორმაცია წარმატებით შეიცვალა";
+// });
 
 // myProfile page Hide/Show password
 
