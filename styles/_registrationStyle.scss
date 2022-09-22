@@ -93,6 +93,14 @@
         border: 1px solid $successMessage;
       }
 
+      .selector-success {
+        border: 1px solid $successMessage;
+      }
+
+      .selector-error {
+        border: 1px solid $errorMessage;
+      }
+
       .input-icons {
         display: flex;
         justify-content: center;

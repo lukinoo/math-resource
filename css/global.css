@@ -1694,6 +1694,12 @@ footer .div-2 p {
 .mainRegistration .registration-container .register-form .input.success {
   border: 1px solid #bdd36e;
 }
+.mainRegistration .registration-container .register-form .selector-success {
+  border: 1px solid #bdd36e;
+}
+.mainRegistration .registration-container .register-form .selector-error {
+  border: 1px solid #ff7474;
+}
 .mainRegistration .registration-container .register-form .input-icons {
   display: flex;
   justify-content: center;
@@ -1997,6 +2003,12 @@ footer .div-2 p {
 }
 .myProfile .my-profile form .input.success {
   border: 1px solid #bdd36e;
+}
+.myProfile .my-profile form .selector-success {
+  border: 1px solid #bdd36e;
+}
+.myProfile .my-profile form .selector-error {
+  border: 1px solid #ff7474;
 }
 .myProfile .my-profile form .input-icons input {
   display: flex;

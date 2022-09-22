@@ -85,24 +85,28 @@ myProfileBtn.addEventListener("click", function () {
     passMsg[2].classList.add("error");
     failures[2].classList.add("error");
     successes[2].classList.remove("success");
-    firstSelector.style.border = "1px solid #ff7474";
+    firstSelector.classList.add("selector-error");
+    firstSelector.classList.remove("selector-success");
   } else {
     passMsg[2].classList.remove("error");
     failures[2].classList.remove("error");
     successes[2].classList.add("success");
-    firstSelector.style.border = "1px solid #bdd36e";
+    firstSelector.classList.add("selector-success");
+    firstSelector.classList.remove("selector-error");
   }
 
   if (secondSelector.firstChild.nextSibling.innerText === "") {
     passMsg[4].classList.add("error");
     failures[4].classList.add("error");
     successes[4].classList.remove("success");
-    secondSelector.style.border = "1px solid #ff7474";
+    secondSelector.classList.add("selector-error");
+    secondSelector.classList.remove("selector-success");
   } else {
     passMsg[4].classList.remove("error");
     failures[4].classList.remove("error");
     successes[4].classList.add("success");
-    secondSelector.style.border = "1px solid #bdd36e";
+    secondSelector.classList.add("selector-success");
+    secondSelector.classList.remove("selector-error");
   }
 
   if (
