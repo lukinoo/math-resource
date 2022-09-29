@@ -154,7 +154,23 @@ body {
             }
           }
           .completeTaskResult {
+            max-height: 454px;
             margin-top: 50px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              width: 8px;
+              height: 7px;
+              background-color: #d6d6d6;
+            }
+            &::-webkit-scrollbar-track {
+              border: 1px solid #d6d6d6;
+              border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #707070;
+              border-radius: 10px;
+            }
 
             .taskDisplay {
               margin-bottom: 55px;

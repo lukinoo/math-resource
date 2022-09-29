@@ -136,6 +136,7 @@
           input {
             display: flex;
             align-self: center;
+            cursor: pointer;
           }
 
           label {
@@ -216,14 +217,33 @@
   padding: 0 20px;
   max-height: 180px;
   overflow-y: auto;
-  transition: 0.4s linear 0.2s;
+  transition: 0.2s linear 0.1s;
   height: 0;
   z-index: 5;
   div {
     padding: 8px 0;
     font-weight: 500;
     font-size: 14px;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+}
+
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.2s linear 0.1s;
+  height: 0;
+  z-index: 5;
+  div {
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.1s ease-in-out;
   }
 }
 
