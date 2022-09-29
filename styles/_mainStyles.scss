@@ -1451,10 +1451,25 @@ h1 {
               display: flex;
               justify-content: center;
               a {
-                img {
-                  margin: 0px 10px;
-                  width: 24px;
-                  height: 24px;
+                text-decoration: none;
+                margin: 0px 7px;
+                width: 24px;
+                height: 24px;
+              }
+              .fa-github {
+                font-size: 25px;
+
+                color: black;
+                &:hover {
+                  color: #707070;
+                }
+              }
+
+              .fa-linkedin-square {
+                font-size: 24px;
+                color: black;
+                &:hover {
+                  color: #065698;
                 }
               }
             }

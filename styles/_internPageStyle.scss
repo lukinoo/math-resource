@@ -1,0 +1,337 @@
+.internPage {
+  font-family: DejaVu Sans;
+  width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: 1305px) {
+    width: 1210px;
+  }
+
+  .internTitle {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 22px;
+      margin-left: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .internAuthor {
+    margin-top: 17px;
+    color: #707070;
+
+    span {
+      border-bottom: 1px solid #707070;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+  .internData {
+    margin-top: 17px;
+
+    span {
+      color: #707070;
+    }
+  }
+  .internDescription {
+    margin-top: 17px;
+    color: #707070;
+  }
+
+  //
+  .assignments {
+    margin: 30px 0px;
+    display: flex;
+    .totalTasks {
+      border: 1px solid #707070;
+      border-radius: 15px;
+      padding: 9px;
+      font-size: 12px;
+      font-weight: bold;
+      min-width: 60px;
+      cursor: pointer;
+    }
+    .doneTask {
+      margin-left: 30px;
+      min-width: 38px;
+      padding: 9px;
+      font-size: 12px;
+      border-radius: 12px;
+      background-color: rgb(107, 203, 119, 0.8);
+      cursor: pointer;
+    }
+    .activeTask {
+      display: flex;
+      justify-content: center;
+      margin-left: 6px;
+      min-width: 35px;
+      padding: 9px;
+      font-size: 12px;
+      border-radius: 12px;
+      background-color: rgb(112, 112, 112, 0.5);
+      color: white;
+      cursor: pointer;
+    }
+    .passiveTask {
+      display: flex;
+      justify-content: center;
+      margin-left: 6px;
+      min-width: 35px;
+      padding: 9px;
+      font-size: 12px;
+      border-radius: 12px;
+      border: 1px solid #707070;
+      color: #707070;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .hintTask {
+      margin-left: 6px;
+      min-width: 38px;
+      padding: 9px;
+      font-size: 12px;
+      border-radius: 12px;
+      background-color: rgb(254, 209, 66, 0.5);
+      cursor: pointer;
+    }
+    .wrongTask {
+      margin-left: 6px;
+      min-width: 38px;
+      padding: 9px;
+      font-size: 12px;
+      border-radius: 12px;
+      background-color: rgb(255, 107, 107, 0.5);
+      cursor: pointer;
+    }
+  }
+
+  //
+
+  .internMathProblem {
+    margin-top: 17px;
+    h3 {
+      color: #433f3f;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    span {
+      color: #707070;
+      font-weight: bold;
+      font-style: oblique;
+    }
+    ul {
+      margin-top: 17px;
+      li {
+        color: #707070;
+        margin-top: 17px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .internInput {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+  }
+  .enterAnswer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    .enter {
+      width: 209px;
+      height: 61px;
+      background-color: $darkBlue;
+      color: $whiteColor;
+      font-size: 18px;
+      border: none;
+      border-radius: 9px;
+      box-shadow: 0px 3px 6px #00000029;
+      padding: 0.8rem 1.8rem;
+      cursor: pointer;
+      font-family: "BPG Nino Mtavruli";
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .correctPassword {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    span {
+      margin: 55px 0px 30px;
+      text-align: center;
+      font: normal normal normal 33px/41px BPG Banner Caps;
+      letter-spacing: 0px;
+      color: #78b86e;
+      text-shadow: 0px 3px 6px #00000029;
+      text-transform: lowercase;
+      opacity: 1;
+    }
+    button {
+      width: 209px;
+      height: 61px;
+      background-color: $darkBlue;
+      color: $whiteColor;
+      font-size: 18px;
+      border: none;
+      border-radius: 9px;
+      box-shadow: 0px 3px 6px #00000029;
+      padding: 0.8rem 1.8rem;
+      cursor: pointer;
+      font-family: "BPG Nino Mtavruli";
+      opacity: 0.8;
+      margin-bottom: 45px;
+      img {
+        color: white;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .wrongPassword {
+    display: none;
+    .wrongPassworButtons {
+      display: flex;
+      justify-content: center;
+      margin: 52px;
+      .seeHints {
+        width: 209px;
+        height: 61px;
+        background: var(--unnamed-color-fed142) 0% 0% no-repeat padding-box;
+        background: #fed142 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        text-align: center;
+        font: normal normal bold 18px/19px BPG Nino Mtavruli;
+        letter-spacing: 0px;
+        border: none;
+        border-radius: 15px;
+        color: #111111;
+        opacity: 0.8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .correctAnswer {
+        width: 209px;
+        height: 61px;
+        margin-left: 15px;
+        border: 3px solid var(--unnamed-color-fed142);
+        box-shadow: 0px 3px 6px #00000029;
+        border: 3px solid #fed142;
+        text-align: center;
+        font: normal normal bold 18px/19px BPG Nino Mtavruli;
+        letter-spacing: 0px;
+        color: #111111;
+        border-radius: 15px;
+        opacity: 0.8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .nextPartButton {
+      display: flex;
+      justify-content: center;
+      button {
+        width: 209px;
+        height: 61px;
+        background: #3571a3 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 0.8;
+        border: none;
+        border-radius: 9px;
+        padding: 0.8rem 1.8rem;
+        font-family: "BPG Nino Mtavruli";
+        opacity: 0.5;
+        letter-spacing: 0px;
+        color: #ffffff;
+        margin-bottom: 45px;
+        img {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// modal
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 1089px;
+    height: 380px;
+    border-radius: 0.5rem;
+
+    .close-button {
+      margin-top: 40px;
+      font-size: 30px;
+      position: absolute;
+      right: 36px;
+    }
+    .hint-title {
+      margin-top: 40px;
+      h3 {
+        display: flex;
+        justify-content: center;
+        color: #111111;
+        font-weight: bold;
+      }
+      .close-button {
+        float: right;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+      }
+    }
+    .hintDescription {
+      margin: 0px 125px;
+
+      h3 {
+        color: #433f3f;
+        font-weight: bold;
+        margin: 70px 0px 30px;
+      }
+      div {
+        text-align: left;
+        font: normal normal normal 14px/16px DejaVu Sans;
+        letter-spacing: 0px;
+        color: #707070;
+      }
+    }
+  }
+}
+.show-modal {
+  overflow-y: scroll;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999;
+}
