@@ -572,6 +572,7 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
 .authorization .auth-container .auth-form .msg-wrapper .email-msg.error {
   display: block;
@@ -704,11 +705,12 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
-.authorization .auth-container .email-form .msg-wrapper .email-msg .email-msg.error {
+.authorization .auth-container .email-form .msg-wrapper .email-msg.error {
   display: block;
 }
-.authorization .auth-container .email-form .msg-wrapper .email-msg .sb4:before {
+.authorization .auth-container .email-form .msg-wrapper .sb4:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -831,6 +833,7 @@ h1 {
   position: relative;
   display: none;
   width: 40%;
+  margin-right: 80px;
 }
 .authorization .auth-container .form1 .msg-wrapper .email-msg.error {
   display: block;
@@ -975,34 +978,6 @@ h1 {
 }
 .authorization .auth-container .pass-form.active {
   display: flex;
-}
-.authorization .auth-container .failure-icon {
-  color: #ff7474;
-  margin-left: 0.5rem;
-  opacity: 0;
-  display: none;
-  position: absolute;
-  right: -32%;
-  bottom: 35px;
-  width: 40%;
-}
-.authorization .auth-container .failure-icon.error {
-  opacity: 1;
-  display: inline-block;
-}
-.authorization .auth-container .success-icon {
-  color: #ffffff;
-  background-color: #bdd36e;
-  margin-left: 0.5rem;
-  border-radius: 100%;
-  opacity: 0;
-  display: none;
-  position: absolute;
-  bottom: 35px;
-}
-.authorization .auth-container .success-icon.success {
-  opacity: 1;
-  display: inline-block;
 }
 .authorization .auth-container .input-icons {
   display: flex;
@@ -1411,10 +1386,25 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile a img {
-  margin: 0px 10px;
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile a {
+  text-decoration: none;
+  margin: 0px 7px;
   width: 24px;
   height: 24px;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile .fa-github {
+  font-size: 25px;
+  color: black;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile .fa-github:hover {
+  color: #707070;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile .fa-linkedin-square {
+  font-size: 24px;
+  color: black;
+}
+.aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info .linkProfile .fa-linkedin-square:hover {
+  color: #065698;
 }
 .aboutPage .about-contaioner .about-container-bottom-wrapper .about-container-bottom .about-container-bottom-team-info .team-info h4 {
   font-family: "DejaVu Sans";
@@ -1677,6 +1667,33 @@ footer .div-2 p {
   margin-bottom: 0;
   width: 100%;
 }
+.mainRegistration .registration-container .register-form .msg-wrapper .email-msg {
+  background-color: #ff7474;
+  color: #ffffff;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  display: none;
+  width: 40%;
+  margin-right: 80px;
+}
+.mainRegistration .registration-container .register-form .msg-wrapper .email-msg.error {
+  display: block;
+}
+.mainRegistration .registration-container .register-form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
+}
 .mainRegistration .registration-container .register-form .msg-wrapper label {
   width: 50%;
   display: flex;
@@ -1685,6 +1702,18 @@ footer .div-2 p {
   margin-bottom: 0;
   font-size: 13px;
   font-family: "BPG Nino Mtavruli";
+}
+.mainRegistration .registration-container .register-form .input.error {
+  border: 1px solid #ff7474;
+}
+.mainRegistration .registration-container .register-form .input.success {
+  border: 1px solid #bdd36e;
+}
+.mainRegistration .registration-container .register-form .selector-success {
+  border: 1px solid #bdd36e;
+}
+.mainRegistration .registration-container .register-form .selector-error {
+  border: 1px solid #ff7474;
 }
 .mainRegistration .registration-container .register-form .input-icons {
   display: flex;
@@ -1715,6 +1744,7 @@ footer .div-2 p {
 .mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv input {
   display: flex;
   align-self: center;
+  cursor: pointer;
 }
 .mainRegistration .registration-container .register-form .agree-policies-wrapper .policeDiv label {
   display: flex;
@@ -1781,7 +1811,7 @@ footer .div-2 p {
   padding: 0 20px;
   max-height: 180px;
   overflow-y: auto;
-  transition: 0.4s linear 0.2s;
+  transition: 0.2s linear 0.1s;
   height: 0;
   z-index: 5;
 }
@@ -1789,7 +1819,26 @@ footer .div-2 p {
   padding: 8px 0;
   font-weight: 500;
   font-size: 14px;
-  transition: 0.3s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.optionVisual {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.2s linear 0.1s;
+  height: 0;
+  z-index: 5;
+}
+.optionVisual div {
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.1s ease-in-out;
 }
 
 .option:hover,
@@ -1948,6 +1997,33 @@ footer .div-2 p {
   margin-bottom: 0;
   width: 100%;
 }
+.myProfile .my-profile form .msg-wrapper .email-msg {
+  background-color: #ff7474;
+  color: #ffffff;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  display: none;
+  width: 40%;
+  margin-right: 80px;
+}
+.myProfile .my-profile form .msg-wrapper .email-msg.error {
+  display: block;
+}
+.myProfile .my-profile form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
+}
 .myProfile .my-profile form .msg-wrapper label {
   width: 50%;
   display: flex;
@@ -1956,6 +2032,18 @@ footer .div-2 p {
   margin-bottom: 0;
   font-size: 13px;
   font-family: "BPG Nino Mtavruli";
+}
+.myProfile .my-profile form .input.error {
+  border: 1px solid #ff7474;
+}
+.myProfile .my-profile form .input.success {
+  border: 1px solid #bdd36e;
+}
+.myProfile .my-profile form .selector-success {
+  border: 1px solid #bdd36e;
+}
+.myProfile .my-profile form .selector-error {
+  border: 1px solid #ff7474;
 }
 .myProfile .my-profile form .input-icons input {
   display: flex;
@@ -1980,6 +2068,7 @@ footer .div-2 p {
 .myProfile .my-profile form .agree-policies-wrapper .policeDiv input {
   display: flex;
   align-self: center;
+  cursor: pointer;
 }
 .myProfile .my-profile form .agree-policies-wrapper label {
   display: flex;
@@ -2067,7 +2156,7 @@ footer .div-2 p {
   padding: 0 20px;
   max-height: 180px;
   overflow-y: auto;
-  transition: 0.4s linear 0.2s;
+  transition: 0.2s linear 0.1s;
   height: 0;
   z-index: 5;
 }
@@ -2075,7 +2164,7 @@ footer .div-2 p {
   padding: 8px 0;
   font-weight: 500;
   font-size: 14px;
-  transition: 0.3s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .option:hover,
@@ -2083,8 +2172,8 @@ footer .div-2 p {
   color: #3571a3;
 }
 
-.option:hover,
-.option.selected {
+.option2:hover,
+.option2.selected2 {
   color: #3571a3;
 }
 
@@ -2158,6 +2247,34 @@ footer .div-2 p {
   justify-content: space-between;
   margin-bottom: 0;
   width: 100%;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-msg,
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-rep-msg {
+  background-color: #ff7474;
+  color: white;
+  padding: 0.3rem 0.1rem;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 2px;
+  position: relative;
+  width: 35%;
+  display: none;
+  margin-right: 80px;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .pass-msg.error {
+  display: block;
+}
+.recoveryPassword .recoverySection .pass-form .msg-wrapper .sb4:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ff7474;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -20px;
 }
 .recoveryPassword .recoverySection .pass-form .msg-wrapper label {
   width: 50%;
@@ -2254,6 +2371,38 @@ footer .div-2 p {
 }
 .homePage:hover {
   opacity: 1;
+}
+
+.failure-icon {
+  color: #ff7474;
+  margin-left: 0.5rem;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  right: -20%;
+  bottom: 35px;
+  width: 40%;
+}
+
+.failure-icon.error {
+  opacity: 1;
+  display: inline-block;
+}
+
+.success-icon {
+  color: #ffffff;
+  background-color: #bdd36e;
+  margin-left: 0.5rem;
+  border-radius: 100%;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  bottom: 35px;
+}
+
+.success-icon.success {
+  opacity: 1;
+  display: inline-block;
 }
 
 body .mathPage {
@@ -2404,7 +2553,22 @@ body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskTitle spa
   font-size: 20px;
 }
 body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult {
+  max-height: 454px;
   margin-top: 50px;
+  overflow-y: scroll;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+  background-color: #d6d6d6;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult::-webkit-scrollbar-track {
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+}
+body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 10px;
 }
 body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .taskDisplay {
   margin-bottom: 55px;
@@ -2450,4 +2614,330 @@ body .mathPage .mathActivity .myActivity .mathProblemPart .completeTaskResult .t
   color: #433f3f;
   border-radius: 15px;
   background-color: #e5e0e0;
+}
+
+.internPage {
+  font-family: DejaVu Sans;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1305px) {
+  .internPage {
+    width: 1210px;
+  }
+}
+.internPage .internTitle {
+  display: flex;
+  align-items: center;
+}
+.internPage .internTitle span {
+  font-size: 22px;
+  margin-left: 18px;
+  font-weight: bold;
+}
+.internPage .internAuthor {
+  margin-top: 17px;
+  color: #707070;
+}
+.internPage .internAuthor span {
+  border-bottom: 1px solid #707070;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.internPage .internData {
+  margin-top: 17px;
+}
+.internPage .internData span {
+  color: #707070;
+}
+.internPage .internDescription {
+  margin-top: 17px;
+  color: #707070;
+}
+.internPage .assignments {
+  margin: 30px 0px;
+  display: flex;
+}
+.internPage .assignments .totalTasks {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  padding: 9px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 60px;
+  cursor: pointer;
+}
+.internPage .assignments .doneTask {
+  margin-left: 30px;
+  min-width: 38px;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: rgba(107, 203, 119, 0.8);
+  cursor: pointer;
+}
+.internPage .assignments .activeTask {
+  display: flex;
+  justify-content: center;
+  margin-left: 6px;
+  min-width: 35px;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: rgba(112, 112, 112, 0.5);
+  color: white;
+  cursor: pointer;
+}
+.internPage .assignments .passiveTask {
+  display: flex;
+  justify-content: center;
+  margin-left: 6px;
+  min-width: 35px;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 12px;
+  border: 1px solid #707070;
+  color: #707070;
+  font-weight: bold;
+  cursor: pointer;
+}
+.internPage .assignments .hintTask {
+  margin-left: 6px;
+  min-width: 38px;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: rgba(254, 209, 66, 0.5);
+  cursor: pointer;
+}
+.internPage .assignments .wrongTask {
+  margin-left: 6px;
+  min-width: 38px;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 107, 107, 0.5);
+  cursor: pointer;
+}
+.internPage .internMathProblem {
+  margin-top: 17px;
+}
+.internPage .internMathProblem h3 {
+  color: #433f3f;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.internPage .internMathProblem span {
+  color: #707070;
+  font-weight: bold;
+  font-style: oblique;
+}
+.internPage .internMathProblem ul {
+  margin-top: 17px;
+}
+.internPage .internMathProblem ul li {
+  color: #707070;
+  margin-top: 17px;
+  margin-left: 15px;
+}
+.internPage .internInput {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+.internPage .enterAnswer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.internPage .enterAnswer .enter {
+  width: 209px;
+  height: 61px;
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+  opacity: 0.8;
+}
+.internPage .enterAnswer .enter:hover {
+  opacity: 1;
+}
+.internPage .correctPassword {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.internPage .correctPassword span {
+  margin: 55px 0px 30px;
+  text-align: center;
+  font: normal normal normal 33px/41px BPG Banner Caps;
+  letter-spacing: 0px;
+  color: #78b86e;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  text-transform: lowercase;
+  opacity: 1;
+}
+.internPage .correctPassword button {
+  width: 209px;
+  height: 61px;
+  background-color: #3571a3;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 0.8rem 1.8rem;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli";
+  opacity: 0.8;
+  margin-bottom: 45px;
+}
+.internPage .correctPassword button img {
+  color: white;
+}
+.internPage .correctPassword button:hover {
+  opacity: 1;
+}
+.internPage .wrongPassword {
+  display: none;
+}
+.internPage .wrongPassword .wrongPassworButtons {
+  display: flex;
+  justify-content: center;
+  margin: 52px;
+}
+.internPage .wrongPassword .wrongPassworButtons .seeHints {
+  width: 209px;
+  height: 61px;
+  background: var(--unnamed-color-fed142) 0% 0% no-repeat padding-box;
+  background: #fed142 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  text-align: center;
+  font: normal normal bold 18px/19px BPG Nino Mtavruli;
+  letter-spacing: 0px;
+  border: none;
+  border-radius: 15px;
+  color: #111111;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.internPage .wrongPassword .wrongPassworButtons .seeHints:hover {
+  opacity: 1;
+}
+.internPage .wrongPassword .wrongPassworButtons .correctAnswer {
+  width: 209px;
+  height: 61px;
+  margin-left: 15px;
+  border: 3px solid var(--unnamed-color-fed142);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border: 3px solid #fed142;
+  text-align: center;
+  font: normal normal bold 18px/19px BPG Nino Mtavruli;
+  letter-spacing: 0px;
+  color: #111111;
+  border-radius: 15px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.internPage .wrongPassword .wrongPassworButtons .correctAnswer:hover {
+  opacity: 1;
+}
+.internPage .wrongPassword .nextPartButton {
+  display: flex;
+  justify-content: center;
+}
+.internPage .wrongPassword .nextPartButton button {
+  width: 209px;
+  height: 61px;
+  background: #3571a3 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  opacity: 0.8;
+  border: none;
+  border-radius: 9px;
+  padding: 0.8rem 1.8rem;
+  font-family: "BPG Nino Mtavruli";
+  opacity: 0.5;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 45px;
+}
+.internPage .wrongPassword .nextPartButton button img {
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 1089px;
+  height: 380px;
+  border-radius: 0.5rem;
+}
+.modal .modal-content .close-button {
+  margin-top: 40px;
+  font-size: 30px;
+  position: absolute;
+  right: 36px;
+}
+.modal .modal-content .hint-title {
+  margin-top: 40px;
+}
+.modal .modal-content .hint-title h3 {
+  display: flex;
+  justify-content: center;
+  color: #111111;
+  font-weight: bold;
+}
+.modal .modal-content .hint-title .close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.modal .modal-content .hintDescription {
+  margin: 0px 125px;
+}
+.modal .modal-content .hintDescription h3 {
+  color: #433f3f;
+  font-weight: bold;
+  margin: 70px 0px 30px;
+}
+.modal .modal-content .hintDescription div {
+  text-align: left;
+  font: normal normal normal 14px/16px DejaVu Sans;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.show-modal {
+  overflow-y: scroll;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 999;
 }/*# sourceMappingURL=global.css.map */

@@ -2,16 +2,16 @@
 
 // Hide/Show up auth-form Page
 const authForm = document.querySelector("#auth-form");
-const autoFormHide = document.getElementById("recovery-on-auth");
-autoFormHide.addEventListener("click", () => {
-  authForm.style.display = "none";
-  emailForm.style.display = "flex";
-});
+// const autoFormHide = document.getElementById("recovery-on-auth");
+// autoFormHide.addEventListener("click", () => {
+//   authForm.style.display = "none";
+//   emailForm.style.display = "flex";
+// });
 
 // Cancel Button Remember password, show up Authorization
 const emailForm = document.querySelector("#email-form");
 const cancelBtn = document.getElementById("cancel");
-const sendMail = document.getElementById("enter-send");
+// const sendMail = document.getElementById("enter-send");
 
 cancelBtn.addEventListener("click", () => {
   emailForm.style.display = "none";
@@ -27,10 +27,10 @@ clickAgain.addEventListener("click", () => {
   emailForm.style.display = "flex";
 });
 
-sendMail.addEventListener("click", () => {
-  emailForm.style.display = "none";
-  recoveryPassword.style.display = "flex";
-});
+// sendMail.addEventListener("click", () => {
+//   emailForm.style.display = "none";
+//   recoveryPassword.style.display = "flex";
+// });
 // Home Page button Click Event
 const homePageBtn = document.getElementById("homePageBtn");
 

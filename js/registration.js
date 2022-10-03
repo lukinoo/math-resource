@@ -38,29 +38,29 @@ options.forEach((option) => {
 //select option 2
 options2.forEach((option2) => {
   option2.addEventListener("click", () => {
-    options.forEach((option2) => {
-      option2.classList.remove("selected");
+    options2.forEach((option2) => {
+      option2.classList.remove("selected2");
     });
     select2.querySelector("span").innerHTML = option2.innerHTML;
-    option2.classList.add("selected");
+    option2.classList.add("selected2");
     options_list2.classList.toggle("active");
     options_list2.classList.toggle("borderVisual");
     select2.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
   });
 });
 
-//show forms
-const registrationBtn = document.getElementById("registration-button");
+// //show forms
+// const registrationBtn = document.getElementById("registration-button");
 
-const registration = document.getElementById("registration-container");
-const registrationNotification = document.getElementById(
-  "successful-registration"
-);
+// const registration = document.getElementById("registration-container");
+// const registrationNotification = document.getElementById(
+//   "successful-registration"
+// );
 
-registrationBtn.addEventListener("click", () => {
-  registration.style.display = "none";
-  registrationNotification.style.display = "flex";
-});
+// registrationBtn.addEventListener("click", () => {
+//   registration.style.display = "none";
+//   registrationNotification.style.display = "flex";
+// });
 
 // myProfile page Hide/Show password
 
