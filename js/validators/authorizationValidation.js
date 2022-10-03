@@ -50,11 +50,13 @@ if (emailFormVisible.style.display !== "none") {
       successes[2].classList.add("success");
       recEmail.classList.add("success");
       recEmail.classList.remove("error");
+      emailForm.style.display = "none";
+      recoveryPassword.style.display = "flex";
     }
   });
 }
 
 // sendMail.addEventListener("click", () => {
-//     emailForm.style.display = "none";
-//     recoveryPassword.style.display = "flex";
-//   });
+//   emailForm.style.display = "none";
+//   recoveryPassword.style.display = "flex";
+// });
